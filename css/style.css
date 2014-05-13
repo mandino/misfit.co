@@ -478,7 +478,7 @@ section.bigwelcome {
 	line-height: 280px;
 	color: #fff;
 	display: inline;
-	
+	opacity: .6;
 }
 
 .curvature {
