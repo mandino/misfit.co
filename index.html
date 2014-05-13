@@ -24,7 +24,8 @@
 
 
 <!-- Lightbox -->	
-<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet"/>
+<link rel="stylesheet" href="css/colorbox.css" type="text/css" media="screen" title="prettyPhoto main stylesheet"/>
+<link rel="stylesheet" href="css/colorbox-custom.css" type="text/css" media="screen"/>
 
 <!-- responsive style -->
 
@@ -49,6 +50,41 @@
 				<div class="clear"></div>
 				
 				<span class="scroll">MAY 2014</span>
+
+				<div class="clear"></div>
+
+				<a class="button signup inline" href="#inline_content">SIGN UP</a>
+
+				<div style='display:none'>
+					<div id='inline_content' style='padding:10px;'>
+
+						<!-- Begin MailChimp Signup Form -->
+						<div id="mc_embed_signup">
+							<form action="http://misfit-inc.us1.list-manage.com/subscribe/post?u=dab524f4886549dbf587dce02&amp;id=9a96836d21" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+							<div class="mc-field-group">
+								<label for="mce-EMAIL">Email Address </label>
+								<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
+							</div>
+							<div class="mc-field-group">
+								<label for="mce-FNAME">First Name </label>
+								<input type="text" value="" name="FNAME" class="" id="mce-FNAME" placeholder="First Name">
+							</div>
+							<div class="mc-field-group">
+								<label for="mce-LNAME">Last Name </label>
+								<input type="text" value="" name="LNAME" class="" id="mce-LNAME" placeholder="Last Name">
+							</div>
+								<div id="mce-responses" class="clear">
+									<div class="response" id="mce-error-response" style="display:none"></div>
+									<div class="response" id="mce-success-response" style="display:none"></div>
+								</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+							    <div style="position: absolute; left: -5000px;"><input type="text" name="b_dab524f4886549dbf587dce02_9a96836d21" tabindex="-1" value=""></div>
+							    <div class="clear"><input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button signup"></div>
+							</form>
+						</div>
+						<!--End mc_embed_signup-->
+
+					</div>
+				</div>
 			
 			</div>
 		
@@ -64,9 +100,17 @@
 			
 	<!-- BigVideo Dependencies -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>    
     
-    
+    <script src="js/jquery.colorbox-min.js"></script>
+    <script type="text/javascript">
+
+    	$(document).ready(function(){
+	    	$(".inline").colorbox({inline:true, width:"400px"});
+	    });
+
+    </script>
+
 	<script type="text/javascript">
 	  jQuery(document).ready(function($) {
 	    $(".scroll").click(function(event) {
@@ -120,13 +164,6 @@
 			$('.columnized').columnize({width:400});
 			$('.thin').columnize({width:200});
 		});
-	</script>
-	
-	<script type="text/javascript">
-		
-			// PRETTYPHOTO //
-			$("a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:3000, autoplay_slideshow: false});
-		
 	</script>
 
 	<script>

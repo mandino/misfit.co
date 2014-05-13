@@ -437,7 +437,7 @@ section.bigwelcome {
 	-o-animation-delay:.5s;
 	z-index: 9999;
 	position: relative;
-	top: 28%;
+	top: 23%;
 }
 
 
@@ -506,6 +506,22 @@ section.bigwelcome {
 .scroll:hover {
 	color: #c21414;
 }
+
+.signup {
+    border: 6px solid #FFFFFF;
+    color: #FFFFFF;
+    display: inline-block;
+    font-family: Avenir95BlackBlack;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-top: 50px;
+}
+
+.hellofolks .button.signup {
+	margin-top: 50px;
+}
+
 /*.massive:before {
 	padding: 0;
 	font-family: 'AvenirRegular';
@@ -854,4 +870,26 @@ margin: 17px 10px 7px 0;
 	top: 15px;
 	width: 80px;
 	
+}
+
+
+
+/* Mailchimp -----------------------------------------------------------*/
+
+#mc_embed_signup label {
+    display: none;
+}
+
+#mc_embed_signup input[type="text"], #mc_embed_signup input[type="email"] {
+    padding: 10px 20px 8px;
+    font-size: 20px;
+    margin: 5px 0;
+    border: 2px solid #ddd;
+    border-radius: 3px;
+    color: #666;
+    width: 90%;
+}
+
+.button.signup {
+    margin-top: 10px;
 }
