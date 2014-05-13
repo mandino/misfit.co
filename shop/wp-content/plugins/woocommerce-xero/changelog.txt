@@ -1,0 +1,43 @@
+*** Xero Integration ***
+
+2013.05.21 - version 1.3.3
+ * Fix for inclusive tax
+ * Removed Cart Discounts from being sent with invoice to Xero
+
+2013.05.21 - version 1.3.2
+ * Fix for "Cannot redeclare wc_ups_plugin_links()"
+ * Fix for compatibility with Dynamic Pricing
+ * Fix for rounding amounts to two digits
+
+2013.03.22 - version 1.3.1
+ * Add check for key files in Xero admin page. Green - file found. Red - file not found.
+ * Removed unused "Sales Tax Account" from settings.
+ * Fix for "PHP Warning:  Illegal string offset" in Order Edit page in the admin.
+ * Fix for "A validation exception occurred Detail: One or more line items must be specified" in WC 2.x
+ * Fix for inclusive tax line amount
+ * Fix for ampersand (&) in billing and shipping information fields
+ 
+
+2013.02.12 - version 1.3.0
+ * Verified compatibility with WooCommerce 2.0
+ * Added setting to be able to turn off SKU (Inventory Items) from being sent in invoices
+ * Added ability to manually send invoices and payments from Edit Order page
+ * Fixed <Date> and <DueDate> fields to use current H:M:S to prevent OAuth error
+ * Fixed issue with VAT
+
+2013.01.07 - version 1.2.1
+ * Added support for Sequential Order Numbers Pro
+
+2012.12.10 - version 1.2
+ * Fix for qty calculation for tax included and tax excluded. Also, fix for validation errors.
+ * Added SKU field to be used as <ItemCode> for reduction of inventory in Xero.
+ * Added <CurrencyRate> to Payment XML to support WC stores using different currency from Xero account currency.
+
+2012.12.04 - version 1.1.1
+ * New updater
+
+2012.09.28 - version 1.1
+ * Added checkbox to enable/disable sending payments to Xero.  Payments may need to be turned of if they are synced via a separate integration such as PayPal.
+
+2012.07.26 - version 1.0
+ * Initial Release

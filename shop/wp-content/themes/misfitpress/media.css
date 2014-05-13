@@ -1,0 +1,819 @@
+/* ================================================  MOBILES BELOW 399 ======================================= */
+
+
+@media only screen 
+and (max-width : 399px) 
+{	
+		.floatinglogo img {
+		width: 100%;
+	}
+	
+	.floatinglogo {
+		left: 40px;
+		top: 65px;
+	}
+	
+	.floatingtext {
+	    left: 70px;
+	    margin: auto;
+	    padding-left: 0;
+	    position: absolute;
+	    top: 200px;
+	    width: 80%;
+	}
+
+	.bottomnav {
+	    display: none;
+	}
+
+	
+	
+}
+
+
+
+
+/* ================================================  MOBILES BELOW 480 to 400 ======================================= */
+
+
+@media only screen 
+and (min-width : 400px) 
+and (max-width : 480px) 
+{	
+	
+.floatinglogo img {
+		width: 100%;
+	}
+	
+	.floatinglogo {
+		left: 40px;
+		top: 65px;
+	}
+	
+	.floatingtext {
+	    left: 20px;
+	    margin: auto;
+	    padding-left: 0;
+	    position: absolute;
+	    top: 200px;
+	    width: 80%;
+	}
+
+	.bottomnav {
+	    display: none;
+	}
+
+}
+
+
+/* ================================================  MOBILES upto 480 ======================================= */
+
+
+
+@media only screen 
+and (max-width : 480px) 
+{
+
+
+
+	.wrapper {
+		overflow: auto;
+	}
+
+	.contentarena {
+	    left: 0;
+	    position: relative;
+	    top: 45px;
+	    width: 190px;
+	    margin: 0 auto;
+	}
+
+	#background, #midground, #foreground, .dragon, .littlehenry {
+			display: none;
+		}
+
+	.stage, .innerwrapper:before, .innerwrapper {
+		background-image: none;
+	}
+
+	.subbox {
+		width: 300px;
+	}
+
+	.drops {
+		top: 43px;
+	}
+
+	.subcr, .subcr a {
+		font-size: 19px;
+		padding: 0;
+	}
+
+	.subscribe {
+	    padding: 13px 20px;
+	}
+
+	.topnav {
+	    height: 43px;
+	}
+
+	.homebutton, span.navdrop {
+	    font-size: 18px;
+	    padding: 10px 0 11px 23px;
+	    width: 40px;
+	}
+
+	/* Page - Why we fail */
+
+
+	.whyfail .failheader {
+	    height: 105px;
+	}
+
+	.whyfail .container {
+	    width: 90%;
+	}
+
+	.whyfail .first, .whyfail .last {
+	    width: 100% !important;
+	}
+
+	.whyfail .container .inner {
+	    width: 100%;
+	}
+
+	.whyfail blockquote {
+		opacity: 1;
+	}
+
+	#fail .whyfail blockquote p {
+	    font-size: 40px;
+	    line-height: 1;
+	}
+
+	.authorbox {
+	    background: none repeat scroll 0 0 #6C6C6C;
+	    clear: both;
+	    padding: 50px 0;
+	    position: relative;
+	    width: 100%;
+        height: 100%;
+	}
+
+	.pichalf {
+	    float: none;
+	    margin: 0 auto;
+	    width: 50%;
+	}
+
+	.authorbox .contenthalf {
+	    float: none;
+	    height: 100%;
+	    margin: 10px auto 0;
+	    overflow: auto;
+	    padding-top: 0;
+	    text-align: center;
+	    width: 80%;
+	}
+
+	.authorbox .container p {
+	    color: #FFFFFF;
+	    text-align: center;
+	}
+
+	.pichalf > img {
+	    width: 100%;
+	}
+
+	/* Page - Artsy Collection */
+
+	.collectionwelcome:before, .collectionwelcome {
+		background-image: none;
+	}
+
+	.collectionwelcome .contentarena {
+	    left: 0;
+	    right: 0;
+	    top: 12%;
+	    margin-left: auto;
+	}
+
+	.collectionwelcome .logowelcome {
+	    margin: 0 auto;
+	    width: 90px;
+	}
+
+	.collectionwelcome .logowelcome h1 {
+	    font-size: 60px;
+	}
+
+	.collectionwelcome .logowelcome h2 {
+	    font-size: 47px;
+	    margin-top: -14px;
+	}
+
+	.collectionwelcome .edition {
+	    font-size: 8px;
+	    margin-top: -35px;
+	}
+
+	#collection .collectionwelcome {
+		padding: 60px 0 0;
+	}
+
+	.collectionwelcome .sw {
+	    width: 35%;
+	}
+
+	.artmaker {
+	    top: 70%;
+	    font-size: 36px;
+	}
+
+	.onepage-pagination {
+	    top: auto;
+	    bottom: 5%;
+	}
+
+
+
+}
+
+
+
+/* ================================================  MOBILES with HEIGHT less than or equal to 320 ======================================= */
+
+
+
+@media only screen 
+and (max-height : 320px) 
+{	
+
+
+	/* Navigation */
+
+	.drops li a {
+		padding: 10px 0;
+	}
+	
+	/* Page - Artsy Collection */
+
+	#collection .collectionwelcome {
+		padding: 40px 0 0;
+	}
+
+	.collectionwelcome .contentarena {
+	    width: 90%;
+	}
+
+	.collectionwelcome .edition {
+	    font-size: 8px;
+	    margin-top: -15px;
+	}
+
+	#collection .linkers > li {
+	    float: left;
+	    width: 50%;
+	}
+
+	#collection .linkers a {
+	    font-size: 16px;
+	}
+
+	#collection .linkers li span {
+	    font-size: 10px;
+	}
+
+	.collectionwelcome h2 {
+	    font-size: 35px;
+	    margin: 10px 0;
+	}
+
+	.collectionwelcome h4 {
+		margin: -10px 0 30px;
+	}
+
+	.collectionwelcome p {
+		padding-bottom: 10px;
+	}
+
+	#collection .collectionwelcome .sw {
+	    width: 20%;
+	}
+
+	.collectionwelcome h4 {
+	    font-size: 25px;
+	    line-height: 29px;
+	    margin: -10px 0 30px;
+	}
+
+
+
+}
+
+
+
+/* ================================================  MOBILES BELOW 480 to 640 ======================================= */
+
+
+@media only screen 
+and (min-width : 790px) 
+and (max-width : 639px) 
+{	
+	
+	.floatinglogo img {
+		width: 100%;
+	}
+	
+	.floatinglogo {
+		left: 40px;
+	}
+	
+	.floatingtext {
+	    left: 15px;
+	    padding-left: 90px;
+	    position: absolute;
+	    top: 350px;
+	    width: 460px;
+	}
+
+	.bottomnav {
+	    display: none;
+	}
+
+	.dragon {
+		right: -100%;
+	}
+				
+}
+
+
+
+/* ================================================  All below 768 ======================================= */
+
+
+
+@media only screen 
+and (max-width : 767px) 
+{
+
+
+
+	/* Page - Waiting for Kerouac */
+
+	#kerouac .wrapper {
+	    height: 100%;
+	    margin: 0 auto;
+	    overflow: auto;
+	    width: 90%;
+	}
+	
+	.poetrycontainer {
+	    left: 0;
+	    overflow: auto;
+	    padding: 200px 0;
+	    position: relative;
+	    text-align: right;
+	    width: 100%;
+	}
+
+	#kerouac .salparadise {
+	    background: url("../images/kerouac_waiting.png") no-repeat scroll 100% 0 / contain rgba(0, 0, 0, 0);
+	    height: 118px;
+	    left: 0;
+	    width: 100%;
+	}
+
+	#kerouac .dean {
+		display: none;
+	}
+
+	/* Page - The Last Birthday */
+
+	.birthday .title {
+	    background: url("../images/birthday_title.png") no-repeat scroll center bottom / contain rgba(0, 0, 0, 0);
+	    width: 90%;
+	    height: 57px;
+	}
+
+	.narrowmarrow {
+		width: 90%;
+	}
+
+	.birthday blockquote p {
+		font-size: 45px;
+	}
+
+	/* Page - Products */
+
+	.products li {
+	    margin: 0 0 16px;
+	    width: 100%;
+	}
+
+	.products li a {
+		display: block;
+	}
+
+	.attachment-shop_catalog.wp-post-image {
+	    width: 80%;
+	}
+
+
+
+}
+
+
+
+/* ================================================  LARGE MOBILE DEVICES AND SMALL TABLETS BELOW 799  ======================================= */
+
+
+@media only screen 
+and (max-width : 799px) 
+{	
+
+	.bottomnav {
+	    display: none;
+	}
+
+	.dragon {
+		right: -80%;
+	}
+
+
+}
+/* ================================================  SLIGHTLY SMALLER RESOLUTIONS, BUT NOT QUITE IPHONE ======================================= */
+
+
+@media only screen 
+and (min-width : 800px) 
+and (max-width : 854px) 
+{	
+	
+
+}
+
+
+
+
+
+/* ================================================  LARGE PHONE SCREENS SMALLER RESOLUTIONS  ======================================= */
+
+
+@media only screen 
+and (min-width : 855px) 
+and (max-width : 960px) 
+{	
+
+	
+
+
+
+
+}
+
+
+
+/* ================================================  IPADS AT LANDSCAPE WIDTH 1024  ======================================= */
+
+
+@media only screen 
+and (min-width : 961px) 
+and (max-width : 1024px) 
+{	
+
+
+
+	/* Home */
+
+	.dragon {
+		background-position: -200% 0 !important;
+	}
+
+	/*	#background, #misdground {
+			background-position: 0 0 !important;
+		}
+		
+		#foreground {
+			background-position: -150% 0 !important;
+		}
+	*/
+
+	.littlehenry {
+		left: 25%;
+	}
+
+	/* Page - Why We Fail */
+
+	.whyfail .earthscribble {
+		width: 150px;
+	}
+
+
+		
+}
+
+
+
+/* ================================================  SCREENS UP TO 768  ======================================= */
+
+
+
+@media only screen
+and (max-width : 768px) {
+
+
+
+	body {
+		height: auto;
+	}
+
+	.innerwrapper {
+		height: 100% !important;
+	}
+
+	.wrapper, .generalwrapping {
+		height: 100%;
+	}
+
+	/* Home */
+
+	body#home {
+		height: 100%;
+	}
+
+
+
+}
+
+
+
+/* ================================================  SCREENS WIDER THAN 768  ======================================= */
+
+
+
+@media only screen
+and (min-width : 768px) {
+
+
+
+	#home .linkers {
+		display: none;
+	}
+
+
+
+}
+
+
+
+/* ================================================  SCREENS UP TO 1024  ======================================= */
+
+
+
+@media only screen
+and (max-width : 1024px) {
+
+
+	p {
+	    font-size: 12px;
+	}
+
+	/* Navigation */
+
+	.upswing h1 {
+	    font-size: 120%;
+	}
+
+	.upswing p {
+	    line-height: 1.5;
+	}
+
+	.drops {
+		opacity: 0;
+		visibility: visible;
+		display: none;
+	}
+
+	.navdrop:hover .drops {
+		opacity: 1;
+		visibility: visible;
+		display: block;
+	}
+
+	/* Pages */
+
+	.pagecontainer {
+		width: 60%;
+		padding: 70px auto 100px;
+		margin: 70px auto 100px;
+	}
+
+	img.aligncenter.size-full, img.aligncenter.size-full {
+	    width: 100%;
+	}
+
+	/* Page - Why we fail */
+
+	.whyfail .topscribble, .leftscribble, .earthscribbler {
+		background-image: none;
+	}
+
+	/* Page - Waiting for Kerouac */
+
+	#kerouac {
+		height: auto;
+	}
+
+	#kerouac .salparadise {
+	    background: url("../images/kerouac_waiting.png") no-repeat scroll 0 0 / contain rgba(0, 0, 0, 0);
+	    height: 148px;
+	    left: 0;
+	    margin: -40px 0 40px;
+	    position: relative;
+	    width: 100%;
+	}
+
+	#kerouac .dean {
+	    left: -30% !important;
+	}
+
+	/* Page - Products */
+
+	.misfit-commerce .littlehenry {
+	    background: url("../images/littlehenry.png") no-repeat scroll 0 0 / contain rgba(0, 0, 0, 0);
+	    bottom: 0;
+	    left: 10%;
+	    position: absolute;
+	    width: 20%;
+	    height: 10%;
+	}
+
+
+
+}
+
+
+
+/* ================================================  1024PX AND UP  ======================================= */
+
+
+
+@media only screen 
+and (min-width : 1024px) {
+
+
+
+	.pagecontainer {
+	    margin: 70px auto 100px;
+	    width: 70%;
+	}
+
+
+
+}
+
+
+
+/* ================================================  FIRST STAGE LARGER THAN 1024PX UP TO LARGER BROWSERS  ======================================= */
+
+
+
+@media only screen 
+and (min-width : 1025px) 
+and (max-width : 1223px) 
+{		
+		
+	
+	
+	.leftscribble {
+		left: -150px;
+	}
+	.whyfail .earthscribble {
+		width: 150px;
+	}
+	
+		.stage {
+		overflow: hidden;
+	}
+	
+	.dragon {
+		right: 0;
+		bottom: -240px;
+		background-size: 82%;
+		right: -90px;
+		overflow: hidden;
+	}
+	
+	.littlehenry {
+		position: absolute;
+		background: url(../images/littlehenry.png) no-repeat;
+		left: 20%;
+		bottom: 0px;
+		width: 215px;
+		background-size: 70%;
+    }
+	
+}
+
+
+
+/* #Narrow Screen, Below 1400px (Portrait)
+================================================== */
+
+    /* Note: Design for a width of 768px */
+
+
+
+@media only screen 
+and (min-width : 1224px) 
+and (max-width : 1300px) 
+{
+
+	.leftscribble {
+		left: -150px;
+	}
+	
+	
+	.whyfail .earthscribble {
+		width: 220px;
+	}
+
+
+
+
+
+}
+	
+
+@media only screen 
+and (min-width : 1224px) 
+and (max-width : 1399px) 
+{
+
+	
+	
+	.stage {
+		overflow: hidden;
+	}
+	
+	.dragon {
+		right: 0;
+		bottom: -240px;
+		background-size: 82%;
+		right: -90px;
+		overflow: hidden;
+	}
+	
+	.littlehenry {
+		position: absolute;
+		background: url(../images/littlehenry.png) no-repeat;
+		left: 20%;
+		bottom: 0px;
+		width: 215px;
+		background-size: 70%;
+    }
+	
+	
+}
+
+
+@media only screen 
+	and (min-width : 1400px) 
+	and (max-width : 1480px) 
+{
+		
+
+	.stage {
+		overflow: hidden;
+	}
+	
+	.dragon {
+		right: 0;
+		bottom: -240px;
+		background-size: 82%;
+		right: -90px;
+		overflow: hidden;
+	}
+	
+	.littlehenry {
+		position: absolute;
+		background: url(../images/littlehenry.png) no-repeat;
+		left: 20%;
+		bottom: 0px;
+		width: 215px;
+		background-size: 70%;
+    }
+	
+
+
+}
+
+
+@media only screen and (min-width : 1481px) {
+	
+	
+}
+
+
+

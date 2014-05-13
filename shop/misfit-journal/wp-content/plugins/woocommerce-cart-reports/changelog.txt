@@ -1,0 +1,10 @@
+*** WooCommerce Cart Reports ***
+
+2013.7.11 - version 1.0.2
+ * Fixed issue where "guest cart" pages could be created, fixed issue where cart name information could be accessed on the frontend by directly accessing the cart status taxonomy page.
+
+2013.6.13 - version 1.0.1
+ * Fixed issue where carts could be accessed as public post types, fixed tooltip jquery conflict
+
+2013.3.04 - version 1.0
+ * First Release

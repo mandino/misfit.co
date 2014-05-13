@@ -1,0 +1,392 @@
+
+/* Responsive Design - Desktop ------------------------------ */
+
+	html {
+		-webkit-text-size-adjust: none;
+	}
+
+/* Responsive Design - 812px - 959px ------------------------------ */
+
+@media only screen and (min-width: 800px) and (max-width: 959px) {
+
+}
+
+/* Responsive Design - 801px - 959px ------------------------------ */
+
+@media only screen and (min-width: 801px) and (max-width: 959px) {
+
+	/**** Share Page ****/
+
+	#wrapper {
+		width: 760px;
+	}
+	
+	#content {
+		margin: 0;
+	}
+
+	.progress-bar {
+		width: 100%;
+	}
+
+	.share-area li {
+		width: 33%;
+	}
+
+	.share-area h2 {
+		font-size: 21px;
+	}
+
+	.share-area h3 {
+		font-size: 14px;
+	}
+	
+	.share-area li > a {
+		width: 225px;
+	}
+	
+	.share-area button {
+		display: block;
+		margin: 10px auto;
+		width: 225px;
+	}
+
+	.share-area button.facebook img.text {
+		width: 70% !important;
+	}
+		.share-area button.facebook:hover img.text {
+			width: 80% !important;
+			top: 34px;
+		}
+
+	.share-area button.twitter img.text {
+		height: 30%;
+		top: 32px;
+	}
+		.share-area button.twitter:hover img.text {
+			top: 28px;
+			height: 35%;
+		}
+
+	.share-area button.google img.text {
+		height: 30%;
+	}
+		.share-area button.google:hover img.text {
+			height: 35%;
+			top: 27px;
+		}
+
+	body.page-template-template-lp-almost-there-php h1, body.page-template-template-lp-almost-there-php h2 {
+		text-align: center;
+	}
+
+	body.page-template-template-lp-almost-there-php .stopmobile {
+		float: none !important;
+		width: 520px !important;
+		margin: 0 auto;
+	}
+
+	.fb-like.fb_edge_widget_with_comment.fb_iframe_widget {
+		display: block;
+		margin: 0 auto;
+		width: 250px;
+	}
+
+	.highrewline {
+		float: none !important;
+		margin: 10px auto;
+		width: 345px;
+	}
+
+	/**** Almost There Page ****/
+
+	body.page-template-template-lp-almost-there-php #content {
+		margin: 0 !important;
+	}
+
+	.mediummobile > p {
+		margin: 0 auto;
+		width: 550px;
+	}
+
+}
+
+/* Responsive Design - 660px - 810px ------------------------------ */
+
+@media only screen and (min-width: 660px) and (max-width: 810px) {
+
+	.highrewline .share-area {
+	    display: block;
+	    margin: 0 auto;
+	    overflow: auto;
+	    position: relative;
+	    width: 610px !important;
+	}
+	
+	.highrewline .share-area li {
+		border: 0 none;
+	    float: left;
+	    margin: 0 20px !important;
+	}
+}
+
+/* Responsive Design - 501px - 800px ------------------------------ */
+
+@media only screen and (min-width: 550px) and (max-width: 810px) {
+
+	body.page-template-template-lp-almost-there-php p {
+	    margin: 15px auto;
+	    position: relative;
+	    width: 500px;
+	}
+
+}
+
+/* Responsive Design - 501px - 800px ------------------------------ */
+
+@media only screen and (min-width: 501px) and (max-width: 800px) {
+	
+	/* Main */
+	
+	html {
+		max-width: 800px;
+		width: auto;
+	}
+
+	/* Share Page - Body */
+	
+	#content {
+		padding-bottom: 0;
+	}
+	
+	.col-full, #wrapper {
+		padding-bottom: 0;
+		max-width: 800px;
+		width: auto;
+	}
+	
+	.profile-divider-line {
+		margin: 0 20px 10px;
+		max-width: 800px;
+	}
+	
+	.progress-bar {
+		margin: 25px 20px 10px;
+		max-width: 100%;
+		width: auto;
+	}
+	
+	ul.share-area {
+		border-top: 1px solid #DDDDDD;
+		margin: 30px 20px 0;
+		max-width: 100%;
+		width: auto;
+	}
+	
+	.share-area li {
+		border-left: medium none;
+		border-right: medium none;
+		float: none;
+		margin: 0 auto;
+		padding: 30px 0;
+		width: 251px;
+	}
+	
+	.share-area li.share-area-facebook,
+	.share-area li.share-area-twitter {
+		border-bottom: 1px solid #DDDDDD;
+	}
+
+	/* Almost There - Body */
+	
+	body.page-template-template-lp-almost-there-php h1 {
+		font-size: 23px !important;
+	}
+	
+	body.page-template-template-lp-almost-there-php h2.sub-title {
+		color: #878787;
+		font: 16px luxi-sans, sans-serif;
+		margin-bottom: 20px;
+	}
+	
+	body.page-template-template-lp-almost-there-php .stopmobile { display: none;}
+	body.page-template-template-lp-almost-there-php .mediummobile { display: block;}
+	body.page-template-template-lp-almost-there-php .mediummobile iframe { display: block; margin: 0 auto; }
+	body.page-template-template-lp-almost-there-php #content { margin: 0 20px;}
+	body.page-template-template-lp-almost-there-php p { margin-top: 0.5em;}
+	
+	body.page-template-template-lp-almost-there-php .mediummobile .fb-like {
+		display: block;
+		margin: 10px auto 0;
+		width: 740px;
+	}
+	
+	body.page-template-template-lp-almost-there-php .mediummobile .fb-like iframe,
+	body.page-template-template-lp-almost-there-php .mediummobile .fb-like span	{
+		max-width: 740px !important;
+	}
+	
+	body.page-template-template-lp-almost-there-php .highrewline {
+		float: none;
+		margin: 20px auto;
+		width: 100%;
+	}
+
+	.highrewline .share-area {
+		margin: 23px 0 0;
+	}
+
+	body.page-template-template-lp-almost-there-php p {
+		color: #666666;
+		font-size: 17px; 
+	}
+
+	.highrewline .share-area-twitter {
+		margin-top: -20px !important;
+	}
+	
+}
+
+/* Responsive Design - 250px - 630px ------------------------------ */
+
+@media only screen and (min-width: 250px) and (max-width: 630px) {
+	.highrewline .share-area {
+	    width: 300px !important;
+	}
+}
+
+@media only screen and (min-width: 501px) and (max-width: 530px) {
+	
+	.profile-title .fl.profile-title-content { max-width: 340px; width: auto;}
+	.profile-title h2 { font-size: 18px; margin-bottom: 2px; max-width: 220px;}
+	.profile-title h1 { font-size: 30px; margin-bottom: 10px; max-width: 300px;}
+}
+
+/* Responsive Design - 500px ------------------------------ */
+	
+@media only screen and (max-width: 500px) {
+	
+	/* Main */
+	
+	html { max-width: 500px; width: auto;}
+	.stopmobile { display: none;}
+	.gomobile { display: block;}
+	#footer, #footer p { font-size: 10px; !important}
+	
+	/* Share Page - Header */
+	
+	body {
+		background: url("../../images/lp/life-and-times/mobile-rainbow-top.png") repeat-x scroll center 0 #F8F8F8;
+		max-width: 500px;
+	}
+	
+	.topline h3 { font-size: 14px;}
+	
+	/* Share Page - Body */
+	
+	#content { padding-bottom: 0;}
+	.col-full, #wrapper { padding-bottom: 0; max-width: 500px; width: auto;}
+	.profile-title { margin: 10px 20px 0;}
+	.profile-title img { margin: 0 10px 0 5px;}
+	.profile-title .fl.profile-title-content { max-width: 340px; width: auto;}
+	.profile-title h2 { font-size: 18px; margin-bottom: 2px; max-width: 220px;}
+	.profile-title h1 { font-size: 30px; margin-bottom: 10px; max-width: 300px;}
+	.profile-divider-line { margin: 0 20px 10px; max-width: 500px;}
+	.progress-bar { margin: 25px 20px 10px; max-width: 100%; width: auto;}
+	ul.share-area { border-top: 1px solid #DDDDDD; margin: 30px 20px 0; max-width: 100%; width: auto;}
+	.share-area li {
+		border-left: medium none;
+		border-right: medium none;
+		float: none;
+		margin: 0 auto;
+		padding: 30px 0;
+		width: 251px;
+	}
+	.share-area li.share-area-facebook, .share-area li.share-area-twitter { border-bottom: 1px solid #DDDDDD;}
+
+	/* Almost There - Body */
+	
+	body.page-template-template-lp-almost-there-php h1 { font-size: 23px !important;}
+	
+	/*	body.page-template-template-lp-almost-there-php h2 { font: 14px luxi-sans, sans-serif !important;} */	
+	
+	body.page-template-template-lp-almost-there-php h2.sub-title {
+	    color: #878787;
+	    font: 16px luxi-sans,sans-serif;
+	    margin-bottom: 20px;
+	}	
+	
+	body.page-template-template-lp-almost-there-php .gomobile iframe { display: block; margin: 0 auto; width: 100%; }
+	body.page-template-template-lp-almost-there-php #content { margin: 0 20px;}
+	body.page-template-template-lp-almost-there-php p {
+	    margin-top: 0.5em;
+	}
+	
+	body.page-template-template-lp-almost-there-php .gomobile .fb-like {
+		display: block;
+		margin: 10px auto 0;
+		width: 440px;
+	}
+	
+	body.page-template-template-lp-almost-there-php .gomobile .fb-like iframe,
+	body.page-template-template-lp-almost-there-php .gomobile .fb-like span	{
+		width: 440px !important;
+	}
+	
+	body.page-template-template-lp-almost-there-php .highrewline {
+		float: none;
+		margin: 20px auto;
+		width: 100%;
+	}
+
+	.highrewline .share-area {
+	    margin: 23px 0 0;
+	}
+
+	body.page-template-template-lp-almost-there-php p {
+		color: #666666;
+		font-size: 17px; 
+	}
+
+	.highrewline .share-area-twitter {
+	    margin-top: -20px !important;
+	}
+
+	/* Stretch Goal - Body */
+	
+	body.page-template-template-lp-stretch-goal-php h1 { font-size: 23px !important;}
+	body.page-template-template-lp-stretch-goal-php h2 { font: 14px luxi-sans, sans-serif !important;}
+	body.page-template-template-lp-stretch-goal-php .gomobile iframe { display: block; margin: 0 auto;}
+	body.page-template-template-lp-stretch-goal-php .gomobile .fb-like {
+		display: block;
+		margin: 10px auto 0;
+		width: 440px;
+	}
+	
+	body.page-template-template-lp-almost-there-php .gomobile .fb-like iframe,
+	body.page-template-template-lp-almost-there-php .gomobile .fb-like span {
+		width: 440px !important;
+	}
+}
+
+/* Responsive Design - 0 - 320px ------------------------------ */
+
+@media only screen and (max-width: 360px) {
+
+
+
+}
+
+@media only screen and (max-width: 360px) {
+
+	.profile-title .fl.profile-title-content { margin-top: 20px;}
+	.profile-title h2 { font-size: 16px;}
+	.profile-title h1 { font-size: 24px;}
+}
+
+@media only screen and (max-width: 320px) {
+
+	html {
+		min-width: 320px;
+	}
+}

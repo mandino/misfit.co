@@ -1,0 +1,335 @@
+/* 
+Instructions:
+
+Add your custom styles at the end of this file instead 
+of style.css so it is easier to update the theme. 
+Simply copy an existing style from style.css to this file, 
+and modify it to your liking.
+*/
+
+/*******************************************
+	DEFAULTS 
+*******************************************/
+
+body {
+	background: url(../../images/lp/life-and-times/rainbow-top.png) repeat-x center 0 #F8F8F8;
+	padding: 0;
+	overflow: visible;
+}
+
+p {
+	line-height: 1.8;
+}
+
+h1, h2, h3 {
+	color: #333;
+}
+
+h1 {
+	font-size: 40px;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+#wrapper {
+	width: 900px;
+	margin: 0 auto 0;
+}
+
+.gomobile { display: none;}
+.mediummobile { display: none;}
+
+/*******************************************
+	Header 
+*******************************************/
+
+.topline {
+	margin-top: 5px;
+	background: #fff;
+	padding: 8px 0;
+}
+
+.topline h3 {
+	color: #999999;
+	font: 15px/1 'Gentium Book Basic', sans-serif;
+	text-align: center;
+}
+
+
+
+/*******************************************
+	Top Content 
+*******************************************/
+
+#content {
+	margin-top: 10px;
+}
+
+.profile-title {
+	height: 90px;
+	margin-top: 15px;
+}
+
+.profile-title .fl.profile-title-content {
+	width: 400px;
+	margin-top: 12px;
+	width: 400px;
+}
+
+.profile-title h1 {
+	text-transform: uppercase;
+	font-size: 40px;
+	line-height: 1;
+}
+
+.profile-title h2 {
+	font: 20px/1 'Gentium Book Basic', sans-serif;
+}
+
+.profile-title img {
+	margin-right: 15px;
+	margin-bottom: 10px;
+	margin-left: 30px;
+}
+
+.profile-divider-line {
+	clear: both;
+	height: 0px;
+	border-bottom: 1px solid #eee;
+	border-top: 1px solid #ddd;
+	margin-bottom: 10px;
+}
+
+.progress-bar {
+	border-radius: 5px !important;
+	-moz-border-radius: 5px !important;
+	-webkit-border-radius: 5px !important;
+	-o-border-radius: 5px !important;
+	-ms-border-radius: 5px !important;
+	background: none repeat scroll 0 0 #DFDFDF !important;
+	border: 0 none !important;
+	height: 28px !important;
+	margin: 15px 0 25px;
+	width: 900px;
+}
+
+.progress-bar .ui-widget-header {
+	-webkit-transition: all 300ms;
+	-moz-transition: all 300ms;
+	-o-transition: all 300ms;
+	-ms-transition: all 300ms;
+	transition: all 300ms; 
+	border-radius: 5px !important;
+	-moz-border-radius: 5px !important;
+	-webkit-border-radius: 5px !important;
+	-o-border-radius: 5px !important;
+	-ms-border-radius: 5px !important;
+	background: none repeat scroll 0 0 #C92127 !important;
+	color: #FFFFFF;
+	font-family: bree-serif,serif;
+	font-size: 20px;
+	height: 100%;
+	line-height: 1.5;
+	width: 25px;
+	text-align: center;
+	border: 0 !important;
+}
+
+/*******************************************
+	Content Area 
+*******************************************/
+
+.lp-content {
+	color: #333333;
+	padding: 0 25px;
+}
+
+.lp-content p {
+	font: 15px/1.5 'Gentium Book Basic', sans-serif;
+	margin-bottom: 10px;
+}
+
+.lp-content span {
+	color: #878787;
+}
+
+/*******************************************
+	Share Area 
+*******************************************/
+
+.share-area {
+	margin-top: 15px;
+}
+
+.share-area li {
+	border-left: 1px solid #EEEEEE;
+	border-right: 1px solid #DDDDDD;
+	float: left;
+	width: 33%;
+}
+
+.share-area li.share-area-google {
+	border-right: 0;
+}
+
+.share-area li.share-area-facebook {
+	border-left: 0;
+}
+
+.share-area li > a {
+	display: block;
+	margin: 15px auto 0;
+	width: 251px;
+}
+
+.share-area h2 {
+	color: #000;
+	font-size: 27px;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 1;
+}
+
+.share-area h3 {
+	color: #666666;
+	font: 15px/1.6 'Gentium Book Basic', sans-serif;
+	text-align: center;
+}
+
+.share-area button {
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-o-border-radius: 10px;
+	-ms-border-radius: 10px;
+	border: 0 none;
+	cursor: pointer;
+	height: 96px;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	width: 251px;
+}
+	.share-area button:hover img.ico {
+		opacity: .2;
+	}
+
+.share-area button.facebook {
+	background: url(../../images/lp/life-and-times/facebook-background.png);
+}
+
+.share-area button.twitter {
+	background: url(../../images/lp/life-and-times/twitter-background.png);
+}
+
+.share-area button.google {
+	background: url(../../images/lp/life-and-times/video-background.png);
+}
+
+.share-area button img {
+	-webkit-transition: all 300ms;
+	-moz-transition: all 300ms;
+	-o-transition: all 300ms;
+	-ms-transition: all 300ms;
+	transition: all 300ms; 
+	position: absolute;
+}
+
+.share-area button img.ico {
+	left: 15px;
+	top: 25px;
+}
+	.share-area button:hover img.ico {
+		top: -5px;
+		left: 0;
+	}
+
+.share-area button img.text {
+	right: 15px;
+	top: 31px;
+}
+	.share-area button:hover img.text {
+		top: 28px;
+	}
+
+.share-area button.facebook img.ico {
+	height: 48px;
+}
+	.share-area button.facebook:hover img.ico {
+		height: 119px;
+	}
+
+.share-area button.twitter img.ico {
+	height: 48px;
+}
+	.share-area button.twitter:hover img.ico {
+		height: 101px;
+	}
+
+.share-area button.google img.ico {
+	height: 48px;
+}
+	.share-area button.google:hover img.ico {
+		height: 122px;
+	}
+
+.share-area button.facebook img.text {
+	width: 162px;
+}
+	.share-area button.facebook:hover img.text {
+		width: 198px;
+	}
+
+.share-area button.twitter img.text {
+	height: 30px;
+}
+	.share-area button.twitter:hover img.text {
+		height: 38px;
+	}
+
+.share-area button.google img.text {
+	height: 32px;
+}
+	.share-area button.google:hover img.text {
+		height: 40px;
+	}
+
+
+/*******************************************
+	Footer 
+*******************************************/
+
+.footerbg {
+	background: #F5F5F5;
+	color: #DDDDDD;
+	text-align: center;
+	padding: 20px 0;
+	margin-top: 300px;
+	margin-bottom: -30px;
+}
+
+.footerbg a {
+	color: #DDDDDD;
+}
+
+#footer, #footer p {
+	background: transparent;
+	color: #DDDDDD;
+	font: 13px/1.8 'Gentium Basic', sans-serif
+}
+
+#footer img {
+	margin-top: 15px;
+}
+
+#footer .heart {
+	display: inline;
+	margin-bottom: 6px;
+	margin-top: 0;
+}

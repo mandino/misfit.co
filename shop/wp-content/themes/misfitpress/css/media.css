@@ -1,0 +1,20 @@
+/* GLOBAL STYLES
+----------------
+Add styles beneath this line that you want to be applied across your entire site */
+
+
+
+/* DESKTOP STYLES
+-----------------
+Add styles inside the media query below that you only want to be applied to the desktop layout of your site */
+
+
+@media only screen and (min-width: 768px) { /* Desktop styles go below this line */ }
+
+/* Ipad */
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {}
+
+/* Mobile */
+
+@media only screen and (max-width: 768px) {}

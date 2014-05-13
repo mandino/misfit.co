@@ -1,0 +1,1192 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kula\n"
+"POT-Creation-Date: 2013-04-09 20:49-0000\n"
+"PO-Revision-Date: 2013-04-09 20:50-0000\n"
+"Last-Translator: \n"
+"Language-Team: guuthemes\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:18
+msgid "Woops! It seems a page is missing."
+msgstr ""
+
+#: 404.php:19
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Please try using "
+"one of the navigation links above."
+msgstr ""
+
+#: 404.php:20
+msgid "Go to the Homepage"
+msgstr ""
+
+#: archive.php:21
+msgid "Posts in the Category:"
+msgstr ""
+
+#: archive.php:24
+msgid "Posts Tagged with:"
+msgstr ""
+
+#: archive.php:27
+msgid "Posts By:"
+msgstr ""
+
+#: archive.php:30
+msgid "Daily Archives:"
+msgstr ""
+
+#: archive.php:33
+msgid "Monthly Archives:"
+msgstr ""
+
+#: archive.php:36
+msgid "Yearly Archives:"
+msgstr ""
+
+#: archive.php:48 search.php:30 single.php:28
+msgid "Posted in"
+msgstr ""
+
+#: archive.php:48 search.php:30 single.php:28
+msgid "on"
+msgstr ""
+
+#: archive.php:48 index.php:256 search.php:30
+msgid "Comments"
+msgstr ""
+
+#: archive.php:56 search.php:38
+msgid "Read More"
+msgstr ""
+
+#: comments.php:8
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: comments.php:20
+msgid "awesome folk have had something to say..."
+msgstr ""
+
+#: comments.php:44
+msgid "Comments are currently closed."
+msgstr ""
+
+#: footer.php:118
+msgid "Navigation"
+msgstr ""
+
+#: functions.php:115
+msgid "Front Navigation Menu"
+msgstr ""
+
+#: functions.php:116
+msgid "Inner Navigation Menu"
+msgstr ""
+
+#: index.php:37
+msgid "Show all"
+msgstr ""
+
+#: index.php:255
+msgid "Posted in -"
+msgstr ""
+
+#: index.php:261
+msgid "Read more"
+msgstr ""
+
+#: search.php:20
+msgid "Search Results:"
+msgstr ""
+
+#: search.php:48
+msgid "Oh, that did not go so well!"
+msgstr ""
+
+#: search.php:49
+msgid "Sorry, but no results were found. Please try the search again."
+msgstr ""
+
+#: searchform.php:3
+msgid "Enter your search term..."
+msgstr ""
+
+#: admin/classes/class.options_machine.php:508
+msgid "Last Backup :"
+msgstr ""
+
+#: admin/classes/class.options_machine.php:569
+msgid "Upload"
+msgstr ""
+
+#: admin/front-end/options.php:43 admin/front-end/options.php:67
+msgid "Save All Changes"
+msgstr ""
+
+#: admin/front-end/options.php:68
+msgid "Options Reset"
+msgstr ""
+
+#: admin/functions/functions.mediauploader.php:20
+msgid "Options"
+msgstr ""
+
+#: admin/functions/functions.mediauploader.php:210
+msgid "Gallery"
+msgstr ""
+
+#: admin/functions/functions.mediauploader.php:210
+msgid "Previously Uploaded"
+msgstr ""
+
+#: admin/functions/functions.options.php:110
+msgid "Home Settings"
+msgstr ""
+
+#: admin/functions/functions.options.php:113
+msgid "Homepage Layout Manager"
+msgstr ""
+
+#: admin/functions/functions.options.php:114
+msgid ""
+"Organize how you want the layout to appear on the homepage.<br /><br />You "
+"can choose to enable/disable sections via drag & drop, or re-order their "
+"stacking order on the homepage.<br /><br />NB; Once you have re-ordered or "
+"disabled, do not forget to adjust your Menu (Navigation) in the same way."
+msgstr ""
+
+#: admin/functions/functions.options.php:119
+msgid "Header Settings"
+msgstr ""
+
+#: admin/functions/functions.options.php:122
+msgid "Custom Logo"
+msgstr ""
+
+#: admin/functions/functions.options.php:123
+msgid "Upload your own logo to use on the site."
+msgstr ""
+
+#: admin/functions/functions.options.php:129
+msgid "Text Logo"
+msgstr ""
+
+#: admin/functions/functions.options.php:130
+msgid ""
+"If you do not have a logo you can choose to use a plain text logo instead."
+msgstr ""
+
+#: admin/functions/functions.options.php:135
+msgid "Uber Statement"
+msgstr ""
+
+#: admin/functions/functions.options.php:136
+msgid ""
+"You can add a short introduction to appear in your header (eg; Yes we do "
+"some awesome things).<br /><br /><em>*HTML tags are allowed.</em>"
+msgstr ""
+
+#: admin/functions/functions.options.php:141
+msgid "Background Image"
+msgstr ""
+
+#: admin/functions/functions.options.php:142
+msgid "Upload a background image to use in your header."
+msgstr ""
+
+#: admin/functions/functions.options.php:147
+msgid "Portfolio Settings"
+msgstr ""
+
+#: admin/functions/functions.options.php:150
+#: admin/functions/functions.options.php:171
+#: admin/functions/functions.options.php:193
+#: admin/functions/functions.options.php:221
+#: admin/functions/functions.options.php:243
+#: functions/widgets/widget-flickr.php:76
+msgid "Title"
+msgstr ""
+
+#: admin/functions/functions.options.php:151
+msgid ""
+"Please enter a title for the Portfolio section. (eg; Our work says a lot "
+"about us. Passionate about all we do.)"
+msgstr ""
+
+#: admin/functions/functions.options.php:156
+#: admin/functions/functions.options.php:177
+#: admin/functions/functions.options.php:199
+#: admin/functions/functions.options.php:227
+#: admin/functions/functions.options.php:249
+msgid "Overview"
+msgstr ""
+
+#: admin/functions/functions.options.php:157
+#: admin/functions/functions.options.php:178
+#: admin/functions/functions.options.php:200
+#: admin/functions/functions.options.php:228
+#: admin/functions/functions.options.php:250
+msgid ""
+"You can add a short overview to appear in this section.<br /><br /><em>*HTML "
+"tags are allowed.</em>"
+msgstr ""
+
+#: admin/functions/functions.options.php:162
+msgid "Button Title (Single Project)"
+msgstr ""
+
+#: admin/functions/functions.options.php:163
+msgid ""
+"Please enter a global name for your single project button (eg; Launch "
+"Project or Visit Website)"
+msgstr ""
+
+#: admin/functions/functions.options.php:168
+msgid "Service Settings"
+msgstr ""
+
+#: admin/functions/functions.options.php:172
+msgid ""
+"Please enter a title for the Services section. (eg; We provide a multitude "
+"of services. Everything is covered.)"
+msgstr ""
+
+#: admin/functions/functions.options.php:183
+msgid ""
+"Please select how many items you would like to show in the services section."
+msgstr ""
+
+#: admin/functions/functions.options.php:190
+msgid "News Settings"
+msgstr ""
+
+#: admin/functions/functions.options.php:194
+msgid ""
+"Please enter a title for the Latest News section. (eg; Hear what we have to "
+"say. It is all good.)"
+msgstr ""
+
+#: admin/functions/functions.options.php:205
+msgid ""
+"Please select how many items you would like to show in the latest news "
+"section."
+msgstr ""
+
+#: admin/functions/functions.options.php:212
+msgid "Comments Closed"
+msgstr ""
+
+#: admin/functions/functions.options.php:213
+msgid ""
+"Disable the 'Comments are currently closed.' message on Blog posts.<br />"
+"(This applies to Portfolio items also)"
+msgstr ""
+
+#: admin/functions/functions.options.php:218
+msgid "Team Settings"
+msgstr ""
+
+#: admin/functions/functions.options.php:222
+msgid ""
+"Please enter a title for the Meet the Team section. (eg; We have a team of "
+"truly awesome folk. You will love them.)"
+msgstr ""
+
+#: admin/functions/functions.options.php:233
+msgid ""
+"Please select how many items you would like to show in the meet the team "
+"section."
+msgstr ""
+
+#: admin/functions/functions.options.php:240
+msgid "Contact Settings"
+msgstr ""
+
+#: admin/functions/functions.options.php:244
+msgid "Please enter a title for the Contact section. (eg; Contact Us)"
+msgstr ""
+
+#: admin/functions/functions.options.php:255
+msgid "Contact Address"
+msgstr ""
+
+#: admin/functions/functions.options.php:256
+msgid ""
+"Please enter your company address (eg; 10 Columbus Circle, New York, NY "
+"10019, United States.)"
+msgstr ""
+
+#: admin/functions/functions.options.php:261
+msgid "Contact Telephone Number"
+msgstr ""
+
+#: admin/functions/functions.options.php:262
+msgid "Please enter your company telephone number (eg; (212) 823-6000.)"
+msgstr ""
+
+#: admin/functions/functions.options.php:267
+msgid "Fax Telephone Number"
+msgstr ""
+
+#: admin/functions/functions.options.php:268
+msgid "Please enter your company fax number (eg; (212) 823-6005.)"
+msgstr ""
+
+#: admin/functions/functions.options.php:273
+msgid "Contact Email"
+msgstr ""
+
+#: admin/functions/functions.options.php:274
+msgid ""
+"Please enter your company email address (eg; marc@guuthemes.com) This will "
+"also populate into your Contact Form."
+msgstr ""
+
+#: admin/functions/functions.options.php:279
+msgid "General Settings"
+msgstr ""
+
+#: admin/functions/functions.options.php:282
+msgid "Custom Favicon"
+msgstr ""
+
+#: admin/functions/functions.options.php:283
+msgid ""
+"Upload a 32px x 32px PNG/GIF image that will represent your website favicon."
+msgstr ""
+
+#: admin/functions/functions.options.php:289
+msgid "Footer Text"
+msgstr ""
+
+#: admin/functions/functions.options.php:290
+msgid ""
+"Please enter the text to appear at the bottom of your Footer (eg; All rights "
+"reserved. Designed by GuuThemes.)"
+msgstr ""
+
+#: admin/functions/functions.options.php:295
+msgid "Google Analytics Tracking Code"
+msgstr ""
+
+#: admin/functions/functions.options.php:296
+msgid ""
+"Paste your Google Analytics tracking code here (Remember you need to paste "
+"all the Javascript code, not just your ID). This will be added into the "
+"footer template of your theme.<br /><br />Do not have Google Analytics? "
+"Unsure what to paste in this box? Visit this <a href=\"http://www.google.com/"
+"analytics\">link</a> to find out more."
+msgstr ""
+
+#: admin/functions/functions.options.php:301
+msgid "Client Logos Title"
+msgstr ""
+
+#: admin/functions/functions.options.php:302
+msgid ""
+"Please enter a title for the Client Logos section. (eg; Folks we have worked "
+"with)"
+msgstr ""
+
+#: admin/functions/functions.options.php:307
+msgid "Client Logo One"
+msgstr ""
+
+#: admin/functions/functions.options.php:308
+msgid ""
+"Upload client logos to appear in the client logo section. Choose an image "
+"around 100px wide to achieve the best layout."
+msgstr ""
+
+#: admin/functions/functions.options.php:314
+#: admin/functions/functions.options.php:325
+#: admin/functions/functions.options.php:336
+#: admin/functions/functions.options.php:347
+#: admin/functions/functions.options.php:358
+msgid "Enter a URL for your logo to link to. <br />(ie; http://guuthemes.com)"
+msgstr ""
+
+#: admin/functions/functions.options.php:319
+msgid "Client Logo Two"
+msgstr ""
+
+#: admin/functions/functions.options.php:330
+msgid "Client Logo Three"
+msgstr ""
+
+#: admin/functions/functions.options.php:341
+msgid "Client Logo Four"
+msgstr ""
+
+#: admin/functions/functions.options.php:352
+msgid "Client Logo Five"
+msgstr ""
+
+#: admin/functions/functions.options.php:363 functions/theme-teammeta.php:24
+msgid "Twitter"
+msgstr ""
+
+#: admin/functions/functions.options.php:364 functions/theme-teammeta.php:25
+msgid "Enter your Twitter Profile URL <br />(ie; http://twitter.com/guuthemes)"
+msgstr ""
+
+#: admin/functions/functions.options.php:369 functions/theme-teammeta.php:31
+msgid "Facebook"
+msgstr ""
+
+#: admin/functions/functions.options.php:370 functions/theme-teammeta.php:32
+msgid ""
+"Enter your Facebook Profile URL <br />(ie; http://facebook.com/guuthemes)"
+msgstr ""
+
+#: admin/functions/functions.options.php:375 functions/theme-teammeta.php:66
+msgid "Dribbble"
+msgstr ""
+
+#: admin/functions/functions.options.php:376 functions/theme-teammeta.php:67
+msgid ""
+"Enter your Dribbble Profile URL <br />(ie; http://dribbble.com/guuthemes)"
+msgstr ""
+
+#: admin/functions/functions.options.php:381
+msgid "Forrst"
+msgstr ""
+
+#: admin/functions/functions.options.php:382
+msgid ""
+"Enter your Forrst Profile URL <br />(ie; http://forrst.com/people/guuthemes)"
+msgstr ""
+
+#: admin/functions/functions.options.php:387 functions/theme-teammeta.php:80
+msgid "Vimeo"
+msgstr ""
+
+#: admin/functions/functions.options.php:388 functions/theme-teammeta.php:81
+msgid "Enter your Vimeo Profile URL <br />(ie; http://vimeo.com/guuthemes)"
+msgstr ""
+
+#: admin/functions/functions.options.php:393 functions/theme-teammeta.php:73
+msgid "YouTube"
+msgstr ""
+
+#: admin/functions/functions.options.php:394 functions/theme-teammeta.php:74
+msgid ""
+"Enter your YouTube Profile URL <br />(ie; http://youtube.com/user/guuthemes)"
+msgstr ""
+
+#: admin/functions/functions.options.php:399 functions/theme-teammeta.php:59
+#: functions/widgets/widget-flickr.php:34
+msgid "Flickr"
+msgstr ""
+
+#: admin/functions/functions.options.php:400
+msgid ""
+"Enter your Flickr Profile URL <br />(ie; http://flickr.com/people/guuthemes)"
+msgstr ""
+
+#: admin/functions/functions.options.php:405 functions/theme-teammeta.php:38
+msgid "Linkedin"
+msgstr ""
+
+#: admin/functions/functions.options.php:406 functions/theme-teammeta.php:39
+msgid ""
+"Enter your Linkedin Profile URL <br />(ie; http://linkedin.com/in/guuthemes)"
+msgstr ""
+
+#: admin/functions/functions.options.php:411 functions/theme-teammeta.php:45
+msgid "Pinterest"
+msgstr ""
+
+#: admin/functions/functions.options.php:412 functions/theme-teammeta.php:46
+msgid ""
+"Enter your Pinterest Profile URL <br />(ie; http://pinterest.com/guuthemes)"
+msgstr ""
+
+#: admin/functions/functions.options.php:417
+msgid "Google +"
+msgstr ""
+
+#: admin/functions/functions.options.php:418 functions/theme-teammeta.php:53
+msgid ""
+"Enter your Google + Profile URL <br />(ie; http://plus.google.com/1030594445)"
+msgstr ""
+
+#: admin/functions/functions.options.php:423
+msgid "Tumblr"
+msgstr ""
+
+#: admin/functions/functions.options.php:424
+msgid "Enter your Tumblr Profile URL <br />(ie; http://guuthemes.tumblr.com)"
+msgstr ""
+
+#: admin/functions/functions.options.php:429
+msgid "Soundcloud"
+msgstr ""
+
+#: admin/functions/functions.options.php:430
+msgid ""
+"Enter your Soundcloud Profile URL <br />(ie; https://soundcloud.com/"
+"guuthemes)"
+msgstr ""
+
+#: admin/functions/functions.options.php:435
+msgid "Last FM"
+msgstr ""
+
+#: admin/functions/functions.options.php:436
+msgid ""
+"Enter your Last FM Profile URL <br />(ie; http://last.fm/user/guuthemes)"
+msgstr ""
+
+#: admin/functions/functions.options.php:441
+msgid "Styling Options"
+msgstr ""
+
+#: admin/functions/functions.options.php:444
+msgid "Text Logo Styling"
+msgstr ""
+
+#: admin/functions/functions.options.php:445
+msgid ""
+"Specify the text logo font properties (if you chose this option on the "
+"previous page)."
+msgstr ""
+
+#: admin/functions/functions.options.php:450
+msgid "Body Font Styling"
+msgstr ""
+
+#: admin/functions/functions.options.php:451
+msgid "Specify the body font properties."
+msgstr ""
+
+#: admin/functions/functions.options.php:456
+msgid "Headings Styling"
+msgstr ""
+
+#: admin/functions/functions.options.php:457
+msgid "Specify the h1, h2, h3, h4, h5 font properties."
+msgstr ""
+
+#: admin/functions/functions.options.php:462
+msgid "Uber-Statement Styling"
+msgstr ""
+
+#: admin/functions/functions.options.php:463
+msgid "Specify the uber-statement font properties."
+msgstr ""
+
+#: admin/functions/functions.options.php:468
+msgid "Accent Color"
+msgstr ""
+
+#: admin/functions/functions.options.php:469
+msgid ""
+"Pick an accent color for the theme. (This will affect Header Navigation, "
+"Quotes, Blockquotes, Pricing Tables, Tabs, Portfolio Navigation etc...)."
+msgstr ""
+
+#: admin/functions/functions.options.php:474
+msgid "Body Link Color"
+msgstr ""
+
+#: admin/functions/functions.options.php:475
+msgid "Pick an accent color for the main body links."
+msgstr ""
+
+#: admin/functions/functions.options.php:480
+msgid "Footer Link Color"
+msgstr ""
+
+#: admin/functions/functions.options.php:481
+msgid "Pick an accent color for the footer text links."
+msgstr ""
+
+#: admin/functions/functions.options.php:486
+msgid "Service Icons Color"
+msgstr ""
+
+#: admin/functions/functions.options.php:487
+msgid "Pick an accent color for the service icons."
+msgstr ""
+
+#: admin/functions/functions.options.php:492
+msgid "Team Member Social Icons Color"
+msgstr ""
+
+#: admin/functions/functions.options.php:493
+msgid "Pick an accent color for the team member social icons."
+msgstr ""
+
+#: admin/functions/functions.options.php:498
+msgid "Custom CSS"
+msgstr ""
+
+#: admin/functions/functions.options.php:499
+msgid "Quickly add some CSS to your theme by adding it to this block."
+msgstr ""
+
+#: admin/functions/functions.options.php:504
+msgid "Background Settings"
+msgstr ""
+
+#: admin/functions/functions.options.php:507
+msgid "Quotes (Top) Background Image"
+msgstr ""
+
+#: admin/functions/functions.options.php:508
+msgid "Upload a background image to use in your (top) quotes section."
+msgstr ""
+
+#: admin/functions/functions.options.php:513
+msgid "Logos Background Image"
+msgstr ""
+
+#: admin/functions/functions.options.php:514
+msgid "Upload a background image to use in your logo section."
+msgstr ""
+
+#: admin/functions/functions.options.php:519
+msgid "Quotes (Bottom) Background Image"
+msgstr ""
+
+#: admin/functions/functions.options.php:520
+msgid "Upload a background image to use in your (bottom) quotes section."
+msgstr ""
+
+#: admin/functions/functions.options.php:526
+msgid "Backup Options"
+msgstr ""
+
+#: admin/functions/functions.options.php:529
+msgid "Backup and Restore Options"
+msgstr ""
+
+#: admin/functions/functions.options.php:533
+msgid ""
+"You can use the two buttons below to backup your current options, and then "
+"restore it back at a later time. This is useful if you want to experiment on "
+"the options but would like to keep the old settings in case you need it back."
+msgstr ""
+
+#: admin/functions/functions.options.php:536
+msgid "Transfer Theme Options Data"
+msgstr ""
+
+#: admin/functions/functions.options.php:540
+msgid ""
+"You can tranfer the saved options data between different installs by copying "
+"the text inside the text box. To import data from another install, replace "
+"the data in the text box with the one from another install and click "
+"\"Import Options\".\n"
+"\t\t\t\t\t\t"
+msgstr ""
+
+#: functions/theme-functions.php:33
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: functions/theme-functions.php:43
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions/theme-functions.php:47
+msgid "(Edit)"
+msgstr ""
+
+#: functions/theme-functions.php:65
+msgid "Your Name (required)"
+msgstr ""
+
+#: functions/theme-functions.php:70
+msgid "Your Email (will not be published)"
+msgstr ""
+
+#: functions/theme-functions.php:75
+msgid "Your Website (optional)"
+msgstr ""
+
+#: functions/theme-functions.php:88
+msgid "Please leave your comment..."
+msgstr ""
+
+#: functions/theme-functions.php:93
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+
+#: functions/theme-functions.php:99
+#, php-format
+msgid ""
+"You are currently logged in<a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title="
+"\"Log out of this account\">Log out?</a>"
+msgstr ""
+
+#: functions/theme-functions.php:110
+msgid "Please leave a Comment..."
+msgstr ""
+
+#: functions/theme-functions.php:111
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: functions/theme-functions.php:112
+msgid "Cancel reply"
+msgstr ""
+
+#: functions/theme-functions.php:113
+msgid "Post Comment"
+msgstr ""
+
+#: functions/theme-portfoliometa.php:11
+msgid "Portfolio Detail Settings"
+msgstr ""
+
+#: functions/theme-portfoliometa.php:17
+msgid "Portfolio Type"
+msgstr ""
+
+#: functions/theme-portfoliometa.php:18
+msgid "Choose the type of portfolio you wish to display."
+msgstr ""
+
+#: functions/theme-portfoliometa.php:25
+msgid "Client Name"
+msgstr ""
+
+#: functions/theme-portfoliometa.php:26
+msgid "Client who this project was completed for"
+msgstr ""
+
+#: functions/theme-portfoliometa.php:32
+msgid "Project Date"
+msgstr ""
+
+#: functions/theme-portfoliometa.php:33
+msgid "What was the date of the completed project"
+msgstr ""
+
+#: functions/theme-portfoliometa.php:39
+msgid "Project Checklist"
+msgstr ""
+
+#: functions/theme-portfoliometa.php:40
+msgid ""
+"Create a checklist of skills used on the project<br />(ie; Branding, "
+"Responsive Design, Strategy Planning etc...)"
+msgstr ""
+
+#: functions/theme-portfoliometa.php:46
+msgid "Project URL"
+msgstr ""
+
+#: functions/theme-portfoliometa.php:47
+msgid "What is the URL for this project"
+msgstr ""
+
+#: functions/theme-portfoliometa.php:57
+msgid "Image Settings"
+msgstr ""
+
+#: functions/theme-portfoliometa.php:73
+msgid "Video Settings"
+msgstr ""
+
+#: functions/theme-portfoliometa.php:79
+msgid "Video Embed Code"
+msgstr ""
+
+#: functions/theme-portfoliometa.php:80
+msgid ""
+"If you are using video from somewhere like YouTube, Vimeo etc... Please "
+"paste the embed code here. Width should be at least 960px with any height."
+"<br><br>"
+msgstr ""
+
+#: functions/theme-portfoliometa.php:190
+msgid ""
+"Upload images to be used for this portfolio item (images should be at least "
+"960px wide).<br />Set a Featured Image (to the box on the right) that will "
+"be displayed on the homepage. Then upload the main images to be used in your "
+"showcase using the Upload button below."
+msgstr ""
+
+#: functions/theme-portfoliometa.php:228
+msgid "Create Featured Gallery"
+msgstr ""
+
+#: functions/theme-portfoliometa.php:236 functions/theme-portfoliometa.php:244
+msgid "Edit Featured Gallery"
+msgstr ""
+
+#: functions/theme-portfoliometa.php:281
+msgid "Save Featured Gallery"
+msgstr ""
+
+#: functions/theme-portfoliometa.php:291
+msgid "Saving..."
+msgstr ""
+
+#: functions/theme-portfoliometa.php:357 functions/theme-portfoliometa.php:359
+msgid "Edit Gallery"
+msgstr ""
+
+#: functions/theme-portfoliometa.php:475
+msgid "Insert"
+msgstr ""
+
+#: functions/theme-quotesmeta.php:11
+msgid "Quote Details"
+msgstr ""
+
+#: functions/theme-quotesmeta.php:17
+msgid "Quote"
+msgstr ""
+
+#: functions/theme-quotesmeta.php:18
+msgid "Enter a short quote or testimonial"
+msgstr ""
+
+#: functions/theme-quotesmeta.php:24
+msgid "Author Name"
+msgstr ""
+
+#: functions/theme-quotesmeta.php:25
+msgid "Enter the author name of the above quote <br />(ie; Orson Welles)"
+msgstr ""
+
+#: functions/theme-servicesmeta.php:11
+msgid "Service Details"
+msgstr ""
+
+#: functions/theme-servicesmeta.php:17
+msgid "Service Icon"
+msgstr ""
+
+#: functions/theme-servicesmeta.php:18
+msgid ""
+"Add an Icon for your service via Shortcode <br />Example: [icon name=icon-"
+"file]<br /><br />A list of all available icons can be found <a href=\"http://"
+"fortawesome.github.com/Font-Awesome\" target=\"_blank\">here</a>"
+msgstr ""
+
+#: functions/theme-teammeta.php:11
+msgid "Team Member Details"
+msgstr ""
+
+#: functions/theme-teammeta.php:17
+msgid "Member Email"
+msgstr ""
+
+#: functions/theme-teammeta.php:18
+msgid "Enter an email for the Team Member <br />(ie; marc@guuthemes.com)"
+msgstr ""
+
+#: functions/theme-teammeta.php:52
+msgid "Google Plus"
+msgstr ""
+
+#: functions/theme-teammeta.php:60
+msgid "Enter your Flickr Profile URL <br />(ie; http://flickr.com/guuthemes)"
+msgstr ""
+
+#: functions/custom-post-types/portfolio-type.php:12
+msgid "Portfolio"
+msgstr ""
+
+#: functions/custom-post-types/portfolio-type.php:13
+#: functions/custom-post-types/quotes-type.php:13
+#: functions/custom-post-types/services-type.php:13
+#: functions/custom-post-types/team-type.php:13
+msgid "Add New"
+msgstr ""
+
+#: functions/custom-post-types/portfolio-type.php:14
+msgid "Add New Portfolio Item"
+msgstr ""
+
+#: functions/custom-post-types/portfolio-type.php:15
+msgid "Edit Portfolio Item"
+msgstr ""
+
+#: functions/custom-post-types/portfolio-type.php:16
+msgid "New Portfolio Item"
+msgstr ""
+
+#: functions/custom-post-types/portfolio-type.php:17
+msgid "View Portfolio Item"
+msgstr ""
+
+#: functions/custom-post-types/portfolio-type.php:18
+msgid "Search Portfolio Items"
+msgstr ""
+
+#: functions/custom-post-types/portfolio-type.php:19
+#: functions/custom-post-types/quotes-type.php:19
+#: functions/custom-post-types/services-type.php:19
+#: functions/custom-post-types/team-type.php:19
+msgid "No items found"
+msgstr ""
+
+#: functions/custom-post-types/portfolio-type.php:20
+#: functions/custom-post-types/quotes-type.php:20
+#: functions/custom-post-types/services-type.php:20
+#: functions/custom-post-types/team-type.php:20
+msgid "No items found in Trash"
+msgstr ""
+
+#: functions/custom-post-types/portfolio-type.php:46
+msgid "Things to remember when adding a Portfolio item:"
+msgstr ""
+
+#: functions/custom-post-types/portfolio-type.php:48
+msgid "Give the item a title. The title will be used as the item's headline."
+msgstr ""
+
+#: functions/custom-post-types/portfolio-type.php:49
+msgid ""
+"You can choose to insert either single images, image slideshow, or video, "
+"below."
+msgstr ""
+
+#: functions/custom-post-types/portfolio-type.php:50
+msgid ""
+"Enter your portfolio item overview into the Visual or HTML area. The text "
+"will appear for your project overview."
+msgstr ""
+
+#: functions/custom-post-types/portfolio-type.php:51
+msgid ""
+"Choose (or first create) a Project Type. You will need to use these to "
+"enable the filterable Portfolio option."
+msgstr ""
+
+#: functions/custom-post-types/portfolio-type.php:55
+msgid ""
+"A list of all Portfolio items appear below. To edit an item, click on the "
+"items's title."
+msgstr ""
+
+#: functions/custom-post-types/portfolio-type.php:97
+msgid "Sort Portfolio Items"
+msgstr ""
+
+#: functions/custom-post-types/portfolio-type.php:98
+msgid ""
+"Click, drag, re-order. Repeat as neccessary. Portfolio item at the top will "
+"appear first on your page."
+msgstr ""
+
+#: functions/custom-post-types/quotes-type.php:12
+msgid "Quotes"
+msgstr ""
+
+#: functions/custom-post-types/quotes-type.php:14
+msgid "Add New Quote"
+msgstr ""
+
+#: functions/custom-post-types/quotes-type.php:15
+msgid "Edit Quote Item"
+msgstr ""
+
+#: functions/custom-post-types/quotes-type.php:16
+msgid "New Quote Item"
+msgstr ""
+
+#: functions/custom-post-types/quotes-type.php:17
+msgid "View Quote Item"
+msgstr ""
+
+#: functions/custom-post-types/quotes-type.php:18
+msgid "Search Quote Items"
+msgstr ""
+
+#: functions/custom-post-types/quotes-type.php:48
+msgid "Things to remember when adding a Quote:"
+msgstr ""
+
+#: functions/custom-post-types/quotes-type.php:50
+msgid ""
+"Give the Quote a reference name. This will not appear on your site, and is "
+"just for reference purposes (ie; Quote from Jules Verne)."
+msgstr ""
+
+#: functions/custom-post-types/quotes-type.php:51
+msgid "Enter a short quote or testimonial."
+msgstr ""
+
+#: functions/custom-post-types/quotes-type.php:52
+msgid "Enter the name of the quote author."
+msgstr ""
+
+#: functions/custom-post-types/quotes-type.php:56
+msgid ""
+"A list of all quotes appear below. To edit a quote, click on the quote "
+"Reference Name."
+msgstr ""
+
+#: functions/custom-post-types/quotes-type.php:101
+msgid "Sort Quote Items"
+msgstr ""
+
+#: functions/custom-post-types/quotes-type.php:102
+msgid ""
+"Click, drag, re-order. Repeat as neccessary. Quote item at the top will "
+"appear first on your page."
+msgstr ""
+
+#: functions/custom-post-types/services-type.php:12
+msgid "Services"
+msgstr ""
+
+#: functions/custom-post-types/services-type.php:14
+msgid "Add New Service"
+msgstr ""
+
+#: functions/custom-post-types/services-type.php:15
+msgid "Edit Service Item"
+msgstr ""
+
+#: functions/custom-post-types/services-type.php:16
+msgid "New Service Item"
+msgstr ""
+
+#: functions/custom-post-types/services-type.php:17
+msgid "View Service Item"
+msgstr ""
+
+#: functions/custom-post-types/services-type.php:18
+msgid "Search Service Items"
+msgstr ""
+
+#: functions/custom-post-types/services-type.php:47
+msgid "Things to remember when adding a Service:"
+msgstr ""
+
+#: functions/custom-post-types/services-type.php:49
+msgid ""
+"Give the Service a title. (ie; Website Development or Development from the "
+"best in the game)."
+msgstr ""
+
+#: functions/custom-post-types/services-type.php:50
+msgid "Add a short excerpt to describe your service."
+msgstr ""
+
+#: functions/custom-post-types/services-type.php:54
+msgid ""
+"A list of all services items appear below. To edit an item, click on the "
+"items title."
+msgstr ""
+
+#: functions/custom-post-types/services-type.php:94
+msgid "Sort Service Items"
+msgstr ""
+
+#: functions/custom-post-types/services-type.php:95
+msgid ""
+"Click, drag, re-order. Repeat as neccessary. Service item at the top will "
+"appear first on your page."
+msgstr ""
+
+#: functions/custom-post-types/team-type.php:12
+msgid "Team"
+msgstr ""
+
+#: functions/custom-post-types/team-type.php:14
+msgid "Add New Team Member"
+msgstr ""
+
+#: functions/custom-post-types/team-type.php:15
+msgid "Edit Team Member"
+msgstr ""
+
+#: functions/custom-post-types/team-type.php:16
+msgid "New Team Member"
+msgstr ""
+
+#: functions/custom-post-types/team-type.php:17
+msgid "View Team Member"
+msgstr ""
+
+#: functions/custom-post-types/team-type.php:18
+msgid "Search Team Members"
+msgstr ""
+
+#: functions/custom-post-types/team-type.php:48
+msgid "Things to remember when adding a Team Member:"
+msgstr ""
+
+#: functions/custom-post-types/team-type.php:50
+msgid "Add your Team Member name. (ie; Lana Del Rey)."
+msgstr ""
+
+#: functions/custom-post-types/team-type.php:51
+msgid "Add a short description (Bio) for your member."
+msgstr ""
+
+#: functions/custom-post-types/team-type.php:52
+msgid ""
+"Add a featured image (headshot possibly) to appear above your team member."
+msgstr ""
+
+#: functions/custom-post-types/team-type.php:53
+msgid "Add a Job Title for your member. (ie; The Boss or Managing Director)."
+msgstr ""
+
+#: functions/custom-post-types/team-type.php:54
+msgid ""
+"Add any Social Networks your Team Member belongs to. (ie; Twitter or "
+"Linkedin)."
+msgstr ""
+
+#: functions/custom-post-types/team-type.php:58
+msgid ""
+"A list of all team members appear below. To edit a member, click on the Team "
+"Member name."
+msgstr ""
+
+#: functions/custom-post-types/team-type.php:67
+msgid "Team Member Image"
+msgstr ""
+
+#: functions/custom-post-types/team-type.php:111
+msgid "Sort Team Members"
+msgstr ""
+
+#: functions/custom-post-types/team-type.php:112
+msgid ""
+"Click, drag, re-order. Repeat as neccessary. Team Member at the top will "
+"appear first on your page."
+msgstr ""
+
+#: functions/widgets/widget-flickr.php:20
+msgid "Display your Flickr images"
+msgstr ""
+
+#: functions/widgets/widget-flickr.php:83
+msgid "Flickr ID"
+msgstr ""
+
+#: functions/widgets/widget-flickr.php:90
+msgid "Number of photos"
+msgstr ""
+
+#: functions/widgets/widget-flickr.php:108
+msgid "Type (user or group)"
+msgstr ""
+
+#: functions/widgets/widget-flickr.php:118
+msgid "Show (random or most recent)"
+msgstr ""
