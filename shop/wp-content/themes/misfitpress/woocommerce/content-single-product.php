@@ -58,20 +58,27 @@ foreach ( $terms as $term ) $categories[] = $term->slug;
 			 * @hooked woocommerce_template_single_sharing - 50
 			 */
 
-			if ( is_product_category('remarkable-misfit') || in_array( 'remarkable-misfit', $categories ) ) {
+			if ( 
+
+				is_product_category('remarkable-misfit') || 
+				is_product_category('misfit-themes') || 
+				is_product_category('wolftree') || 
+				in_array( 'remarkable-misfit', $categories )) {
+		 		
 				remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+
 			}
 
 			do_action( 'woocommerce_single_product_summary' );
 		?>
 		
-	<div class="product-text">
-		<?php echo get_post_meta( $thePostID, 'paragraphdesc', true ); ?>
-	</div>
-	
-	<div class="images edited-img">
-		<?php do_action( 'woocommerce_product_thumbnails' ); ?>
-	</div>
+		<div class="product-text">
+			<?php echo get_post_meta( $thePostID, 'paragraphdesc', true ); ?>
+		</div>
+		
+		<div class="images edited-img">
+			<?php do_action( 'woocommerce_product_thumbnails' ); ?>
+		</div>
 
 	</div><!-- .summary -->
 

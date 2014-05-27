@@ -137,6 +137,27 @@ a:hover {
 		color: #FFCC00;
 	}
 
+
+
+/*-------------------------------------------------------------------------------------------*/
+
+/* Product Single */
+
+/*-------------------------------------------------------------------------------------------*/
+
+#tab-description ul {
+    padding-left: 20px;
+}
+
+#tab-description li {
+    font-family: 'Montaga',serif;
+    font-size: 14px;
+    line-height: 1.8;
+    list-style: circle inside;
+}
+
+
+
 /* Colorbox */
 
 #cboxClose {

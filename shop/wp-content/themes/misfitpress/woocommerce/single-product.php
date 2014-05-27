@@ -17,7 +17,16 @@ foreach ( $terms as $term ) $categories[] = $term->slug;
 
 ?>
 
-	<?php if ( is_product_category('misfit-journal') || in_array( 'misfit-journal', $categories ) ) { ?>
+	<?php if ( 
+
+		is_product_category('misfit-journal') || 
+		is_product_category('misfit-themes') || 
+		is_product_category('wolftree') || 
+		in_array( 'misfit-journal', $categories ) ||
+		in_array( 'misfit-themes', $categories ) ||
+		in_array( 'wolftree', $categories ) 
+
+	) { ?>
 
 		<?php get_header('misfit-journal'); ?>
 
