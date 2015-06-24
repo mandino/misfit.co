@@ -4254,8 +4254,8 @@ a.cn-nav-next{
 
 .tiltview a {
 	outline: 1px solid transparent;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
+	/*-webkit-backface-visibility: hidden;*/
+	/*backface-visibility: hidden;*/
 }
 
 .tiltview a,

@@ -90,6 +90,8 @@
 			</div>
 		</li>
 		
+		<!--
+		
 		<li>
 			<div class="description">
 				<h2>The Misfit Anthology: 2015</h2>
@@ -104,6 +106,9 @@
 				</a>
 			</div>
 		</li>
+		
+		-->
+		
 	</ol>
 </div>
 
