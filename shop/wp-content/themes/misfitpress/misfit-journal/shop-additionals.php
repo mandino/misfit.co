@@ -89,6 +89,21 @@
 				</a>
 			</div>
 		</li>
+		
+		<li>
+			<div class="description">
+				<h2>The Misfit Anthology: 2015</h2>
+				<p>The Misfit Anthology 2015 is a collection of the finest creative work Misfit Press has encountered over the past eighteen months. There is prose, poetry, photography, visual art, and everything in between.</p>
+			</div>
+			<div class="tiltview col">
+				<a href="/shop/product/the-misfit-anthology-2015">
+					<img src="<?php bloginfo ('template_url'); ?>/js/timthumb.php?src=/shop/wp-content/uploads/2015/06/Store_2.jpg&w=500&h=500"/>
+				</a>
+				<a href="/shop/product/the-misfit-anthology-2015">
+					<img src="<?php bloginfo ('template_url'); ?>/js/timthumb.php?src=/shop/wp-content/uploads/2015/06/MisfitBooks_20.jpg&w=500&h=500"/>
+				</a>
+			</div>
+		</li>
 	</ol>
 </div>
 
@@ -240,6 +255,31 @@
 						
 						<div class="bigview">
 							<a href="/shop/product/bundle-of-10-the-life-and-times-of-a-remarkable-misfit"><i class="fa fa-chevron-right"></i></a>
+						</div>
+						
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="portfoliocontainer mobile" style="display: none;">
+				<div class="portfolio-item">
+					<div class="portfolio-shade"></div>
+					<a href="#"></a>
+					<div class="portimg" style="background-image: url('<?php bloginfo ('template_url'); ?>/js/timthumb.php?src=/shop/wp-content/uploads/2015/06/Store_2.jpg&w=500&h=500');"></div>
+					<h3>The Misfit Anthology: 2015</h3>
+					<h1>Available Now</h1>
+					
+					<div class="overlay">
+						<div class="smallview">
+							<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fthe-misfit-anthology-2015"><i class="fa fa-facebook"></i></a>
+							<a target="_blank" href="https://twitter.com/intent/tweet?hashtags=misfitjournal&text=The%20Misfit%20Anthology%3A%202015&url=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fthe-misfit-anthology-2015"><i class="fa fa-twitter"></i></a>
+							<a target="_blank" href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fthe-misfit-anthology-2015&media=http%3A%2F%2Fmisfit.co%2Fshop%2Fwp-content%2Fuploads%2F2015%2F06%2FStore_2.jpg&description=The%20Misfit%20Anthology%3A%202015"><i class="fa fa-pinterest"></i></a>
+							<a href="/shop/product/the-misfit-anthology-2015"><i class="fa fa-shopping-cart"></i></a>
+						</div>
+						
+						<div class="bigview">
+							<a href="/shop/product/the-misfit-anthology-2015"><i class="fa fa-chevron-right"></i></a>
 						</div>
 						
 						<div class="clear"></div>

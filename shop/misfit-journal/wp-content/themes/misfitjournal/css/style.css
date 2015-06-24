@@ -1163,6 +1163,9 @@ a.subcrmob {
 .summary.entry-summary h1.product_title {
 	float: left;
 	color: #000;
+	text-align: left;
+	width: 85%;
+	margin-bottom: 20px;
 }
 
 .summary.entry-summary .price {
@@ -1176,6 +1179,7 @@ a.subcrmob {
 }
 
 .price-offer {
+	margin-bottom: 10px;
 	overflow: hidden;
 }
 
@@ -1680,13 +1684,7 @@ p.price .amount {
     margin-top: 30px;
 }
 
-
-
-/*-------------------------------------------------------------------------------------------*/
-
 /* Single Product Page */
-
-/*-------------------------------------------------------------------------------------------*/
 
 .cart-quantity {
 	display: block;
@@ -1709,17 +1707,6 @@ p.price .amount {
 	padding: 0;
 	color: #000000;
 	font-size: 16px;
-}
-
-#tab-description ul {
-    padding-left: 20px;
-}
-
-#tab-description li {
-    font-family: 'Montaga',serif;
-    font-size: 14px;
-    line-height: 1.8;
-    list-style: circle inside;
 }
 
 /* My Account */
@@ -3579,6 +3566,10 @@ body.page-template-template-submit-php .pagecontainer {
 
 /*=============================>>>>>>>> Shop Page <<<<<<<<<<<<<<======================== */
 
+.displayonly-mobile {
+	display: none;
+}
+
 body.misfit-commerce.shop-commerce,
 body.misfit-commerce.product-single {
 	background: none repeat scroll 0 0 #FFFFFF;
@@ -3614,16 +3605,19 @@ body.misfit-commerce.product-single {
 
 .tile-gallery .portfoliocontainer.two .portfolio-item,
 .tile-gallery .portfoliocontainer.three .portfolio-item {
-	height: 255px;
+	height: 400px;
 }
-	.tile-gallery .portfoliocontainer.three .portfolio-item {
-		margin-bottom: 0;
-	}
 
-.tile-gallery .portfoliocontainer.four .portfolio-item,
 .tile-gallery .portfoliocontainer.five .portfolio-item,
 .tile-gallery .portfoliocontainer.six .portfolio-item {
-	height: 300px;
+    height: 535px;
+}
+
+.tile-wrapper h2 {
+	font-family: 'bodegasans_mediumregular';
+	font-size: 45px;
+	margin-bottom: 15px;
+	margin-top: 40px;
 }
 
 /*=============================>>>>>>>> Circle Hover Effect <<<<<<<<<<<<<<======================== */
@@ -4944,9 +4938,9 @@ a.cn-nav-next{
 
 @media screen and (max-width: 33.75em) {
 	.slideshow > nav span {
-		height: 30px;
+		height: 20px;
 		margin: 0 10px;
-		width: 45px;
+		width: 35px;
 	}
 }
 
