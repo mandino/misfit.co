@@ -1,75 +1,379 @@
-=== Sucuri Security - SiteCheck Malware Scanner ===
-Contributors: dd@sucuri.net, dremeda
+=== Sucuri Security - Auditing, Malware Scanner and Hardening ===
+Contributors: dd@sucuri.net
 Donate Link: http://sitecheck.sucuri.net
-Tags: malware, security, scan, spam, virus, sucuri, WordPress,  
+Tags: malware, security, firewall, scan, spam, virus, sucuri, protection,WordPress Security, Login Security,Security Auditing,File Integrity,htaccess,phishing,backdoors,SQL Injection, RFI, LFI, XSS, CSRF,
 Requires at least:3.2
-Stable tag:1.5.4
-Tested up to: 3.8
+Stable tag:1.7.1
+Tested up to: 4.0
 
-The Sucuri Security - SiteCheck Malware Scanner is a security plugin enables you to scan your WordPress site using Sucuri SiteCheck for security and malware issues, and also verifies the security integrity of your core files right in your dashboard. It also includes post-hack security ions to help you reset passwords and secret keys in case it has been already hacked, or infected with malware.
+The Sucuri WordPress Security plugin is the best security toolset for security integrity monitoring, activity monitoring and malware detection. It’s a complementary toolset to your existing security posture.
+
 
 == Description ==
 
-Sucuri SiteCheck will check your site for malware, spam, blacklisting and other security issues like .htaccess redirects, hidden eval code, etc. The best thing about it is it's completely free.
 
-You can also check for malware, blacklisting, and overall security status by scanning for free at <a href="http://sitecheck.sucuri.net">SiteCheck.Sucuri.net</a>.
+Sucuri Inc is a globally recognized authority in all matters related to
+website security, with specialization in WordPress Security. 
 
-Sucuri SiteCheck detects various types of malware, SPAM injections, website errors, disabled sites, database connection issues and code anomalies that require special attention to include:
+The Sucuri Security WordPress Security plugin is free to all WordPress users.
+It is a security suite meant to complement your existing security posture. It
+offers it’s users four key security features for their website, each designed
+to have a positive affect on their security posture:
 
-* Obfuscated JavaScript injections
-* Cross Site Scripting (XSS)
-* Website Defacements
-* Hidden & Malicious iFrames
-* PHP Mailers
-* Phishing Attempts
-* Malicious Redirects
-* Anomalies
-* Drive-by-Downloads
-* IP Cloaking
-* Social Engineering Attacks
+<ol>
+<li>Security Activity Auditing</li>
+<li>File Integrity Monitoring</li>
+<li>Remote Malware Scanning</li>
+<li>Blacklist Monitoring</li>
+<li>Effective Security Hardening</li>
+<li>Post-Hack Security Actions</li>
+<li>Security Notifications</li>
+<li>Website Firewall (add on)</li>
+</ol>
 
 
-There are a number of blacklisting authorities that monitor for malware, SPAM, and phishing attempts. Sucuri SiteCheck leverages the APIs for these authorities to check your website blacklisting status:
+= Security Activity Monitoring =
 
-* Sucuri
-* Google Safe Browsing
-* Norton
-* AVG
-* Phish Tank (Phishing Specifically)
-* ESET
-* McAfee SiteAdvisor
-* Yandex
+This is perhaps the most underutilized security function. It’s the act of
+monitoring all security related events within your WordPress install. The
+challenge is, what makes up a security event. In the eyes of Sucuri, any
+change that occurs within the application could be categorized as a security
+event, as such we try to record it. 
 
-We augment the SiteCheck Malware Scanner with various. 1-click hardening options. Some of these options do not provide a high level of security, but collectively these options do lower your risk floor:
+This is important because it allows you, the website owner, the ability keep a
+good eye on the various changes occurring within your environment. Who is
+logging in? What changes are being made? 
 
-* Verify WordPress Version
-* Protect Uploads Directory
-* Restrict wp-content Access
-* Restrict wp-includes Access
-* Verify PHP Version
-* Disable the theme and plugin editors
+This feature is logging all activity to the Sucuri cloud, for safe keeping.
+This ensures that an attacker is not able to wipe your forensic data and
+prevent further security analysis after a compromise. If an attacker is able
+to bypass your security controls, your security logs will be kept safe within
+the Sucuri Security Operations Center (SOC). 
 
-On the newest versions of the plugin we also added an option to verify all WordPress core files for changes,
-which can be useful to detect hidden backdoors.
+This feature is particularly important to website / system administrators and
+security experts looking to understand what is going on with their website and
+when it’s happening.
 
-Note that if your site is compromised and you need urgent help, you can leverage the 
-Sucuri plans here: http://sucuri.net (even if our free options are not finding
-the compromise on your site).
+
+= Security File Integrity Monitoring =
+
+Security File Integrity Monitoring has been fundamental to the world of
+security. It’s the act of comparing a known good with the current state. If
+the current state differs from the known good, you know you have a problem.
+This is the basis of a lot of host Intrusion detection systems. It’s what we
+have built into the plugin. 
+
+It will create a <strong>known good</strong> the minute the plugin is
+installed. This will be of all the directories at the root of the install,
+this includes plugins, themes and core files. 
+
+
+= Remote Security Malware Scanning =
+
+This feature is powered by our very powerful scanning engine, found on our
+free security scanner - <a href="http://sitecheck.sucuri.net">SiteCheck. It’s
+important to take some time to <a
+href="http://blog.sucuri.net/2012/10/ask-sucuri-how-does-sitecheck-work.html">understand
+how this scanner works</a>. 
+
+There are limitations with the way this scanner works, you can find more info
+on that in the FAQ section.
+
+
+= Security Blacklist Monitoring =
+
+Another very interesting feature of the Security Malware Scanner is that it
+incorporates various blacklist engines. Security blacklist engines include the
+following:
+
+<ol>
+<li>Sucuri Labs</li>
+<li>Google Safe Browsing</li>
+<li>Norton</li>
+<li>AVG</li>
+<li>Phish Tank</li>
+<li>ESET</li>
+<li>McAfee Site Advisor</li>
+<li>Yandex</li>
+<li>SpamHaus</li>
+<li>Bitdefender</li>
+</ol>
+
+These are some of the largest blacklisting entities, each having the ability
+to directly impact your brands online reputation. By synchronize with their
+environments we’re able to tell you, upon scan, whether any of them are
+negatively flagging your website with a security related issue. 
+
+If they do, then via our Website AntiVirus product, we’re able to help you get
+off the their security blacklist. 
+
+
+= Effective Security Hardening =
+
+It’s easy to get lost in the world of security hardening. At Sucuri we clean
+100’s of websites a day, many with the various security hardening
+configurations you find in various WordPress Security presentations. In this
+section, we add those that we feel to be most effective, and that complement
+the entire Sucuri suite of products. 
+
+
+= Post-Hack Security Actions =
+
+Regardless of how good your security posture is, sometimes it’s impossible to
+prevent the inevitable. When this happens, we’ve included a section to help
+you walk through the three key things you should do after a compromise. 
+
+
+= Security Notifications =
+
+Having all these security features would be useless unless you were notified
+of the issues. This is why we have made available security notifications. We
+have also expanded the various security related events, to provide website
+owners more flexibility in regards to what they want to know about. As a
+website owner, you have the option to make these security alerts as quiet or
+noisy as you would like. 
+
+
+= Website Firewall (add on) =
+
+This is by far the coolest security feature Sucuri has to offer everyday
+website owners. It’s an enterprise grade Website Firewall known as CloudProxy.
+It is designed to give you the best security protection any website can hope
+for. It protects your website from a variety of website attacks and security
+events to include:
+
+<ol>
+<li>Denial of Service (DOS / DDOS) Attacks</li>
+<li>Exploitation of Software Vulnerabilities</li>
+<li>Zero Day Disclosure Patches</li>
+<li>Brute Force Attacks against your Access Control Mechanisms</li>
+</ol>
+
+This is coupled with a number of features like:
+
+<ol>
+<li>Performance Optimization</li>
+<li>Advanced Access Control Features</li>
+<li>Failover and Redundancy</li>
+</ol>
+
+This is not included as a <strong>Free</strong> option to the plugin, but is
+integrated so that if purchased you are able to activate.
+
+The Sucuri Security WordPress Security plugin is built by the team that is
+known for their proactive approach to security. It is built using intelligence
+gathered from thousands upon thousands of remediation cases, millions of
+unique domain scans and 10’s of millions of website security attack blocks. 
 
 
 == Installation  ==
 
-1. Download the plugin.
-1. Go to the WordPress Plugin menu and activate it.
-1. That's it!
+The installation of the Sucuri Security WordPress Security plugin is very
+simple and straight forward. <a
+href="https://sucuri.net/wordpress-security-plugin-installation">A detailed
+breakdown of the process is available, including images,</a> below however we
+outline the bare minimum steps.
+
+To install Sucuri Security and complement your Security posture: 
+
+
+1. You will want to log into your WordPress administration panel - (e.g.,
+http://yourdomain/wp-admin)
+
+2. Navigate to <strong>Plugins Menu</strong> option in your WordPress
+administration panel
+
+3. Select <strong>Add New</strong>
+
+4. Type <strong>Sucuri</strong> in the <strong>Search</strong> box, and click
+<strong>Search</strong> plugins.
+
+5. The first option you get should be for <strong>Sucuri Security - Auditing,
+Malware Scanner and Hardening</strong>
+
+6. Select <strong>Install Now</strong>
+
+7. Now choose to <strong>Activate</strong> the plugin.
+
+8. Once activated, you will need to create an API key, this is done
+automatically for you. Simply click on <strong>Generate API Key for
+XXXXXX</strong>
+
+9. Once the API key is generated the page will redirect you to your dashboard
+and the plugin is automatically configured for you. 
+
+
+To configure the Sucuri WordPress Security plugin for your specific Security
+needs: 
+
+1. Navigate to the <strong>Sucuri Security</strong> menu option (left hand
+side).
+
+2. Hover or click on the name.
+
+3. Click on <strong>Settings</strong>
+
+The <strong>Settings</strong> page allows you to configure the website to your
+preferred security needs. Some of it’s features include changing the email
+notifications, via the <strong>notification settings</strong> tab or disabling
+integrity checking. We encourage you to visit this section and tune your
+security needs as you see fit. 
+
+
+== FAQ ==
+
+= If I install the Sucuri Security plugin do I get a Sucuri account? =
+
+No, this is a free plugin that we offer at no charge. It does not mean you get a free account.
+
+
+= If I have the premium plugin, do I need the Free plugin? =
+
+The free plugin will be replacing the Premium plugin in the coming weeks.
+Eventually, there will only be one plugin. If you have the premium plugin, and
+install the free version, the free version will overwrite the premium version.
+
+= Do I still need Sucuri’s products if I have this plugin? =
+
+Yes. This plugin compliments your existing security toolsets. It is not
+designed to replace the Sucuri AntiVirus or Firewall products. 
+
+= Where do I get support for this plugin? =
+
+The best place is to engage us via the <a
+href=“https://wordpress.org/support/plugin/sucuri-scanner”>Support Forum. If
+you are a client, <a href=“https://support.sucuri.net/support/?new”you can
+submit a ticket here</a>.
+
+= Does your plugin conflict with WordFence? =
+
+The plugin does not, but there might be issues with our scanners. If you get
+an “Unable to Properly Scan Your Site” It’s likely because the WordFence
+plugin is blocking our scanner as an invalid crawler. 
+
+You would have to white list our IP address on the WordFence dashboard.
+
+
+= What are the Remote Security Malware Scanning Limitations? =
+
+Because the security malware scanner is remote, it is unable to see things
+that are on the server but that are not displaying on the browser. If you are
+interested in this, we encourage you to subscribe to our Website AntiVirus
+product. 
+
+This issues includes things like Phishing pages, Backdoors, Mailer Scripts,
+etc… 
+
+= Your plugin didn’t detect this malware? =
+
+This happens, reference the Remote scanner limitations above. This should not
+be confused with our Website AntiVirus product. If you have malware, and you
+are a client, submit a ticket so that <a
+href=“https://support.sucuri.net/support/?new&mremoval”>we can help you get
+clean.</a> 
+
+If you are not a client, and you want to share what you have found please send
+it to <a href=“mailto:labs@sucuri.net”>labs@sucuri.net</a>. 
+
+The plugin is not performing application level malware / security scanning so
+this is not uncommon. 
+
+= Is it free to enable the Website Firewall option? =
+
+No, it is not. To enable you must subscribe to the <a
+href=“https://sucuri.net/website-firewall-signup”>Website Firewall
+service</a>.
+
+= Will this plugin impact the performance of my website? =
+
+No, it will not.
+
+= Do the logs get stored to my database? =
+
+No, it does not. 
+
+= Are there any issues installing your plugin with any hosts? =
+
+Not that we are aware of.
+
+
 
 
 == Changelog ==
 
+= 1.7.1 =
+* Fixed remote scanning that was not loading automatically on some installs.
+
+= 1.7.0 =
+* Added Hardening option to remove error log files
+* Bug fixes on some new registrations.
+* Changed format of the internal logs to json.
+
+= 1.6.9 =
+* Multiple bug fixes (as reported on the support forums).
+* Added heartbeat for the file scans.
+* Code cleanup.
+
+= 1.6.8 =
+* Fixing interface.
+
+= 1.6.7 =
+* Added Support for integrity checks on i18n installations.
+* Fixed the setting change bug.
+
+= 1.6.6 =
+* Internal code cleanup and re-organization.
+* More white lists for the integrity checks.
+* Additional settings to customize some of the warnings.
+
+= 1.6.5 =
+* Fixed integrity checking display.
+
+= 1.6.4 =
+* Fixed API generation bug.
+
+= 1.6.3 = 
+* Added proper brute force alerts. 
+* Added option to restrict number of emails. 
+* Added more description to the emails. 
+* Added a list of failed login attempts inside the last login tab. 
+
+= 1.6.2 =
+* Setting a maximum number of emails per hour.
+* Fixing typos.
+
+
+= 1.6.1 =
+* Initial release with new auditing options.
+
+= 1.6.0 =
+* A new dashboard to welcome users to the new features of the plugin.
+* Overall design of the interface of all the pages were modified.
+* SiteCheck scanner results were filled with more information.
+* SiteCheck scanner results markers when the site is infected/clean.
+* System Info page were simplified with tabulation containers.
+* Integrity check for administrator accounts was optimized.
+* Integrity check for outdated plugins/themes was optimized and merged.
+* IPv6 support in last logins statistics.
+
+
+= 1.5.7 =
+* WordPress 3.9 compatibility
+
+= 1.5.6 =
+* Added IPv6 support.
+* Fixed links and messaging.
+
+= 1.5.5 = 
+* Added list of logged in users.
+* Added system page.
+* Change the integrity checking to use WP API.
+
 = 1.5.4 = Bug fixes.
 
 = 1.5.2 =
-* Adding additional information about .htaccess hacks and the server environment.
+* Adding additional information about .htaccess hacks and the server
+* environment.
 
 = 1.5.0 =
 * Fixing last login and giving better warns on permission errors.
@@ -91,7 +395,8 @@ the compromise on your site).
 * Fixing some issues on the last login and allowing the option to disable it.
 
 = 1.4.4 =
-* Small bug fixes + forcing a re-scan on every scan attempt (not using the cache anymore).
+* Small bug fixes + forcing a re-scan on every scan attempt (not using the
+* cache anymore).
 
 = 1.4.3 =
 * Fixing a few PHP warnings.
@@ -149,6 +454,7 @@ the compromise on your site).
 
 = 1.1.1 = 
  * First public release. 
+
 
 == Credits ==
 

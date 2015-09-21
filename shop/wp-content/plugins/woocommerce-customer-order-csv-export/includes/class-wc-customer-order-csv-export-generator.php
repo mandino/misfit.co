@@ -39,6 +39,9 @@ class WC_Customer_Order_CSV_Export_Generator {
 	/** @var array CSV header fields */
 	public $headers;
 
+	/** @var string order export format */
+	public $order_format;
+
 	/** @var resource output stream containing CSV */
 	private $stream;
 
@@ -54,6 +57,8 @@ class WC_Customer_Order_CSV_Export_Generator {
 
 		// either order IDs or customer IDs
 		$this->ids = $ids;
+
+		$this->order_format = get_option( 'wc_customer_order_csv_export_order_format' );
 
 		/**
 		 * CSV Delimiter.
@@ -230,12 +235,47 @@ class WC_Customer_Order_CSV_Export_Generator {
 
 			$product = $order->get_product_from_item( $item );
 
-			$line_items[] = implode( '|', array(
-				'name:' . html_entity_decode( $product->get_title(), ENT_NOQUOTES, 'UTF-8' ),
-				'sku:' . $product->get_sku(),
-				'quantity:' . $item['qty'],
-				'total:' . SV_WC_Plugin_Compatibility::wc_format_decimal( $order->get_line_total( $item ), 2 ),
-			) );
+			if ( ! is_object( $product ) ) {
+				continue;
+			}
+
+			$item_meta = new WC_Order_Item_Meta( $item['item_meta'] );
+			$meta = $item_meta->display( true, true );
+
+			if ( $meta ) {
+
+				// remove newlines
+				$meta = str_replace( array( "\r", "\r\n", "\n" ), '', $meta );
+
+				// switch reserved chars (:;|) to =
+				$meta = str_replace( array( ': ', ':', ';', '|' ), '=', $meta );
+			}
+
+			/**
+			 * CSV Order Export Line Item.
+			 *
+			 * Filter the individual line item entry for the default export
+			 *
+			 * @since 3.0.6
+			 * @param array $line_item {
+			 *     line item data in key => value format
+			 *     the keys are for convenience and not used for exporting. Make
+			 *     sure to prefix the values with the desired line item entry name
+			 * }
+			 * @param array WC order item data
+			 * @param \WC_Customer_Order_CSV_Export_Generator $this, generator instance
+			 */
+			$line_item = apply_filters( 'wc_customer_order_csv_export_order_line_item',
+				array(
+					'name'     => 'name:' . html_entity_decode( $product->get_title(), ENT_NOQUOTES, 'UTF-8' ),
+					'sku'      => 'sku:' . $product->get_sku(),
+					'quantity' => 'quantity:' . $item['qty'],
+					'total'    => 'total:' . SV_WC_Plugin_Compatibility::wc_format_decimal( $order->get_line_total( $item ), 2 ),
+					'meta'     => 'meta:' . $meta,
+				), $item, $this
+			);
+
+			$line_items[] = implode( '|', $line_item );
 		}
 
 		// get shipping items (only in WC 2.1+)
@@ -262,8 +302,13 @@ class WC_Customer_Order_CSV_Export_Generator {
 		// add coupons
 		foreach ( $order->get_items( 'coupon' ) as $_ => $coupon_item ) {
 
+			$coupon = new WC_Coupon( $coupon_item['name'] );
+
+			$coupon_post = get_post( $coupon->id );
+
 			$coupon_items[] = implode( '|', array(
 				'code:' . $coupon_item['name'],
+				'description:' . $coupon_post->post_excerpt,
 				'amount:' . SV_WC_Plugin_Compatibility::wc_format_decimal( $coupon_item['discount_amount'], 2 ),
 			) );
 		}
@@ -307,7 +352,7 @@ class WC_Customer_Order_CSV_Export_Generator {
 			'line_items'          => implode( ';', $line_items ),
 			'shipping_items'      => implode( ';', $shipping_items ),
 			'tax_items'           => implode( ';', $tax_items ),
-			'coupon_items'        => implode( ';', $order->get_used_coupons() ),
+			'coupon_items'        => implode( ';', $coupon_items ),
 			'order_notes'         => implode( '|', $this->get_order_notes( $order ) ),
 		);
 
@@ -362,7 +407,7 @@ class WC_Customer_Order_CSV_Export_Generator {
 
 		foreach ( $notes as $note ) {
 
-			$order_notes[] = $note->comment_content;
+			$order_notes[] = str_replace( array( "\r", "\n" ), ' ', $note->comment_content );
 		}
 
 		return $order_notes;
@@ -385,7 +430,7 @@ class WC_Customer_Order_CSV_Export_Generator {
 
 		$customers = array();
 
-		// get customers to export
+		// get customers to export based on orders
 		foreach ( $this->ids as $order_id ) {
 
 			$billing_email = get_post_meta( $order_id, '_billing_email', true );
@@ -396,6 +441,24 @@ class WC_Customer_Order_CSV_Export_Generator {
 			}
 
 			$customers[ $order_id ] = $billing_email;
+		}
+
+		// customer date filtering requires a bit of a hack as WP_User_Query does not support the same `date_query`
+		// arguments as WP_Query (as of WP 3.8.1) and so must be done with raw SQL
+		add_action( 'pre_user_query', array( $this, 'modify_user_query' ) );
+
+		// get customers to export based on role
+		$users = get_users( array( 'role' => 'customer' ) );
+
+		remove_action( 'pre_user_query', array( $this, 'modify_user_query' ) );
+
+		foreach ( $users as $user ) {
+
+			if ( ! isset( $user->user_email ) ) {
+				continue;
+			}
+
+			$customers[ 'user_id_' . $user->ID ] = $user->user_email;
 		}
 
 		// ensure each customer has a unique billing email
@@ -424,6 +487,25 @@ class WC_Customer_Order_CSV_Export_Generator {
 		}
 
 		return $this->get_csv();
+	}
+
+
+	/**
+	 * Modify the WP_User_Query to support filtering on the date the customer was created
+	 *
+	 * @since 3.0.5
+	 * @param WP_User_Query $query
+	 */
+	public function modify_user_query( $query ) {
+		global $wc_customer_order_csv_export;
+
+		if ( $wc_customer_order_csv_export->admin->customer_export_start_date ) {
+			$query->query_where .= sprintf( " AND user_registered >= STR_TO_DATE( '%s', '%%Y-%%m-%%d %%h:%%i' )", esc_sql( $wc_customer_order_csv_export->admin->customer_export_start_date ) );
+		}
+
+		if ( $wc_customer_order_csv_export->admin->customer_export_end_date ) {
+			$query->query_where .= sprintf( " AND user_registered <= STR_TO_DATE( '%s', '%%Y-%%m-%%d %%h:%%i' )", esc_sql( $wc_customer_order_csv_export->admin->customer_export_end_date ) );
+		}
 	}
 
 
@@ -499,7 +581,7 @@ class WC_Customer_Order_CSV_Export_Generator {
 		$user = get_user_by( 'email', $customer_email );
 
 		// guest, get info from order
-		if ( ! $user ) {
+		if ( ! $user && is_numeric( $order_id ) ) {
 
 			$order = new WC_Order( $order_id );
 
@@ -619,7 +701,14 @@ class WC_Customer_Order_CSV_Export_Generator {
 
 		fclose( $this->stream );
 
-		return $csv;
+		/**
+		 * Allow actors to change the generated CSV, such as removing headers.
+		 *
+		 * @since 3.0.6
+		 * @param string $csv - generated CSV file
+		 * @param \WC_Customer_Order_CSV_Export_Generator $this - generator class instance
+		 */
+		return apply_filters( 'wc_customer_order_csv_export_generated_csv', $csv, $this );
 	}
 
 

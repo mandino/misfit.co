@@ -80,6 +80,7 @@ class WC_Customer_Order_CSV_Export_Compatibility {
 
 			// CSV import format
 			$headers = array(
+				'order_id'               => 'order_id',
 				'order_number_formatted' => 'order_number_formatted',
 				'order_number'           => 'order_number',
 				'order_date'             => 'date',
@@ -236,8 +237,17 @@ class WC_Customer_Order_CSV_Export_Compatibility {
 			// sku/qty/price
 			$product = $order->get_product_from_item( $item );
 
+			if ( ! is_object( $product ) ) {
+				continue;
+			}
+
+			$sku = $product->get_sku();
+
+			// note that product ID must be prefixed with `product_id:` so the importer can properly parse it vs. the SKU
+			$product_id = $product->is_type( 'variation' ) ? $product->variation_id : $product->id;
+
 			$line_item = array(
-				$product->get_sku(),
+				$sku ? $sku : "product_id:{$product_id}",
 				$item['qty'],
 				$order->get_item_total( $item )
 			);
@@ -266,8 +276,9 @@ class WC_Customer_Order_CSV_Export_Compatibility {
 		}
 
 		// fix order numbers
-		$order_data['order_number_formatted'] = ltrim( $order->get_order_number(), _x( '#', 'hash before the order number', WC_Customer_Order_CSV_Export::TEXT_DOMAIN ) );
-		$order_data['order_number'] = $order->id;
+		$order_data['order_id']               = $order->id;
+		$order_data['order_number_formatted'] = get_post_meta( $order->id, '_order_number_formatted', true );
+		$order_data['order_number']           = get_post_meta( $order->id, '_order_number', true );
 
 		// fix customer user
 		$user = new WP_User( $order_data['customer_id'] );
@@ -297,6 +308,10 @@ class WC_Customer_Order_CSV_Export_Compatibility {
 
 			$product = $order->get_product_from_item( $item );
 
+			if ( ! is_object( $product ) ) {
+				continue;
+			}
+
 			$item_meta = new WC_Order_Item_Meta( $item['item_meta'] );
 			$variation = $item_meta->display( true, true );
 
@@ -317,6 +332,9 @@ class WC_Customer_Order_CSV_Export_Compatibility {
 			if ( isset( SV_WC_Plugin_Compatibility::WC()->countries->countries[ $order->shipping_country ] ) ) {
 				$order_data['shipping_country'] = SV_WC_Plugin_Compatibility::WC()->countries->countries[ $order->shipping_country ];
 			}
+
+			// set order ID to order number
+			$order_data['order_id'] = ltrim( $order->get_order_number(), _x( '#', 'hash before the order number', WC_Customer_Order_CSV_Export::TEXT_DOMAIN ) );
 
 			$data[] = $order_data;
 		}
@@ -350,6 +368,10 @@ class WC_Customer_Order_CSV_Export_Compatibility {
 
 			$product = $order->get_product_from_item( $item );
 
+			if ( ! is_object( $product ) ) {
+				continue;
+			}
+
 			$line_item = $item['name'];
 
 			if ( $product->get_sku() ) {
@@ -378,6 +400,9 @@ class WC_Customer_Order_CSV_Export_Compatibility {
 		if ( isset( SV_WC_Plugin_Compatibility::WC()->countries->countries[ $order->shipping_country ] ) ) {
 			$order_data['shipping_country'] = SV_WC_Plugin_Compatibility::WC()->countries->countries[ $order->shipping_country ];
 		}
+
+		// set order ID to order number
+		$order_data['order_id'] = ltrim( $order->get_order_number(), _x( '#', 'hash before the order number', WC_Customer_Order_CSV_Export::TEXT_DOMAIN ) );
 
 		return $order_data;
 	}

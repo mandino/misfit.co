@@ -91,13 +91,33 @@ class WC_Customer_Order_CSV_Export_Cron {
 
 		if ( $this->exports_enabled ) {
 
-			// use interval to set next immediate execution time
-			$interval = get_option( 'wc_customer_order_csv_export_auto_export_interval' );
-
 			// Schedule export
 			if ( ! wp_next_scheduled( 'wc_customer_order_csv_export_auto_export_orders' ) ) {
 
-				wp_schedule_event( strtotime( "{$interval} minutes" ), 'wc_customer_order_csv_export_auto_export_interval', 'wc_customer_order_csv_export_auto_export_orders' );
+				$start_time = get_option( 'wc_customer_order_csv_export_auto_export_start_time' );
+				$curr_time  = current_time( 'timestamp' );
+
+				if ( $start_time ) {
+
+					if ( $curr_time > strtotime( 'today ' . $start_time, $curr_time ) ) {
+
+						$start_timestamp = strtotime( 'tomorrow ' . $start_time, $curr_time ) - ( get_option( 'gmt_offset' ) * HOUR_IN_SECONDS );
+
+					} else {
+
+						$start_timestamp = strtotime( 'today ' . $start_time, $curr_time ) - ( get_option( 'gmt_offset' ) * HOUR_IN_SECONDS );
+
+					}
+
+				} else {
+
+					$export_interval = get_option( 'wc_customer_order_csv_export_auto_export_interval' );
+
+					$start_timestamp = strtotime( "now +{$export_interval} minutes" );
+				}
+
+				wp_schedule_event( $start_timestamp, 'wc_customer_order_csv_export_auto_export_interval', 'wc_customer_order_csv_export_auto_export_orders' );
+
 			}
 
 		}
@@ -154,6 +174,17 @@ class WC_Customer_Order_CSV_Export_Cron {
 		 * @param array $order_ids order IDs that were exported
 		 */
 		do_action( 'wc_customer_order_csv_export_orders_exported', $query->posts );
+	}
+
+
+	/**
+	 * Clear scheduled events upon deactivation
+	 *
+	 * @since 3.1
+	 */
+	public function clear_scheduled_export() {
+
+		wp_clear_scheduled_hook( 'wc_customer_order_csv_export_auto_export_orders' );
 	}
 
 

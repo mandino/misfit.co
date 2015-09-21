@@ -47,8 +47,8 @@ abstract class WC_Customer_Order_CSV_Export_Method_File_Transfer implements WC_C
 	/** @var string the FTP server port */
 	protected $port;
 
-	/** @var string the initial path to change to after connecting */
-	protected $initial_path;
+	/** @var string the path to change to after connecting */
+	protected $path;
 
 	/** @var string the FTP security type, either `none`, `ftps`, `ftp-ssl`, `sftp` */
 	protected $security;
@@ -72,7 +72,7 @@ abstract class WC_Customer_Order_CSV_Export_Method_File_Transfer implements WC_C
 		$this->username     = get_option( 'wc_customer_order_csv_export_ftp_username' );
 		$this->password     = get_option( 'wc_customer_order_csv_export_ftp_password', '' );
 		$this->port         = get_option( 'wc_customer_order_csv_export_ftp_port' );
-		$this->initial_path = get_option( 'wc_customer_order_csv_export_ftp_initial_path', '' );
+		$this->path         = get_option( 'wc_customer_order_csv_export_ftp_path', '' );
 		$this->security     = get_option( 'wc_customer_order_csv_export_ftp_security' );
 		$this->passive_mode = 'yes' === get_option( 'wc_customer_order_csv_export_ftp_passive_mode' );
 		$this->timeout      = apply_filters( 'wc_customer_order_csv_export_ftp_timeout', 30 );

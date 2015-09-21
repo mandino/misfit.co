@@ -1,0 +1,16 @@
+### 2013.10.24 - version 1.0.4
+
+* Fix: Guests sometimes couldn't checkout (when not logged in)
+* Tweak: Allow disconnecting Stripe accounts
+
+### 2013.06.29 - version 1.0.2
+
+* Fix: Stripe rounding issues
+
+### 2013.06.20 - version 1.0.1
+
+* Fix: Stripe accounts weren't connecting to the shop
+
+### 2013.06.15 - version 1.0
+
+ * Initial release

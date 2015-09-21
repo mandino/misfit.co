@@ -5,7 +5,7 @@
  * Description: Easily download customers & orders in CSV format and automatically export FTP or HTTP POST on a recurring schedule
  * Author: SkyVerge
  * Author URI: http://www.skyverge.com
- * Version: 3.0.1
+ * Version: 3.2.1
  * Text Domain: woocommerce-customer-order-csv-export
  * Domain Path: /i18n/languages/
  *
@@ -41,7 +41,7 @@ if ( ! class_exists( 'SV_WC_Framework_Bootstrap' ) ) {
 	require_once( 'lib/skyverge/woocommerce/class-sv-wc-framework-bootstrap.php' );
 }
 
-SV_WC_Framework_Bootstrap::instance()->register_plugin( '2.0', __( 'WooCommerce Customer/Order CSV Export', 'woocommerce-customer-order-csv-export' ), __FILE__, 'init_woocommerce_customer_order_csv_export' );
+SV_WC_Framework_Bootstrap::instance()->register_plugin( '2.1', __( 'WooCommerce Customer/Order CSV Export', 'woocommerce-customer-order-csv-export' ), __FILE__, 'init_woocommerce_customer_order_csv_export' );
 
 function init_woocommerce_customer_order_csv_export() {
 
@@ -104,7 +104,7 @@ class WC_Customer_Order_CSV_Export extends SV_WC_Plugin {
 
 
 	/** plugin version number */
-	const VERSION = '3.0.1';
+	const VERSION = '3.2.1';
 
 	/** plugin id */
 	const PLUGIN_ID = 'customer_order_csv_export';
@@ -153,6 +153,9 @@ class WC_Customer_Order_CSV_Export extends SV_WC_Plugin {
 				$this->admin_includes();
 			}
 		}
+
+		// clear schduled events on deactivation
+		register_deactivation_hook( $this->get_file(), array( $this->cron, 'clear_scheduled_export' ) );
 	}
 
 
@@ -343,19 +346,6 @@ class WC_Customer_Order_CSV_Export extends SV_WC_Plugin {
 
 
 	/**
-	 * Returns true if on the gateway settings page
-	 *
-	 * @since 3.0
-	 * @see SV_WC_Plugin::is_plugin_settings()
-	 * @return boolean true if on the settings page
-	 */
-	public function is_plugin_settings() {
-
-		return ( isset( $_GET['page'] ) && 'wc_customer_order_csv_export' == $_GET['page'] );
-	}
-
-
-	/**
 	 * Returns conditional dependencies based on the FTP security selected
 	 *
 	 * @since 3.0
@@ -363,6 +353,11 @@ class WC_Customer_Order_CSV_Export extends SV_WC_Plugin {
 	 * @return array of dependencies
 	 */
 	protected function get_dependencies() {
+
+		// check if FTP is the chosen method
+		if ( 'ftp' !== get_option( 'wc_customer_order_csv_export_auto_export_method' ) ) {
+			return array();
+		}
 
 		$ftp_security = get_option( 'wc_customer_order_csv_export_ftp_security' );
 
@@ -374,6 +369,36 @@ class WC_Customer_Order_CSV_Export extends SV_WC_Plugin {
 		if ( 'ftp_ssl' == $ftp_security ) {
 
 			return array( 'curl' );
+		}
+
+		if ( 'ftps' == $ftp_security ) {
+
+			return array( 'ftp', 'openssl' );
+		}
+
+		return array();
+	}
+
+
+	/**
+	 * Returns conditional function dependencies based on the FTP security selected
+	 *
+	 * @since 3.1
+	 * @see SV_WC_Plugin::get_function_dependencies()
+	 * @return array of dependencies
+	 */
+	protected function get_function_dependencies() {
+
+		// check if FTP is the chosen method
+		if ( 'ftp' !== get_option( 'wc_customer_order_csv_export_auto_export_method' ) ) {
+			return array();
+		}
+
+		$ftp_security = get_option( 'wc_customer_order_csv_export_ftp_security' );
+
+		if ( 'ftps' == $ftp_security ) {
+
+			return array( 'ftp_ssl_connect' );
 		}
 
 		return array();
@@ -399,6 +424,24 @@ class WC_Customer_Order_CSV_Export extends SV_WC_Plugin {
 
 				update_option( $setting['id'], $setting['default'] );
 			}
+		}
+	}
+
+
+	/**
+	 * Upgrade to $installed_version
+	 *
+	 * @since 3.0.4
+	 * @see SV_WC_Plugin::upgrade()
+	 */
+	protected function upgrade( $installed_version ) {
+
+		// upgrade to 3.0.4
+		if ( version_compare( $installed_version, '3.0.4', '<' ) ) {
+
+			// wc_customer_order_csv_export_passive_mode > wc_customer_order_csv_export_ftp_passive_mode
+			update_option( 'wc_customer_order_csv_export_ftp_passive_mode', get_option( 'wc_customer_order_csv_export_passive_mode' ) );
+			delete_option( 'wc_customer_order_csv_export_passive_mode' );
 		}
 	}
 

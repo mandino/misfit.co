@@ -1,23 +1,35 @@
-<div class="wrap">
-    <h2 id="warnings_hook"></h2>
-    <div class="sucuriscan_header">
-        <a href="http://sucuri.net/signup" target="_blank" title="Sucuri Security">
-            <img src="%%SUCURI.SucuriURL%%/inc/images/logo.png" alt="Sucuri Security" />
-        </a>
-        <h2>Sucuri Security WordPress Plugin (Site Info)</h2>
-    </div>
 
+<div class="sucuriscan-tabs">
+    <ul>
+        <li>
+            <a href="#" data-tabname="server-info">Plugin &amp; Server Info</a>
+        </li>
+        <li>
+            <a href="#" data-tabname="wordpress-cronjobs">Scheduled Tasks</a>
+        </li>
+        <li>
+            <a href="#" data-tabname="htaccess-integrity">Access File Integrity</a>
+        </li>
+        <li>
+            <a href="#" data-tabname="wpconfig-vars">Config. Variables</a>
+        </li>
+    </ul>
 
-    <div class="postbox-container" style="width:75%;">
-        <div class="sucuriscan-maincontent">
-            %%SUCURI.LoggedInUsers%%
+    <div class="sucuriscan-tab-containers">
+        <div id="sucuriscan-server-info">
+            %%SUCURI.ServerInfo%%
+        </div>
 
+        <div id="sucuriscan-wordpress-cronjobs">
+            %%SUCURI.Cronjobs%%
+        </div>
+
+        <div id="sucuriscan-htaccess-integrity">
             %%SUCURI.HTAccessIntegrity%%
+        </div>
 
+        <div id="sucuriscan-wpconfig-vars">
             %%SUCURI.WordpressConfig%%
-        </div><!-- End sucuriscan-maincontent -->
-    </div><!-- End postbox-container -->
-
-    %%SUCURI.SucuriWPSidebar%%
-
-</div><!-- End wrap -->
+        </div>
+    </div>
+</div>

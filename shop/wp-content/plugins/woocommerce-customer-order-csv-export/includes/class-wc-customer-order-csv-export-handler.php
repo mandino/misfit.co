@@ -323,6 +323,21 @@ class WC_Customer_Order_CSV_Export_Handler {
 			}
 
 			$order->add_order_note( sprintf( __( 'Order exported to CSV and successfully %s', WC_Customer_Order_CSV_Export::TEXT_DOMAIN ), $message ) );
+
+
+			/**
+			 * CSV Order Exported Action.
+			 *
+			 * Fired when an order is automatically exported. Note this includes
+			 * orders exported via the Orders bulk action.
+			 *
+			 * @since 3.1
+			 * @param WC_Order $order order being exported
+			 * @param string $method how the order is exported (ftp, download, etc)
+			 * @param string $message order note message
+			 * @param \WC_Customer_Order_CSV_Export_Handler $this, handler instance
+			 */
+			do_action( 'wc_customer_order_csv_export_order_exported', $order, $method, $message, $this );
 		}
 	}
 
@@ -338,7 +353,7 @@ class WC_Customer_Order_CSV_Export_Handler {
 		$pre_replace_filename = get_option( 'orders' == $this->export_type ? 'wc_customer_order_csv_export_order_filename' : 'wc_customer_order_csv_export_customer_filename' );
 
 		$variables   = array( '%%timestamp%%', '%%order_ids%%' );
-		$replacement = array( date( 'Y_m_d_H_i_s' ), implode( '-', $this->ids ) );
+		$replacement = array( date( 'Y_m_d_H_i_s', current_time( 'timestamp' ) ), implode( '-', $this->ids ) );
 
 		$post_replace_filename = str_replace( $variables, $replacement, $pre_replace_filename );
 

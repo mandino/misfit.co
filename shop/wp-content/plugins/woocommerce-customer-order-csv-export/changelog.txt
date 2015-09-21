@@ -1,5 +1,47 @@
 *** WooCommerce CSV Export Changelog ***
 
+2014.06.10 - version 3.2.1
+ * Fix - Fix issue with email exports in WooCommerce 2.0
+
+2014.06.09 - version 3.2
+ * Feature - Coupons now include code, description, and amount!
+ * Fix - Automatic exports with no start time are now scheduled properly
+
+2014.05.27 - version 3.1
+ * Feature - You can now automatically email exports on a recurring schedule
+ * Feature - You can now set a start time for automatic exports
+ * Tweak - Add action that fires when each order is exported
+ * Tweak - Auto-export test button disabled until settings are saved
+ * Tweak - Auto-export cron schedules cleared on plugin deactivation
+ * Tweak - SFTP dependency checks for Windows environments
+
+2014.04.25 - version 3.0.6
+ * Fix - Strip newlines from order notes
+ * Fix - Fix issue with default start/end dates for customer exports
+ * Tweak - Exports in the "CSV Import" format now include the Order ID
+ * Tweak - Added filter for customizing the entire export format
+ * Tweak - Added filter for customizing the order line item export format
+ * Tweak - Added filters for customizing settings & export parameters
+
+2014.03.10 - version 3.0.5
+ * Fix - When exporting customers, the date filter now properly excludes registered customers created outside of the specified date range
+ * Fix - Fix bug that prevented FTP connections with an initial path set from working properly
+
+2014.02.24 - version 3.0.4
+ * Fix - Fix improper loading of javascript on edit post page
+ * Fix - Fix issue with FTP passive mode not working
+ * Tweak - Improved error messages when testing FTP connections
+ * Tweak - Export filename timestamps now reflect the site timezone
+
+2014.02.10 - version 3.0.3
+ * Tweak - Customer exports now include WordPress users with the `customer` role even if they have no associated orders
+ * Fix - Legacy export formats use the order number instead of order ID
+
+2014.01.31 - version 3.0.2
+ * Tweak - The line items column now includes item meta
+ * Tweak - Orders with invalid or deleted products can now be exported properly
+ * Tweak - The CSV Import Suite format now includes the product ID if no SKU exists for the product
+
 2014.01.27 - version 3.0.1
  * Fix - Fix issue with saving settings
 
