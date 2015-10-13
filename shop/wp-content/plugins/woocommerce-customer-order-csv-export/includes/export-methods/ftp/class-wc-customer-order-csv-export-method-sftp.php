@@ -92,7 +92,7 @@ class WC_Customer_Order_CSV_Export_Method_SFTP extends WC_Customer_Order_CSV_Exp
 	public function perform_action( $filename, $csv ) {
 
 		// open a file on the remote system for writing
-		$stream = fopen( "ssh2.sftp://{$this->sftp_link}/{$this->initial_path}{$filename}", 'w+' );
+		$stream = fopen( "ssh2.sftp://{$this->sftp_link}/{$this->path}{$filename}", 'w+' );
 
 		// check for fopen failure
 		if ( ! $stream ) {

@@ -2,11 +2,13 @@
 /*
  * Plugin Name: WooCommerce Product Vendors
  * Version: 1.0.9
+ * Version: 1.1.2
  * Plugin URI: https://www.woothemes.com/products/product-vendors/
  * Description: Set up a multi-vendor marketplace that allows vendors to manage their own products and earn commissions, or simply assign commissions from sales.
  * Author: WooThemes
  * Author URI: http://www.woothemes.com/
  * Requires at least: 3.7
+ * Requires at least: 3.9
  * Tested up to: 3.9.1
  *
  * @package WordPress

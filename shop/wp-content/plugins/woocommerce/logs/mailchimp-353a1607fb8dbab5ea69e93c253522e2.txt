@@ -1,0 +1,76 @@
+12-12-2013 @ 09:55:35 - Code=104:	API Key can not be blank
+12-12-2013 @ 09:55:50 - Code=104:	API Key can not be blank
+12-12-2013 @ 09:55:51 - Code=104:	API Key can not be blank
+12-12-2013 @ 09:56:40 - Code=104:	API Key can not be blank
+12-12-2013 @ 09:56:46 - Code=104:	API Key can not be blank
+12-12-2013 @ 09:56:57 - Code=104:	API Key can not be blank
+12-13-2013 @ 02:23:32 - Code=104:	API Key can not be blank
+12-13-2013 @ 02:24:21 - Code=104:	API Key can not be blank
+12-13-2013 @ 02:28:38 - Code=104:	API Key can not be blank
+12-13-2013 @ 02:49:07 - Code=104:	API Key can not be blank
+12-13-2013 @ 02:54:39 - Code=104:	API Key can not be blank
+12-13-2013 @ 05:35:32 - Code=104:	API Key can not be blank
+12-13-2013 @ 05:39:01 - Code=104:	API Key can not be blank
+12-13-2013 @ 05:39:22 - Code=104:	API Key can not be blank
+12-13-2013 @ 07:47:55 - Code=104:	API Key can not be blank
+12-13-2013 @ 07:48:28 - Code=104:	API Key can not be blank
+12-13-2013 @ 07:51:16 - Code=104:	API Key can not be blank
+12-13-2013 @ 07:51:40 - Code=104:	API Key can not be blank
+01-23-2014 @ 10:48:23 - Code=214:	dassasdas@gmail.com is already subscribed to list Misfit Press - General Order. <a href="http://misfit-inc.us1.list-manage1.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=43bcda9370&e=ZGFzc2FzZGFzQGdtYWlsLmNvbQ==">Click here to update your profile.</a>
+01-23-2014 @ 10:48:23 - Code=214:	dassasdas@gmail.com is already subscribed to list Misfit Press - Misfit Journal Subscription (Print) Orders. <a href="http://misfit-inc.us1.list-manage1.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=f467cf0bdd&e=ZGFzc2FzZGFzQGdtYWlsLmNvbQ==">Click here to update your profile.</a>
+01-23-2014 @ 10:48:24 - Code=502:	Invalid Email Address: 
+01-23-2014 @ 10:53:07 - Code=214:	dassasdas@gmail.com is already subscribed to list Misfit Press - General Order. <a href="http://misfit-inc.us1.list-manage.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=43bcda9370&e=ZGFzc2FzZGFzQGdtYWlsLmNvbQ==">Click here to update your profile.</a>
+01-23-2014 @ 10:53:08 - Code=214:	dassasdas@gmail.com is already subscribed to list Misfit Press - General Order. <a href="http://misfit-inc.us1.list-manage1.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=43bcda9370&e=ZGFzc2FzZGFzQGdtYWlsLmNvbQ==">Click here to update your profile.</a>
+01-23-2014 @ 10:53:08 - Code=214:	dassasdas@gmail.com is already subscribed to list Misfit Press - Misfit Journal Subscription (Digital) Orders. <a href="http://misfit-inc.us1.list-manage.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=bfd8fc4bd4&e=ZGFzc2FzZGFzQGdtYWlsLmNvbQ==">Click here to update your profile.</a>
+01-23-2014 @ 10:53:08 - Code=502:	Invalid Email Address: 
+01-30-2014 @ 07:57:49 - Code=214:	dassasdas@gmail.com is already subscribed to list Misfit Press - General Order. <a href="http://misfit-inc.us1.list-manage.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=43bcda9370&e=ZGFzc2FzZGFzQGdtYWlsLmNvbQ==">Click here to update your profile.</a>
+01-30-2014 @ 07:57:50 - Code=214:	dassasdas@gmail.com is already subscribed to list Misfit Press - General Order. <a href="http://misfit-inc.us1.list-manage.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=43bcda9370&e=ZGFzc2FzZGFzQGdtYWlsLmNvbQ==">Click here to update your profile.</a>
+01-30-2014 @ 07:57:50 - Code=214:	dassasdas@gmail.com is already subscribed to list Misfit Press - Misfit Journal Subscription (Print) Orders. <a href="http://misfit-inc.us1.list-manage.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=f467cf0bdd&e=ZGFzc2FzZGFzQGdtYWlsLmNvbQ==">Click here to update your profile.</a>
+01-30-2014 @ 07:57:51 - Code=502:	Invalid Email Address: 
+01-30-2014 @ 10:05:39 - Code=214:	dassasdas@gmail.com is already subscribed to list Misfit Press - General Order. <a href="http://misfit-inc.us1.list-manage2.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=43bcda9370&e=ZGFzc2FzZGFzQGdtYWlsLmNvbQ==">Click here to update your profile.</a>
+01-30-2014 @ 10:05:40 - Code=214:	dassasdas@gmail.com is already subscribed to list Misfit Press - General Order. <a href="http://misfit-inc.us1.list-manage.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=43bcda9370&e=ZGFzc2FzZGFzQGdtYWlsLmNvbQ==">Click here to update your profile.</a>
+01-30-2014 @ 10:05:40 - Code=214:	dassasdas@gmail.com is already subscribed to list Misfit Press - Misfit Journal Subscription (Digital) Orders. <a href="http://misfit-inc.us1.list-manage.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=bfd8fc4bd4&e=ZGFzc2FzZGFzQGdtYWlsLmNvbQ==">Click here to update your profile.</a>
+01-30-2014 @ 10:05:41 - Code=502:	Invalid Email Address: 
+01-30-2014 @ 10:18:13 - Code=214:	dassasdas@gmail.com is already subscribed to list Misfit Press - General Order. <a href="http://misfit-inc.us1.list-manage.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=43bcda9370&e=ZGFzc2FzZGFzQGdtYWlsLmNvbQ==">Click here to update your profile.</a>
+01-30-2014 @ 10:18:13 - Code=214:	dassasdas@gmail.com is already subscribed to list Misfit Press - General Order. <a href="http://misfit-inc.us1.list-manage2.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=43bcda9370&e=ZGFzc2FzZGFzQGdtYWlsLmNvbQ==">Click here to update your profile.</a>
+01-30-2014 @ 10:18:13 - Code=214:	dassasdas@gmail.com is already subscribed to list Misfit Press - Misfit Journal Subscription (Digital) Orders. <a href="http://misfit-inc.us1.list-manage.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=bfd8fc4bd4&e=ZGFzc2FzZGFzQGdtYWlsLmNvbQ==">Click here to update your profile.</a>
+01-30-2014 @ 10:18:14 - Code=502:	Invalid Email Address: 
+01-31-2014 @ 03:05:39 - Code=214:	dassasdas@gmail.com is already subscribed to list Misfit Press - General Order. <a href="http://misfit-inc.us1.list-manage.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=43bcda9370&e=ZGFzc2FzZGFzQGdtYWlsLmNvbQ==">Click here to update your profile.</a>
+01-31-2014 @ 03:05:39 - Code=214:	dassasdas@gmail.com is already subscribed to list Misfit Press - General Order. <a href="http://misfit-inc.us1.list-manage1.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=43bcda9370&e=ZGFzc2FzZGFzQGdtYWlsLmNvbQ==">Click here to update your profile.</a>
+01-31-2014 @ 03:05:39 - Code=214:	dassasdas@gmail.com is already subscribed to list Misfit Press - Misfit Journal Subscription (Print) Orders. <a href="http://misfit-inc.us1.list-manage1.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=f467cf0bdd&e=ZGFzc2FzZGFzQGdtYWlsLmNvbQ==">Click here to update your profile.</a>
+01-31-2014 @ 03:05:41 - Code=502:	Invalid Email Address: 
+01-31-2014 @ 03:59:57 - Code=214:	dassasdas@gmail.com is already subscribed to list Misfit Press - General Order. <a href="http://misfit-inc.us1.list-manage.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=43bcda9370&e=ZGFzc2FzZGFzQGdtYWlsLmNvbQ==">Click here to update your profile.</a>
+01-31-2014 @ 03:59:57 - Code=214:	dassasdas@gmail.com is already subscribed to list Misfit Press - General Order. <a href="http://misfit-inc.us1.list-manage1.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=43bcda9370&e=ZGFzc2FzZGFzQGdtYWlsLmNvbQ==">Click here to update your profile.</a>
+01-31-2014 @ 03:59:57 - Code=214:	dassasdas@gmail.com is already subscribed to list Misfit Press - Misfit Journal Subscription (Digital) Orders. <a href="http://misfit-inc.us1.list-manage.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=bfd8fc4bd4&e=ZGFzc2FzZGFzQGdtYWlsLmNvbQ==">Click here to update your profile.</a>
+01-31-2014 @ 03:59:58 - Code=502:	Invalid Email Address: 
+01-31-2014 @ 04:00:49 - Code=214:	dassasdas@gmail.com is already subscribed to list Misfit Press - General Order. <a href="http://misfit-inc.us1.list-manage.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=43bcda9370&e=ZGFzc2FzZGFzQGdtYWlsLmNvbQ==">Click here to update your profile.</a>
+01-31-2014 @ 04:00:49 - Code=214:	dassasdas@gmail.com is already subscribed to list Misfit Press - Misfit Journal Subscription (Digital) Orders. <a href="http://misfit-inc.us1.list-manage.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=bfd8fc4bd4&e=ZGFzc2FzZGFzQGdtYWlsLmNvbQ==">Click here to update your profile.</a>
+01-31-2014 @ 04:00:49 - Code=214:	dassasdas@gmail.com is already subscribed to list Misfit Press - General Order. <a href="http://misfit-inc.us1.list-manage.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=43bcda9370&e=ZGFzc2FzZGFzQGdtYWlsLmNvbQ==">Click here to update your profile.</a>
+01-31-2014 @ 04:00:49 - Code=214:	dassasdas@gmail.com is already subscribed to list Misfit Press - Misfit Journal Subscription (Digital) Orders. <a href="http://misfit-inc.us1.list-manage.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=bfd8fc4bd4&e=ZGFzc2FzZGFzQGdtYWlsLmNvbQ==">Click here to update your profile.</a>
+01-31-2014 @ 04:00:49 - Code=502:	Invalid Email Address: 
+01-31-2014 @ 09:06:37 - Code=215:	dassasdas@gmail.com is not subscribed to list Misfit Press - Misfit Journal Subscription (Digital) Orders
+04-19-2014 @ 13:08:50 - Code=214:	dino@misfit-inc.com is already subscribed to list Misfit Press - General Order. <a href="http://misfit-inc.us1.list-manage.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=43bcda9370&e=ZGlub0BtaXNmaXQtaW5jLmNvbQ==">Click here to update your profile.</a>
+04-19-2014 @ 13:08:50 - Code=214:	dino@misfit-inc.com is already subscribed to list Misfit Press - Misfit Journal Subscription (Digital) Orders. <a href="http://misfit-inc.us1.list-manage1.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=bfd8fc4bd4&e=ZGlub0BtaXNmaXQtaW5jLmNvbQ==">Click here to update your profile.</a>
+04-19-2014 @ 14:06:34 - Code=214:	dino@misfit-inc.com is already subscribed to list Misfit Press - General Order. <a href="http://misfit-inc.us1.list-manage.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=43bcda9370&e=ZGlub0BtaXNmaXQtaW5jLmNvbQ==">Click here to update your profile.</a>
+04-19-2014 @ 14:06:34 - Code=214:	dino@misfit-inc.com is already subscribed to list Misfit Press - Misfit Journal Subscription (Digital) Orders. <a href="http://misfit-inc.us1.list-manage2.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=bfd8fc4bd4&e=ZGlub0BtaXNmaXQtaW5jLmNvbQ==">Click here to update your profile.</a>
+04-19-2014 @ 14:33:04 - Code=214:	dino@misfit-inc.com is already subscribed to list Misfit Press - General Order. <a href="http://misfit-inc.us1.list-manage.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=43bcda9370&e=ZGlub0BtaXNmaXQtaW5jLmNvbQ==">Click here to update your profile.</a>
+04-19-2014 @ 14:33:05 - Code=214:	dino@misfit-inc.com is already subscribed to list Misfit Press - Misfit Journal Subscription (Digital) Orders. <a href="http://misfit-inc.us1.list-manage.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=bfd8fc4bd4&e=ZGlub0BtaXNmaXQtaW5jLmNvbQ==">Click here to update your profile.</a>
+05-05-2014 @ 07:01:59 - Code=104:	API Key can not be blank
+05-05-2014 @ 07:02:06 - Code=104:	API Key can not be blank
+05-05-2014 @ 18:22:02 - Code=214:	ejrabell@yahoo.com is already subscribed to list Misfit Press - General Order. <a href="http://misfit-inc.us1.list-manage1.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=43bcda9370&e=ZWpyYWJlbGxAeWFob28uY29t">Click here to update your profile.</a>
+05-05-2014 @ 18:22:02 - Code=214:	ejrabell@yahoo.com is already subscribed to list The Honorary Misfits. <a href="http://misfit-inc.us1.list-manage.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=070c4eb435&e=ZWpyYWJlbGxAeWFob28uY29t">Click here to update your profile.</a>
+05-05-2014 @ 18:22:03 - Code=502:	Invalid Email Address: 
+05-07-2014 @ 03:33:16 - Code=214:	christine@christinemcdougall.com is already subscribed to list The Honorary Misfits. <a href="http://misfit-inc.us1.list-manage.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=070c4eb435&e=Y2hyaXN0aW5lQGNocmlzdGluZW1jZG91Z2FsbC5jb20=">Click here to update your profile.</a>
+05-07-2014 @ 03:33:16 - Code=214:	christine@christinemcdougall.com is already subscribed to list Misfit Press - General Order. <a href="http://misfit-inc.us1.list-manage.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=43bcda9370&e=Y2hyaXN0aW5lQGNocmlzdGluZW1jZG91Z2FsbC5jb20=">Click here to update your profile.</a>
+05-07-2014 @ 03:33:17 - Code=214:	christine@christinemcdougall.com is already subscribed to list The Honorary Misfits. <a href="http://misfit-inc.us1.list-manage1.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=070c4eb435&e=Y2hyaXN0aW5lQGNocmlzdGluZW1jZG91Z2FsbC5jb20=">Click here to update your profile.</a>
+05-07-2014 @ 03:33:17 - Code=502:	Invalid Email Address: 
+06-24-2014 @ 18:52:18 - Code=214:	joshua.layhue@gmail.com is already subscribed to list Misfit Press - General Order. <a href="http://misfit-inc.us1.list-manage.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=43bcda9370&e=am9zaHVhLmxheWh1ZUBnbWFpbC5jb20=">Click here to update your profile.</a>
+06-24-2014 @ 18:52:18 - Code=214:	joshua.layhue@gmail.com is already subscribed to list The Honorary Misfits. <a href="http://misfit-inc.us1.list-manage.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=070c4eb435&e=am9zaHVhLmxheWh1ZUBnbWFpbC5jb20=">Click here to update your profile.</a>
+06-24-2014 @ 18:52:18 - Code=502:	Invalid Email Address: 
+07-18-2014 @ 23:26:19 - Code=214:	jessie@misfit-inc.com is already subscribed to list Misfit Press - General Order. <a href="http://misfit-inc.us1.list-manage1.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=43bcda9370&e=amVzc2llQG1pc2ZpdC1pbmMuY29t">Click here to update your profile.</a>
+02-04-2015 @ 16:28:05 - Code=214:	aaronmatthewcurtis@gmail.com is already subscribed to list Misfit Press - General Order. <a href="http://misfit-inc.us1.list-manage.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=43bcda9370&e=YWFyb25tYXR0aGV3Y3VydGlzQGdtYWlsLmNvbQ==">Click here to update your profile.</a>
+02-04-2015 @ 16:28:05 - Code=214:	aaronmatthewcurtis@gmail.com is already subscribed to list The Honorary Misfits. <a href="http://misfit-inc.us1.list-manage.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=070c4eb435&e=YWFyb25tYXR0aGV3Y3VydGlzQGdtYWlsLmNvbQ==">Click here to update your profile.</a>
+02-04-2015 @ 16:28:06 - Code=502:	Invalid Email Address: 
+02-05-2015 @ 14:17:43 - Code=214:	angenell@yahoo.com is already subscribed to list Misfit Press - General Order. <a href="http://misfit-inc.us1.list-manage1.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=43bcda9370&e=YW5nZW5lbGxAeWFob28uY29t">Click here to update your profile.</a>
+02-05-2015 @ 14:17:43 - Code=214:	angenell@yahoo.com is already subscribed to list The Honorary Misfits. <a href="http://misfit-inc.us1.list-manage2.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=070c4eb435&e=YW5nZW5lbGxAeWFob28uY29t">Click here to update your profile.</a>
+02-05-2015 @ 14:17:43 - Code=502:	Invalid Email Address: 

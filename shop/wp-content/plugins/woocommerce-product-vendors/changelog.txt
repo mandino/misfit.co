@@ -1,5 +1,11 @@
 *** Product Vendors Changelog ***
 
+2014.08.06 - version 1.1.2
+ * Fix - Updating admin queries to only affect relevant pages for vendors
+
+2014.08.01 - version 1.1.1
+ * Fix - Fixing fatal error on product_vendors_total_earnings shortcode when loading commissions for deleted products
+
 2014.07.30 - version 1.1.0
  * New - Adding order IDs to commission post meta
  * New - Moving commission posts to trash when relevant order is cancelled or refunded (only works for commissions generated from v1.1+)

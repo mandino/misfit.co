@@ -1,6 +1,8 @@
 jQuery( document ).ready( function ( $ ) {
 
-	"use strict";
+	'use strict';
+
+	/* global wc_customer_order_csv_export_admin_params */
 
 	// make order status multiselects chosen
 	$( 'select.chosen_select' ).chosen();
@@ -35,7 +37,7 @@ jQuery( document ).ready( function ( $ ) {
 
 			var $order_status_row = $( 'select' ).closest( 'tr' );
 
-			if ( 'customers' == $( this ).val() ) {
+			if ( 'customers' === $( this ).val() ) {
 
 				$order_status_row.hide();
 
@@ -55,7 +57,8 @@ jQuery( document ).ready( function ( $ ) {
 
 		var export_method = $( this ).val(),
 			$ftp_settings = $( '#wc_customer_order_csv_export_ftp_server' ).closest( 'table' ),
-			$http_post_settings = $( '#wc_customer_order_csv_export_http_post_url' ).closest( 'table' );
+			$http_post_settings = $( '#wc_customer_order_csv_export_http_post_url' ).closest( 'table' ),
+			$email_settings = $( '#wc_customer_order_csv_export_email_recipients' ).closest( 'table' );
 
 		if ( 'disabled' === export_method ) {
 			$( this ).closest( 'tr' ).nextUntil( 'h3' ).hide();
@@ -63,6 +66,8 @@ jQuery( document ).ready( function ( $ ) {
 			$ftp_settings.hide();
 			$http_post_settings.prev().hide();
 			$http_post_settings.hide();
+			$email_settings.prev().hide();
+			$email_settings.hide();
 
 		} else if ( 'ftp' === export_method ) {
 
@@ -72,6 +77,8 @@ jQuery( document ).ready( function ( $ ) {
 			$ftp_settings.show();
 			$http_post_settings.prev().hide();
 			$http_post_settings.hide();
+			$email_settings.prev().hide();
+			$email_settings.hide();
 
 		} else if ( 'http_post' === export_method ) {
 
@@ -81,26 +88,47 @@ jQuery( document ).ready( function ( $ ) {
 			$http_post_settings.show();
 			$ftp_settings.prev().hide();
 			$ftp_settings.hide();
+			$email_settings.prev().hide();
+			$email_settings.hide();
+
+		} else if ( 'email' === export_method ) {
+
+			// show export & Email settings
+			$( this ).closest( 'tr' ).nextUntil( 'h3' ).show();
+			$email_settings.prev().show();
+			$email_settings.show();
+			$http_post_settings.prev().hide();
+			$http_post_settings.hide();
+			$ftp_settings.prev().hide();
+			$ftp_settings.hide();
+
 		}
 
 	} ).change();
+
+	// auto export start time timepicker
+	$( '.js-wc-customer-order-csv-export-auto-export-timepicker' ).timepicker();
 
 	// change port to 22 if SFTP is selected or 990 if FTP with Implicit SSL
 	$( 'select[name=wc_customer_order_csv_export_ftp_security]' ).change( function () {
 
 		var $ftp_port = $( '#wc_customer_order_csv_export_ftp_port' );
 
-		if ( 'sftp' == $( this) .val() ) {
+		if ( '' === $ftp_port.val() ) {
 
-			$ftp_port.val( '22' );
+			if ( 'sftp' === $( this) .val() ) {
 
-		} else if ( 'ftp_ssl' == $( this ).val() ) {
+				$ftp_port.val( '22' );
 
-			$ftp_port.val( '990' );
+			} else if ( 'ftp_ssl' === $( this ).val() ) {
 
-		} else {
+				$ftp_port.val( '990' );
 
-			$ftp_port.val( '21' );
+			} else {
+
+				$ftp_port.val( '21' );
+			}
+
 		}
 
 	} ).change();

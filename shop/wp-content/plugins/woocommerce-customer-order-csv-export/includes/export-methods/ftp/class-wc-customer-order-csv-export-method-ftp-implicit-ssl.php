@@ -53,7 +53,7 @@ class WC_Customer_Order_CSV_Export_Method_FTP_Implicit_SSL extends WC_Customer_O
 		parent::__construct();
 
 		// set host/initial path
-		$this->url = "ftps://{$this->server}/{$this->initial_path}";
+		$this->url = "ftps://{$this->server}/{$this->path}";
 
 		// setup connection
 		$this->curl_handle = curl_init();

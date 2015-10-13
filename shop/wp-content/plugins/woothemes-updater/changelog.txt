@@ -1,4 +1,14 @@
-*** WooThemes Updater Changelog ***
+*** WooThemes Helper Changelog ***
+
+2014.07.18 - version 1.3.0
+ * New - Check license keys on the "Licenses" screen to ensure they are active on WooThemes.com. If not, deactivate them locally to avoid confusion.
+ * New - Remove the "Panic" button from the "Help" tab.
+
+2014.03.24 - version 1.2.4
+ * Fix - Ensure we have a numeric product id.
+
+2014.02.25 - version 1.2.3
+ * Fix - Adjusts the API URL to point to a newly formed version of the same endpoint on WooThemes.com.
 
 2013.11.27 - version 1.2.1
  * Adds an admin notice if there are products present on the installation which have not yet had their licenses activated.

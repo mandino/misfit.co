@@ -43,6 +43,12 @@ class WC_Customer_Order_CSV_Export_Admin {
 	/** @var \SV_WP_Admin_Message_Handler instance */
 	public $message_handler;
 
+	/** @var string export start date for bulk customer export */
+	public $customer_export_start_date;
+
+	/** @var string export end date for bulk customer export */
+	public $customer_export_end_date;
+
 
 	/**
 	 * Setup admin class
@@ -70,7 +76,7 @@ class WC_Customer_Order_CSV_Export_Admin {
 		add_action( 'admin_menu', array( $this, 'add_menu_link' ) );
 
 		// Render a custom test button when using woocommerce_admin_fields()
-		add_action( 'woocommerce_admin_field_test_button', array( $this, 'render_test_button' ) );
+		add_action( 'woocommerce_admin_field_csv_test_button', array( $this, 'render_test_button' ) );
 
 		/** Order Hooks */
 
@@ -108,23 +114,27 @@ class WC_Customer_Order_CSV_Export_Admin {
 	public function load_styles_scripts( $hook_suffix ) {
 		global $wp_scripts, $wc_customer_order_csv_export;
 
-		// only load on settings / order / product pages
-		if ( $this->page == $hook_suffix || 'edit.php' == $hook_suffix || 'post.php' == $hook_suffix ) {
+		// only load on settings / view orders pages
+		if ( $this->page == $hook_suffix || 'edit.php' == $hook_suffix ) {
 
 			$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
-
-			// admin JS
-			wp_enqueue_script( 'wc-customer-order-csv-export-admin', $wc_customer_order_csv_export->get_plugin_url() . '/assets/js/admin/wc-customer-order-csv-export-admin' . $suffix . '.js', array(), WC_Customer_Order_CSV_Export::VERSION, true );
 
 			// Admin CSS
 			wp_enqueue_style( 'wc-customer-order-csv-export_admin', $wc_customer_order_csv_export->get_plugin_url() . '/assets/css/admin/wc-customer-order-csv-export-admin.min.css', array( 'dashicons' ), WC_Customer_Order_CSV_Export::VERSION );
 
-			wp_localize_script( 'wc-customer-order-csv-export-admin', 'wc_customer_order_csv_export_admin_params', array( 'calendar_icon_url' => SV_WC_Plugin_Compatibility::WC()->plugin_url() . '/assets/images/calendar.png' ) );
-
-			// jQuery UI Datepicker
+			// settings/export page
 			if ( $this->page == $hook_suffix ) {
 
-				// enqueue script
+				// jQuery Timepicker JS
+				wp_enqueue_script( 'wc-customer-order-csv-export-jquery-timepicker', $wc_customer_order_csv_export->get_plugin_url() . '/assets/js/jquery-timepicker/jquery.timepicker' . $suffix . '.js', array(), WC_Customer_Order_CSV_Export::VERSION, true );
+
+				// admin JS
+				wp_enqueue_script( 'wc-customer-order-csv-export-admin', $wc_customer_order_csv_export->get_plugin_url() . '/assets/js/admin/wc-customer-order-csv-export-admin' . $suffix . '.js', array(), WC_Customer_Order_CSV_Export::VERSION, true );
+
+				// calendar icon
+				wp_localize_script( 'wc-customer-order-csv-export-admin', 'wc_customer_order_csv_export_admin_params', array( 'calendar_icon_url' => SV_WC_Plugin_Compatibility::WC()->plugin_url() . '/assets/images/calendar.png' ) );
+
+				// datepicker
 				wp_enqueue_script( 'jquery-ui-datepicker' );
 
 				// get jQuery UI version
@@ -303,7 +313,7 @@ class WC_Customer_Order_CSV_Export_Admin {
 				array(
 					'columnn'   => 'post_date_gmt',
 					'before'    => empty( $_POST['wc_customer_order_csv_export_end_date'] ) ? date( 'Y-m-d 23:59' ) : $_POST['wc_customer_order_csv_export_end_date'],
-					'after'     => empty( $_POST['wc_customer_order_csv_export_start_date'] ) ? date( 'Y-m-d', 0 ) : $_POST['wc_customer_order_csv_export_start_date'],
+					'after'     => empty( $_POST['wc_customer_order_csv_export_start_date'] ) ? date( 'Y-m-d 00:00', 0 ) : $_POST['wc_customer_order_csv_export_start_date'],
 					'inclusive' => true,
 				),
 			),
@@ -321,6 +331,23 @@ class WC_Customer_Order_CSV_Export_Admin {
 				),
 			);
 		}
+
+		// set start/end date for customer exports as class variables which are used when performing get_users() in the CSV generator
+		if ( 'customers' == $export_type ) {
+
+			$this->customer_export_start_date = str_replace( ' 00:00', '', $query_args['date_query'][0]['after'] );
+			$this->customer_export_end_date   = str_replace( ' 23:59', '', $query_args['date_query'][0]['before'] );
+		}
+
+		/**
+		 * Allow actors to change the WP_Query args used for selecting orders to export in the admin.
+		 *
+		 * @since 3.0.6
+		 * @param array $query_args - WP_Query arguments
+		 * @param string $export_type - either `customers` or `orders`
+		 * @param \WC_Customer_Order_CSV_Export_Admin $this class instance
+		 */
+		$query_args = apply_filters( 'wc_customer_order_csv_export_admin_query_args', $query_args, $export_type, $this );
 
 		// get order IDs
 		$query = new WP_Query( $query_args );
@@ -774,12 +801,20 @@ class WC_Customer_Order_CSV_Export_Admin {
 						'disabled'  => __( 'Disabled', WC_Customer_Order_CSV_Export::TEXT_DOMAIN ),
 						'ftp'       => __( 'via FTP', WC_Customer_Order_CSV_Export::TEXT_DOMAIN ),
 						'http_post' => __( 'via HTTP POST', WC_Customer_Order_CSV_Export::TEXT_DOMAIN ),
-						//'email'     => __( 'via Email', WC_Customer_Order_CSV_Export::TEXT_DOMAIN ),
+						'email'     => __( 'via Email', WC_Customer_Order_CSV_Export::TEXT_DOMAIN ),
 					),
 					'default' => 'disabled',
 				),
 
-				// TODO: start time
+				array(
+					'id'       => 'wc_customer_order_csv_export_auto_export_start_time',
+					'name'     => __( 'Export Start Time', WC_Customer_Order_CSV_Export::TEXT_DOMAIN ),
+					'desc_tip' => __( 'Any new orders will start exporting at this time.', WC_Customer_Order_CSV_Export::TEXT_DOMAIN ),
+					'default'  => '',
+					'type'     => 'text',
+					'css'      => 'max-width: 100px;',
+					'class'    => 'js-wc-customer-order-csv-export-auto-export-timepicker'
+				),
 
 				array(
 					'id'       => 'wc_customer_order_csv_export_auto_export_interval',
@@ -865,7 +900,7 @@ class WC_Customer_Order_CSV_Export_Admin {
 				),
 
 				array(
-					'id'      => 'wc_customer_order_csv_export_passive_mode',
+					'id'      => 'wc_customer_order_csv_export_ftp_passive_mode',
 					'name'    => __( 'Passive Mode', WC_Customer_Order_CSV_Export::TEXT_DOMAIN ),
 					'desc'    => __( 'Enable passive mode if you are having issues connecting to FTP, especially if you see "PORT command successful" in the error log.', WC_Customer_Order_CSV_Export::TEXT_DOMAIN ),
 					'default' => 'no',
@@ -876,7 +911,7 @@ class WC_Customer_Order_CSV_Export_Admin {
 					'id'     => 'wc_customer_order_csv_export_test_button',
 					'name'   => __( 'Test FTP', WC_Customer_Order_CSV_Export::TEXT_DOMAIN ),
 					'method' => 'ftp',
-					'type'   => 'test_button',
+					'type'   => 'csv_test_button',
 				),
 
 				array( 'type' => 'sectionend' ),
@@ -899,7 +934,38 @@ class WC_Customer_Order_CSV_Export_Admin {
 					'id'     => 'wc_customer_order_csv_export_test_button',
 					'name'   => __( 'Test HTTP POST', WC_Customer_Order_CSV_Export::TEXT_DOMAIN ),
 					'method' => 'http_post',
-					'type'   => 'test_button',
+					'type'   => 'csv_test_button',
+				),
+
+				array( 'type' => 'sectionend' ),
+
+				array(
+					'id'   => 'wc_customer_order_csv_export_email_settings',
+					'name' => __( 'Email Settings', WC_Customer_Order_CSV_Export::TEXT_DOMAIN ),
+					'type' => 'title'
+				),
+
+				array(
+					'id'       => 'wc_customer_order_csv_export_email_recipients',
+					'name'     => __( 'Recipient(s)', WC_Customer_Order_CSV_Export::TEXT_DOMAIN ),
+					'desc_tip' => sprintf( __( 'Enter recipients (comma separated) the exported CSV should be emailed to. Defaults to <em>%s</em>.', WC_Customer_Order_CSV_Export::TEXT_DOMAIN ), esc_attr( get_option('admin_email') ) ),
+					'default'  => '',
+					'type'     => 'text',
+				),
+
+				array(
+					'id'       => 'wc_customer_order_csv_export_email_subject',
+					'name'     => __( 'Email Subject', WC_Customer_Order_CSV_Export::TEXT_DOMAIN ),
+					'desc_tip' => __( 'Enter the email subject.', WC_Customer_Order_CSV_Export::TEXT_DOMAIN ),
+					'default'  => sprintf( __( '[%s] Order CSV Export', WC_Customer_Order_CSV_Export::TEXT_DOMAIN ), get_option( 'blogname' ) ),
+					'type'     => 'text',
+				),
+
+				array(
+					'id'     => 'wc_customer_order_csv_export_test_button',
+					'name'   => __( 'Test Email', WC_Customer_Order_CSV_Export::TEXT_DOMAIN ),
+					'method' => 'email',
+					'type'   => 'csv_test_button',
 				),
 
 				array( 'type' => 'sectionend' ),
@@ -907,7 +973,14 @@ class WC_Customer_Order_CSV_Export_Admin {
 
 		);
 
-		return $settings[ $tab_id ];
+		/**
+		 * Allow actors to add or remove settings from the CSV export pages.
+		 *
+		 * @since 3.0.6
+		 * @param array $settings an array of settings for the given tab
+		 * @param string $tab_id current tab ID
+		 */
+		return apply_filters( 'wc_customer_order_csv_export_settings', $settings[ $tab_id ], $tab_id );
 	}
 
 
@@ -919,14 +992,46 @@ class WC_Customer_Order_CSV_Export_Admin {
 	 */
 	public function render_test_button( $field ) {
 
+		$settings_exist = $this->method_settings_exist( $field['method'] );
+		$name           = $field['name'];
+		$atts           = array( 'data-method' => $field['method'] );
+
+		// disable text button and change name if required
+		if ( ! $settings_exist ) {
+			$name = __( 'Please save your settings before testing', WC_Customer_Order_CSV_Export::TEXT_DOMAIN );
+			$atts['disabled'] = 'disabled';
+		}
+
 		?>
 			<tr valign="top">
 				<th scope="row" class="titledesc">Test</th>
 				<td class="forminp">
-					<?php submit_button( $field['name'], 'secondary', $field['id'], true, array( 'data-method' => $field['method'] ) ); ?>
+					<?php submit_button( $name, 'secondary', $field['id'], true, $atts ); ?>
 				</td>
 			</tr>
 		<?php
+	}
+
+
+	/**
+	 * Check if settings for chosen auto-export method are saved
+	 *
+	 * @since 3.1
+	 * @param string $method export method, either `ftp` or `http_post`
+	 * @return bool
+	 */
+	public function method_settings_exist( $method ) {
+
+		// assume true
+		$exist = true;
+
+		if ( $method == 'ftp' ) {
+			$exist = get_option( 'wc_customer_order_csv_export_ftp_server' ) && get_option( 'wc_customer_order_csv_export_ftp_username' ) && get_option( 'wc_customer_order_csv_export_ftp_password' );
+		} elseif ( $method == 'http_post' ) {
+			$exist = get_option( 'wc_customer_order_csv_export_http_post_url' );
+		}
+
+		return $exist;
 	}
 
 

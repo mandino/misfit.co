@@ -1256,6 +1256,11 @@ class WooCommerce_Product_Vendors {
                 $product_id = get_post_meta( $commission->ID, '_commission_product', true );
                 $product = get_product( $product_id );
 
+
+                if( ! isset( $product ) || ! $product || is_wp_error( $product ) || ! is_object( $product ) ) {
+                    continue;
+                }
+
                 if( ! isset( $data[ $product_id ]['product'] ) ) {
                     $data[ $product_id ]['product'] = $product->get_title();
                 }

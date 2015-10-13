@@ -153,6 +153,28 @@ class SV_WC_Plugin_Compatibility {
 
 
 	/**
+	 * Returns the checkout pay page URL
+	 *
+	 * @since 2.1
+	 * @return string checkout pay page URL
+	 */
+	public static function get_checkout_pay_page_url() {
+
+		if ( self::is_wc_version_gte_2_1() ) {
+			$pay_url = get_permalink( wc_get_page_id( 'checkout' ) ) . 'order-pay/';
+		} else {
+			$pay_url = get_permalink( woocommerce_get_page_id( 'pay' ) );
+		}
+
+		if ( 'yes' == get_option( 'woocommerce_force_ssl_checkout' ) || is_ssl() ) {
+			$pay_url = str_replace( 'http:', 'https:', $pay_url );
+		}
+
+		return $pay_url;
+	}
+
+
+	/**
 	 * Returns the order_id if on the checkout pay page
 	 *
 	 * @since 2.0
@@ -164,7 +186,15 @@ class SV_WC_Plugin_Compatibility {
 			global $wp;
 			return isset( $wp->query_vars['order-pay'] ) ? absint( $wp->query_vars['order-pay'] ) : 0;
 		} else {
-			return isset( $_GET['order'] ) ? absint( $_GET['order'] ) : 0;
+			if ( isset( $_GET['order_id'] ) ) {
+				// on the Pay page gateway selection version, there is an order_id param
+				return absint( $_GET['order_id'] );
+			} elseif ( isset( $_GET['order'] ) ) {
+				// on the Pay page for a single gateway, there is an order param with the order id
+				return absint( $_GET['order'] );
+			} else {
+				return 0;
+			}
 		}
 	}
 
@@ -728,6 +758,40 @@ class SV_WC_Plugin_Compatibility {
 
 
 	/**
+	 * Trim trailing zeros off prices.
+	 *
+	 * @since 2.0.1
+	 * @param string $price the price
+	 * @return string price with zeroes trimmed
+	 */
+	public static function wc_trim_zeroes( $price ) {
+
+		if ( self::is_wc_version_gte_2_1() ) {
+			return wc_trim_zeroes( $price );
+		} else {
+			return woocommerce_trim_zeros( $price );
+		}
+	}
+
+
+	/**
+	 * Get the template path
+	 *
+	 * @since 2.0.2
+	 * @return string template path
+	 */
+	public static function template_path() {
+
+		if ( self::is_wc_version_gte_2_1() ) {
+			return WC()->template_path();
+		} else {
+			global $woocommerce;
+			return $woocommerce->template_url;
+		}
+	}
+
+
+	/**
 	 * Compatibility function to get the version of the currently installed WooCommerce
 	 *
 	 * @since 2.0
@@ -783,9 +847,7 @@ class SV_WC_Plugin_Compatibility {
 	 * @return boolean true if the installed version of WooCommerce is 2.1 or greater
 	 */
 	public static function is_wc_version_gte_2_1() {
-
-		// can't use gte 2.1 at the moment because 2.1-BETA < 2.1
-		return self::is_wc_version_gt( '2.0.20' );
+		return self::get_wc_version() && version_compare( self::get_wc_version(), '2.1', '>=' );
 	}
 
 
@@ -797,7 +859,6 @@ class SV_WC_Plugin_Compatibility {
 	 * @return boolean true if the installed version of WooCommerce is > $version
 	 */
 	public static function is_wc_version_gt( $version ) {
-
 		return self::get_wc_version() && version_compare( self::get_wc_version(), $version, '>' );
 	}
 

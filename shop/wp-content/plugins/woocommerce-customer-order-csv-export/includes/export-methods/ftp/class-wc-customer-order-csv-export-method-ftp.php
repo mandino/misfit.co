@@ -49,11 +49,20 @@ class WC_Customer_Order_CSV_Export_Method_FTP extends WC_Customer_Order_CSV_Expo
 
 		parent::__construct();
 
-		// Handle errors from ftp_* functions that throw warnings for things like invalid username / password and failed directory changes
+		// Handle errors from ftp_* functions that throw warnings for things like invalid username / password, failed directory changes, and failed data connections
 		set_error_handler( array( $this, 'handle_errors' ) );
 
 		// setup connection
-		$this->link = ( 'ftps' == $this->security ) ? ftp_ssl_connect( $this->server, $this->port, $this->timeout ) : ftp_connect( $this->server, $this->port, $this->timeout );
+		$this->link = null;
+
+		if ( 'ftps' == $this->security && function_exists( 'ftp_ssl_connect' ) ) {
+
+			$this->link = ftp_ssl_connect( $this->server, $this->port, $this->timeout );
+
+		} elseif ( 'ftps' !== $this->security ) {
+
+			$this->link = ftp_connect( $this->server, $this->port, $this->timeout );
+		}
 
 		// check for successful connection
 		if ( ! $this->link ) {
@@ -78,17 +87,14 @@ class WC_Customer_Order_CSV_Export_Method_FTP extends WC_Customer_Order_CSV_Expo
 		}
 
 		// change directories if initial path is populated, note that failing to change directory throws an E_WARNING PHP error
-		if ( $this->initial_path ) {
+		if ( $this->path ) {
 
 			// check for success
-			if ( ! ftp_chdir( $this->link, '/' . $this->initial_path ) ) {
+			if ( ! ftp_chdir( $this->link, '/' . $this->path ) ) {
 
-				throw new Exception( __( "Could not change directory to {$this->initial_path} - check path exists.", WC_Customer_Order_CSV_Export::TEXT_DOMAIN ) );
+				throw new Exception( __( "Could not change directory to {$this->path} - check path exists.", WC_Customer_Order_CSV_Export::TEXT_DOMAIN ) );
 			}
 		}
-
-		// give error handling back to PHP
-		restore_error_handler();
 	}
 
 
@@ -138,6 +144,7 @@ class WC_Customer_Order_CSV_Export_Method_FTP extends WC_Customer_Order_CSV_Expo
 	 * @param string $error_string PHP error string
 	 * @param string $error_file PHP file where error occurred
 	 * @param int $error_line line number of error
+	 * @return boolean false
 	 * @throws Exception
 	 */
 	public function handle_errors( $error_no, $error_string, $error_file, $error_line ) {
@@ -145,7 +152,7 @@ class WC_Customer_Order_CSV_Export_Method_FTP extends WC_Customer_Order_CSV_Expo
 		// only handle errors for our own files
 		if ( false === strpos( $error_file, __FILE__ ) ) {
 
-			return;
+			return false;
 		}
 
 		throw new Exception( sprintf( __( 'FTP error: %s', WC_Customer_Order_CSV_Export::TEXT_DOMAIN ), $error_string ) );
@@ -159,8 +166,14 @@ class WC_Customer_Order_CSV_Export_Method_FTP extends WC_Customer_Order_CSV_Expo
 	 */
 	public function __destruct() {
 
-		// errors suppressed here as they are not useful
-		@ftp_close( $this->link );
+		if ( $this->link ) {
+
+			// errors suppressed here as they are not useful
+			@ftp_close( $this->link );
+		}
+
+		// give error handling back to PHP
+		restore_error_handler();
 	}
 
 
