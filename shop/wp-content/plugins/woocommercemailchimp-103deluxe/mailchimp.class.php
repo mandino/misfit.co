@@ -42,7 +42,7 @@ class WC_Mailchimp_List extends WC_Integration {
         $this->api                  = new MCAPI($this->mailchimp_api_key);
 
         //Logs
-        $this->log = $woocommerce->logger();
+        // $this->log = $woocommerce->logger();
 
         // Actions
 
