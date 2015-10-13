@@ -49,3 +49,5 @@
 01-31-2014 @ 04:00:49 - Code=214:	dassasdas@gmail.com is already subscribed to list Misfit Press - Misfit Journal Subscription (Digital) Orders. <a href="http://misfit-inc.us1.list-manage.com/subscribe/send-email?u=dab524f4886549dbf587dce02&id=bfd8fc4bd4&e=ZGFzc2FzZGFzQGdtYWlsLmNvbQ==">Click here to update your profile.</a>
 01-31-2014 @ 04:00:49 - Code=502:	Invalid Email Address: 
 01-31-2014 @ 09:06:37 - Code=215:	dassasdas@gmail.com is not subscribed to list Misfit Press - Misfit Journal Subscription (Digital) Orders
+10-13-2015 @ 08:42:04 - Code=200:	Invalid MailChimp List ID: 070c4eb435
+10-13-2015 @ 08:42:05 - Code=200:	Invalid MailChimp List ID: 070c4eb435
