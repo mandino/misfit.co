@@ -34,3 +34,28 @@ blogs/
 test/
 *timthumb.txt
 shop/wp-content/uploads/sucuri/sucuri-lastlogins.php
+
+shop/.htaccess
+shop/wp-config.php
+shop/wp-content/uploads/
+shop/wp-content/blogs.dir/
+shop/wp-content/upgrade/
+shop/wp-content/backup-db/
+shop/wp-content/advanced-cache.php
+shop/wp-content/wp-cache-config.php
+shop/sitemap.xml
+shop/*.log
+shop/wp-content/cache/
+shop/wp-content/backups/
+shop/sitemap.xml.gz
+
+# ignore debug.log
+shop/wp-content/debug.log
+# ignore local-config.php
+shop/local-config.php
+
+# ignore wordpress themes
+shop/wp-content/wp-content/themes/classic/
+shop/wp-content/wp-content/themes/twentyfourteen/
+shop/wp-content/wp-content/themes/twentythirteen/
+shop/wp-content/wp-content/themes/twentytwelve/

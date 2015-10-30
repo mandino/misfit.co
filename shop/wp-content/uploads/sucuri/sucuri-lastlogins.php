@@ -34,3 +34,4 @@ a:5:{s:7:"user_id";i:2;s:10:"user_login";s:7:"mandino";s:15:"user_remoteaddr";s:
 =======
 a:5:{s:7:"user_id";i:2;s:10:"user_login";s:7:"mandino";s:15:"user_remoteaddr";s:1:"1";s:13:"user_hostname";b:0;s:14:"user_lastlogin";s:19:"2015-09-21 09:52:45";}
 >>>>>>> origin/master
+{"user_id":2,"user_login":"mandino","user_remoteaddr":"127.0.0.1","user_hostname":"lmlicenses.wip4.adobe.com","user_lastlogin":"2015-10-23 06:44:30"}
