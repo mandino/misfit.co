@@ -45,6 +45,7 @@ include(TEMPLATEPATH . '/library/post_types.php');
  /* ................. SOME OPTIONS FOR POSTS .................... */
 /* Below is an include to a few options for your posts.*/
 include(TEMPLATEPATH . '/options/single-options.php'); 
+include(TEMPLATEPATH . '/options/options-product.php'); 
 
 
  /* ................. SOME OPTIONS FOR SLIDES .................... */

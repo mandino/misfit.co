@@ -3,6 +3,7 @@
 
 		<?php
 
+			$i=1;
 			$product_1 = new wp_query(array(
 				'post_type' => 'product',
 				'posts_per_page' => 6
@@ -12,97 +13,32 @@
 
 	    ?>
 
-			<li>
+			<li <?php if($i == 1) { echo 'class="current"'; } ?>>
 				<div class="description">
+
 					<h2><?php the_title(); ?></h2>
-					<?php the_content(); ?>
+
+					<?php if( has_excerpt() ) { ?>
+						<?php the_excerpt(); ?>
+					<?php } else { ?>
+						<?php the_content(); ?>
+					<?php } ?>
+
 				</div>
 				<div class="tiltview col">
 					<a href="<?php the_permalink(); ?>">
 						<img src="<?php bloginfo('template_url'); ?>/js/timthumb.php?src=<?php echo $imgsrc[0]; ?>&w=500&h=500"/>
 					</a>
-					<a href="<?php the_permalink(); ?>">
-						<img src="<?php bloginfo('template_url'); ?>/js/timthumb.php?src=<?php bloginfo('url'); ?>/wp-content/uploads/2013/11/Screen-Shot-2014-02-27-at-11.07.26-AM.png&w=500&h=500"/>
-					</a>
+
+					<?php if( get_post_meta($post->ID,'misfit_extra_product_photo',true) ) { ?>
+						<a href="<?php the_permalink(); ?>">
+							<img src="<?php bloginfo('template_url'); ?>/js/timthumb.php?src=<?php echo get_post_meta($post->ID,'misfit_extra_product_photo',true); ?>&w=500&h=500"/>
+						</a>
+					<?php } ?>
 				</div>
 			</li>
 
-		<?php endwhile; endif; wp_reset_query(); ?>
-		
-		<li>
-			<div class="description">
-				<h2>The Life &amp; Times of a Remarkable Misfit</h2>
-				<p>The Life and Times of a Remarkable Misfit is a collection of essays about living with intention, doing work that matters and changing the world. If you&lsquo;ve never quite fit in &amp; you feel like there is more to life than working a job you hate, then this might be for you.</p>
-			</div>
-			<div class="tiltview col">
-				<a href="/shop/product/the-life-times-of-a-remarkable-misfit">
-					<img src="<?php bloginfo('template_url'); ?>/js/timthumb.php?src=<?php bloginfo('url'); ?>/wp-content/uploads/2013/12/Books.jpeg&w=500&h=500"/>
-				</a>
-				<a href="/shop/product/the-life-times-of-a-remarkable-misfit">
-					<img src="<?php bloginfo('template_url'); ?>/js/timthumb.php?src=<?php bloginfo('url'); ?>/wp-content/uploads/2013/12/Books1.jpeg&w=500&h=500"/>
-				</a>
-			</div>
-		</li>
-		
-		<li>
-			<div class="description">
-				<h2>Define Your Moments Print</h2>
-				<p>The Define Your Moments print is a handcrafted 13x19 inch art piece which is based on a quote from The Life &amp; Times of a Remarkable Misfit. It is an artisan letterpress print on heavy card stock, made from recycled paper, with a vibrant red edge.</p>
-			</div>
-			<div class="tiltview col">
-				<a href="/shop/product/define-your-moments-letterpress-print">
-					<img src="<?php bloginfo('template_url'); ?>/js/timthumb.php?src=<?php bloginfo('url'); ?>/wp-content/uploads/2014/03/Define-Your-Moments.jpg&w=500&h=500"/>
-				</a>
-				<a href="/shop/product/define-your-moments-letterpress-print">
-					<img src="<?php bloginfo('template_url'); ?>/js/timthumb.php?src=<?php bloginfo('url'); ?>/wp-content/uploads/2014/03/Define-Your-Moments-in-Fargo-.jpg&w=500&h=500"/>
-				</a>
-			</div>
-		</li>
-		
-		<li>
-			<div class="description">
-				<h2>Wolftree Vol. 3 + Companion Album</h2>
-				<p>Wolftree is a biannual publication and lifestyle blog that celebrates makers, dreamers and adventurers. 116 pages, offset-printed, perfect bound, full color on uncoated paper.  Printed and bound in Iowa. The paper used in Wolftree Vol. 3 was sourced from a mill in the Midwest and is FSC certified. Plus the “Life in the Dust of Our Youth” Companion Album includes 10 Songs Written and Recorded by Wolftree to delight your ears whilst delighting your eyes with Wolftree Magazine.</p>
-			</div>
-			<div class="tiltview col">
-				<a href="/shop/product/wolftree-vol-3-digital-companion">
-					<img src="<?php bloginfo('template_url'); ?>/js/timthumb.php?src=<?php bloginfo('url'); ?>/wp-content/uploads/2014/05/Wolftree-page-4.jpg&w=500&h=500"/>
-				</a>
-				<a href="/shop/product/wolftree-vol-3-digital-companion">
-					<img src="<?php bloginfo('template_url'); ?>/js/timthumb.php?src=<?php bloginfo('url'); ?>/wp-content/uploads/2014/05/Pages-from-WolftreeVol3Final3-4.jpg&w=500&h=500"/>
-				</a>
-			</div>
-		</li>
-		
-		<li>
-			<div class="description">
-				<h2>Misfit Journal 2 Digital Edition</h2>
-				<p>We started this arts journal to prove that art and literature still very much have a place in this brave new world and we hope you enjoy taking pause from your hectic lives and getting lost in these beautiful pages for a few hours. We are trialing a 'pay what you can' model with the digital edition.</p>
-			</div>
-			<div class="tiltview col">
-				<a href="/shop/product/misfit-journal-edition-2-digital">
-					<img src="<?php bloginfo('template_url'); ?>/js/timthumb.php?src=<?php bloginfo('url'); ?>/wp-content/uploads/2014/05/cover_MJ2_low.jpg&w=500&h=500"/>
-				</a>
-				<a href="/shop/product/misfit-journal-edition-2-digital">
-					<img src="<?php bloginfo('template_url'); ?>/js/timthumb.php?src=<?php bloginfo('url'); ?>/wp-content/uploads/2014/05/MJ-2-Dig-pg-1.jpg&w=500&h=500"/>
-				</a>
-			</div>
-		</li>
-		
-		<li>
-			<div class="description">
-				<h2>Bundle of 10: The Life and Times of a Remarkable Misfit</h2>
-				<p>The Life and Times of a Remarkable Misfit is a collection of essays about living with intention, doing work that matters and changing the world. If you’ve never quite fit in & you feel like there is more to life than working a job you hate, then this might be for you.</p>
-			</div>
-			<div class="tiltview col">
-				<a href="/shop/product/bundle-of-10-the-life-and-times-of-a-remarkable-misfit">
-					<img src="<?php bloginfo('template_url'); ?>/js/timthumb.php?src=<?php bloginfo('url'); ?>/wp-content/uploads/2013/12/Books.jpeg&w=500&h=500"/>
-				</a>
-				<a href="/shop/product/bundle-of-10-the-life-and-times-of-a-remarkable-misfit">
-					<img src="<?php bloginfo('template_url'); ?>/js/timthumb.php?src=<?php bloginfo('url'); ?>/wp-content/uploads/2013/12/misfit-book_jalanpaul_DSC_2763.jpg&w=500&h=500"/>
-				</a>
-			</div>
-		</li>
+		<?php $i++; endwhile; endif; ?>
 		
 	</ol>
 </div>
@@ -149,7 +85,7 @@
 					</div>
 				</div>
 
-			<?php endwhile; endif; wp_reset_query(); ?>
+			<?php endwhile; endif; ?>
 
 		</div>
 		

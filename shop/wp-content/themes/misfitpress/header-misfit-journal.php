@@ -48,7 +48,7 @@
 
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo ('template_url'); ?>/misfit-journal/style.css" />
 	
-	<link rel="stylesheet" type="text/css" href="//misfit.co/shop/misfit-journal/wp-content/themes/misfitjournal/css/style.css">
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo ('url'); ?>/misfit-journal/wp-content/themes/misfitjournal/css/style.css">
 	
 	<!-- fonts -->
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo ('template_url'); ?>/misfit-journal/css/fonts.css">
@@ -58,7 +58,7 @@
 	
 	
 	<!-- responsive style -->
-	<link rel="stylesheet" type="text/css" href="//misfit.co/shop/misfit-journal/wp-content/themes/misfitjournal/css/media.css">
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo ('url'); ?>/misfit-journal/wp-content/themes/misfitjournal/css/media.css">
 	
 	<!-- responsive style -->
 	<script type="text/javascript" src="<?php bloginfo ('template_url'); ?>/js/modernizr.custom.js"></script>
