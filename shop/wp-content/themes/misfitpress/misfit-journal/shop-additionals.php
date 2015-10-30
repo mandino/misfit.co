@@ -1,19 +1,33 @@
 <div class="slideshow" id="slideshow">
 	<ol class="slides">
-		<li class="current">
-			<div class="description">
-				<h2>Misfit Journal Digital Edition</h2>
-				<p>Edition One is a creative cluster bomb, bringing together seven photographers, three visual artists, two poets and four prose-merchants. This is a vintage edition which bears the name Misfit Quarterly. This edition is extremely limited edition as the name has since been changed to Misfit.</p>
-			</div>
-			<div class="tiltview col">
-				<a href="/shop/product/misfit-journal-edition-1-digital-2">
-					<img src="<?php bloginfo ('template_url'); ?>/js/timthumb.php?src=/shop/wp-content/uploads/2013/11/Screen-Shot-2014-02-27-at-10.56.58-AM.png&w=500&h=500"/>
-				</a>
-				<a href="/shop/product/misfit-journal-edition-1-digital-2">
-					<img src="<?php bloginfo ('template_url'); ?>/js/timthumb.php?src=/shop/wp-content/uploads/2013/11/Screen-Shot-2014-02-27-at-11.07.26-AM.png&w=500&h=500"/>
-				</a>
-			</div>
-		</li>
+
+		<?php
+
+			$product_1 = new wp_query(array(
+				'post_type' => 'product',
+				'posts_per_page' => 6
+			)); 
+			if($product_1->have_posts()) : while($product_1->have_posts()) : $product_1->the_post();
+			$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "Full"); 
+
+	    ?>
+
+			<li>
+				<div class="description">
+					<h2><?php the_title(); ?></h2>
+					<?php the_content(); ?>
+				</div>
+				<div class="tiltview col">
+					<a href="<?php the_permalink(); ?>">
+						<img src="<?php bloginfo('template_url'); ?>/js/timthumb.php?src=<?php echo $imgsrc[0]; ?>&w=500&h=500"/>
+					</a>
+					<a href="<?php the_permalink(); ?>">
+						<img src="<?php bloginfo('template_url'); ?>/js/timthumb.php?src=<?php bloginfo('url'); ?>/wp-content/uploads/2013/11/Screen-Shot-2014-02-27-at-11.07.26-AM.png&w=500&h=500"/>
+					</a>
+				</div>
+			</li>
+
+		<?php endwhile; endif; wp_reset_query(); ?>
 		
 		<li>
 			<div class="description">
@@ -22,10 +36,10 @@
 			</div>
 			<div class="tiltview col">
 				<a href="/shop/product/the-life-times-of-a-remarkable-misfit">
-					<img src="<?php bloginfo ('template_url'); ?>/js/timthumb.php?src=/shop/wp-content/uploads/2013/12/Books.jpeg&w=500&h=500"/>
+					<img src="<?php bloginfo('template_url'); ?>/js/timthumb.php?src=<?php bloginfo('url'); ?>/wp-content/uploads/2013/12/Books.jpeg&w=500&h=500"/>
 				</a>
 				<a href="/shop/product/the-life-times-of-a-remarkable-misfit">
-					<img src="<?php bloginfo ('template_url'); ?>/js/timthumb.php?src=/shop/wp-content/uploads/2013/12/Books1.jpeg&w=500&h=500"/>
+					<img src="<?php bloginfo('template_url'); ?>/js/timthumb.php?src=<?php bloginfo('url'); ?>/wp-content/uploads/2013/12/Books1.jpeg&w=500&h=500"/>
 				</a>
 			</div>
 		</li>
@@ -37,10 +51,10 @@
 			</div>
 			<div class="tiltview col">
 				<a href="/shop/product/define-your-moments-letterpress-print">
-					<img src="<?php bloginfo ('template_url'); ?>/js/timthumb.php?src=/shop/wp-content/uploads/2014/03/Define-Your-Moments.jpg&w=500&h=500"/>
+					<img src="<?php bloginfo('template_url'); ?>/js/timthumb.php?src=<?php bloginfo('url'); ?>/wp-content/uploads/2014/03/Define-Your-Moments.jpg&w=500&h=500"/>
 				</a>
 				<a href="/shop/product/define-your-moments-letterpress-print">
-					<img src="<?php bloginfo ('template_url'); ?>/js/timthumb.php?src=/shop/wp-content/uploads/2014/03/Define-Your-Moments-in-Fargo-.jpg&w=500&h=500"/>
+					<img src="<?php bloginfo('template_url'); ?>/js/timthumb.php?src=<?php bloginfo('url'); ?>/wp-content/uploads/2014/03/Define-Your-Moments-in-Fargo-.jpg&w=500&h=500"/>
 				</a>
 			</div>
 		</li>
@@ -52,10 +66,10 @@
 			</div>
 			<div class="tiltview col">
 				<a href="/shop/product/wolftree-vol-3-digital-companion">
-					<img src="<?php bloginfo ('template_url'); ?>/js/timthumb.php?src=/shop/wp-content/uploads/2014/05/Wolftree-page-4.jpg&w=500&h=500"/>
+					<img src="<?php bloginfo('template_url'); ?>/js/timthumb.php?src=<?php bloginfo('url'); ?>/wp-content/uploads/2014/05/Wolftree-page-4.jpg&w=500&h=500"/>
 				</a>
 				<a href="/shop/product/wolftree-vol-3-digital-companion">
-					<img src="<?php bloginfo ('template_url'); ?>/js/timthumb.php?src=/shop/wp-content/uploads/2014/05/Pages-from-WolftreeVol3Final3-4.jpg&w=500&h=500"/>
+					<img src="<?php bloginfo('template_url'); ?>/js/timthumb.php?src=<?php bloginfo('url'); ?>/wp-content/uploads/2014/05/Pages-from-WolftreeVol3Final3-4.jpg&w=500&h=500"/>
 				</a>
 			</div>
 		</li>
@@ -67,10 +81,10 @@
 			</div>
 			<div class="tiltview col">
 				<a href="/shop/product/misfit-journal-edition-2-digital">
-					<img src="<?php bloginfo ('template_url'); ?>/js/timthumb.php?src=/shop/wp-content/uploads/2014/05/cover_MJ2_low.jpg&w=500&h=500"/>
+					<img src="<?php bloginfo('template_url'); ?>/js/timthumb.php?src=<?php bloginfo('url'); ?>/wp-content/uploads/2014/05/cover_MJ2_low.jpg&w=500&h=500"/>
 				</a>
 				<a href="/shop/product/misfit-journal-edition-2-digital">
-					<img src="<?php bloginfo ('template_url'); ?>/js/timthumb.php?src=/shop/wp-content/uploads/2014/05/MJ-2-Dig-pg-1.jpg&w=500&h=500"/>
+					<img src="<?php bloginfo('template_url'); ?>/js/timthumb.php?src=<?php bloginfo('url'); ?>/wp-content/uploads/2014/05/MJ-2-Dig-pg-1.jpg&w=500&h=500"/>
 				</a>
 			</div>
 		</li>
@@ -82,32 +96,13 @@
 			</div>
 			<div class="tiltview col">
 				<a href="/shop/product/bundle-of-10-the-life-and-times-of-a-remarkable-misfit">
-					<img src="<?php bloginfo ('template_url'); ?>/js/timthumb.php?src=/shop/wp-content/uploads/2013/12/Books.jpeg&w=500&h=500"/>
+					<img src="<?php bloginfo('template_url'); ?>/js/timthumb.php?src=<?php bloginfo('url'); ?>/wp-content/uploads/2013/12/Books.jpeg&w=500&h=500"/>
 				</a>
 				<a href="/shop/product/bundle-of-10-the-life-and-times-of-a-remarkable-misfit">
-					<img src="<?php bloginfo ('template_url'); ?>/js/timthumb.php?src=/shop/wp-content/uploads/2013/12/misfit-book_jalanpaul_DSC_2763.jpg&w=500&h=500"/>
+					<img src="<?php bloginfo('template_url'); ?>/js/timthumb.php?src=<?php bloginfo('url'); ?>/wp-content/uploads/2013/12/misfit-book_jalanpaul_DSC_2763.jpg&w=500&h=500"/>
 				</a>
 			</div>
 		</li>
-		
-		<!--
-		
-		<li>
-			<div class="description">
-				<h2>The Misfit Anthology: 2015</h2>
-				<p>The Misfit Anthology 2015 is a collection of the finest creative work Misfit Press has encountered over the past eighteen months. There is prose, poetry, photography, visual art, and everything in between.</p>
-			</div>
-			<div class="tiltview col">
-				<a href="/shop/product/the-misfit-anthology-2015">
-					<img src="<?php bloginfo ('template_url'); ?>/js/timthumb.php?src=/shop/wp-content/uploads/2015/06/Store_2.jpg&w=500&h=500"/>
-				</a>
-				<a href="/shop/product/the-misfit-anthology-2015">
-					<img src="<?php bloginfo ('template_url'); ?>/js/timthumb.php?src=/shop/wp-content/uploads/2015/06/MisfitBooks_20.jpg&w=500&h=500"/>
-				</a>
-			</div>
-		</li>
-		
-		-->
 		
 	</ol>
 </div>
@@ -117,382 +112,257 @@
 		<div class="tile-wrapper">
 		
 		<div class="displayonly-mobile">
-			<div class="portfoliocontainer mobile">
-				<div class="portfolio-item">
-					<div class="portfolio-shade"></div>
-					<a href="#"></a>
-					<div class="portimg" style="background-image: url('<?php bloginfo ('template_url'); ?>/js/timthumb.php?src=/shop/wp-content/uploads/2013/11/Screen-Shot-2014-02-27-at-10.56.58-AM.png&w=500&h=500');"></div>
-					<h3>Digital Edition</h3>
-					<h1>Available Now</h1>
-					
-					<div class="overlay">
-						<div class="smallview">
-							<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fmisfit-journal-edition-1-digital-2"><i class="fa fa-facebook"></i></a>			
-							<a target="_blank" href="https://twitter.com/intent/tweet?hashtags=misfitjournal&text=Misfit%20Journal%20Digital%20Edition%20%7C%20Misfit%20Co&url=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fmisfit-journal-edition-1-digital-2&via=misfit_inc"><i class="fa fa-twitter"></i></a>
-							<a target="_blank" href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fmisfit-journal-edition-1-digital-2&media=http%3A%2F%2Fmisfit.co%2Fshop%2Fwp-content%2Fuploads%2F2013%2F11%2FScreen-Shot-2014-02-27-at-10.56.58-AM.png&guid=nJ5S7t7i86Xi-1&description=Digital%20Edition"><i class="fa fa-pinterest"></i></a>
-							<a href="/shop/product/misfit-journal-edition-1-digital-2"><i class="fa fa-shopping-cart"></i></a>
-						</div>
+
+			<?php
+
+				$product_1 = new wp_query(array(
+					'post_type' => 'product',
+					'posts_per_page' => 6
+				)); 
+				if($product_1->have_posts()) : while($product_1->have_posts()) : $product_1->the_post();
+				$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "Full"); 
+		    ?>
+
+				<div class="portfoliocontainer mobile">
+					<div class="portfolio-item">
+						<div class="portfolio-shade"></div>
+						<a href="#"></a>
+						<div class="portimg" style="background-image: url('<?php bloginfo('template_url'); ?>/js/timthumb.php?src=<?php echo $imgsrc[0]; ?>&w=500&h=500');"></div>
+						<h3><?php the_title(); ?></h3>
+						<h1>Available Now</h1>
 						
-						<div class="bigview">
-							<a href="/shop/product/misfit-journal-edition-1-digital-2"><i class="fa fa-chevron-right"></i></a>
+						<div class="overlay">
+							
+							<div class="smallview">
+								<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>"><i class="fa fa-facebook"></i></a>
+								<a target="_blank" href="https://twitter.com/intent/tweet?hashtags=misfitshop&text=<?php the_title(); ?>&url=<?php the_permalink(); ?>&via=misfit_inc"><i class="fa fa-twitter"></i></a>
+								<a target="_blank" href="http://www.pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>&media=<?php echo $imgsrc[0]; ?>&guid=nJ5S7t7i86Xi-1&description=<?php the_title(); ?>"><i class="fa fa-pinterest"></i></a>
+								<a href="<?php the_permalink(); ?>"><i class="fa fa-shopping-cart"></i></a>
+							</div>
+
+							<div class="bigview">
+								<a href="<?php the_permalink(); ?>"><i class="fa fa-chevron-right"></i></a>
+							</div>
+							
+							<div class="clear"></div>
 						</div>
-						
-						<div class="clear"></div>
 					</div>
 				</div>
-			</div>
-			
-			<div class="portfoliocontainer mobile">
-				<div class="portfolio-item">
-					<div class="portfolio-shade"></div>
-					<a href="#"></a>
-					<div class="portimg" style="background-image: url('<?php bloginfo ('template_url'); ?>/js/timthumb.php?src=/shop/wp-content/uploads/2013/12/Books.jpeg&w=500&h=500');"></div>
-					<h3>The Life &amp; Times of a Remarkable Misfit</h3>
-					<h1>Available Now</h1>
-					
-					<div class="overlay">
-						<div class="smallview">
-							<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fthe-life-times-of-a-remarkable-misfit"><i class="fa fa-facebook"></i></a>
-							<a target="_blank" href="https://twitter.com/intent/tweet?hashtags=misfitjournal&text=The%20Life%20%26%20Times%20of%20A%20Remarkable%20Misfit%20%7C%20Misfit%20Co&url=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fthe-life-times-of-a-remarkable-misfit&via=misfit_inc"><i class="fa fa-twitter"></i></a>
-							<a target="_blank" href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fthe-life-times-of-a-remarkable-misfit&media=http%3A%2F%2Fmisfit.co%2Fshop%2Fwp-content%2Fuploads%2F2013%2F12%2FBooks.jpeg&guid=nJ5S7t7i86Xi-3&description=The%20Life%20%26%20Times%20of%20a%20Remarkable%20Misfit"><i class="fa fa-pinterest"></i></a>
-							<a href="/shop/product/the-life-times-of-a-remarkable-misfit"><i class="fa fa-shopping-cart"></i></a>
-						</div>
-						
-						<div class="bigview">
-							<a href="/shop/product/the-life-times-of-a-remarkable-misfit"><i class="fa fa-chevron-right"></i></a>
-						</div>
-						
-						<div class="clear"></div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="portfoliocontainer mobile">
-				<div class="portfolio-item">
-					<div class="portfolio-shade"></div>
-					<a href="#"></a>
-					<div class="portimg" style="background-image: url('<?php bloginfo ('template_url'); ?>/js/timthumb.php?src=/shop/wp-content/uploads/2014/03/Define-Your-Moments.jpg&w=500&h=500');"></div>
-					<h3>Define Your Moments Print</h3>
-					<h1>Available Now</h1>
-					
-					<div class="overlay">
-						<div class="smallview">
-							<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fdefine-your-moments-letterpress-print"><i class="fa fa-facebook"></i></a>
-							<a target="_blank" href="https://twitter.com/intent/tweet?hashtags=misfitjournal&text=Define%20Your%20Moments%20Print%20%7C%20Misfit%20Co&url=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fdefine-your-moments-letterpress-print&via=misfit_inc"><i class="fa fa-twitter"></i></a>
-							<a target="_blank" href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fdefine-your-moments-letterpress-print&media=http%3A%2F%2Fmisfit.co%2Fshop%2Fwp-content%2Fuploads%2F2014%2F03%2FDefine-Your-Moments.jpg&guid=nJ5S7t7i86Xi-4&description=Define%20Your%20Moments%20Print"><i class="fa fa-pinterest"></i></a>
-							<a href="/shop/product/define-your-moments-letterpress-print"><i class="fa fa-shopping-cart"></i></a>
-						</div>
-						
-						<div class="bigview">
-							<a href="/shop/product/define-your-moments-letterpress-print"><i class="fa fa-chevron-right"></i></a>
-						</div>
-						
-						<div class="clear"></div>
-					</div>
-				</div>
-			</div>
-		
-			<div class="portfoliocontainer mobile">
-				<div class="portfolio-item">
-					<div class="portfolio-shade"></div>
-					<a href="#"></a>
-					<div class="portimg" style="background-image: url('<?php bloginfo ('template_url'); ?>/js/timthumb.php?src=/shop/wp-content/uploads/2014/05/WTandAlbum.jpg&w=500&h=500');"></div>
-					<h3>Wolftree Vol. 3 + Digital Companion</h3>
-					<h1>Available Now</h1>
-					
-					<div class="overlay">
-						<div class="smallview">
-							<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fwolftree-vol-3-digital-companion"><i class="fa fa-facebook"></i></a>
-							<a target="_blank" href="https://twitter.com/intent/tweet?hashtags=misfitjournal&text=Wolftree%20Vol.%203%20%2B%20Digital%20Companion%20%7C%20Misfit%20Co&url=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fwolftree-vol-3-digital-companion&via=misfit_inc"><i class="fa fa-twitter"></i></a>
-							<a target="_blank" href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fwolftree-vol-3-digital-companion&media=http%3A%2F%2Fmisfit.co%2Fshop%2Fwp-content%2Fuploads%2F2014%2F05%2FWTandAlbum.jpg&guid=rXA66tUYAWE6-5&description=Wolftree%20Vol.%203%20%2B%20Digital%20Companion%20%7C%20Misfit%20Co"><i class="fa fa-pinterest"></i></a>
-							<a href="/shop/product/wolftree-vol-3-digital-companion"><i class="fa fa-shopping-cart"></i></a>
-						</div>
-						
-						<div class="bigview">
-							<a href="/shop/product/wolftree-vol-3-digital-companion"><i class="fa fa-chevron-right"></i></a>
-						</div>
-						
-						<div class="clear"></div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="portfoliocontainer mobile">
-				<div class="portfolio-item">
-					<div class="portfolio-shade"></div>
-					<a href="#"></a>
-					<div class="portimg" style="background-image: url('<?php bloginfo ('template_url'); ?>/js/timthumb.php?src=/shop/wp-content/uploads/2014/05/cover_MJ2_low.jpg&w=500&h=500');"></div>
-					<h3>Misfit Journal 2<br/>Digital Edition</h3>
-					<h1>Available Now</h1>
-					
-					<div class="overlay">
-						<div class="smallview">
-							<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fmisfit-journal-edition-2-digital"><i class="fa fa-facebook"></i></a>
-							<a target="_blank" href="https://twitter.com/intent/tweet?hashtags=misfitjournal&text=Misfit%20Journal%202%20Digital%20Edition%20%7C%20Misfit%20Co&url=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fmisfit-journal-edition-2-digital&via=misfit_inc"><i class="fa fa-twitter"></i></a>
-							<a target="_blank" href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fmisfit-journal-edition-2-digital&media=http%3A%2F%2Fmisfit.co%2Fshop%2Fwp-content%2Fuploads%2F2014%2F05%2Fcover_MJ2_low.jpg&description=Misfit%20Journal%202%20Digital%20Edition%20%7C%20Misfit%20Co"><i class="fa fa-pinterest"></i></a>
-							<a href="/shop/product/misfit-journal-edition-2-digital"><i class="fa fa-shopping-cart"></i></a>
-						</div>
-						
-						<div class="bigview">
-							<a href="/shop/product/misfit-journal-edition-2-digital"><i class="fa fa-chevron-right"></i></a>
-						</div>
-						
-						<div class="clear"></div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="portfoliocontainer mobile">
-				<div class="portfolio-item">
-					<div class="portfolio-shade"></div>
-					<a href="#"></a>
-					<div class="portimg" style="background-image: url('<?php bloginfo ('template_url'); ?>/js/timthumb.php?src=/shop/wp-content/uploads/2013/12/Books.jpeg&w=500&h=500');"></div>
-					<h3>Bundle of 10: The Life and Times of a Remarkable Misfit</h3>
-					<h1>Available Now</h1>
-					
-					<div class="overlay">
-						<div class="smallview">
-							<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fbundle-of-10-the-life-and-times-of-a-remarkable-misfit"><i class="fa fa-facebook"></i></a>
-							<a target="_blank" href="https://twitter.com/intent/tweet?hashtags=misfitjournal&text=The%20Life%20and%20Times%20of%20a%20Remarkable%20Misfit%20%7C%20Misfit%20Co&url=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fbundle-of-10-the-life-and-times-of-a-remarkable-misfit&via=misfit_inc"><i class="fa fa-twitter"></i></a>
-							<a target="_blank" href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fbundle-of-10-the-life-and-times-of-a-remarkable-misfit&media=http%3A%2F%2Fmisfit.co%2Fshop%2Fwp-content%2Fuploads%2F2013%2F12%2FBooks.jpeg&description=Bundle%20of%2010%3A%20The%20Life%20and%20Times%20of%20a%20Remarkable%20Misfit"><i class="fa fa-pinterest"></i></a>
-							<a href="/shop/product/bundle-of-10-the-life-and-times-of-a-remarkable-misfit"><i class="fa fa-shopping-cart"></i></a>
-						</div>
-						
-						<div class="bigview">
-							<a href="/shop/product/bundle-of-10-the-life-and-times-of-a-remarkable-misfit"><i class="fa fa-chevron-right"></i></a>
-						</div>
-						
-						<div class="clear"></div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="portfoliocontainer mobile" style="display: none;">
-				<div class="portfolio-item">
-					<div class="portfolio-shade"></div>
-					<a href="#"></a>
-					<div class="portimg" style="background-image: url('<?php bloginfo ('template_url'); ?>/js/timthumb.php?src=/shop/wp-content/uploads/2015/06/Store_2.jpg&w=500&h=500');"></div>
-					<h3>The Misfit Anthology: 2015</h3>
-					<h1>Available Now</h1>
-					
-					<div class="overlay">
-						<div class="smallview">
-							<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fthe-misfit-anthology-2015"><i class="fa fa-facebook"></i></a>
-							<a target="_blank" href="https://twitter.com/intent/tweet?hashtags=misfitjournal&text=The%20Misfit%20Anthology%3A%202015&url=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fthe-misfit-anthology-2015"><i class="fa fa-twitter"></i></a>
-							<a target="_blank" href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fthe-misfit-anthology-2015&media=http%3A%2F%2Fmisfit.co%2Fshop%2Fwp-content%2Fuploads%2F2015%2F06%2FStore_2.jpg&description=The%20Misfit%20Anthology%3A%202015"><i class="fa fa-pinterest"></i></a>
-							<a href="/shop/product/the-misfit-anthology-2015"><i class="fa fa-shopping-cart"></i></a>
-						</div>
-						
-						<div class="bigview">
-							<a href="/shop/product/the-misfit-anthology-2015"><i class="fa fa-chevron-right"></i></a>
-						</div>
-						
-						<div class="clear"></div>
-					</div>
-				</div>
-			</div>
+
+			<?php endwhile; endif; wp_reset_query(); ?>
+
 		</div>
 		
 		<!-- Block Left -->
 		
 		<div class="displayonly-desktop">
-		<div style="float: left; width: 49%; margin-right: 1%;">
-		
-			<div class="portfoliocontainer one">
-				<div class="portfolio-item">
-					<a href="/shop/product/misfit-journal-edition-1-digital-2"><div class="portfolio-shade"></div></a>
-					<a href="#"></a>
-					<div class="portimg" style="background-image: url('<?php bloginfo ('template_url'); ?>/js/timthumb.php?src=/shop/wp-content/uploads/2013/11/Screen-Shot-2014-02-27-at-10.56.58-AM.png&w=500&h=500');"></div>
-					<h3>Digital Edition</h3>
-					<h1>Available Now</h1>
-					
-					<div class="overlay">
-						<div class="smallview">
-							<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fmisfit-journal-edition-1-digital-2"><i class="fa fa-facebook"></i></a>
-							<a target="_blank" href="https://twitter.com/intent/tweet?hashtags=misfitjournal&text=Misfit%20Journal%20Digital%20Edition%20%7C%20Misfit%20Co&url=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fmisfit-journal-edition-1-digital-2&via=misfit_inc"><i class="fa fa-twitter"></i></a>
-							<a target="_blank" href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fmisfit-journal-edition-1-digital-2&media=http%3A%2F%2Fmisfit.co%2Fshop%2Fwp-content%2Fuploads%2F2013%2F11%2FScreen-Shot-2014-02-27-at-10.56.58-AM.png&guid=nJ5S7t7i86Xi-1&description=Digital%20Edition"><i class="fa fa-pinterest"></i></a>
-							<a href="/shop/product/misfit-journal-edition-1-digital-2"><i class="fa fa-shopping-cart"></i></a>
-						</div>
+
+			<?php
+
+				$i=1;
+				$product_1 = new wp_query(array(
+					'post_type' => 'product',
+					'posts_per_page' => 2
+				)); 
+				if($product_1->have_posts()) : 
+
+			?>
+
+			<div style="float: left; width: 49%; margin-right: 1%;">
+
+			<?php while($product_1->have_posts()) : $product_1->the_post();
+				$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "Full"); 
+		    ?>
+
+		    	<div class="portfoliocontainer <?php echo convertNumber($i); ?>">
+					<div class="portfolio-item">
+						<a href="<?php the_permalink(); ?>"><div class="portfolio-shade"></div></a>
+						<a href="#"></a>
+						<div class="portimg" style="background-image: url('<?php bloginfo('template_url'); ?>/js/timthumb.php?src=<?php echo $imgsrc[0]; ?>&w=500&h=500');"></div>
+						<h3><?php the_title(); ?></h3>
+						<h1>Available Now</h1>
 						
-						<div class="bigview">
-							<a href="/shop/product/misfit-journal-edition-1-digital-2"><i class="fa fa-chevron-right"></i></a>
+						<div class="overlay">
+							<div class="smallview">
+								<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>"><i class="fa fa-facebook"></i></a>
+								<a target="_blank" href="https://twitter.com/intent/tweet?hashtags=misfitshop&text=<?php the_title(); ?>&url=<?php the_permalink(); ?>&via=misfit_inc"><i class="fa fa-twitter"></i></a>
+								<a target="_blank" href="http://www.pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>&media=<?php echo $imgsrc[0]; ?>&guid=nJ5S7t7i86Xi-1&description=<?php the_title(); ?>"><i class="fa fa-pinterest"></i></a>
+								<a href="<?php the_permalink(); ?>"><i class="fa fa-shopping-cart"></i></a>
+							</div>
+							
+							<div class="bigview">
+								<a href="<?php the_permalink(); ?>"><i class="fa fa-chevron-right"></i></a>
+							</div>
+							
+							<div class="clear"></div>
 						</div>
-						
-						<div class="clear"></div>
 					</div>
 				</div>
+		
+			<?php $i++; endwhile; ?>
+
 			</div>
+
+			<?php endif; ?>
+
 			
-			<div class="portfoliocontainer two">
-				<div class="portfolio-item">
-					<a href="/shop/product/the-life-times-of-a-remarkable-misfit"><div class="portfolio-shade"></div></a>
-					<a href="#"></a>
-					<div class="portimg" style="background-image: url('<?php bloginfo ('template_url'); ?>/js/timthumb.php?src=/shop/wp-content/uploads/2013/12/Books.jpeg&w=500&h=500');"></div>
-					<h3>The Life &amp; Times of a Remarkable Misfit</h3>
-					<h1>Available Now</h1>
-					
-					<div class="overlay">
-						<div class="smallview">
-							<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fthe-life-times-of-a-remarkable-misfit"><i class="fa fa-facebook"></i></a>
-							<a target="_blank" href="https://twitter.com/intent/tweet?hashtags=misfitjournal&text=The%20Life%20%26%20Times%20of%20A%20Remarkable%20Misfit%20%7C%20Misfit%20Co&url=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fthe-life-times-of-a-remarkable-misfit&via=misfit_inc"><i class="fa fa-twitter"></i></a>
-							<a target="_blank" href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fthe-life-times-of-a-remarkable-misfit&media=http%3A%2F%2Fmisfit.co%2Fshop%2Fwp-content%2Fuploads%2F2013%2F12%2FBooks.jpeg&guid=nJ5S7t7i86Xi-3&description=The%20Life%20%26%20Times%20of%20a%20Remarkable%20Misfit"><i class="fa fa-pinterest"></i></a>
-							<a href="/shop/product/the-life-times-of-a-remarkable-misfit"><i class="fa fa-shopping-cart"></i></a>
-						</div>
-						
-						<div class="bigview">
-							<a href="/shop/product/the-life-times-of-a-remarkable-misfit"><i class="fa fa-chevron-right"></i></a>
-						</div>
-						
-						<div class="clear"></div>
-					</div>
-				</div>
-			</div>
 			
-		</div>
+			<!-- Block Right -->
+
+			<?php
+
+				$product_1 = new wp_query(array(
+					'post_type' => 'product',
+					'posts_per_page' => 2,
+					'offset' => 2
+				)); 
+				if($product_1->have_posts()) : 
+				$i=3;
+
+			?>
+
+			<div style="float: right; width: 49%;">
+
+			<?php while($product_1->have_posts()) : $product_1->the_post();
+				$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "Full"); 
+		    ?>
 		
-		<!-- Block Right -->
-		
-		<div style="float: right; width: 49%;">
-		
-			<div class="portfoliocontainer three">
-				<div class="portfolio-item">
-					<a href="/shop/product/define-your-moments-letterpress-print"><div class="portfolio-shade"></div></a>
-					<a href="#"></a>
-					<div class="portimg" style="background-image: url('<?php bloginfo ('template_url'); ?>/js/timthumb.php?src=/shop/wp-content/uploads/2014/03/Define-Your-Moments.jpg&w=500&h=500');"></div>
-					<h3>Define Your Moments Print</h3>
-					<h1>Available Now</h1>
-					
-					<div class="overlay">
-						<div class="smallview">
-							<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fdefine-your-moments-letterpress-print"><i class="fa fa-facebook"></i></a>
-							<a target="_blank" href="https://twitter.com/intent/tweet?hashtags=misfitjournal&text=Define%20Your%20Moments%20Print%20%7C%20Misfit%20Co&url=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fdefine-your-moments-letterpress-print&via=misfit_inc"><i class="fa fa-twitter"></i></a>
-							<a target="_blank" href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fdefine-your-moments-letterpress-print&media=http%3A%2F%2Fmisfit.co%2Fshop%2Fwp-content%2Fuploads%2F2014%2F03%2FDefine-Your-Moments.jpg&guid=nJ5S7t7i86Xi-4&description=Define%20Your%20Moments%20Print"><i class="fa fa-pinterest"></i></a>
-							<a href="/shop/product/define-your-moments-letterpress-print"><i class="fa fa-shopping-cart"></i></a>
-						</div>
+				<div class="portfoliocontainer <?php echo convertNumber($i); ?>">
+					<div class="portfolio-item">
+						<a href="<?php the_permalink(); ?>"><div class="portfolio-shade"></div></a>
+						<a href="#"></a>
+						<div class="portimg" style="background-image: url('<?php bloginfo('template_url'); ?>/js/timthumb.php?src=<?php echo $imgsrc[0]; ?>&w=500&h=500');"></div>
+						<h3><?php the_title(); ?></h3>
+						<h1>Available Now</h1>
 						
-						<div class="bigview">
-							<a href="/shop/product/define-your-moments-letterpress-print"><i class="fa fa-chevron-right"></i></a>
+						<div class="overlay">
+							<div class="smallview">
+								<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>"><i class="fa fa-facebook"></i></a>
+								<a target="_blank" href="https://twitter.com/intent/tweet?hashtags=misfitshop&text=<?php the_title(); ?>&url=<?php the_permalink(); ?>&via=misfit_inc"><i class="fa fa-twitter"></i></a>
+								<a target="_blank" href="http://www.pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>&media=<?php echo $imgsrc[0]; ?>&guid=nJ5S7t7i86Xi-1&description=<?php the_title(); ?>"><i class="fa fa-pinterest"></i></a>
+								<a href="<?php the_permalink(); ?>"><i class="fa fa-shopping-cart"></i></a>
+							</div>
+							
+							<div class="bigview">
+								<a href="<?php the_permalink(); ?>"><i class="fa fa-chevron-right"></i></a>
+							</div>
+							
+							<div class="clear"></div>
 						</div>
-						
-						<div class="clear"></div>
 					</div>
 				</div>
+
+			<?php $i++; endwhile; ?>
+
 			</div>
+
+			<?php endif; ?>
+
+
 			
-			<div class="portfoliocontainer four">
-				<div class="portfolio-item">
-					<a href="/shop/product/wolftree-vol-3-digital-companion"><div class="portfolio-shade"></div></a>
-					<a href="#"></a>
-					<div class="portimg" style="background-image: url('<?php bloginfo ('template_url'); ?>/js/timthumb.php?src=/shop/wp-content/uploads/2014/05/WTandAlbum.jpg&w=500&h=500');"></div>
-					<h3>Wolftree Vol. 3 + Digital Companion</h3>
-					<h1>Available Now</h1>
-					
-					<div class="overlay">
-						<div class="smallview">
-							<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fwolftree-vol-3-digital-companion"><i class="fa fa-facebook"></i></a>
-							<a target="_blank" href="https://twitter.com/intent/tweet?hashtags=misfitjournal&text=Wolftree%20Vol.%203%20%2B%20Digital%20Companion%20%7C%20Misfit%20Co&url=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fwolftree-vol-3-digital-companion&via=misfit_inc"><i class="fa fa-twitter"></i></a>
-							<a target="_blank" href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fwolftree-vol-3-digital-companion&media=http%3A%2F%2Fmisfit.co%2Fshop%2Fwp-content%2Fuploads%2F2014%2F05%2FWTandAlbum.jpg&guid=rXA66tUYAWE6-5&description=Wolftree%20Vol.%203%20%2B%20Digital%20Companion%20%7C%20Misfit%20Co"><i class="fa fa-pinterest"></i></a>
-							<a href="/shop/product/wolftree-vol-3-digital-companion"><i class="fa fa-shopping-cart"></i></a>
-						</div>
+			<!-- Block Bottom 2 - 1 -->
+
+			<?php
+
+				$product_1 = new wp_query(array(
+					'post_type' => 'product',
+					'posts_per_page' => 1,
+					'offset' => 4
+				)); 
+				if($product_1->have_posts()) : 
+				$i=5;
+
+			?>
+
+			<div style="width: 49%; float: left;">
+
+			<?php while($product_1->have_posts()) : $product_1->the_post();
+				$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "Full"); 
+		    ?>
+
+		    	<div class="portfoliocontainer <?php echo convertNumber($i); ?>">
+					<div class="portfolio-item">
+						<a href="<?php the_permalink(); ?>"><div class="portfolio-shade"></div></a>
+						<a href="#"></a>
+						<div class="portimg" style="background-image: url('<?php bloginfo('template_url'); ?>/js/timthumb.php?src=<?php echo $imgsrc[0]; ?>&w=500&h=500');"></div>
+						<h3><?php the_title(); ?></h3>
+						<h1>Available Now</h1>
 						
-						<div class="bigview">
-							<a href="/shop/product/wolftree-vol-3-digital-companion"><i class="fa fa-chevron-right"></i></a>
+						<div class="overlay">
+							<div class="smallview">
+								<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>"><i class="fa fa-facebook"></i></a>
+								<a target="_blank" href="https://twitter.com/intent/tweet?hashtags=misfitshop&text=<?php the_title(); ?>&url=<?php the_permalink(); ?>&via=misfit_inc"><i class="fa fa-twitter"></i></a>
+								<a target="_blank" href="http://www.pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>&media=<?php echo $imgsrc[0]; ?>&guid=nJ5S7t7i86Xi-1&description=<?php the_title(); ?>"><i class="fa fa-pinterest"></i></a>
+								<a href="<?php the_permalink(); ?>"><i class="fa fa-shopping-cart"></i></a>
+							</div>
+							
+							<div class="bigview">
+								<a href="<?php the_permalink(); ?>"><i class="fa fa-chevron-right"></i></a>
+							</div>
+							
+							<div class="clear"></div>
 						</div>
-						
-						<div class="clear"></div>
 					</div>
 				</div>
+
+		    <?php endwhile; ?>
+
 			</div>
-		</div>
-		
-		<!-- Block Bottom 2 - 1 -->
-		
-		<div style="width: 49%; float: left;">
-			<div class="portfoliocontainer seven">
-				<div class="portfolio-item">
-					<a href="/shop/product/misfit-journal-edition-2-digital"><div class="portfolio-shade"></div></a>
-					<a href="#"></a>
-					<div class="portimg" style="background-image: url('<?php bloginfo ('template_url'); ?>/js/timthumb.php?src=/shop/wp-content/uploads/2014/05/cover_MJ2_low.jpg&w=500&h=500');"></div>
-					<h3>Misfit Journal 2<br/>Digital Edition</h3>
-					<h1>Available Now</h1>
-					
-					<div class="overlay">
-						<div class="smallview">
-							<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fmisfit-journal-edition-2-digital"><i class="fa fa-facebook"></i></a>
-							<a target="_blank" href="https://twitter.com/intent/tweet?hashtags=misfitjournal&text=Misfit%20Journal%202%20Digital%20Edition%20%7C%20Misfit%20Co&url=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fmisfit-journal-edition-2-digital&via=misfit_inc"><i class="fa fa-twitter"></i></a>
-							<a target="_blank" href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fmisfit-journal-edition-2-digital&media=http%3A%2F%2Fmisfit.co%2Fshop%2Fwp-content%2Fuploads%2F2014%2F05%2Fcover_MJ2_low.jpg&description=Misfit%20Journal%202%20Digital%20Edition%20%7C%20Misfit%20Co"><i class="fa fa-pinterest"></i></a>
-							<a href="/shop/product/misfit-journal-edition-2-digital"><i class="fa fa-shopping-cart"></i></a>
-						</div>
+
+			<?php endif; ?>
+
+
+			
+			<!-- Block Bottom 2 - 2 -->
+
+			<?php
+
+				$product_1 = new wp_query(array(
+					'post_type' => 'product',
+					'posts_per_page' => 1,
+					'offset' => 5
+				)); 
+				if($product_1->have_posts()) : 
+				$i=6;
+
+			?>
+
+			<div style="width: 49%; float: right;">
+
+			<?php while($product_1->have_posts()) : $product_1->the_post();
+				$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "Full"); 
+		    ?>
+
+		    	<div class="portfoliocontainer <?php echo convertNumber($i); ?>">
+					<div class="portfolio-item">
+						<a href="<?php the_permalink(); ?>"><div class="portfolio-shade"></div></a>
+						<a href="#"></a>
+						<div class="portimg" style="background-image: url('<?php bloginfo('template_url'); ?>/js/timthumb.php?src=<?php echo $imgsrc[0]; ?>&w=500&h=500');"></div>
+						<h3><?php the_title(); ?></h3>
+						<h1>Available Now</h1>
 						
-						<div class="bigview">
-							<a href="/shop/product/misfit-journal-edition-2-digital"><i class="fa fa-chevron-right"></i></a>
+						<div class="overlay">
+							<div class="smallview">
+								<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>"><i class="fa fa-facebook"></i></a>
+								<a target="_blank" href="https://twitter.com/intent/tweet?hashtags=misfitshop&text=<?php the_title(); ?>&url=<?php the_permalink(); ?>&via=misfit_inc"><i class="fa fa-twitter"></i></a>
+								<a target="_blank" href="http://www.pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>&media=<?php echo $imgsrc[0]; ?>&guid=nJ5S7t7i86Xi-1&description=<?php the_title(); ?>"><i class="fa fa-pinterest"></i></a>
+								<a href="<?php the_permalink(); ?>"><i class="fa fa-shopping-cart"></i></a>
+							</div>
+							
+							<div class="bigview">
+								<a href="<?php the_permalink(); ?>"><i class="fa fa-chevron-right"></i></a>
+							</div>
+							
+							<div class="clear"></div>
 						</div>
-						
-						<div class="clear"></div>
 					</div>
 				</div>
+
+		    <?php endwhile; ?>
+
 			</div>
-		</div>
-		
-		<!-- Block Bottom 2 - 2 -->
-		
-		<div style="width: 49%; float: right;">
-			<div class="portfoliocontainer eight">
-				<div class="portfolio-item">
-					<a href="/shop/product/bundle-of-10-the-life-and-times-of-a-remarkable-misfit"><div class="portfolio-shade"></div></a>
-					<a href="#"></a>
-					<div class="portimg" style="background-image: url('<?php bloginfo ('template_url'); ?>/js/timthumb.php?src=/shop/wp-content/uploads/2013/12/Books.jpeg&w=500&h=500');"></div>
-					<h3>Bundle of 10: The Life and Times of a Remarkable Misfit</h3>
-					<h1>Available Now</h1>
-					
-					<div class="overlay">
-						<div class="smallview">
-							<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fbundle-of-10-the-life-and-times-of-a-remarkable-misfit"><i class="fa fa-facebook"></i></a>
-							<a target="_blank" href="https://twitter.com/intent/tweet?hashtags=misfitjournal&text=The%20Life%20and%20Times%20of%20a%20Remarkable%20Misfit%20%7C%20Misfit%20Co&url=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fbundle-of-10-the-life-and-times-of-a-remarkable-misfit&via=misfit_inc"><i class="fa fa-twitter"></i></a>
-							<a target="_blank" href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fbundle-of-10-the-life-and-times-of-a-remarkable-misfit&media=http%3A%2F%2Fmisfit.co%2Fshop%2Fwp-content%2Fuploads%2F2013%2F12%2FBooks.jpeg&description=Bundle%20of%2010%3A%20The%20Life%20and%20Times%20of%20a%20Remarkable%20Misfit"><i class="fa fa-pinterest"></i></a>
-							<a href="/shop/product/bundle-of-10-the-life-and-times-of-a-remarkable-misfit"><i class="fa fa-shopping-cart"></i></a>
-						</div>
-						
-						<div class="bigview">
-							<a href="/shop/product/bundle-of-10-the-life-and-times-of-a-remarkable-misfit"><i class="fa fa-chevron-right"></i></a>
-						</div>
-						
-						<div class="clear"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<!-- Block Bottom 3 - 1 -->
-		
-		<div style="width: 49%; float: left; display: none;">
-			<div class="portfoliocontainer nine">
-				<div class="portfolio-item">
-					<a href="/shop/product/the-misfit-anthology-2015"><div class="portfolio-shade"></div></a>
-					<a href="#"></a>
-					<div class="portimg" style="background-image: url('<?php bloginfo ('template_url'); ?>/js/timthumb.php?src=/shop/wp-content/uploads/2015/06/Store_2.jpg&w=500&h=500');"></div>
-					<h3>The Misfit Anthology: 2015</h3>
-					<h1>Available Now</h1>
-					
-					<div class="overlay">
-						<div class="smallview">
-							<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fthe-misfit-anthology-2015"><i class="fa fa-facebook"></i></a>
-							<a target="_blank" href="https://twitter.com/intent/tweet?hashtags=misfitjournal&text=The%20Misfit%20Anthology%3A%202015&url=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fthe-misfit-anthology-2015"><i class="fa fa-twitter"></i></a>
-							<a target="_blank" href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fmisfit.co%2Fshop%2Fproduct%2Fthe-misfit-anthology-2015&media=http%3A%2F%2Fmisfit.co%2Fshop%2Fwp-content%2Fuploads%2F2015%2F06%2FStore_2.jpg&description=The%20Misfit%20Anthology%3A%202015"><i class="fa fa-pinterest"></i></a>
-							<a href="/shop/product/the-misfit-anthology-2015"><i class="fa fa-shopping-cart"></i></a>
-						</div>
-						
-						<div class="bigview">
-							<a href="/shop/product/the-misfit-anthology-2015"><i class="fa fa-chevron-right"></i></a>
-						</div>
-						
-						<div class="clear"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="clear"></div>
+
+			<?php endif; wp_reset_query(); ?>
 		
 		</div><!-- .tile-wrapper -->
 	</div>
