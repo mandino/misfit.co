@@ -36,3 +36,4 @@ a:5:{s:7:"user_id";i:2;s:10:"user_login";s:7:"mandino";s:15:"user_remoteaddr";s:
 >>>>>>> origin/master
 {"user_id":2,"user_login":"mandino","user_remoteaddr":"127.0.0.1","user_hostname":"lmlicenses.wip4.adobe.com","user_lastlogin":"2015-10-23 06:44:30"}
 {"user_id":2,"user_login":"mandino","user_remoteaddr":"127.0.0.1","user_hostname":"lmlicenses.wip4.adobe.com","user_lastlogin":"2015-10-30 06:09:06"}
+{"user_id":2,"user_login":"mandino","user_remoteaddr":"127.0.0.1","user_hostname":"activate.adobe.com","user_lastlogin":"2015-11-04 05:18:55"}

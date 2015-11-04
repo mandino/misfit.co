@@ -30,9 +30,9 @@ include(TEMPLATEPATH . '/library/misfit-journal-functions.php');
 //.................. REMARKABLE MISFIT FUNCTIONS .................. //
 
 /* Below is an include to default custom fields for the posts.*/
-if ( is_product_category('remarkable-misfit') || in_array( 'remarkable-misfit', $categories ) ) {
-	include(TEMPLATEPATH . '/library/remarkable-misfit-functions.php');
-}
+// if ( is_product_category('remarkable-misfit') || in_array( 'remarkable-misfit', $categories ) ) {
+// 	include(TEMPLATEPATH . '/library/remarkable-misfit-functions.php');
+// }
 
 /* Include Super Furu Custom Options Panel*/
 require_once(TEMPLATEPATH .  '/options/options_panel.php');

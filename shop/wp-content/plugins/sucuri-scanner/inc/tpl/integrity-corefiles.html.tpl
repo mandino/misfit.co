@@ -8,32 +8,44 @@
     </div>
 </div>
 
+<div class="postbox sucuriscan-border sucuriscan-border-bad sucuriscan-integrity-message sucuriscan-%%SUCURI.CoreFiles.FailureVisibility%%">
+    <span class="sucuriscan-integrity-failure">FAILURE</span>
+    <h3>Core integrity</h3>
+
+    <div class="inside">
+        <p>
+            Error retrieving the WordPress core hashes. The information used by the plugin
+            to determine the integrity of the core files is retrieved and controlled by
+            WordPress. Any error message related with this tool is likely related with a
+            modification in their API service that is not supported yet. It is also possible
+            that your website is not able to communicate with this server due to a missing
+            HTTP transport tool.
+        </p>
+    </div>
+</div>
+
 <form action="%%SUCURI.URL.Home%%" method="post">
     <input type="hidden" name="sucuriscan_page_nonce" value="%%SUCURI.PageNonce%%" />
 
     <table class="wp-list-table widefat sucuriscan-table sucuriscan-corefiles sucuriscan-%%SUCURI.CoreFiles.BadVisibility%%">
         <thead>
             <tr>
-                <th colspan="3" class="sucuriscan-clearfix thead-with-button">
+                <th colspan="5" class="sucuriscan-clearfix thead-with-button">
                     <span>Core integrity (%%SUCURI.CoreFiles.ListCount%% files)</span>
-                    <div class="sucuriscan-pull-right sucuriscan-corefiles-abbrs">
-                        <span class="sucuriscan-status-type sucuriscan-status-added">Added</span>
-                        <span class="sucuriscan-status-type sucuriscan-status-modified">Modified</span>
-                        <span class="sucuriscan-status-type sucuriscan-status-removed">Removed</span>
-                        <button id="sucuriscan-corefiles-show" class="button button-primary thead-topright-action" data-action="show">Show files</button>
-                    </div>
+                    <button id="sucuriscan-corefiles-show" class="button button-primary thead-topright-action" data-action="show">Show files</button>
                 </th>
             </tr>
 
             <tr>
-                <td colspan="3" class="sucuriscan-corefiles-warning">
+                <td colspan="5" class="sucuriscan-corefiles-warning">
                     <div>
                         <p>
-                            Changes in the integrity of your core files were detected. There are files that
-                            were added, modified, and/or removed in the core directories
-                            <code>/&lt;root&gt;</code>, <code>/wp-admin</code> and/or <code>/wp-
-                            includes</code>. You may want to check each file to determine if they were
-                            infected with malicious code.
+                            Changes in the integrity of your core files were detected, you may want to check
+                            each file to determine if they were infected with malicious code. The WordPress
+                            core directories <code>/&lt;root&gt;</code>, <code>/wp-admin</code> and <code>
+                            /wp-includes</code> are the only ones being scanned; the content, uploads, and
+                            custom directories are not part of the official archives so you have to check
+                            them manually.
                         </p>
                     </div>
                 </td>
@@ -44,8 +56,10 @@
                     <label class="screen-reader-text" for="cb-select-all-1">Select All</label>
                     <input id="cb-select-all-1" type="checkbox">
                 </th>
-                <th width="70" class="manage-column">Status</th>
-                <th class="manage-column">Filepath</th>
+                <th width="80" class="manage-column">Status</th>
+                <th width="100" class="manage-column">File Size</th>
+                <th width="170" class="manage-column">Modified At</th>
+                <th class="manage-column">File Path</th>
             </tr>
         </thead>
 
@@ -55,20 +69,21 @@
 
         <tfoot>
             <tr>
-                <td colspan="3">
+                <td colspan="5">
                     <p>
-                        The action to restore the content of a file will only work with files that were
-                        <b>modified</b> or <b>removed</b>, for files that were <b>added</b> you must
-                        either remove or mark as fixed. Files marked as <b>fixed</b> will always be
-                        ignored from the integrity checks, an attacker can use this option to hide a
-                        malicious file, so always check what files are being ignored.
+                        <strong>Note.</strong> This is not a malware scanner but an integrity checker
+                        which is a completely different thing, if you want to check if your site is
+                        generating malicious code then use the <a href="%%SUCURI.URL.Scanner%%">malware
+                        scan</a> tool. If you see the text <em>"must be fixed manually"</em> in any of
+                        these files that means that they do not have write permissions so you can not
+                        fix them using this tool.
                     </p>
 
                     <label>
                         <select name="sucuriscan_integrity_action">
                             <option value="">Choose action</option>
                             <option value="restore">Restore file(s) content</option>
-                            <option value="remove">Remove file(s)</option>
+                            <option value="delete">Delete file(s)</option>
                             <option value="fixed">Mark as fixed</option>
                         </select>
                     </label>

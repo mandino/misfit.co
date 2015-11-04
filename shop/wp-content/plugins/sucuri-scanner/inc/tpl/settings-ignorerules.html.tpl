@@ -1,7 +1,7 @@
 
 <div id="poststuff">
     <div class="postbox sucuriscan-border sucuriscan-border-bad sucuriscan-%%SUCURI.IgnoreRules.MessageVisibility%%">
-        <h3>Ignore Notifications</h3>
+        <h3>Ignore Alerts</h3>
 
         <div class="inside">
             <p>
@@ -17,7 +17,7 @@
 
 <div id="poststuff">
     <div class="postbox sucuriscan-border sucuriscan-table-description sucuriscan-%%SUCURI.IgnoreRules.TableVisibility%%">
-        <h3>Ignore Notifications</h3>
+        <h3>Ignore Alerts</h3>
 
         <div class="inside">
             <p>
@@ -34,7 +34,7 @@
 <table class="wp-list-table widefat sucuriscan-table sucuriscan-settings-ignorerules sucuriscan-%%SUCURI.IgnoreRules.TableVisibility%%">
     <thead>
         <tr>
-            <th width="50">#Num</th>
+            <th>&nbsp;</th>
             <th>Post Type</th>
             <th width="50">Ignored</th>
             <th>Ignored At</th>
@@ -45,15 +45,4 @@
     <tbody>
         %%SUCURI.IgnoreRules.PostTypes%%
     </tbody>
-
-    <tfoot>
-        <tr>
-            <td colspan="5">
-                <em>
-                    <strong>Notifications example:</strong>
-                    <code>Post_Type</code> changed from private to published <code>#ID</code> (<code>Title</code>)
-                </em>
-            </td>
-        </tr>
-    </tfoot>
 </table>

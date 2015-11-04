@@ -1,7 +1,7 @@
 
 %%SUCURI.ModalWhenAPIRegistered%%
 
-<table class="wp-list-table widefat sucuriscan-table sucuriscan-settings">
+<table class="wp-list-table widefat sucuriscan-table sucuriscan-striped-table sucuriscan-settings">
     <thead>
         <tr>
             <th colspan="3" class="thead-with-button">
@@ -26,6 +26,18 @@
                     monitoring tool forever even if you remove the API key and generate it again.
                 </p>
 
+                <div class="sucuriscan-inline-alert-info">
+                    <p>
+                        All the HTTP requests used to communicate with the API service are being sent
+                        using the WordPress built-in functions, so <em>(almost)</em> all its official
+                        features are inherited, this is useful if you need to pass these HTTP requests
+                        through a proxy. According to the <a href="http://codex.wordpress.org/HTTP_API"
+                        target="_blank">official documentation</a> you have to add some constants to the
+                        main configuration file: <em>WP_PROXY_HOST, WP_PROXY_PORT, WP_PROXY_USERNAME,
+                        WP_PROXY_PASSWORD</em>.
+                    </p>
+                </div>
+
                 <div class="sucuriscan-inline-alert-warning sucuriscan-%%SUCURI.InvalidDomainVisibility%%">
                     <p>
                         Your domain <code>%%SUCURI.CleanDomain%%</code> does not seems to have a DNS
@@ -37,8 +49,8 @@
             </td>
         </tr>
 
-        <tr class="alternate">
-            <td width="200">API Key</td>
+        <tr>
+            <td width="200">Sucuri API key</td>
             <td>
                 <span class="sucuriscan-monospace">%%SUCURI.APIKey%%</span>
             </td>
@@ -62,19 +74,43 @@
         </tr>
 
         <tr>
-            <td>Notify events to</td>
-            <td>%%SUCURI.NotifyTo%%</td>
+            <td>Log storage path</td>
+            <td class="sucuriscan-wraptext"><span class="sucuriscan-monospace" title="%%SUCURI.DatastorePath%%">%%SUCURI.DatastorePath%%</span></td>
             <td class="td-with-button">
                 <form action="%%SUCURI.URL.Settings%%" method="post">
                     <input type="hidden" name="sucuriscan_page_nonce" value="%%SUCURI.PageNonce%%" />
-                    <input type="text" name="sucuriscan_notify_to" class="input-text" placeholder="Send notifications to..." />
+                    <input type="text" name="sucuriscan_datastore_path" class="input-text" placeholder="Directory to save logs..." />
                     <button type="submit" class="button-primary">Change</button>
                 </form>
             </td>
         </tr>
 
-        <tr class="alternate">
-            <td>Alerts per hour</td>
+        <tr>
+            <td>Test email alerts</td>
+            <td><em>(Test ability to send email alerts)</em></td>
+            <td class="td-with-button">
+                <form action="%%SUCURI.URL.Settings%%" method="post">
+                    <input type="hidden" name="sucuriscan_page_nonce" value="%%SUCURI.PageNonce%%" />
+                    <input type="hidden" name="sucuriscan_debug_email" value="1" />
+                    <button type="submit" class="button-primary">Proceed</button>
+                </form>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Send plugin alerts to</td>
+            <td>%%SUCURI.NotifyTo%%</td>
+            <td class="td-with-button">
+                <form action="%%SUCURI.URL.Settings%%" method="post">
+                    <input type="hidden" name="sucuriscan_page_nonce" value="%%SUCURI.PageNonce%%" />
+                    <input type="text" name="sucuriscan_notify_to" class="input-text" placeholder="Separated by commas" />
+                    <button type="submit" class="button-primary">Change</button>
+                </form>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Maximum alerts per hour</td>
             <td>%%SUCURI.EmailsPerHour%%</td>
             <td class="td-with-button">
                 <form action="%%SUCURI.URL.Settings%%" method="post">
@@ -101,8 +137,8 @@
             </td>
         </tr>
 
-        <tr class="alternate">
-            <td>Verify SSL Cert</td>
+        <tr>
+            <td>API request with SSL</td>
             <td>%%SUCURI.VerifySSLCert%%</td>
             <td class="td-with-button">
                 <form action="%%SUCURI.URL.Settings%%" method="post">
@@ -122,6 +158,131 @@
                 <form action="%%SUCURI.URL.Settings%%" method="post">
                     <input type="hidden" name="sucuriscan_page_nonce" value="%%SUCURI.PageNonce%%" />
                     <input type="text" name="sucuriscan_request_timeout" class="input-text" placeholder="Timeout in seconds..." />
+                    <button type="submit" class="button-primary">Change</button>
+                </form>
+            </td>
+        </tr>
+
+        <tr>
+            <td>API proxy <em>(host:port)</em></td>
+            <td><span class="sucuriscan-monospace">%%SUCURI.APIProxy.Host%%:%%SUCURI.APIProxy.Port%%</span></td>
+            <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+            <td>API proxy <em>(auth)</em></td>
+            <td>
+                <span class="sucuriscan-monospace">%%SUCURI.APIProxy.Username%%</span>
+                <span class="sucuriscan-label-%%SUCURI.APIProxy.PasswordType%%">
+                    <em>password is %%SUCURI.APIProxy.PasswordText%%</em>
+                </span>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+            <td>API test request</td>
+            <td><em>(Test ability to send HTTP requests)</em></td>
+            <td class="td-with-button">
+                <form action="%%SUCURI.URL.Settings%%" method="post">
+                    <input type="hidden" name="sucuriscan_page_nonce" value="%%SUCURI.PageNonce%%" />
+                    <input type="hidden" name="sucuriscan_debug_request" value="1" />
+                    <button type="submit" class="button-primary">Proceed</button>
+                </form>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Support reverse proxy</td>
+            <td>%%SUCURI.ReverseProxyStatus%%</td>
+            <td class="td-with-button">
+                <form action="%%SUCURI.URL.Settings%%" method="post">
+                    <input type="hidden" name="sucuriscan_page_nonce" value="%%SUCURI.PageNonce%%" />
+                    <input type="hidden" name="sucuriscan_revproxy" value="%%SUCURI.ReverseProxySwitchValue%%" />
+                    <button type="submit" class="button-primary %%SUCURI.ReverseProxySwitchCssClass%%">%%SUCURI.ReverseProxySwitchText%%</button>
+                </form>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Execute DNS lookups</td>
+            <td>%%SUCURI.DnsLookupsStatus%%</td>
+            <td class="td-with-button">
+                <form action="%%SUCURI.URL.Settings%%" method="post">
+                    <input type="hidden" name="sucuriscan_page_nonce" value="%%SUCURI.PageNonce%%" />
+                    <input type="hidden" name="sucuriscan_dns_lookups" value="%%SUCURI.DnsLookupsSwitchValue%%" />
+                    <button type="submit" class="button-primary %%SUCURI.DnsLookupsSwitchCssClass%%">%%SUCURI.DnsLookupsSwitchText%%</button>
+                </form>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Allow comment monitor</td>
+            <td>%%SUCURI.CommentMonitorStatus%%</td>
+            <td class="td-with-button">
+                <form action="%%SUCURI.URL.Settings%%" method="post">
+                    <input type="hidden" name="sucuriscan_page_nonce" value="%%SUCURI.PageNonce%%" />
+                    <input type="hidden" name="sucuriscan_comment_monitor" value="%%SUCURI.CommentMonitorSwitchValue%%" />
+                    <button type="submit" class="button-primary %%SUCURI.CommentMonitorSwitchCssClass%%">%%SUCURI.CommentMonitorSwitchText%%</button>
+                </form>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Allow XHR monitor</td>
+            <td>%%SUCURI.XhrMonitorStatus%%</td>
+            <td class="td-with-button">
+                <form action="%%SUCURI.URL.Settings%%" method="post">
+                    <input type="hidden" name="sucuriscan_page_nonce" value="%%SUCURI.PageNonce%%" />
+                    <input type="hidden" name="sucuriscan_xhr_monitor" value="%%SUCURI.XhrMonitorSwitchValue%%" />
+                    <button type="submit" class="button-primary %%SUCURI.XhrMonitorSwitchCssClass%%">%%SUCURI.XhrMonitorSwitchText%%</button>
+                </form>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Display audit report</td>
+            <td>%%SUCURI.AuditReportStatus%%</td>
+            <td class="td-with-button">
+                <form action="%%SUCURI.URL.Settings%%" method="post">
+                    <input type="hidden" name="sucuriscan_page_nonce" value="%%SUCURI.PageNonce%%" />
+                    <input type="hidden" name="sucuriscan_audit_report" value="%%SUCURI.AuditReportSwitchValue%%" />
+                    <button type="submit" class="button-primary %%SUCURI.AuditReportSwitchCssClass%%">%%SUCURI.AuditReportSwitchText%%</button>
+                </form>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Audit report limit</td>
+            <td>Process latest %%SUCURI.AuditReportLimit%% logs</td>
+            <td class="td-with-button">
+                <form action="%%SUCURI.URL.Settings%%" method="post">
+                    <input type="hidden" name="sucuriscan_page_nonce" value="%%SUCURI.PageNonce%%" />
+                    <input type="text" name="sucuriscan_logs4report" class="input-text" placeholder="e.g. 500" />
+                    <button type="submit" class="button-primary">Change</button>
+                </form>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Collect failed passwords</td>
+            <td>%%SUCURI.CollectWrongPasswords%%</td>
+            <td class="td-with-button">
+                <form action="%%SUCURI.URL.Settings%%" method="post">
+                    <input type="hidden" name="sucuriscan_page_nonce" value="%%SUCURI.PageNonce%%" />
+                    <input type="text" name="sucuriscan_collect_wrong_passwords" class="input-text" placeholder="Type: YES or NO" />
+                    <button type="submit" class="button-primary">Change</button>
+                </form>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Plugin advertisement</td>
+            <td>%%SUCURI.AdsVisibility%%</td>
+            <td class="td-with-button">
+                <form action="%%SUCURI.URL.Settings%%" method="post">
+                    <input type="hidden" name="sucuriscan_page_nonce" value="%%SUCURI.PageNonce%%" />
+                    <input type="text" name="sucuriscan_ads_visibility" class="input-text" placeholder="Type: SHOW or HIDE" />
                     <button type="submit" class="button-primary">Change</button>
                 </form>
             </td>

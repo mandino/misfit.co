@@ -13,6 +13,33 @@
                 directories, this will force the plugin to ignore the files inside these
                 folders.
             </p>
+
+            <div class="sucuriscan-inline-alert-warning sucuriscan-%%SUCURI.IgnoreScanning.DisabledVisibility%%">
+                <p>
+                    The feature to ignore directories during the file system scans is disabled, go
+                    to the <em>Scanner Settings</em> panel to enable it.
+                </p>
+            </div>
+
+            <div class="sucuriscan-inline-alert-info sucuriscan-ignore-file">
+                <p>
+                    You can also force the plugin to ignore specific files during the file system
+                    scans using this form, add the absolute path of the file or symbolic link that
+                    you want to skip. <strong>Note.</strong> You can not use wildcards to select
+                    multiple files following a pattern in their names, this is intentional to
+                    prevent the misuse of this tool.
+                </p>
+
+                <form action="%%SUCURI.URL.Settings%%#settings-ignorescanning" method="post">
+                    <input type="hidden" name="sucuriscan_page_nonce" value="%%SUCURI.PageNonce%%" />
+                    <input type="hidden" name="sucuriscan_ignorescanning_action" value="ignore" />
+                    <input type="text" name="sucuriscan_ignorescanning_file"
+                    placeholder="e.g. /public_html/private/ssl_certificate.crt"
+                    class="sucuriscan-ignore-file-input" />
+                    <button type="submit" class="button button-primary
+                    sucuriscan-ignore-file-button">Proceed</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
@@ -26,13 +53,19 @@
                 <label class="screen-reader-text" for="cb-select-all-1">Select All</label>
                 <input id="cb-select-all-1" type="checkbox">
             </th>
-            <th class="manage-column" width="80">Ignored</th>
+            <th class="manage-column">&nbsp;</th>
             <th class="manage-column">Directory</th>
             <th class="manage-column" width="180">Ignored At</th>
         </thead>
 
         <tbody>
             %%SUCURI.IgnoreScanning.ResourceList%%
+
+            <tr class="sucuriscan-%%SUCURI.IgnoreScanning.NoItemsVisibility%%">
+                <td colspan="4">
+                    <em>List is empty.</em>
+                </td>
+            </tr>
         </tbody>
 
         <tfoot>

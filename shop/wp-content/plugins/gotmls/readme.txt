@@ -4,13 +4,13 @@ Author: Eli Scheetz
 Author URI: http://wordpress.ieonly.com/category/my-plugins/anti-malware/
 Contributors: scheeeli, gotmls
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZHD8QHZ2E7PE
-Tags: anti-malware, security, plugin, scan, automatic, repair, remove, malware, virus, threat, hacked, malicious, scripts, infection, timthumb, exploit, block, brute-force, wp-login, patch, antimalware, revslider, Revolution Slider
-Version: 4.14.59
-Stable tag: 4.14.59
+Tags: anti-malware, security, scanner, automatic, repair, remove, malware, virus, threat, hacked, malicious, infection, timthumb, exploit, block, brute-force, wp-login, patch, antimalware, revslider, Revolution Slider
+Version: 4.15.41
+Stable tag: 4.15.41
 Requires at least: 3.3
-Tested up to: 4.1
+Tested up to: 4.3.1
 
-This Anti-Malware plugin searches for Malware and other Virus like threats and security vulnerabilities on your server and it helps you remove them.
+This Anti-Malware scanner searches for Malware, Viruses, and other security threats and vulnerabilities on your server and it helps you fix them.
 
 == Description ==
 
@@ -18,13 +18,18 @@ This Anti-Malware plugin searches for Malware and other Virus like threats and s
 
 * Automatically remove Known Threats and Back-doors.
 * Automatically block SoakSoak and other malware from exploiting the Revolution Slider Vulnerability.
-* Patch wp-login to block Brute-Force attacks.
 * Upgrade vulnerable versions of timthumb scripts.
 * Run a Quick Scan from the admin menu.
 * Run a Complete Scan from the Settings Page.
 * Download Definition Updates to protect against new threats.
 
-Updated February 6th
+**Premium Features:**
+
+* Patch wp-login to block Brute-Force attacks.
+* Check the integrity of your WordPress Core files.
+* Automatically Download Definition Updates When running a Complete Scan.
+
+Updated October 1st
 
 Register this plugin at [GOTMLS.NET](http://gotmls.net/) and get access to new definitions of "Known Threats" and added features like Automatic Removal, plus patches for specific security vulnerabilities like old versions of timthumb. Updated definition files can be downloaded automatically within the admin once your Key is registered. Otherwise, this plugin just scans for "Potential Threats" and leaves it up to you to identify and remove the malicious ones.
 
@@ -89,6 +94,78 @@ sucuri.net caches their scan results and will not refresh the scan until you cli
 
 == Changelog ==
 
+= 4.15.41 =
+* Improved the JavaScript in the new Brute-Force login patch so that it works with caching enabled on the login page.
+
+= 4.15.40 =
+* Improved the Brute-Force login patch with custom fields and JavaScript. 
+* Added a Save button to that Scan Settings page.
+* Fixed a bug in the XMLRPC Patch "Unblock" feature.
+
+= 4.15.30 =
+* Added a link to purge the deleted Quarantine items from the database.
+* Added firewall option to Block all XMLRPC calls.
+* Fixed a few cosmetic bugs in the quarantine and firewall options.
+
+= 4.15.29 =
+* Fixed a bugs in the Quarantine that was memory_limit errors if there number of files in the was too high.
+* Added the highlight malicious code feature back to the Quarantine file viewer.
+* Added the ability to change the admin username if the current username is "admin".
+* Improved the code in the Brute-Force Protection patch.
+
+= 4.15.28 =
+* Fixed a few bugs in the Core Files Check that was preventing it from fixing some unusual file modifications.
+
+= 4.15.27 =
+* Fixed a major bug that made multisite scan extremely slow and sometimes error out.
+* Moved all ajax call out of the init function and into their own functions for better handling time.
+
+= 4.15.26 =
+* Moved the quarantine files into the database and deleted the old directory in uploads.
+* Fixed some minor formatting issues in the HTML output on the settings page.
+* Added a warning message if base64_decode has been disabled.
+
+= 4.15.24 =
+* Hardened against injected HTML content by encoding the tags with variables.
+* Fixed debug option to exclude individual definitions.
+
+= 4.15.23 =
+* Hardened admin_init with current_user_can and realpath on the quarantine file deletion (thanks to J.D. Grimes).
+* Fixed another XSS vulnerabilities in the admin (thanks to James H.)
+
+= 4.15.20 =
+* Hardened against XSS vulnerabilities in the admin (thanks to Tim Coen).
+* Added feature to restore default settings for Exclude Extensions.
+* Changed the encoding on the index.php file in the Quarantine to make it more human-readable.
+* Fixed a few small bugs that were throwing PHP Notices in some configurations and added more info to some error messages.
+
+= 4.15.17 =
+* Extended execution_time during the Fix process to increase the number of files that could be fixed at a time.
+* Added a Quarantine log to the database.
+* Fixed a couple of minor bugs that would throw PHP notices.
+
+= 4.15.16 =
+* Created an automatic update feature that downloads any new definition updates before starting the scan.
+* Added WordPress Core files to the new definitions update process and included a scan option to check the integrity of the Core files.
+* Automatically whitelisted the unmodified WordPress Core files.
+* Made more improvements to the Brute-Force protection patch and other minor cosmetic changes to the interface.
+* Protected the HTML in my plugin from filter injections and fixed a few other minor bugs.
+
+= 4.14.65 =
+* Fixed a problem with deleting files from the Quarantine folder.
+* Added a descriptive reason to the error displayed if the fix was unsuccessful.
+* Added link to restore the default location of the Examine Results window.
+
+= 4.14.64 =
+* Improved the encoding of definition updates so that they would not be blocked by poorly written firewall rules.
+* Suppressed the "Please make a donation" nag if the fix was unsuccessful, to avoid confusion over premium services.
+
+= 4.14.63 =
+* Removed debug alert from initial session check.
+
+= 4.14.62 =
+* Improved rewrite compatibility of session check for the Brute-Force Protection Installation.
+
 = 4.14.59 =
 * Improved session check for the option to Install Brute-Force Protection and added an error message on failure.
 * Improved support for Multisite by only allowing Network Admins access to the Anti-Malware menu.
@@ -139,8 +216,6 @@ sucuri.net caches their scan results and will not refresh the scan until you cli
 
 = 3.13.11 =
 * Fixed a session bug to display the last directory scanned.
-
-= 3.13.10 =
 * Fixed a few small cosmetic bugs for WP 3.8.
 
 = 3.12.27 =
@@ -177,9 +252,6 @@ sucuri.net caches their scan results and will not refresh the scan until you cli
 * Fixed a bug in the Add to Whitelist feature so the you do not need to update the definitions after whitelisting a file.
 
 = 1.3.05.13 =
-* Fixed two bugs in the last release.
-
-= 1.3.05.11 =
 * Added ability to whitelist files.
 
 = 1.3.04.19 =
@@ -274,23 +346,65 @@ sucuri.net caches their scan results and will not refresh the scan until you cli
 = 1.2.04.08 =
 * Fixed option to exclude directories so that the scan would not get stuck if omitted.
 * Added support for winblows servers using BACKSLASH directory structures.
-
-= 1.2.04.04 =
 * Added option to exclude directories.
 * Changed definition updates to write to the DB instead of a file.
 * Added better messages about available updates.
-* Added more FAQs to the readme.
 
 = 1.2.03.28 =
-* Fixed registration form.
-
-= 1.2.03.27 =
-* Fixed some of the links on the settings page.
+* Fixed registration form and some of the links on the settings page.
 
 = 1.2.03.23 =
 * First BETA versions available for WordPress.
 
 == Upgrade Notice ==
+
+= 4.15.41 =
+Improved the JavaScript in the new Brute-Force login patch so that it works with caching enabled on the login page.
+
+= 4.15.40 =
+Improved the Brute-Force login patch with custom fields and JavaScript, added a Save button to that Scan Settings page, and fixed a bug in the XMLRPC Patch.
+
+= 4.15.30 =
+Added a new firewall option to Block all XMLRPC calls and a link to purge the deleted Quarantine items from the database, and fixed a few cosmetic bugs in the quarantine and firewall options.
+
+= 4.15.29 =
+Fixed a bugs in the Quarantine, added the highlight malicious code feature back to the Quarantine file viewer, added the ability to change the admin username, and improved the Brute-Force Protection.
+
+= 4.15.28 =
+Fixed a few bugs in the Core Files Check that was preventing it from fixing some unusual file modifications.
+
+= 4.15.27 =
+Fixed a major bug that made multisite scan extremely slow and moved all ajax call out of the init function and into their own functions.
+
+= 4.15.26 =
+Moved the quarantine files into the database and deleted the old directory in uploads, fixed some minor HTML formatting issues, and added a warning if base64_decode is disabled.
+
+= 4.15.24 =
+Hardened against injected HTML content and fixed debug option to exclude individual definitions.
+
+= 4.15.23 =
+Fixed another XSS vulnerabilities in the admin (thanks to James H.), and hardened admin_init with current_user_can and realpath on the quarantine file deletion (thanks to J.D. Grimes).
+
+= 4.15.20 =
+Hardened against XSS in the admin, changed encoding of the index.php file in the Quarantine, added more info to some error messages and a feature to restore a default setting, and fixed a few small bugs.
+
+= 4.15.17 =
+Extended execution_time during the Fix process, added a Quarantine log to the database, and fixed a couple of minor bugs.
+
+= 4.15.16 =
+Created automatic definition updates that include WordPress Core files for integrity checking and whitelisting, made more improvements to the Brute-Force protection patch, and a few other cosmetic changes and minor bug fixes.
+
+= 4.14.65 =
+Fixed a problem with deleting files from the Quarantine folder, added more descriptive errors and a link to restore the default location of the Examine Results window.
+
+= 4.14.64 =
+Improved the encoding of definition updates and suppressed the "Please make a donation" nag if the fix was unsuccessful.
+
+= 4.14.63 =
+Removed debug alert from initial session check.
+
+= 4.14.62 =
+Improved rewrite compatibility of session check for the Brute-Force Protection Installation.
 
 = 4.14.59 =
 Improved session check for the Brute-Force Protection and support for Multisite menu.
@@ -326,10 +440,7 @@ Made the Examine File window sizable, fixed a few small bugs, removed some old c
 Re-purposed Quick Scan to just scan the most affected areas and fixed a few small bugs.
 
 = 3.13.11 =
-Fixed a session bug to display the last directory scanned.
-
-= 3.13.10 =
-Fixed a few small cosmetic bugs for WP 3.8.
+Fixed a session bug to display the last directory scanned and a few other small cosmetic bugs for WP 3.8.
 
 = 3.12.27 =
 Added Spanish translation, thanks to Jelena Kovacevic and Andrew Kurtis.
@@ -362,9 +473,6 @@ Downgraded the WP-Login threat and changed it to an opt-in fix.
 Fixed a bug in the Add to Whitelist feature so the you do not need to update the definitions after whitelisting a file.
 
 = 1.3.05.13 =
-Fixed two bugs in the last release.
-
-= 1.3.05.11 =
 Added ability to whitelist files.
 
 = 1.3.04.19 =
@@ -434,16 +542,10 @@ Fixed auto-update script to update scan level even if there is no new definition
 Added more info about registration to the readme file, Updated timthumb replacement patch to version 2.8.10, and fixed menu option placement.
 
 = 1.2.04.08 =
-Fixed option to exclude directories and added support for winblows servers using BACKSLASH directory structures.
-
-= 1.2.04.04 =
-Changed definition updates to write to the DB instead of a file and added better messages about available updates.
+Fixed option to exclude directories, added support for winblows servers using BACKSLASHES, changed definition updates to write to the DB instead of a file, and added better messages about available updates.
 
 = 1.2.03.28 =
-Fixed registration form.
-
-= 1.2.03.27 =
-Fixed some of the links on the settings page.
+Fixed registration form and some of the links on the settings page.
 
 = 1.2.03.23 =
 First BETA versions available for WordPress.

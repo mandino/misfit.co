@@ -1,6 +1,6 @@
 /**
  * Sucuri Security - SiteCheck Malware Scanner
- * Copyright (C) 2010-2014 Sucuri Security - http://sucuri.net
+ * Copyright (C) 2010-2015 Sucuri Security - http://sucuri.net
  * Released under the GPL - see LICENSE file for details.
  */
 
@@ -10,6 +10,18 @@ function sucuriscan_alert_close(id){
 }
 
 jQuery(document).ready(function($){
+    $('.sucuriscan-modal-btn').on('click', function(ev){
+        ev.preventDefault();
+        var modalid = $(this).data('modalid');
+        $('div.' + modalid).removeClass('sucuriscan-hidden');
+    });
+
+    $('.sucuriscan-overlay, .sucuriscan-modal-close').on('click', function(ev){
+        ev.preventDefault();
+        $('.sucuriscan-overlay').addClass('sucuriscan-hidden');
+        $('.sucuriscan-modal').addClass('sucuriscan-hidden');
+    });
+
     if( $('.sucuriscan-tabs').length ){
         var hidden_class = 'sucuriscan-hidden';
         var active_class = 'sucuriscan-tab-active';
@@ -23,6 +35,10 @@ jQuery(document).ready(function($){
             var container = $('.sucuriscan-tab-containers > #sucuriscan-'+container_id);
 
             if( container.length ){
+                var current_href = location.href.replace(location.hash, '');
+                var new_location_href = current_href + '#' + container_id;
+                window.history.pushState( {}, document.title, new_location_href );
+
                 $('.sucuriscan-tabs > ul a').removeClass(active_class);
                 $('.sucuriscan-tab-containers > div').addClass(hidden_class);
                 button.addClass(active_class);

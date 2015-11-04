@@ -2,11 +2,23 @@
 <table class="wp-list-table widefat sucuriscan-table sucuriscan-table-double-title sucuriscan-auditlogs">
     <thead>
         <tr>
-            <th colspan="2">Audit Logs (%%SUCURI.AuditLogs.Count%% latest logs)</th>
+            <th colspan="5" class="thead-with-button">
+                <span>Audit Logs (%%SUCURI.AuditLogs.Count%% latest logs)</span>
+                <form action="%%SUCURI.URL.Settings%%" method="post"
+                class="thead-topright-action sucuriscan-%%SUCURI.AuditLogs.EnableAuditReportVisibility%%">
+                    <input type="hidden" name="sucuriscan_page_nonce" value="%%SUCURI.PageNonce%%" />
+                    <input type="hidden" name="sucuriscan_audit_report" value="enable" />
+                    <button type="submit" class="button-primary">Enable Audit Report</button>
+                </form>
+            </th>
         </tr>
+
         <tr>
-            <th width="150">Date &amp; Time</th>
-            <th>Event &amp; Message</th>
+            <th>&nbsp;</th>
+            <th width="160">Date</th>
+            <th>Username</th>
+            <th>IP Address</th>
+            <th>Event Message</th>
         </tr>
     </thead>
 
@@ -14,13 +26,13 @@
         %%SUCURI.AuditLogs.List%%
 
         <tr class="sucuriscan-%%SUCURI.AuditLogs.NoItemsVisibility%%">
-            <td colspan="2">
+            <td colspan="5">
                 <em>No logs so far.</em>
             </td>
         </tr>
 
         <tr class="sucuriscan-%%SUCURI.AuditLogs.PaginationVisibility%%">
-            <td colspan="2">
+            <td colspan="5">
                 <ul class="sucuriscan-pagination">
                     %%SUCURI.AuditLogs.PaginationLinks%%
                 </ul>
