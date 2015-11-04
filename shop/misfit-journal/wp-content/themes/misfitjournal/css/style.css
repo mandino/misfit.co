@@ -4743,6 +4743,14 @@ a.cn-nav-next{
 }
 
 /* Some media queries */
+@media screen and (max-width: 1270px) {
+	.tiltview {
+		width: 350px;
+		left: 60%;
+	}
+
+}
+
 @media screen and (max-width: 65.3125em) {
 	.description,
 	.tiltview {
@@ -4826,9 +4834,11 @@ a.cn-nav-next{
 	}
 	
 	.tiltview {
-		left: 50%;
+		/*left: 50%;*/
+	    left: 60%;
 		opacity: 1;
 		top: 45%;
+		width: 250px;
 	}
 	
 	.tiltview a, .tiltview a img {
@@ -4849,7 +4859,8 @@ a.cn-nav-next{
 	}
 	
 	.tiltview {
-		left: 35%;
+		/*left: 35%;*/
+		left: 17%;
 		top: 75%;
 	}
 	
@@ -4857,12 +4868,18 @@ a.cn-nav-next{
 		left: 15%;
 		top: 75%;
 	}
+
+	.slides {
+		height: 700px;
+	}
+
 }
 
 @media screen and (max-width: 650px) {
 	
 	.tiltview {
-		left: 20%;
+		/*left: 20%;*/
+		left: 12%;
 		top: 75%;
 	}
 	
@@ -4874,24 +4891,37 @@ a.cn-nav-next{
 	.tiltview a, .tiltview a img {
 		width: 300px;
 	}
+
+	.slides {
+		height: 650px;
+	}
+
 }
 
 @media screen and (max-width: 550px) {
 	.tiltview {
-		left: 10%;
+		/*left: 10%;*/
+		left: 5%;
 	}
 	
 	.tiltview.row {
 		left: 10%;
 		top: 65%;
 	}
+
+	.slides {
+		height: 650px;
+	}
+
 }
 
 @media screen and (max-width: 479px) {
 	
 	.tiltview {
-		width: 350px;
-		left: 10%;	
+		/*width: 350px;
+		left: 10%;*/
+		width: 270px;
+		left: 15%;	
 	}
 	
 	.description {
@@ -4907,6 +4937,10 @@ a.cn-nav-next{
 	.tiltview a, .tiltview a img {
 		width: 300px;
 	}
+
+	.slides {
+		height: 650px;
+	}
 }
 
 @media screen and (max-width: 400px) {
@@ -4920,11 +4954,13 @@ a.cn-nav-next{
 	}
 	
 	.tiltview {
-		top: 70%;
+		/*top: 70%;*/
+		top: 83%;
 	}
 	
 	.tiltview {
-		left: 15%;
+		/*left: 15%;*/
+		left: 2%;
 	}
 	
 	.tiltview.row {
@@ -4946,7 +4982,7 @@ a.cn-nav-next{
 
 @media screen and (max-width: 24em) {
 	.slides {
-		height: 500px;
+		height: 550px;
 	}
 }
 
