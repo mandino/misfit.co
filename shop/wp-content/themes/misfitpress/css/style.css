@@ -376,6 +376,13 @@ a:hover {
     width: 154px;
 }
 
+
+/* WooCommerce */
+
+.woocommerce ul.products li.product .button {
+	color: #515151 !important;
+}
+
 /* Responsive Design Desktop ---------------------------------------- */
 
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {
