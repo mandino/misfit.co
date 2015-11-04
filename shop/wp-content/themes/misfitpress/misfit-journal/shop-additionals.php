@@ -61,7 +61,8 @@
 
 				<div class="portfoliocontainer mobile">
 					<div class="portfolio-item">
-						<div class="portfolio-shade"></div>
+						<!-- <div class="portfolio-shade"></div> -->
+						<a href="<?php the_permalink(); ?>"><div class="portfolio-shade"></div></a>
 						<a href="#"></a>
 						<div class="portimg" style="background-image: url('<?php bloginfo('template_url'); ?>/js/timthumb.php?src=<?php echo $imgsrc[0]; ?>&w=500&h=500');"></div>
 						<h3><?php the_title(); ?></h3>
