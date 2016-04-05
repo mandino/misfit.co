@@ -99,7 +99,11 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 					<span class="product_thumbnail_background" style="<?php echo $style; ?>"></span>
 					<?php
 						if ( has_post_thumbnail( $post->ID ) ) { 	
-							echo  get_the_post_thumbnail( $post->ID, 'shop_catalog');
+							// echo  get_the_post_thumbnail( $post->ID, 'shop_catalog');
+							$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID, 'shop_catalog'), "Full"); 
+					?>
+						<img src="<?php echo tt($imgsrc[0], 800, 800);?>" class="attachment-shop_catalog wp-post-image"> 
+					<?php
 						}else{
 							 echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<img src="%s" alt="Placeholder" />', wc_placeholder_img_src() ), $post->ID );
 						}

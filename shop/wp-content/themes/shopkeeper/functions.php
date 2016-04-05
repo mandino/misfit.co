@@ -834,3 +834,8 @@ function wc_remove_related_products( $args ) {
 	return array();
 }
 add_filter('woocommerce_related_products_args','wc_remove_related_products', 10); 
+
+
+function tt($image,$width,$height){
+    return bloginfo('template_url') . "/inc/thumb.php?src=$image&w=$width&h=$height";
+}
