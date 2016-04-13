@@ -36,7 +36,7 @@ if ( $products->have_posts() ) : ?>
 	<div class="cross-sells">
 
         <div class="large-12 columns">
-            <h2 class="cross-sells-title"><?php _e( 'You may be interested in&hellip;', 'woocommerce' ) ?></h2>
+            <h2 class="cross-sells-title"><?php _e( 'You may also be interested in&hellip;', 'woocommerce' ) ?></h2>
         </div><!-- .columns -->
 
         <div id="cross-sell-products-carousel" class="owl-carousel related products">
