@@ -90,7 +90,7 @@ if ( is_shop() && get_post_meta( get_option( 'woocommerce_shop_page_id' ), 'page
                     <div class="shop_cat_container">    
                         <ul class="shop_categories">        
                             <?php foreach($categories as $category) : ?>
-                                <?php if ($category->slug == 'press' || $category->name == 'studio' || $category->name == 'themes') { ?>  
+                                <?php if ($category->slug === 'press' || $category->slug == 'studio' || $category->slug == 'themes') { ?>  
                                     <li>
                                         <a href="<?php echo get_term_link( $category->slug, 'product_cat' ); ?>" class="category_item_link">
                                             <?php echo esc_html($category->name); ?>
