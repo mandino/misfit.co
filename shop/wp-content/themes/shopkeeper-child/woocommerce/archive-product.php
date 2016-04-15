@@ -78,7 +78,9 @@ if ( is_shop() && get_post_meta( get_option( 'woocommerce_shop_page_id' ), 'page
 		   
 		<div  class="shop_header <?php if ($category_header_src != "" || (is_shop() && $page_header_src != "")) : ?>with_featured_img<?php endif; ?> <?php echo $category_header_with_parallax; ?>"> 
 		 	
-			<div class="shop_header_image" style="background-image:url(<?php echo esc_url($page_header_src); ?>);"></div>
+			<?php if ($page_header_src != "") { ?>      
+                <div class="shop_header_image" style="background-image:url(<?php echo esc_url($page_header_src); ?>);"></div>
+            <?php } ?>    
 
             <div class="row">
                 <div class="large-12 large-centered columns">
