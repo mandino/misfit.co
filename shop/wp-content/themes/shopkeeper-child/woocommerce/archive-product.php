@@ -66,12 +66,20 @@ if ( is_shop() && get_post_meta( get_option( 'woocommerce_shop_page_id' ), 'page
 }
  
 ?>
+    
+    <?php 
+    //Find the category + category parent, if applicable
+    $term           = get_queried_object();
+    $parent_id      = empty( $term->term_id ) ? 0 : $term->term_id;
+    $categories     = get_terms('product_cat', array('hide_empty' => 0, 'parent' => $parent_id));
+    ?>
+
    	<div id="primary" class="content-area shop-page<?php echo $shop_has_sidebar ? ' shop-has-sidebar':'';?>">
 		   
 		<div  class="shop_header <?php if ($category_header_src != "" || (is_shop() && $page_header_src != "")) : ?>with_featured_img<?php endif; ?> <?php echo $category_header_with_parallax; ?>"> 
 		 	
-			<div class="temp" style="background-image:url(<?php echo esc_url($page_header_src); ?>);"></div>
-		 
+			<div class="shop_header_image" style="background-image:url(<?php echo esc_url($page_header_src); ?>);"></div>
+
             <div class="row">
                 <div class="large-12 large-centered columns">
 
@@ -79,6 +87,20 @@ if ( is_shop() && get_post_meta( get_option( 'woocommerce_shop_page_id' ), 'page
                         <h1 class="page-title on-shop"><?php woocommerce_page_title(); ?></h1>
                     <?php endif; ?>
                    
+                    <div class="shop_cat_container">    
+                        <ul class="shop_categories">        
+                            <?php foreach($categories as $category) : ?>
+                                <?php if ($category->slug == 'press' || $category->name == 'studio' || $category->name == 'themes') { ?>  
+                                    <li>
+                                        <a href="<?php echo get_term_link( $category->slug, 'product_cat' ); ?>" class="category_item_link">
+                                            <?php echo esc_html($category->name); ?>
+                                        </a>
+                                    </li>
+                                <?php } ?>
+                           <?php endforeach; ?>
+                        </ul>
+                    </div>
+
                     <div class="row">
                         <div class="large-9 large-centered columns">
                             <?php do_action( 'woocommerce_archive_description' ); ?>
@@ -86,10 +108,10 @@ if ( is_shop() && get_post_meta( get_option( 'woocommerce_shop_page_id' ), 'page
                     </div><!--.row-->
                    
                     <?php 
-                    // Find the category + category parent, if applicable
-                    $term 			= get_queried_object();
-                    $parent_id 		= empty( $term->term_id ) ? 0 : $term->term_id;
-                    $categories 	= get_terms('product_cat', array('hide_empty' => 0, 'parent' => $parent_id));
+                    //Find the category + category parent, if applicable
+                    //$term 			= get_queried_object();
+                    //$parent_id 		= empty( $term->term_id ) ? 0 : $term->term_id;
+                    //$categories 	= get_terms('product_cat', array('hide_empty' => 0, 'parent' => $parent_id));
                     ?>
                     
                     <?php
