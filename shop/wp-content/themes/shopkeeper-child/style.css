@@ -15,9 +15,29 @@ Version: 1.0
 /****************************************************************/
 
 
+/* SHOP */
 
+.shop_header.with_featured_img,
+#page_wrapper.sticky_header .content-area {
+	padding-top: 0; 
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
 
+.woocommerce .page-title.on-shop, 
+.woocommerce-page .page-title.on-shop {
+	margin: 50px 0 28px !important;
+	color: #000 !important;
+}
 
+.temp {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 400px;
+	width: 100%;
+}
 
 
 
