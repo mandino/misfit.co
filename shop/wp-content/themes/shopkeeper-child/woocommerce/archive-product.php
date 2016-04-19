@@ -82,6 +82,14 @@ if ( is_shop() && get_post_meta( get_option( 'woocommerce_shop_page_id' ), 'page
                 <div class="shop_header_image" style="background-image:url(<?php echo esc_url($page_header_src); ?>);"></div>
             <?php } ?>    
 
+            <div class="shop_single_cat">
+            <?php foreach($categories as $category) : ?>
+                <a href="<?php echo get_term_link( $category->slug, 'product_cat' ); ?>">
+                    <?php echo esc_html($category->name); ?>
+                </a>
+            <?php endforeach; ?>
+            </div>
+
             <div class="row">
                 <div class="large-12 large-centered columns">
 
