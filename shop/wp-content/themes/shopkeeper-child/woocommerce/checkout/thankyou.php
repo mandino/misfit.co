@@ -53,9 +53,18 @@ if ( $order ) : ?>
     
     <div class="row">
         <div class="xlarge-6 xlarge-centered large-8 large-centered columns">
-            
+			
+			<?php
+				$first_class = get_post_meta($order->id,'_billing_signup_checkbox',true);
+				if (isset($first_class)) {
+					if ($first_class) {
+						
+					}
+				}
+			?>
+			
 			<div class="stay_awhile">
-				<img src="http://misfit.co/shop/wp-content/uploads/2016/04/misfitpresslogo.jpg" />
+				<img src="<?php bloginfo('url'); ?>/wp-content/uploads/2016/04/misfitpresslogo.jpg" />
 				<p>Pssst. Did you know that misfit press has its own blog? Check it out <a target="_blank" href="http://www.misfitpress.co/blog">here</a></p>
 			</div>
 			
