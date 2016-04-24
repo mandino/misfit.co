@@ -32,8 +32,6 @@ function tt($image,$width,$height){
 	- https://docs.woothemes.com/document/tutorial-customising-checkout-fields-using-actions-and-filters/
 	- https://wordpress.org/support/topic/get-billing-address-info-separately
 
-*/
-
 add_filter( 'woocommerce_checkout_fields' , 'add_signup_box_checkbox_field' );
 
 function add_signup_box_checkbox_field($fields) {
@@ -76,3 +74,13 @@ function order_fields($fields) {
 	return $fields;
 
 }
+
+*/
+
+
+add_action( 'wp_enqueue_scripts', 'add_require_scripts_files' );
+
+function add_require_scripts_files() {
+	wp_enqueue_style('shopkeeper-style', get_stylesheet_directory_uri().'/style.css', array(), '1.0.5', "all");        
+}
+

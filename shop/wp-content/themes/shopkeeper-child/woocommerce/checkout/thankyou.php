@@ -54,14 +54,9 @@ if ( $order ) : ?>
     <div class="row">
         <div class="xlarge-6 xlarge-centered large-8 large-centered columns">
 			
-			<?php
-				$first_class = get_post_meta($order->id,'_billing_signup_checkbox',true);
-				if (isset($first_class)) {
-					if ($first_class) {
-						
-					}
-				}
-			?>
+			<div class="signup-btn">
+				<a target="_blank" href="http://eepurl.com/bQiS5L">Sign up for our mailing list</a>
+			</div>
 			
 			<div class="stay_awhile">
 				<img src="<?php bloginfo('url'); ?>/wp-content/uploads/2016/04/misfitpresslogo.jpg" />

@@ -95,6 +95,22 @@ Version: 1.0
 	margin-top: 50px;
 }
 
+.signup-btn {
+	text-align: center;
+	margin: 30px 0 0;
+}
+
+.signup-btn a {
+	background-color: #545454;
+	display: inline-block;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 1.2;
+	text-transform: uppercase;
+	padding: 15px 25px;
+}
+
 .stay_awhile {
 	margin: 30px 0;
 	position: relative;
