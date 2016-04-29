@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php do_action('woocommerce_email_header', $email_heading); ?>
 
 <h1 style="margin: 0 0 20px;"><?php echo $email_heading; ?></h1>
-<p><?php _e( "Your order has been received and is now being processed. Your order details are shown below for your reference:", 'woocommerce' ); ?></p>
+<p><?php _e( "Thank you for your recent order from the Misfit! Your order details are shown below for your reference:", 'woocommerce' ); ?></p>
 
 <?php do_action( 'woocommerce_email_before_order_table', $order, $sent_to_admin, $plain_text ); ?>
 
