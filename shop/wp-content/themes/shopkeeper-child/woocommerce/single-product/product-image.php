@@ -52,6 +52,14 @@ echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<div clas
 	<?php if ( has_post_thumbnail() ) { ?>
     
     <div class="product_images">
+
+    	<div class="temp">
+    		<div>TEMP</div>
+    		<div>TEMP</div>
+    		<div>TEMP</div>
+    		<div>TEMP</div>
+    		<div>TEMP</div>
+    	</div>
         
         <div id="product-images-carousel" class="owl-carousel">
     

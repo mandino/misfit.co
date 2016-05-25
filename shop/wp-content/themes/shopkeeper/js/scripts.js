@@ -858,6 +858,10 @@ jQuery(document).ready(function ($) {
 			afterMove:function() {}
 		});
 		
+		$(document).ready(function() {
+			$('.temp').slick();
+		});
+
 		//get carousel instance data and store it in variable owl
 		var owl = $("#product-images-carousel").data('owlCarousel');
 		

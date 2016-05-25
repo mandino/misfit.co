@@ -301,6 +301,8 @@ function shopkeeper_styles() {
 	wp_enqueue_style('shopkeeper-idangerous-swiper', get_template_directory_uri() . '/css/idangerous.swiper.css', array(), '2.3', 'all' );
 	wp_enqueue_style('shopkeeper-owl', get_template_directory_uri() . '/css/owl.carousel.css', array(), '1.3.1', 'all' );
 	wp_enqueue_style('shopkeeper-owl-theme', get_template_directory_uri() . '/css/owl.theme.css', array(), '1.3.1', 'all' );
+	wp_enqueue_style('shopkeeper-slick', get_template_directory_uri() . '/css/slick.css', array(), '1.0', 'all' );
+	wp_enqueue_style('shopkeeper-slick-theme', get_template_directory_uri() . '/css/slick-theme.css', array(), '1.0', 'all' );
 	wp_enqueue_style('shopkeeper-offcanvas', get_template_directory_uri() . '/css/offcanvas.css', array(), '1.0', 'all' );
 	wp_enqueue_style('shopkeeper-nanoscroller', get_template_directory_uri() . '/css/nanoscroller.css', array(), '0.7.6', 'all' );
 	wp_enqueue_style('shopkeeper-select2', get_template_directory_uri() . '/css/select2.css', array(), '3.4.5', 'all' );
@@ -395,6 +397,7 @@ function shopkeeper_scripts() {
 	wp_enqueue_script('shopkeeper-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array('jquery'), '1.0.3', TRUE);
 	wp_enqueue_script('shopkeeper-idangerous-swiper', get_template_directory_uri() . '/js/idangerous.swiper-2.4.1.min.js', array('jquery'), '2.4.1', TRUE);
 	wp_enqueue_script('shopkeeper-owl', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'), '1.3.1', TRUE);
+	wp_enqueue_script('shopkeeper-slick', get_template_directory_uri() . '/js/slick.min.js', array('jquery'), '1.0', TRUE);
 	wp_enqueue_script('shopkeeper-fresco', get_template_directory_uri() . '/js/fresco.js', array('jquery'), '1.3.0', TRUE);
 	wp_enqueue_script('shopkeeper-select2', get_template_directory_uri() . '/js/select2.min.js', array('jquery'), '3.5.1', TRUE);
 	wp_enqueue_script('shopkeeper-nanoscroller', get_template_directory_uri() . '/js/jquery.nanoscroller.min.js', array('jquery'), '0.7.6', TRUE);
