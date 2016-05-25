@@ -513,13 +513,13 @@ jQuery(document).ready(function ($) {
 
 	
 	// share product text desktop animation
-	$('.product_socials_wrapper').on('mouseenter',function(){
-		$(this).addClass('hovered');
-	})
+	// $('.product_socials_wrapper').on('mouseenter',function(){
+	// 	$(this).addClass('hovered');
+	// })
 
-	$('.product_socials_wrapper').on('mouseleave',function(){
-		$(this).removeClass('hovered');
-	})
+	// $('.product_socials_wrapper').on('mouseleave',function(){
+	// 	$(this).removeClass('hovered');
+	// })
 
 	
 	function handleSelect() {	

@@ -88,6 +88,74 @@ Version: 1.0
 }
 
 
+/* Product Single Page */
+
+.single-product .product_title.entry-title {
+	font-size: 20px !important;
+}
+
+.single-product .product_infos .price {
+	font-size: 20px !important;
+}
+
+.single-product .product_socials_wrapper .large-12 {
+	text-align: left;
+}
+
+.single-product .share-product-text {
+	opacity: 1 !important;
+	display: inline-block;
+	text-align: left;
+}
+
+.single-product .product_socials_wrapper {
+	padding-top: 30px;
+}
+
+.single-product .product_socials_wrapper_inner {
+	display: inline-block;
+	text-align: left;
+}
+
+.single-product .product_socials_wrapper .social_media {
+	margin: 0 10px 0;
+	font-size: 18px;
+}
+
+.quantity label,
+.quantity input {
+	font-size: 14px !important;
+	float: none !important;
+	display: inline-block;
+}
+
+.woocommerce-tabs .row {
+	border-bottom: 1px solid rgba(84,84,84,0.15);
+}
+
+.single-product.woocommerce div.product .woocommerce-tabs ul.tabs li.active, 
+.single-product.woocommerce #content div.product .woocommerce-tabs ul.tabs li.active, 
+.single-product.woocommerce-page div.product .woocommerce-tabs ul.tabs li.active, 
+.single-product.woocommerce-page #content div.product .woocommerce-tabs ul.tabs li.active {
+	border-top-color: transparent !important;
+	border-bottom-color: #EC7A5C !important;
+}
+
+.single-product.woocommerce div.product .woocommerce-tabs ul.tabs li, 
+.single-product.woocommerce #content div.product .woocommerce-tabs ul.tabs li, 
+.single-product.woocommerce-page div.product .woocommerce-tabs ul.tabs li, 
+.single-product.woocommerce-page #content div.product .woocommerce-tabs ul.tabs li {
+	border-bottom: 3px solid transparent !important;
+	margin: -1px 21px 0 21px;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li a, 
+.woocommerce #content div.product .woocommerce-tabs ul.tabs li a, 
+.woocommerce-page div.product .woocommerce-tabs ul.tabs li a, 
+.woocommerce-page #content div.product .woocommerce-tabs ul.tabs li a {
+	padding: 23px 0 18px;
+}
+
 /* Thank you page */
 
 .thank_you_bank_details {
