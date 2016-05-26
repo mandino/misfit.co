@@ -864,6 +864,22 @@ jQuery(document).ready(function ($) {
 				slideToShow: 1,
 				sldieToScroll: 1
 			});
+
+			$('.slider-1').slick({
+				slidesToShow: 1,
+		        slide: '.featured-slide-1',
+		        asNavFor: '.slider-nav-1',
+		        autoplay: false,
+			});
+
+			$('.slider-nav-1').slick({
+				slidesToShow: 4,
+		        slide: '.slide-link-1',
+		        asNavFor: '.slider-1',
+		        arrows: false,
+		        centerMode: true,
+		        focusOnSelect: true,
+			});
 		});
 
 		//get carousel instance data and store it in variable owl

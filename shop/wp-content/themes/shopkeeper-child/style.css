@@ -147,7 +147,7 @@ Version: 1.0
 }
 
 .slick-next {
-	right: -50px;
+	right: -40px;
 }
 
 .slick-next:before {
@@ -160,7 +160,7 @@ Version: 1.0
 }
 
 .slick-prev {
-	left: -50px;
+	left: -40px;
 }
 
 .slick-prev:before {
@@ -179,32 +179,51 @@ Version: 1.0
 	display: inline-block;
 }
 
-.woocommerce-tabs .row {
+.slick-tab {
 	border-bottom: 1px solid rgba(84,84,84,0.15);
+	border-top: 1px solid rgba(84,84,84,0.15);
 }
 
-.single-product.woocommerce div.product .woocommerce-tabs ul.tabs li.active, 
-.single-product.woocommerce #content div.product .woocommerce-tabs ul.tabs li.active, 
-.single-product.woocommerce-page div.product .woocommerce-tabs ul.tabs li.active, 
-.single-product.woocommerce-page #content div.product .woocommerce-tabs ul.tabs li.active {
-	border-top-color: transparent !important;
-	border-bottom-color: #EC7A5C !important;
+.slider-nav {
+	text-align: center;
+	margin: 0;
 }
 
-.single-product.woocommerce div.product .woocommerce-tabs ul.tabs li, 
-.single-product.woocommerce #content div.product .woocommerce-tabs ul.tabs li, 
-.single-product.woocommerce-page div.product .woocommerce-tabs ul.tabs li, 
-.single-product.woocommerce-page #content div.product .woocommerce-tabs ul.tabs li {
+.slider-nav li a {
 	border-bottom: 3px solid transparent !important;
-	margin: -1px 21px 0 21px;
+	font-family: 'Poppins',sans-serif; 
+	text-transform: uppercase;
+	color: rgba(0,0,0,0.35);
+	display: inline-block;
+	padding: 20px 0 15px;
+	font-weight: 900;
+	font-size: 15px;
+
+
+	-webkit-transition: all 0.25s ease-in-out;
+	-moz-transition: all 0.25s ease-in-out;
+	-o-transition: all 0.25s ease-in-out;
+	transition: all 0.25s ease-in-out;
 }
 
-.woocommerce div.product .woocommerce-tabs ul.tabs li a, 
-.woocommerce #content div.product .woocommerce-tabs ul.tabs li a, 
-.woocommerce-page div.product .woocommerce-tabs ul.tabs li a, 
-.woocommerce-page #content div.product .woocommerce-tabs ul.tabs li a {
-	padding: 20px 0 15px;
+.slider-nav li a:hover {
+	color: rgba(0,0,0,0.45);
 }
+
+.slider-nav .slick-current a {
+	border-bottom-color: #EC7A5C !important;
+	color: #000;
+}
+
+.slider-nav .slick-current a:hover {
+	color: #000;
+}
+
+.slider {
+	border-top: 1px solid rgba(84,84,84,0.15);
+	padding: 50px 0 70px;
+}
+
 
 /* Thank you page */
 
