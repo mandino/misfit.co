@@ -90,6 +90,22 @@ Version: 1.0
 
 /* Product Single Page */
 
+.single-product .row {
+	padding: 0;
+}
+
+.single-product .xlarge-10 {
+	width: 90% !important;
+}
+
+.single-product .large-6 {
+	width: 45% !important;
+}
+
+.single-product .large-5 {
+	width: 50% !important;
+}
+
 .single-product .product_title.entry-title {
 	font-size: 20px !important;
 }
@@ -120,6 +136,40 @@ Version: 1.0
 .single-product .product_socials_wrapper .social_media {
 	margin: 0 10px 0;
 	font-size: 18px;
+}
+
+.single-product .product_summary_thumbnails_wrapper {
+	display: none;
+}
+
+.single-product .product_content_wrapper {
+	padding-bottom: 55px !important;
+}
+
+.slick-next {
+	right: -50px;
+}
+
+.slick-next:before {
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 40px;
+    background: url("../../themes/shopkeeper/images/arrow_right_black.png") no-repeat 0 0;
+    background-size: 100%;
+}
+
+.slick-prev {
+	left: -50px;
+}
+
+.slick-prev:before {
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 40px;
+    background: url("../../themes/shopkeeper/images/arrow_left_black.png") no-repeat 0 0;
+    background-size: 100%;
 }
 
 .quantity label,
@@ -153,7 +203,7 @@ Version: 1.0
 .woocommerce #content div.product .woocommerce-tabs ul.tabs li a, 
 .woocommerce-page div.product .woocommerce-tabs ul.tabs li a, 
 .woocommerce-page #content div.product .woocommerce-tabs ul.tabs li a {
-	padding: 23px 0 18px;
+	padding: 20px 0 15px;
 }
 
 /* Thank you page */

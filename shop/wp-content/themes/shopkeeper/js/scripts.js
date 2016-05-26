@@ -841,45 +841,49 @@ jQuery(document).ready(function ($) {
 		
 		//owl
 		
-		var curent_dragging_item;
+		// var curent_dragging_item;
 		
 		$(".featured_img_temp").hide();
 		
-		$("#product-images-carousel").owlCarousel({
-			singleItem : true,
-			autoHeight : true,
-			transitionStyle:"fade",
-			lazyLoad : true,
-			slideSpeed : 300,
-			dragBeforeAnimFinish: false,
-			afterAction : afterAction,
-			beforeUpdate : function() {},
-			startDragging:function() {},
-			afterMove:function() {}
-		});
+		// $("#product-images-carousel").owlCarousel({
+		// 	singleItem : true,
+		// 	autoHeight : true,
+		// 	transitionStyle:"fade",
+		// 	lazyLoad : true,
+		// 	slideSpeed : 300,
+		// 	dragBeforeAnimFinish: false,
+		// 	afterAction : afterAction,
+		// 	beforeUpdate : function() {},
+		// 	startDragging:function() {},
+		// 	afterMove:function() {}
+		// });
 		
 		$(document).ready(function() {
-			$('.temp').slick();
+			$('.slick-carousel').slick({
+				arrows: true,
+				slideToShow: 1,
+				sldieToScroll: 1
+			});
 		});
 
 		//get carousel instance data and store it in variable owl
-		var owl = $("#product-images-carousel").data('owlCarousel');
+		// var owl = $("#product-images-carousel").data('owlCarousel');
 		
-		function afterAction() {
-			/*jshint validthis: true */
+		// function afterAction() {
+		// 	/*jshint validthis: true */
 			
-			$('.product_thumbnails_swiper_container').css('max-height', $('.product_images').height());
+		// 	$('.product_thumbnails_swiper_container').css('max-height', $('.product_images').height());
 			
-			if ($(".product_thumbnails").length) {
+		// 	if ($(".product_thumbnails").length) {
 				
-				for (var i = 0; i < product_thumbnails_swiper.slides.length; i++){
-					product_thumbnails_swiper.slides[i].style.opacity = 0.2;
-				}
-				product_thumbnails_swiper.slides[this.owl.currentItem].style.opacity = 1;
-				product_thumbnails_swiper.swipeTo(this.owl.currentItem, 300, '');
-			}
+		// 		for (var i = 0; i < product_thumbnails_swiper.slides.length; i++){
+		// 			product_thumbnails_swiper.slides[i].style.opacity = 0.2;
+		// 		}
+		// 		product_thumbnails_swiper.slides[this.owl.currentItem].style.opacity = 1;
+		// 		product_thumbnails_swiper.swipeTo(this.owl.currentItem, 300, '');
+		// 	}
 
-		}
+		// }
 		
 		//Product Gallery zoom	
 		if ($(".easyzoom").length ) {

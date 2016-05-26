@@ -94,7 +94,7 @@
 				<div class="row">
 			
 					<div class="large-1 columns product_summary_thumbnails_wrapper">
-						<div><?php do_action( 'woocommerce_product_summary_thumbnails' ); ?>&nbsp;</div>
+						<div><?php do_action( 'woocommerce_product_summary_thumbnailssummary_thumbnails' ); ?>&nbsp;</div>
 					</div><!-- .columns -->
 					
 					<div class="large-5 columns">
