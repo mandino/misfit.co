@@ -31,6 +31,16 @@ Version: 1.0
 	color: #000 !important;
 }
 
+.woocommerce .single_product_summary_upsell .upsells.products, 
+.woocommerce-page .single_product_summary_upsell .upsells.products {
+	margin: 0;
+}
+
+.woocommerce .products ul, 
+.woocommerce ul.products {
+	margin: 0;
+}
+
 .shop_header_image {
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -95,15 +105,16 @@ Version: 1.0
 }
 
 .single-product .xlarge-10 {
-	width: 90% !important;
+	width: 97% !important;
 }
 
 .single-product .large-6 {
-	width: 45% !important;
+	width: 43% !important;
 }
 
 .single-product .large-5 {
-	width: 50% !important;
+	width: 48% !important;
+	left: 4%;
 }
 
 .single-product .product_title.entry-title {
@@ -144,10 +155,70 @@ Version: 1.0
 
 .single-product .product_content_wrapper {
 	padding-bottom: 55px !important;
+	margin-top: 30px;
+	padding-top: 0;
+}
+
+.single-product .product_thumbnail_wrapper {
+	padding: 25px 25px 0 25px;
+}
+
+.single-product .product-title-link {
+	margin: 26px 0 0 0;
+}
+
+.single-product .product_after_shop_loop {
+	margin-bottom: 0;
+}
+
+.single-product .large-9 {
+	padding: 0;
+	width: 100%;
+}
+
+.single_product_summary_related .large-12.columns, 
+.single_product_summary_upsell .large-12.columns {
+	border-bottom: 1px solid rgba(84,84,84,0.15);
+	padding: 0 !important;
+}
+
+.single_product_summary_related h2, 
+.single_product_summary_upsell h2 {
+    padding: 42px 0;
+    margin: 0;
+}
+
+.single_product_summary_related ul h3, 
+.single_product_summary_upsell ul h3 {
+	padding: 0 !important;
+}
+
+.single_product_summary_related h2:after, 
+.single_product_summary_upsell h2:after {
+	display: none;
+}
+
+#upsells-products-carousel {
+	border-bottom: 1px solid rgba(84,84,84,0.15);
+}
+
+#upsells-products-carousel .animate {
+	border-right: 1px solid rgba(84,84,84,0.15);
+	text-align: center;
+}
+
+.owl-carousel.related.products .owl-item, 
+.owl-carousel.upsells.products .owl-item {
+	padding-top: 0;
+}
+
+.owl-carousel.related.products li, 
+.owl-carousel.upsells.products li {
+	margin: 0;
 }
 
 .slick-next {
-	right: -40px;
+	right: -50px;
 }
 
 .slick-next:before {
@@ -160,7 +231,7 @@ Version: 1.0
 }
 
 .slick-prev {
-	left: -40px;
+	left: -50px;
 }
 
 .slick-prev:before {
