@@ -870,6 +870,7 @@ jQuery(document).ready(function ($) {
 		        slide: '.featured-slide-1',
 		        asNavFor: '.slider-nav-1',
 		        autoplay: false,
+		        adaptiveHeight: true
 			});
 
 			$('.slider-nav-1').slick({
@@ -877,7 +878,6 @@ jQuery(document).ready(function ($) {
 		        slide: '.slide-link-1',
 		        asNavFor: '.slider-1',
 		        arrows: false,
-		        centerMode: true,
 		        focusOnSelect: true,
 			});
 		});

@@ -255,6 +255,19 @@ Version: 1.0
 	border-top: 1px solid rgba(84,84,84,0.15);
 }
 
+.slick-tab #tab-gallery_tab .xlarge-6 {
+	padding: 0 5px 0 25px;
+	width: 100%;
+}
+
+.slick-tab .slick-slide img {
+	width: calc(50% - 20px);
+	display: inline-block;	
+	margin-right: 20px;
+	margin-top: 20px;
+	height: 400px;
+}
+
 .slider-nav {
 	text-align: center;
 	margin: 0;

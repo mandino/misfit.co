@@ -84,3 +84,56 @@ function add_require_scripts_files() {
 	wp_enqueue_style('shopkeeper-style', get_stylesheet_directory_uri().'/style.css', array(), '1.0.5', "all");        
 }
 
+
+/******************************************************************************/
+/****** WooCommerce CUSTOM ***********************************/
+/******************************************************************************/
+
+add_filter( 'woocommerce_product_tabs', 'woo_reorder_tabs', 98 );
+function woo_reorder_tabs( $tabs ) {
+
+	$tabs['gallery_tab']['priority'] = 5;			
+	$tabs['description']['priority'] = 10;			
+	$tabs['comments_tab']['priority'] = 15;
+	$tabs['additional_information']['priority'] = 20;
+
+	return $tabs;
+}
+
+
+add_filter( 'woocommerce_product_tabs', 'woocommerce_custom_product_tab' );
+function woocommerce_custom_product_tab( $tabs ) {
+	
+	// Adds the new tab
+	
+	$tabs['gallery_tab'] = array(
+		'title' 	=> __( 'Gallery', 'woocommerce' ),
+		'priority' 	=> 50,
+		'callback' 	=> 'woocommerce_gallery_tab'
+	);
+
+	$tabs['comments_tab'] = array(
+		'title' 	=> __( 'Comments', 'woocommerce' ),
+		'priority' 	=> 30,
+		'callback' 	=> 'woocommerce_comments_tab'
+	);
+
+	return $tabs;
+
+}
+
+function woocommerce_gallery_tab() {
+	global $product;
+	$attachment_ids = $product->get_gallery_attachment_ids();
+
+		foreach( $attachment_ids as $attachment_id ) {
+			echo wp_get_attachment_image($attachment_id, 'full');
+		}
+
+}
+
+function woocommerce_comments_tab() {
+
+	echo '<h2>Comments</h2>';
+
+}
