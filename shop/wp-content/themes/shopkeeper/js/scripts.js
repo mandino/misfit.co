@@ -879,6 +879,7 @@ jQuery(document).ready(function ($) {
 		        asNavFor: '.slider-1',
 		        arrows: false,
 		        focusOnSelect: true,
+		        // variableWidth: true
 			});
 		});
 
