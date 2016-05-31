@@ -182,6 +182,10 @@ Version: 1.0
 	width: 100%;
 }
 
+.single_product_summary_upsell .row {
+	max-width: 100%;
+}
+
 .single_product_summary_related .large-12.columns, 
 .single_product_summary_upsell .large-12.columns {
 	border-bottom: 1px solid rgba(84,84,84,0.15);
@@ -316,6 +320,10 @@ Version: 1.0
 	display: inline-block;
 }
 
+.single-product .product form.cart {
+	margin: 0 0 20px 0 !important;
+}
+
 .single-product .product form.cart .button {
 	width: calc(100% - 180px);
 }
@@ -328,6 +336,33 @@ Version: 1.0
 
 .single-product  .single_add_to_cart_button .fa.fa-shopping-cart {
 	margin-right: 6px;
+}
+
+.single-product .quick-buy {
+	border-radius: 0 2px 2px 0;
+	position: absolute;
+	visibility: hidden;
+	padding: 4px 15px;
+	background: #fff;
+	display: block;
+    opacity: 0;
+	z-index: 9;
+    height: 0;
+    left: 0;
+    top: 0;
+
+
+
+    -webkit-transion: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+}
+
+.single-product .product_thumbnail:hover .quick-buy {
+	height: 35px;
+	opacity: 1;
+    visibility: visible;
 }
 
 .slick-tab {

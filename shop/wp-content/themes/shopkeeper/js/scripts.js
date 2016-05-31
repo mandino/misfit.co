@@ -882,6 +882,12 @@ jQuery(document).ready(function ($) {
 		        // variableWidth: true
 			});
 
+			$(".menu a").click(function(e){
+		        e.preventDefault();
+		        slideIndex = $(this).index();
+		        $( '.slideshow' ).slickGoTo( parseInt(slideIndex) );
+		    });
+
 			var checker = 1;
 			$('.quantity .btn:first-of-type').on('click', function() {
 				var checker = $('.quantity input').val();
