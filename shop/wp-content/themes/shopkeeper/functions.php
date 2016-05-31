@@ -564,7 +564,7 @@ function sant_prettyadd ($content, $id, $size, $permalink, $icon, $text) {
 add_filter( 'woocommerce_breadcrumb_defaults', 'jk_change_breadcrumb_delimiter' );
 function jk_change_breadcrumb_delimiter( $defaults ) {
     // Change the breadcrumb delimeter from '/' to '>'  
-    $defaults['delimiter'] = ' &gt; ';
+    $defaults['delimiter'] = ' &sol; ';
     return $defaults;
 }
 
