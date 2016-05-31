@@ -134,6 +134,6 @@ function woocommerce_gallery_tab() {
 
 function woocommerce_comments_tab() {
 
-	echo '<h2>Comments</h2>';
+	echo '<div class="fb-comments" data-href="http://misfit.co/shop/shop/" data-numposts="5"></div>';
 
 }
