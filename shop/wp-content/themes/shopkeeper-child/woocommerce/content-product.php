@@ -95,7 +95,7 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 		<div class="product_thumbnail_wrapper <?php if ( !$product->is_in_stock() ) : ?>outofstock<?php endif; ?>">
 			
 			<div class="product_thumbnail <?php echo $class; ?>">
-				<a class="quick-buy">Quick Buy</a>
+				<!-- <a class="quick-buy">Quick Buy</a> -->
 				<a href="<?php the_permalink(); ?>">
 					<span class="product_thumbnail_background" style="<?php echo $style; ?>"></span>
 					<?php
