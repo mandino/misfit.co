@@ -881,6 +881,22 @@ jQuery(document).ready(function ($) {
 		        focusOnSelect: true,
 		        // variableWidth: true
 			});
+
+			var checker = 1;
+			$('.quantity .btn:first-of-type').on('click', function() {
+				var checker = $('.quantity input').val();
+				if (checker < 100) {
+					$('.quantity input').val( parseInt($('.quantity input').val(), 10) + 1);
+				}
+			});
+
+			$('.quantity .btn:last-of-type').on('click', function() {
+				var checker = $('.quantity input').val();
+				if (checker > 1) {
+					$('.quantity input').val( parseInt($('.quantity input').val(), 10) - 1);
+				}
+			});
+
 		});
 
 		//get carousel instance data and store it in variable owl
