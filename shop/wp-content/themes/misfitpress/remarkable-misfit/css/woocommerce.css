@@ -1,0 +1,71 @@
+/* Woocommerce Pages
+--------------------------------------------------*/
+
+.woocommerce-page #main h1 {
+  border-bottom: 0 none;
+  font-family: Gentium Book italic,serif;
+  font-size: 40px;
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+}
+
+.woocommerce .cart-collaterals .cart_totals table, .woocommerce-page .cart-collaterals .cart_totals table {
+  border-collapse: separate;
+  border-radius: 5px 5px 5px 5px;
+  float: right;
+  margin: 0 0 6px;
+  padding: 0;
+}
+
+
+
+/* Product Page
+--------------------------------------------------*/
+
+ul.tabs {
+    border-bottom: 0;
+    border-left: 0;
+    padding-left: 0;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs, .woocommerce-page div.product .woocommerce-tabs ul.tabs, .woocommerce #content div.product .woocommerce-tabs ul.tabs, .woocommerce-page #content div.product .woocommerce-tabs ul.tabs {
+    color: #333333;
+    display: inline-block;
+    font-family: Gentium Book italic,serif;
+    font-size: 30px;
+    font-weight: normal;
+    padding: 0;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li a, .woocommerce-page div.product .woocommerce-tabs ul.tabs li a, .woocommerce #content div.product .woocommerce-tabs ul.tabs li a, .woocommerce-page #content div.product .woocommerce-tabs ul.tabs li a {
+    color: #333333;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li, .woocommerce-page div.product .woocommerce-tabs ul.tabs li, .woocommerce #content div.product .woocommerce-tabs ul.tabs li, .woocommerce-page #content div.product .woocommerce-tabs ul.tabs li {
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    background: none repeat scroll 0 0 transparent;
+    border-color: #9E9E9E;
+    border-image: none;
+    border-style: none solid none none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-width: 0 1px 0 0;
+    box-shadow: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0 0 0 0;
+    position: relative;
+    z-index: 0;
+}
