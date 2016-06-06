@@ -53,11 +53,15 @@ if ( ! empty( $tabs ) ) : ?>
 
 	<div class="slick-tab">
 	    <ul class="slider-nav slider-nav-1">
-	        <?php foreach ( $tabs as $key => $tab ) : ?>
-				<li class="slide-link slide-link-1">
+	        <?php 	
+	        	$counter = 0;
+	        	foreach ( $tabs as $key => $tab ) : 
+	        ?>
+				<li class="slide-link slide-link-1 nav<?php echo $counter; ?>">
 					<a><?php echo apply_filters( 'woocommerce_product_' . $key . '_tab_title', esc_html( $tab['title'] ), $key ); ?></a>
+				<?php if ($counter == 0) { ?><span class="active-state"></span><?php } ?>	
 				</li>
-			<?php endforeach; ?>
+			<?php $counter++; endforeach; ?>
 	    </ul>
 
 	    <div class="slider slider-1">

@@ -370,6 +370,10 @@ Version: 1.0
 	border-top: 1px solid rgba(84,84,84,0.15);
 }
 
+.slick-tab .slider {
+	background: #F4F4F4;
+}
+
 .slick-tab #tab-gallery_tab .xlarge-6 {
 	padding: 0 5px 0 25px;
 	width: 100%;
@@ -389,7 +393,7 @@ Version: 1.0
 }
 
 .slider-nav li a {
-	border-bottom: 3px solid transparent !important;
+	/*border-bottom: 3px solid transparent !important;*/
 	font-family: 'Poppins',sans-serif; 
 	text-transform: uppercase;
 	color: rgba(0,0,0,0.35);
@@ -407,18 +411,31 @@ Version: 1.0
 
 .slider-nav li {
 	display: inline-block;
+	position: relative;
+	margin: 0 42px;
 }
 
 .slider-nav li a:hover {
 	color: rgba(0,0,0,0.45);
 }
 
-.slider-nav .slick-current a {
-	border-bottom-color: #EC7A5C !important;
-	color: #000;
+.slider-nav .active-state {
+	border-bottom: 3px solid #EC7A5C;
+	display: inline-block;
+    position: absolute;
+	bottom: -2px;
+	width: 100%;
+	z-index: 2;
+    left: 0;
+
+    
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
 }
 
-.slider-nav .slick-current a:hover {
+.slider-nav .active-state a:hover {
 	color: #000;
 }
 
