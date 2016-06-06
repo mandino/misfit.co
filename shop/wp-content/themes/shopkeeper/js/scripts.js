@@ -867,25 +867,15 @@ jQuery(document).ready(function ($) {
 
 			$('.slider-1').slick({
 				slidesToShow: 1,
-		        slide: '.featured-slide-1',
-		        asNavFor: '.slider-nav-1',
 		        autoplay: false,
-		        adaptiveHeight: true
+		        adaptiveHeight: true,
+		        draggable: false
 			});
 
-			$('.slider-nav-1').slick({
-				slidesToShow: 4,
-		        slide: '.slide-link-1',
-		        asNavFor: '.slider-1',
-		        arrows: false,
-		        focusOnSelect: true,
-		        // variableWidth: true
-			});
-
-			$(".menu a").click(function(e){
+			$('.slider-nav li').click(function(e){
 		        e.preventDefault();
-		        slideIndex = $(this).index();
-		        $( '.slideshow' ).slickGoTo( parseInt(slideIndex) );
+		        var slideIndex = $(this).index();
+		        $( '.slider-1' ).slick('slickGoTo', parseInt(slideIndex));
 		    });
 
 			var checker = 1;
