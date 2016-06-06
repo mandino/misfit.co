@@ -1,7 +1,0 @@
-<?php
-/**
-
-Remarkable Misfit Functions
- 
- */
-
