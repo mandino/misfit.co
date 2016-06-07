@@ -478,6 +478,10 @@ Version: 1.0
 	color: rgba(0,0,0,0.45);
 }
 
+.active a {
+	color: #EC7A5C !important;
+}
+
 .slider-nav .active-state {
 	border-bottom: 3px solid #EC7A5C;
 	display: inline-block;
@@ -500,8 +504,13 @@ Version: 1.0
 
 .slider {
 	border-top: 1px solid rgba(84,84,84,0.15);
+}
+
+.slider .row {
 	padding: 50px 0 70px;
 }
+
+.slider #tab-gallery_tab .row { padding: 0 0 20px 0; }
 
 
 /* Thank you page */

@@ -57,7 +57,7 @@ if ( ! empty( $tabs ) ) : ?>
 	        	$counter = 0;
 	        	foreach ( $tabs as $key => $tab ) : 
 	        ?>
-				<li class="slide-link slide-link-1 nav<?php echo $counter; ?>">
+				<li class="slide-link slide-link-1 nav<?php echo $counter; if ($counter == 0) { ?> active<?php } ?>">
 					<a><?php echo apply_filters( 'woocommerce_product_' . $key . '_tab_title', esc_html( $tab['title'] ), $key ); ?></a>
 				<?php if ($counter == 0) { ?><span class="active-state"></span><?php } ?>	
 				</li>
@@ -67,7 +67,7 @@ if ( ! empty( $tabs ) ) : ?>
 	    <div class="slider slider-1">
 	        <?php foreach ( $tabs as $key => $tab ) : ?>
 				<div class="featured-slide featured-slide-1 panel entry-content" id="tab-<?php echo esc_attr( $key ); ?>">
-	                <div class="row">
+	                <div <?php if ($key == 'comments_tab') { ?>style="text-align: center;"<?php } ?> class="row">
 	                    <div class="large-8 xlarge-6 large-centered xlarge-centered columns">
 	                        <?php call_user_func( $tab['callback'], $key, $tab ) ?>
 	                    </div>
