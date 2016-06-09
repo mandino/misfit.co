@@ -937,6 +937,17 @@ jQuery(document).ready(function ($) {
 			//     }
 			// }
 
+			$('.modal-slide').slick({
+				arrows: false,
+				dots: true
+			});
+
+			$('.quick-buy').click(function (e) {
+				$('.modal').modal();
+
+				return false;
+			});
+
 		});
 
 		//get carousel instance data and store it in variable owl

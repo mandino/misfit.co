@@ -208,6 +208,13 @@ Version: 1.0
 	display: none;
 }
 
+#fancybox-content .top-headers-wrapper,
+#fancybox-content .product_socials_wrapper.show-share-text-on-mobiles,
+#fancybox-content .slick-tab,
+#fancybox-content .site-footer {
+	display: none !important;
+}
+
 #upsells-products-carousel {
 	border-bottom: 1px solid rgba(84,84,84,0.15);
 }
@@ -374,11 +381,13 @@ Version: 1.0
     transition: all 0.15s ease-in-out;
 }
 
+a.modalCloseImg {background:url(../img/basic/x.png) no-repeat; width:25px; height:29px; display:inline; z-index:3200; position:absolute; top:-15px; right:-16px; cursor:pointer;}
+
 .modal {
 	background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.4); 
+	overflow: hidden; 
 	position: fixed; 
-	overflow: auto; 
     display: none; 
     height: 100%;
     width: 100%; 
@@ -387,12 +396,69 @@ Version: 1.0
     top: 0;
 }
 
-.modal-content {
+.modal-container {
     background-color: #fefefe;
-    border: 1px solid #888;
-    margin: 15% auto; 
-    padding: 20px;
+    position: relative;
+    max-width: 960px;
+    margin: 5% auto;
+    padding: 50px;
     width: 80%; 
+}
+
+.modal-container .fa.fa-times {
+	background: #ececec;
+	position: absolute;
+	padding: 15px 17px;
+    font-size: 20px;
+    right: 0;
+    top: 0;
+}
+
+.modal-content {
+	float: left;
+	width: 55%;
+}
+
+.modal-content .product_title.entry-title {
+	margin: 20px 0 0 0;
+	text-align: left;
+}
+
+.modal-content .single_add_to_cart_button {
+	width: 60%;
+}
+
+.modal-content .product_infos {
+	padding: 0;
+}
+
+.modal-content .quantity {
+	float: left;
+}
+
+.modal-content .amount {
+	color: #EC7A5C;
+}
+
+.modal-content .more {
+	font-weight: 900;
+	font-size: 18px;
+}
+
+.modal-content .fa.fa-chevron-right {
+	margin-left: 10px;
+	font-size: 16px;
+}
+
+.modal-slide {
+    height: 400px;
+    width: 400px;
+}
+
+.modal-image {
+	width: calc(45% - 50px);
+	margin-right: 50px;
+	float: left;
 }
 
 .close {
