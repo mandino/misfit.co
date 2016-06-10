@@ -670,20 +670,153 @@ a.modalCloseImg {background:url(../img/basic/x.png) no-repeat; width:25px; heigh
 	margin-bottom: 50px !important;
 }
 
+/* Facebook Comment Plugin */
+
+.fb_iframe_widget,
+.fb_iframe_widget span,
+.fb_iframe_widget span iframe[style] {
+  min-width: 100% !important;
+  width: 100% !important;
+}
 
 
+@media only screen and (max-width: 1030px) {
+	
+	.slick-prev {
+		left: -40px;
+	}
 
-@media only screen
-and (max-width: 567px) {
+	.slick-next {
+		right: -40px;
+	}
+
+}
+
+@media only screen and (max-width: 1022px) {
+	
+	.single-product .tob_bar_shop + .row {
+		padding: 0 60px;
+	}
+
+	.single-product .large-5,
+	.single-product .large-6,
+	.single-product .xlarge-10 {
+		width: 100% !important;
+		left: auto !important;
+	}
+
+	.single-product .product_title.entry-title {
+		font-size: 3rem !important;
+	}
+
+	.single-product .product_infos .price {
+		font-size: 2.25em !important;
+	}
+
+	.single-product .product_socials_wrapper .large-12 {
+		text-align: center;
+		padding: 0 50px;
+	}
+
+	.slick-tab .row {
+		padding: 50px 50px 70px;
+	}
+	
+}
+
+@media only screen and (max-width: 990px) {
+	
+	.slider-nav li {
+		border-bottom: 3px solid transparent;
+		margin: 0 30px;
+
+
+		-webkit-transition: 0.25s ease-in-out;
+	    -moz-transition: 0.25s ease-in-out;
+	    -o-transition: 0.25s ease-in-out;
+	    transition: 0.25s ease-in-out;
+	}	
+
+	.active-state { display: none !important; }
+
+	.slider-nav .active {
+		border-color: #EC7A5C;
+	}
+
+}
+
+@media only screen and (max-width: 865px) {
+	
+	.slider-nav li {
+		margin: 0 15px;
+	}
+
+}
+
+@media only screen and (max-width: 725px) {
+	
+	.slider-nav li {
+		margin: 0 10px;
+	}
+
+}
+
+@media only screen and (max-width: 670px) {
+	
+	.slider-nav li {
+		margin: 0 10px;
+	}
+
+}
+
+@media only screen and (max-width: 665px) {
+	
+	.slider-nav li {
+		border-bottom: 1px solid rgba(84,84,84,0.15);
+		display: block;
+		margin: 0;
+	}
+
+	.slider-nav li:last-child {
+		border: none;
+	}
+
+	.slider-nav .active {
+		border-color: rgba(84,84,84,0.15);
+	}
+
+}
+
+@media only screen and (max-width: 600px) {
+	
+	.slick-tab .slick-slide img {
+		padding: 30px 0 0;
+		display: block;
+		width: 100%;
+		margin: 0;
+	}
+
+	.slick-tab #tab-gallery_tab .xlarge-6 {
+		padding: 0;
+	}
+
+	.slick-tab .row {
+		width: 90%;
+	}
+
+}
+
+@media only screen and (max-width: 567px) {
 	
 	/* thank you page */
 	
 	.stay_awhile p {
 		padding: 0 0 15px;
 	}
+
 }
 
 
 /****************************************************************/
 /****************************************************************/
-/****************************************************************/
+/***************************************************************

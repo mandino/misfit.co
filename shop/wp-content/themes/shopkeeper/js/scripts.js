@@ -886,19 +886,21 @@ jQuery(document).ready(function ($) {
 		        $(this).addClass('active');
 		        $( '.slider-1' ).slick('slickGoTo', parseInt(slideIndex));
 
-		        if (nav0.hasClass('active')) {
-		        	active.css({'left':'0', 'width':'66px'});
-		        } else if (nav1.hasClass('active')) {
-		        	active.css({'left':'154px', 'width':'103px'});
-		        } else if (nav2.hasClass('active')) {
-		        	active.css({'left':'345px', 'width':'91px'});
-		        } else if (nav3.hasClass('active')) {
-		        	active.css({'left':'524px', 'width':'207px'});
-		        } else if (nav4.hasClass('active')) {
-		        	active.css({'left':'819px', 'width':'65px'});
-		        } else {
+		        if($(window).width() > 990) {
+		        	if (nav0.hasClass('active')) {
+		        		active.css({'left':'0', 'width':'66px'});
+			        } else if (nav1.hasClass('active')) {
+			        	active.css({'left':'154px', 'width':'103px'});
+			        } else if (nav2.hasClass('active')) {
+			        	active.css({'left':'345px', 'width':'91px'});
+			        } else if (nav3.hasClass('active')) {
+			        	active.css({'left':'524px', 'width':'207px'});
+			        } else if (nav4.hasClass('active')) {
+			        	active.css({'left':'819px', 'width':'65px'});
+			        } else {
 
-		        }
+			        }
+				}
 		    });
 
 			var checker = 1;
