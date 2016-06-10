@@ -360,7 +360,17 @@ Version: 1.0
 	-webkit-transform: translateY(0);
 }
 
+.single-product .products li:hover span.onsale {
+	position: absolute;
+	top: 65px;
+}
+
+.single-product .quick-buy:hover {
+	color: #EC7A5C;
+}
+
 .single-product .quick-buy {
+	font-family: 'Poppins',sans-serif !important;
 	border-radius: 0 2px 2px 0;
 	text-transform: uppercase;
 	display: block !important;
@@ -368,17 +378,33 @@ Version: 1.0
 	visibility: hidden;
 	padding: 4px 15px;
 	background: #fff;
+	color: #999;
+	left: -10px;
     opacity: 0;
 	z-index: 9;
 	top: -10px;
     height: 0;
-    left: 0;
 
 
     -webkit-transion: all 0.15s ease-in-out;
     -moz-transition: all 0.15s ease-in-out;
     -o-transition: all 0.15s ease-in-out;
     transition: all 0.15s ease-in-out;
+}
+
+.single-product span.onsale {
+	padding: 4px 15px !important;
+	font-size: 13px !important;
+
+
+	-webkit-transion: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+}
+
+.single-product .product_infos .price del span {
+	color: #999;
 }
 
 a.modalCloseImg {background:url(../img/basic/x.png) no-repeat; width:25px; height:29px; display:inline; z-index:3200; position:absolute; top:-15px; right:-16px; cursor:pointer;}
@@ -417,6 +443,11 @@ a.modalCloseImg {background:url(../img/basic/x.png) no-repeat; width:25px; heigh
 .modal-content {
 	float: left;
 	width: 55%;
+}
+
+.modal-content .stock.in-stock {
+	font-size: .92em;
+	color: #77a464;
 }
 
 .modal-content .product_title.entry-title {
@@ -475,7 +506,7 @@ a.modalCloseImg {background:url(../img/basic/x.png) no-repeat; width:25px; heigh
     color: black;
 }
 
-.single-product .product_thumbnail:hover .quick-buy {
+.single-product .products li:hover .quick-buy {
 	height: 35px;
 	opacity: 1;
     visibility: visible;

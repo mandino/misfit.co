@@ -163,3 +163,8 @@ function woocommerce_comments_tab() {
 // 	echo 'Ecology Tab Contents';
 
 // }
+
+add_filter( 'woocommerce_sale_flash', 'wc_custom_replace_sale_text' );
+function wc_custom_replace_sale_text( $html ) {
+    return str_replace( __( 'Sale!', 'woocommerce' ), __( 'On Sale!', 'woocommerce' ), $html );
+}

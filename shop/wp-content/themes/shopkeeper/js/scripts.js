@@ -894,6 +894,8 @@ jQuery(document).ready(function ($) {
 		        	active.css({'left':'345px', 'width':'91px'});
 		        } else if (nav3.hasClass('active')) {
 		        	active.css({'left':'524px', 'width':'207px'});
+		        } else if (nav4.hasClass('active')) {
+		        	active.css({'left':'819px', 'width':'65px'});
 		        } else {
 
 		        }
@@ -913,29 +915,6 @@ jQuery(document).ready(function ($) {
 					$('.quantity input').val( parseInt($('.quantity input').val(), 10) - 1);
 				}
 			});
-
-			// $('.inline').colorbox({inline:true, width:'100%', transition:'fade'});
-			// $('.lightbox-close').click();
-
-
-			// var modal = document.getElementById('myModal');
-			// var btn = document.getElementById('myBtn');
-			// var span = document.getElementsByClassName('close')[0];
-
- 
-			// btn.onclick = function() {
-			//     modal.style.display = "block";
-			// }
-
-			// span.onclick = function() {
-			//     modal.style.display = "none";
-			// }
-
-			// window.onclick = function(event) {
-			//     if (event.target == modal) {
-			//         modal.style.display = "none";
-			//     }
-			// }
 
 			$('.modal-slide').slick({
 				arrows: false,
