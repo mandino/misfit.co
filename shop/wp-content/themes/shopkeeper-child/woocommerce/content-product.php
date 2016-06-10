@@ -110,6 +110,59 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 						}
 					?>
 				</a>
+
+				<div class="modal">
+					<div class="modal-container">
+						<span class="close modalCloseImg simplemodal-close"><i class="fa fa-times"></i></span>
+						
+						<div class="modal-image">
+							<?php
+							if ( has_post_thumbnail( $post->ID ) ) { 	
+								// echo  get_the_post_thumbnail( $post->ID, 'shop_catalog');
+								$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID, 'shop_catalog'), "Full"); 
+							?>
+								<img src="<?php echo tt($imgsrc[0], 800, 800);?>" class="attachment-shop_catalog wp-post-image"> 
+							<?php
+								}else{
+									 echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<img src="%s" alt="Placeholder" />', wc_placeholder_img_src() ), $post->ID );
+								}
+							?>
+						</div>
+						
+						<div class="modal-content">	
+							<div class="product_infos">		
+								<div class="product_summary_top">
+									<?php
+										if ( !((isset($shopkeeper_theme_options['review_tab'])) && ($shopkeeper_theme_options['review_tab'] == "0" )) ) : 
+										do_action( 'woocommerce_single_product_summary_single_rating' );
+										endif;	
+										
+										do_action( 'woocommerce_single_product_summary_single_title' );
+										
+										if ( post_password_required() ) {
+											echo get_the_password_form();
+											return;
+										}
+									?>
+								</div>
+								
+								<?php
+									do_action( 'woocommerce_single_product_summary_single_price' );
+									
+									if ( (isset($shopkeeper_theme_options['catalog_mode'])) && ($shopkeeper_theme_options['catalog_mode'] == 0) ) {
+									do_action( 'woocommerce_single_product_summary_single_add_to_cart' );
+									}								
+								?>
+								<div class="clear"></div>
+								<?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); ?>
+								<a class="more" href="<?php the_permalink(); ?>">Read More <i class="fa fa-chevron-right"></i></a>
+							</div>
+						</div>
+
+						<div class="clear"></div>
+					</div>
+				</div>
+
 			</div><!--.product_thumbnail-->
 
 
@@ -158,58 +211,3 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 	</div>
 	
 </li>
-
-<div class="modal">
-	<div class="modal-container">
-		<span class="close modalCloseImg simplemodal-close"><i class="fa fa-times"></i></span>
-		
-		<div class="modal-image">
-			<?php
-			if ( has_post_thumbnail( $post->ID ) ) { 	
-				// echo  get_the_post_thumbnail( $post->ID, 'shop_catalog');
-				$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID, 'shop_catalog'), "Full"); 
-			?>
-				<img src="<?php echo tt($imgsrc[0], 800, 800);?>" class="attachment-shop_catalog wp-post-image"> 
-			<?php
-				}else{
-					 echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<img src="%s" alt="Placeholder" />', wc_placeholder_img_src() ), $post->ID );
-				}
-			?>
-		</div>
-		
-		<div class="modal-content">	
-			<div class="product_infos">		
-				<div class="product_summary_top">
-					<?php
-						if ( !((isset($shopkeeper_theme_options['review_tab'])) && ($shopkeeper_theme_options['review_tab'] == "0" )) ) : 
-						do_action( 'woocommerce_single_product_summary_single_rating' );
-						endif;	
-						
-						do_action( 'woocommerce_single_product_summary_single_title' );
-						
-						if ( post_password_required() ) {
-							echo get_the_password_form();
-							return;
-						}
-					?>
-				</div>
-				
-				<?php
-					do_action( 'woocommerce_single_product_summary_single_price' );
-					
-					if ( (isset($shopkeeper_theme_options['catalog_mode'])) && ($shopkeeper_theme_options['catalog_mode'] == 0) ) {
-					do_action( 'woocommerce_single_product_summary_single_add_to_cart' );
-					}								
-				?>
-				<div class="clear"></div>
-				<?php 
-					do_action( 'woocommerce_single_product_summary' );
-					do_action( 'woocommerce_single_product_summary_single_excerpt' );
-				?>
-				<a class="more" href="<?php the_permalink(); ?>">Read More <i class="fa fa-chevron-right"></i></a>
-			</div>
-		</div>
-
-		<div class="clear"></div>
-	</div>
-</div>

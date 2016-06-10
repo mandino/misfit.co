@@ -943,7 +943,7 @@ jQuery(document).ready(function ($) {
 			});
 
 			$('.quick-buy').click(function (e) {
-				$('.modal').modal();
+				$(this).parent().find('.modal').modal();
 
 				return false;
 			});
