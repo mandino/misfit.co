@@ -544,13 +544,16 @@ a.modalCloseImg {background:url(../img/basic/x.png) no-repeat; width:25px; heigh
 	height: 400px;
 }
 
+.single-product #product-images-carousel img {
+	height: 600px !important;
+}
+
 .slider-nav {
 	text-align: center;
 	margin: 0;
 }
 
 .slider-nav li a {
-	/*border-bottom: 3px solid transparent !important;*/
 	font-family: 'Poppins',sans-serif; 
 	text-transform: uppercase;
 	color: rgba(0,0,0,0.35);
