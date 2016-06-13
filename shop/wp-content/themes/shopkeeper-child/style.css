@@ -124,11 +124,12 @@ Version: 1.0
 }
 
 .single-product .product_title.entry-title {
-	font-size: 20px !important;
+	font-size: 36px !important;
 }
 
-.single-product .product_infos .price {
-	font-size: 20px !important;
+.single-product .product_infos .price,
+.single-product .price del {
+	font-size: 34px !important;
 }
 
 .single-product .product_socials_wrapper .large-12 {
