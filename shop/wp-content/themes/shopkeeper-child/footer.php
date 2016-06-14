@@ -155,15 +155,17 @@
 	                    				</div>
 	                    			</div>
 								
-                                    <div class="copyright_text">
-                                        <?php if ( (isset($shopkeeper_theme_options['footer_copyright_text'])) && (trim($shopkeeper_theme_options['footer_copyright_text']) != "" ) ) { ?>
-                                            <?php _e( $shopkeeper_theme_options['footer_copyright_text'], 'shopkeeper' ); ?>
-                                        <?php } ?>
-                                    </div><!-- .copyright_text -->  
+                                     
                             
 								</div><!--.large-12-->
 							</div><!-- .row --> 
                         </div><!-- .site-footer-copyright-area -->
+
+                        <div class="copyright_text">
+                            <?php if ( (isset($shopkeeper_theme_options['footer_copyright_text'])) && (trim($shopkeeper_theme_options['footer_copyright_text']) != "" ) ) { ?>
+                                <?php _e( $shopkeeper_theme_options['footer_copyright_text'], 'shopkeeper' ); ?>
+                            <?php } ?>
+                        </div><!-- .copyright_text --> 
                                
                     </footer>
                     
