@@ -541,12 +541,20 @@ a.modalCloseImg {background:url(../img/basic/x.png) no-repeat; width:25px; heigh
 }
 
 .slick-tab .slick-slide img {
-	width: calc(50% - 20px);
-	display: inline-block;	
-	margin-right: 20px;
+	/*width: calc(50% - 20px);*/
+	/*display: inline-block;	*/
+	/*margin-right: 20px;*/
 	margin-top: 20px;
-	height: 400px;
+	/*height: 400px;*/
 }
+
+.temp[data-columns]::before {
+	content: '2 .column.size-1of2';
+}
+
+.column { float: left; }
+.size-1of1 { width: 100%; }
+.size-1of2 { width: 50%; }
 
 .single-product #product-images-carousel img {
 	height: 600px !important;

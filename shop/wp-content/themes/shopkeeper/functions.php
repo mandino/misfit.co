@@ -405,7 +405,7 @@ function shopkeeper_scripts() {
 	wp_enqueue_script('shopkeeper-nanoscroller', get_template_directory_uri() . '/js/jquery.nanoscroller.min.js', array('jquery'), '0.7.6', TRUE);
 	wp_enqueue_script('shopkeeper-stellar', get_template_directory_uri() . '/js/jquery.stellar.min.js', array('jquery'), '0.6.2', TRUE);
 	wp_enqueue_script('shopkeeper-colorbox', get_template_directory_uri() . '/js/jquery.colorbox.js', array('jquery'), '1', TRUE);
-
+	wp_enqueue_script('shopkeeper-salvattore', get_template_directory_uri() . '/js/salvattore.min.js', array('jquery'), '1', TRUE);
 	wp_enqueue_script('shopkeeper-isotope', get_template_directory_uri() . '/js/isotope.pkgd.min.js', array('jquery'), 'v2.0.0', TRUE);
 	wp_enqueue_script('shopkeeper-imagesloaded', get_template_directory_uri() . '/js/imagesloaded.js', array('jquery'), 'v3.1.4', TRUE);
 	

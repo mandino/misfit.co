@@ -140,9 +140,11 @@ function woocommerce_gallery_tab() {
 	global $product;
 	$attachment_ids = $product->get_gallery_attachment_ids();
 
-	foreach( $attachment_ids as $attachment_id ) {
-		echo wp_get_attachment_image($attachment_id, 'full');
-	}
+	echo '<div class="temp" data-columns>';
+		foreach( $attachment_ids as $attachment_id ) {
+			echo wp_get_attachment_image($attachment_id, 'full');
+		}
+	echo '</div>';
 
 }
 
