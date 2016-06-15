@@ -811,6 +811,29 @@ a.modalCloseImg {background:url(../img/basic/x.png) no-repeat; width:25px; heigh
 }
 
 
+@media only screen and (max-width: 1136px) {
+	
+	#site-footer .large-12.columns .footer-container {
+		display: block;
+	}
+
+	#site-footer .large-12.columns .footer-container div {
+		display: block;
+		float: left;
+	}
+
+	#site-footer .footer-about,
+	#site-footer .footer-member {
+		width: 300px;
+	}
+
+	#site-footer .footer-social, #site-footer .footer-info {
+		width: 150px;
+	}
+
+}
+
+
 @media only screen and (max-width: 1030px) {
 	
 	.slick-prev {
