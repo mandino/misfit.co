@@ -100,6 +100,15 @@
 		fbq('track', 'Other');
 	<?php } ?>
 	
+	var fb_purchase_bool = true;
+
+	function click_purchase(fb_bool) {
+	  if (fb_bool) {
+	  	fbq('track', 'Purchase');
+	  	fb_purchase_bool = false;
+	  }
+	};
+
 	</script>
 
 	<noscript><img height="1" width="1" style="display:none"
