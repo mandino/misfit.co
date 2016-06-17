@@ -814,17 +814,17 @@ a.modalCloseImg {background:url(../img/basic/x.png) no-repeat; width:25px; heigh
 @media only screen and (max-width: 1136px) {
 	
 	#site-footer .large-12.columns .footer-container {
-		display: block;
+		position: relative;
+		width: 100%;
 	}
 
 	#site-footer .large-12.columns .footer-container div {
-		display: block;
-		float: left;
+		height: 300px;
 	}
 
 	#site-footer .footer-about,
 	#site-footer .footer-member {
-		width: 300px;
+		width: 250px;
 	}
 
 	#site-footer .footer-social, #site-footer .footer-info {
@@ -833,6 +833,39 @@ a.modalCloseImg {background:url(../img/basic/x.png) no-repeat; width:25px; heigh
 
 }
 
+@media only screen and (max-width: 995px) {
+	
+	#site-footer .large-12.columns .footer-container {
+		position: relative;
+		display: block;
+		width: 100%;
+	}
+
+	#site-footer .large-12.columns .footer-container div {
+		display: block;
+		height: 240px;
+		float: left;
+	}
+
+	#site-footer .footer-about {
+		margin-left: 60px;
+		width: 45%;
+	}
+
+	#site-footer .footer-info {
+		width: 25%;
+	}
+
+	#site-footer .footer-contact {
+		margin-left: 60px;
+		width: 30%;
+	}
+
+	#site-footer .footer-member {
+		width: 50%;
+	}
+
+}
 
 @media only screen and (max-width: 1030px) {
 	
@@ -907,6 +940,14 @@ a.modalCloseImg {background:url(../img/basic/x.png) no-repeat; width:25px; heigh
 
 }
 
+@media only screen and (max-width: 750px) {
+	
+	#site-footer .footer-about {
+	    margin-left: 30px;
+	}
+
+}
+
 @media only screen and (max-width: 725px) {
 	
 	.slider-nav li {
@@ -937,6 +978,35 @@ a.modalCloseImg {background:url(../img/basic/x.png) no-repeat; width:25px; heigh
 
 	.slider-nav .active {
 		border-color: rgba(84,84,84,0.15);
+	}
+
+}
+
+@media only screen and (max-width: 640px) {
+
+	#site-footer .large-12.columns .footer-container div {
+		height: auto;
+	}
+	
+	#site-footer .footer-about {
+		width: 70%;
+	}
+
+	#site-footer .footer-contact {
+		margin: 0;
+	}
+
+	#site-footer .footer-info {
+		width: 30%;
+	}
+
+	#site-footer .footer-social {
+		margin-left: 30px;
+	}
+
+	#site-footer .footer-member {
+	    margin-left: 30px;
+	    width: 70%;
 	}
 
 }
