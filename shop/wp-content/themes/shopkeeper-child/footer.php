@@ -40,9 +40,9 @@
 
 									<div class="footer-container">
 										<div class="footer-about">
-											<h6>Welcome to Misfit Shop</h6>
+											<h6>Who are we?</h6>
 
-											<p>Holstee provides art that inspires reflection and words that encourage action. Sign up for The Holstee Subscription or shop our limited editions products and frames.</p>
+											<p>Misfit are a nomadic creative mafia, digital empire, and travelling circus. We're dedicated to creating beautiful, artisan products that we believe matter and help to make the world just a little bit brighter.</p>
 										</div>
 					
 										<?php if ( (isset($shopkeeper_theme_options['footer_social_icons'])) && (trim($shopkeeper_theme_options['footer_social_icons']) == "1" ) ) : ?>
@@ -144,9 +144,9 @@
 	                    				</div>
 
 	                    				<div class="footer-member">
-	                    					<h6>Stay Connected</h6>
+	                    					<h6>Become a Misfit</h6>
 
-	                    					<p>Join 60,000+ members of the Holstee community on a journey to bring meaning and purpose into their everyday lives.</p>
+	                    					<p>Sign up for monthly news, updates and previews of our new products. With discount codes and exclusive swag giveaways, you don't want to miss out.</p>
 
 	                    					<form>
 	                    						<input type="email" name="email" placeholder="YOUR EMAIL..."/>
