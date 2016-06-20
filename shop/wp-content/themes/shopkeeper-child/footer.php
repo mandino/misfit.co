@@ -41,7 +41,6 @@
 									<div class="footer-container">
 										<div class="footer-about">
 											<h6>Who are we?</h6>
-
 											<p>Misfit are a nomadic creative mafia, digital empire, and travelling circus. We're dedicated to creating beautiful, artisan products that we believe matter and help to make the world just a little bit brighter.</p>
 										</div>
 					
@@ -137,15 +136,11 @@
 	                    
 	                    				<div class="footer-contact">
 	                    					<h6>Get in touch</h6>
-
-	                    					<p>Frequently Asked Questions
-	hello@holstee.com
-	(917) 336-0603</p>
+	                    					<p>clare@misfit-inc.com</p>
 	                    				</div>
 
 	                    				<div class="footer-member">
 	                    					<h6>Become a Misfit</h6>
-
 	                    					<p>Sign up for monthly news, updates and previews of our new products. With discount codes and exclusive swag giveaways, you don't want to miss out.</p>
 
 	                    					<form>

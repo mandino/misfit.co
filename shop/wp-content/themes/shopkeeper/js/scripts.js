@@ -359,8 +359,8 @@ jQuery(document).ready(function ($) {
 		items:4,
 		itemsDesktop : [1200,4],
 		itemsDesktopSmall : [1000,3],
-		itemsTablet: false,
-		itemsMobile : [600,2],
+		itemsTablet: [600,2],
+		itemsMobile : [500,1],
 		lazyLoad : true,
 		pagination :true,
 		/*autoHeight : true,*/
