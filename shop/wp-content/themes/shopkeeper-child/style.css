@@ -826,6 +826,14 @@ a.modalCloseImg {background:url(../img/basic/x.png) no-repeat; width:25px; heigh
 
 }
 
+@media only screen and (max-width: 1200px) {
+
+	.modal-content .product_title.entry-title {
+		margin: 0;
+	}
+
+}
+
 @media only screen and (max-width: 1136px) {
 	
 	#site-footer .large-12.columns .footer-container {
