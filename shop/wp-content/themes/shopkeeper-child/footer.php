@@ -143,16 +143,17 @@
 	                    					<h6>Become a Misfit</h6>
 	                    					<p>Sign up for monthly news, updates and previews of our new products. With discount codes and exclusive swag giveaways, you don't want to miss out.</p>
 
-	                    					<form>
-	                    						<input type="email" name="email" placeholder="YOUR EMAIL..."/>
-	                    						<input type="submit" value="Submit">
-	                    					</form>
+	                    					<form action="//eepurl.us1.list-manage.com/subscribe/post?u=dab524f4886549dbf587dce02&amp;id=fe7b34881b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+												<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+												<div id="mce-responses" class="clear">
+													<div class="response" id="mce-error-response" style="display:none"></div>
+													<div class="response" id="mce-success-response" style="display:none"></div>
+												</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+											    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_dab524f4886549dbf587dce02_fe7b34881b" tabindex="-1" value=""></div>
+											    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+											</form>
 	                    				</div>
-	                    				
 	                    			</div>
-								
-                                     
-                            
 								</div><!--.large-12-->
 							</div><!-- .row --> 
                         </div><!-- .site-footer-copyright-area -->

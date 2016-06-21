@@ -120,18 +120,6 @@ function woocommerce_custom_product_tab( $tabs ) {
 		'callback' 	=> 'woocommerce_comments_tab'
 	);
 
-	// $tabs['shippings_tab'] = array(
-	// 	'title' 	=> __( 'Shippings', 'woocommerce' ),
-	// 	'priority' 	=> 20,
-	// 	'callback' 	=> 'woocommerce_shippings_tab'
-	// );
-
-	// $tabs['ecology_tab'] = array(
-	// 	'title' 	=> __( 'Ecology', 'woocommerce' ),
-	// 	'priority' 	=> 10,
-	// 	'callback' 	=> 'woocommerce_ecology_tab'
-	// );
-
 	return $tabs;
 
 }
@@ -140,7 +128,7 @@ function woocommerce_gallery_tab() {
 	global $product;
 	$attachment_ids = $product->get_gallery_attachment_ids();
 
-	echo '<div class="temp" data-columns>';
+	echo '<div class="gallery-mosaic" data-columns>';
 		foreach( $attachment_ids as $attachment_id ) {
 			echo wp_get_attachment_image($attachment_id, 'full');
 		}
@@ -153,18 +141,6 @@ function woocommerce_comments_tab() {
 	echo '<div class="fb-comments" data-href="http://misfit.co/shop/shop/" data-numposts="5"></div>';
 
 }
-
-// function woocommerce_shippings_tab() {
-	
-// 	echo 'Shippings Tab Contents';
-
-// }
-
-// function woocommerce_ecology_tab() {
-	
-// 	echo 'Ecology Tab Contents';
-
-// }
 
 add_filter( 'woocommerce_sale_flash', 'wc_custom_replace_sale_text' );
 function wc_custom_replace_sale_text( $html ) {
