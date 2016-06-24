@@ -154,7 +154,9 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 									}								
 								?>
 								<div class="clear"></div>
-								<?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); ?>
+								<div itemprop="description" class="product_description">
+									<?php echo excerpt(30); ?>
+								</div>
 								<a class="more" href="<?php the_permalink(); ?>">Read More <i class="fa fa-chevron-right"></i></a>
 							</div>
 						</div>
