@@ -119,26 +119,6 @@
 	                                    
 	                                    <?php endif; ?>
 
-	                                	<div class="footer-info">
-	                                		<h6>Information</h6>
-											<nav class="footer-navigation-wrapper" role="navigation">                    
-												<?php 
-													wp_nav_menu(array(
-														'theme_location'  => 'footer-navigation',
-														'fallback_cb'     => false,
-														'container'       => false,
-														'depth' 		  => 1,
-														'items_wrap'      => '<ul class="%1$s">%3$s</ul>',
-													));
-												?>           
-											</nav><!-- #site-navigation -->   
-										</div>	
-	                    
-	                    				<div class="footer-contact">
-	                    					<h6>Get in touch</h6>
-	                    					<p>clare@misfit-inc.com</p>
-	                    				</div>
-
 	                    				<div class="footer-member">
 	                    					<h6>Become a Misfit</h6>
 	                    					<p>Sign up for monthly news, updates and previews of our new products. With discount codes and exclusive swag giveaways, you don't want to miss out.</p>
