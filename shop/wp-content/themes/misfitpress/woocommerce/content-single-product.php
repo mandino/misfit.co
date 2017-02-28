@@ -63,10 +63,9 @@ foreach ( $terms as $term ) $categories[] = $term->slug;
 				is_product_category('remarkable-misfit') || 
 				is_product_category('misfit-themes') || 
 				is_product_category('wolftree') || 
-				in_array( 'remarkable-misfit', $categories )) {
-		 		
+				in_array( 'remarkable-misfit', $categories ) ) {
 				remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
-
+			
 			}
 
 			do_action( 'woocommerce_single_product_summary' );

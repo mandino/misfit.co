@@ -1018,8 +1018,6 @@ class WooCommerce_Product_Vendors {
                             }
                         }
                     }
-                } else {
-                    $request = array();
                 }
             }
         }
@@ -1255,7 +1253,6 @@ class WooCommerce_Product_Vendors {
                 $earnings = get_post_meta( $commission->ID, '_commission_amount', true );
                 $product_id = get_post_meta( $commission->ID, '_commission_product', true );
                 $product = get_product( $product_id );
-
 
                 if( ! isset( $product ) || ! $product || is_wp_error( $product ) || ! is_object( $product ) ) {
                     continue;
@@ -1545,8 +1542,6 @@ class WooCommerce_Product_Vendors {
                             }
                         }
                     }
-                } else {
-                    $request = array();
                 }
             }
         }

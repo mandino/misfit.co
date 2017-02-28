@@ -1,4 +1,3 @@
-
 <?php 
 
 
@@ -29,13 +28,7 @@ function getLatLong($address){
 
 <div id="mapper">
 		
-	  <?php $coordinates = getLatLong($address);
-			$lat = $coordinates['lat'];
-			$long = $coordinates['long'];
-			
-			$latitude = str_replace('.', ',', $lat);
-			$longitude = str_replace('.', ',', $long);
-		?>
+	  
 		
 		
 		
