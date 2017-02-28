@@ -15,12 +15,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * WC_Meta_Box_Order_Actions Class
+ * WC_Meta_Box_Order_Actions Class.
  */
 class WC_Meta_Box_Order_Actions {
 
 	/**
-	 * Output the metabox
+	 * Output the metabox.
+	 *
+	 * @param WP_Post $post
 	 */
 	public static function output( $post ) {
 		global $theorder;
@@ -47,7 +49,7 @@ class WC_Meta_Box_Order_Actions {
 
 						if ( ! empty( $mails ) ) {
 							foreach ( $mails as $mail ) {
-								if ( in_array( $mail->id, $available_emails ) ) {
+								if ( in_array( $mail->id, $available_emails ) && 'no' !== $mail->enabled ) {
 									echo '<option value="send_email_'. esc_attr( $mail->id ) .'">' . esc_html( $mail->title ) . '</option>';
 								}
 							}
@@ -55,7 +57,7 @@ class WC_Meta_Box_Order_Actions {
 						?>
 					</optgroup>
 
-					<option value="regenerate_download_permissions"><?php _e( 'Generate download permissions', 'woocommerce' ); ?></option>
+					<option value="regenerate_download_permissions"><?php _e( 'Regenerate download permissions', 'woocommerce' ); ?></option>
 
 					<?php foreach( apply_filters( 'woocommerce_order_actions', array() ) as $action => $title ) { ?>
 						<option value="<?php echo $action; ?>"><?php echo $title; ?></option>
@@ -89,9 +91,13 @@ class WC_Meta_Box_Order_Actions {
 	}
 
 	/**
-	 * Save meta box data
+	 * Save meta box data.
+	 *
+	 * @param int $post_id
+	 * @param WP_Post $post
 	 */
 	public static function save( $post_id, $post ) {
+		global $wpdb;
 
 		// Order data saved, now get it so we can manipulate status
 		$order = wc_get_order( $post_id );
@@ -103,35 +109,49 @@ class WC_Meta_Box_Order_Actions {
 
 			if ( strstr( $action, 'send_email_' ) ) {
 
+				// Switch back to the site locale.
+				if ( function_exists( 'switch_to_locale' ) ) {
+					switch_to_locale( get_locale() );
+				}
+
 				do_action( 'woocommerce_before_resend_order_emails', $order );
 
-				// Ensure gateways are loaded in case they need to insert data into the emails
+				// Ensure gateways are loaded in case they need to insert data into the emails.
 				WC()->payment_gateways();
 				WC()->shipping();
 
-				// Load mailer
+				// Load mailer.
 				$mailer = WC()->mailer();
-
 				$email_to_send = str_replace( 'send_email_', '', $action );
-
 				$mails = $mailer->get_emails();
 
 				if ( ! empty( $mails ) ) {
 					foreach ( $mails as $mail ) {
 						if ( $mail->id == $email_to_send ) {
 							$mail->trigger( $order->id );
+							$order->add_order_note( sprintf( __( '%s email notification manually sent.', 'woocommerce' ), $mail->title ), false, true );
 						}
 					}
 				}
 
 				do_action( 'woocommerce_after_resend_order_email', $order, $email_to_send );
 
-				// Change the post saved message
+				// Restore user locale.
+				if ( function_exists( 'restore_current_locale' ) ) {
+					restore_current_locale();
+				}
+
+				// Change the post saved message.
 				add_filter( 'redirect_post_location', array( __CLASS__, 'set_email_sent_message' ) );
 
-			} elseif ( $action == 'regenerate_download_permissions' ) {
+			} elseif ( 'regenerate_download_permissions' === $action ) {
 
 				delete_post_meta( $post_id, '_download_permissions_granted' );
+				$wpdb->delete( 
+					$wpdb->prefix . 'woocommerce_downloadable_product_permissions',
+					array( 'order_id' => $post_id ),
+					array( '%d' )
+				);
 				wc_downloadable_product_permissions( $post_id );
 
 			} else {
@@ -144,9 +164,9 @@ class WC_Meta_Box_Order_Actions {
 	}
 
 	/**
-	 * Set the correct message ID
+	 * Set the correct message ID.
 	 *
-	 * @param $location
+	 * @param string $location
 	 *
 	 * @since  2.3.0
 	 *
