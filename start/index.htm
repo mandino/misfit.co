@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> 
+
+<html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	
+	<title>Misfit Inc. Development Process</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		
+			$('a').click(function(){
+	    $('html, body').animate({
+	        scrollTop: $( $.attr(this, 'href') ).offset().top
+	    }, 500);
+	    return false;
+	});
+	});
+	</script>	
+</head>
+<body class="home">
+	
+	
+	<div class="nav-section">
+	
+		<a href="#Legend"><h3 align="center">Misfit</h3></a>
+		<ol class="Legend">
+			<li><a href="#started">Predevelopment</a></li>
+			<li><a href="#started">Process Step by Step</a></li>
+			<li><a href="#started">Resources</a></li>
+			<br>
+			<li><a href="#basemarkup">Base Markup</a></li>
+			<li><a href="#shortcodes">Get Started Step by Step</a></li>
+			<li><a href="#pages">Testing Round 1</a></li>
+			<br>
+			<li><a href="#newsletter">Wordpress Integration</a></li>
+			<li><a href="#newsletter">Wordpress Philosophy</a></li>
+			<li><a href="#newsletter">Step by Step WP Integration</a></li>
+			<li><a href="#newsletter">Testing Round 2</a></li>
+			<br>
+			<li><a href="#newsletter">QA</a></li>
+			<li><a href="#newsletter">Prelaunch Checklist</a></li>
+			<li><a href="#newsletter">Launch Procedure</a></li>
+			
+		</ol>
+		
+		
+	</div>
+	
+	<div class="content">
+	
+	
+		<div class="welcome">
+	
+		<h4 id="Legend" class="center alt" style="text-align: center">Misfit Inc Development Process</h4>
+		
+		<hr>
+		
+			<!--<div class="left">
+				
+				<span class="socials">
+					
+					<a href="http://twitter.com/misfit"><img src="images/twitter.png" width="30px" /></a>
+					<a href="http://facebook.com/misfits"><img src="images/facebook.png" width="30px" /></a>
+					<a href="http://misfit-inc.com"><img src="images/rss.png" width="30px" /></a>
+					<a href="http://themeforest.net/user/misfit"><img src="images/envato.png" width="30px" /></a>
+				
+				</span>
+			
+			
+			</div><!-- end left -->
+			
+			
+			<div class="">
+				
+				<p>Our goal with every project is to establish a standard of web development that sets the bar. That means, clean, well-managed code, advanced technology and techniques, and mobile-first development that allows the experience of what we make to be felt on any device. We will start all our builds at the markup level, so that we can compartmentalize the dev, mobile dev and testing in phases that assure quality and performance on the web. </p>
+				<p>We have frameworks for both our initial markup as well as our wordpress integration to make sure you are working with the highest level code base and code library we can offer.</p>
+				
+				
+				
+			
+			</div><!-- end right -->
+			
+			<div class="clear"></div>
+			
+		</div><!-- end  welcome -->
+			
+		
+		
+		
+		<!--++++++++======================   WELCOME  =========================++++++-->
+		
+		<h1>Why we do it</h1>
+		
+		
+		<p>Somewhere, there is developer who has worked day and night to meet some arbitrary client deadline. When the project began, he was excite to make something that will exist on the web. He had grand ideas, saw in his mind something he peers would envy and talk about at conferences for years. He believed he would make something that mattered. But somewhere in the process he gave in to client wants, added a ton of unnecessary features and barely had time to eek out anything at all. He was no no longer proud of it. He no longer felt as though it mattered.</p>
+				
+				<p>Making things that matter is what makes us the envy of our peers. The projects we do and the people with whom we do them, aim to change the world. Be proud of every line of code. Be proud of every morsel of energy you put into the project in your hands. We will work hard. We will endure long nights. We will test our creative limits. Because, in the end, we are makers, we are Misfits, and what you are working on matters.</p>
+		
+		<!--<h3>Legendary Features</h3>
+		
+		<ul class="lister">
+			
+			<li>Multiple Home Page Configurations
+				<ul>
+					<li>Single Image Home</li>
+					<li>Home Page with Image Slider</li>
+					<li>Home Page with Video</li>
+					<li>Home Page with Stacked Entry Points</li>
+					<li>Home Page Lower Entry Points</li>
+					<li>Any of the 7 different Post or Page Layout</li>
+				</ul>
+			</li>
+		    <li>Fully Responsive</li>
+			<li>Sexy Portfolio Section/Page Template</li>
+			<li>Multiple Page/Post/Portfolio Layouts
+				<ul>
+					<li>Minimal Wide</li>
+					<li>Top Image Banner</li>
+					<li>Side Image Banner</li>
+					<li>Side Image Banner with hanging Intro</li>
+					<li>Sticky Side Image Stack</li>
+					<li>Sticky Side Image Stack with hanging Intro</li>
+					<li>Scrolling Top Image Gallery</li>
+				</ul>
+			</li>
+			<li>Built In Mailchimp Ready Email Newsletter Template</li>
+			<li>Built In Basic Email Newsletter Template</li>
+			<li>Shortcodes
+				<ul>
+					<li>Dropcaps</li>
+					<li>Blockquotes</li>
+					<li>Tabs</li>
+					<li>Columns (up to 4)</li>
+					<li>Accordions</li>
+				</ul>
+			</li>
+			<li>Contact Page</li>
+			<li>Google Map Integration</li>
+			<li>Coming Soon Page</li>
+			<li>Blog Page Template</li>
+			<li>Portfolio Page Template</li>
+			<li>Twitter Integration</li>
+			<li>Instagram Integration</li>
+			<li>Options Panel</li>
+			<li>Built In Contact Forms</li>
+			<li>PSD's Included</li>
+			<li>Well Documented</li>
+		</ul>
+		
+		
+		<p>Now you know what the theme is all about, let's get started.</p>-->
+		
+		<!--++++++++======================   GETTING STARTED  =========================++++++-->
+		
+		<h1 id="started">Resources</h1>
+		
+		<ul class="subnav">
+			<li><a href="#markupdl">Download Markup</a></li>
+			<li><a href="#wpdl">Download Wordpress Framework</a></li>
+			<li><a href="#aweres">Awesome Development Resources</a></li>
+			<li><a href="#testres">Testing Resources</a></li>
+			
+		</ul>
+		
+		<div class="clear"></div>
+		
+		<p>I know, I know, you're super excited to get going. But, before you dive it, download the base markup files. This will give you the basic framework to get started, while still providing enough freedom for you to work your magic. No doubt, some projects will have very specific requirements, so check out some of the other Awesome Development listed to see if they offer any help. If you have questions, refer to the designer notes or hit up Cebo or Melissa provide additional notes.</p>
+			
+		
+		<h3 id="markupdl">Download Base Markup</h3>
+
+		<div class="marginalized">
+		
+		<p>Our base markup is a our initial framework for development. This code base will transition nicely to wordpress. Please <a href="#">click here</a> to get more information about the Base Markup files and use. </p>
+		
+		<a href="#" class="button">Download Base Markup</a>
+		
+
+    	</div>
+    	
+    	
+		<br>
+		<br>
+		
+
+		
+		<h3 id="wpdl">Download Wordpress Framework</h3>
+
+		<div class="marginalized">
+		
+		<p>If you have finished your markup files, and are ready to transition to the full wordpress integration, download the framework. Please note, always check to see if you are on the current framework as we are constantly updating it. Please <a href="#">click here</a> to get more information about the Base Markup files and use. </p>
+
+		
+		<a href="#" class="button">Download Wordpress Framework</a>
+	    
+    	</div>
+    	
+    	
+		<br>
+		<br>
+		
+
+    	
+    	<h3 id="aweres">Awesome Development Resources</h3>
+		
+		<div class="marginalized">
+		
+		<p>We love looking around on the internet for new techniques and new technology. If you are looking for a way to accomplish something you've never tried, feel free to hit up Cebo or Dino, or check out some of the resources we all use.</p>
+		
+			<ul>
+					<li><a href="#">CoDrops</a> - new techniques</li>
+					<li><a href="#">CoDrops</a> - new techniques</li>
+					<li><a href="#">CSSWinner</a> - best sites on the web.</li>
+				</ul>
+	    
+    	</div>
+
+
+    	
+		<h3 id="testres">Testing Resources</h3>
+		
+		<div class="marginalized">
+		
+		<p>Testing is an extremely important to our process of development. With that said, developers can aid in testing by employing <em>Test Driven Development</em>. What that means, is that during the development, there are a <a href="#">number of things you can do</a> to assure clean code and functional sites before sending it to QA. These links will get you started.</p>
+		
+				<ul>
+					<li><a href="#">WS3</a> - test code validity</li>
+					<li><a href="#">TDD</a> - what is Test Driven Development</li>
+					
+				</ul>
+	    
+    	</div>
+		
+		<br>
+		<br>
+		
+		
+		<!--++++++++======================   THEME OPTIONS  =========================++++++-->
+		
+		<h1 id="basemarkup">Base Markup</h1>
+		
+		<ul class="subnav">
+			<li><a href="#getstart">Getting Started</a></li>
+			<li><a href="#inde">Index</a></li>
+			<li><a href="#styling">File Structure & Library</a></li>
+			<li><a href="#socials">Base CSS</a></li>
+			<li><a href="#homepage">Library Highlights</a></li>
+			<li><a href="#aboutus">Testing Round 1</a></li>
+		</ul>
+		
+		<div class="clear"></div>
+		
+		
+		<p>Our base markup is designed to get your development started smoothly while also standardizing the low level code pieces so we are all working within the same context</p>
+			
+			<div class="marginalization">
+				
+				<h3 id="getstart">Files and Structure</h3>
+
+
+				<div class="marginalized">
+				
+				<ul>
+					<li><a href="#">Index.html</a> - homepage...simplified start</li>
+					<li><a href="#">Style.css</a> - some clearouts and notes for you to get going</li>
+					<li><a href="#">/css/ - directory to house all css files</a></li>
+					<li><a href="#">/css/fonts/  - directory to house all webfonts</a></li>
+					<li><a href="#">/css/font.css - include webfonts here</a></li>
+					<li><a href="#">/css/media.css - responsive styles (look inside for important responsive breakpoints)</a></li>
+					<li><a href="#">/images/ - images go here (prepping for wordpress)</a></li>
+					<li><a href="#">/js/ - javascript dependencies go here</a></li>
+				</ul>
+				
+				</div>
+				
+			</div>
+	
+		
+		<h2 id="inde"> Index.html</h2>
+		
+			<div class="marginalization">
+				
+				<p>Our index.html, while simple, set the precedent for all future development and later wordpress integration</p>
+				
+			
+			</div>
+			
+			
+			
+			
+			
+		<h2 id="navoptions">Navigation Options</h2>
+		
+			<div class="marginalization">
+			
+			<h3 id="menu">Side Menu is your primary menu. To create it, use the steps below</h3>
+				<div class="marginalized">
+					<ol>
+					<li>To create a custom menu, go to Appearance -> Menus in your blog’s dashboard. If you do not see the Appearance menu option, you are not an administrator on the blog.</li>
+					<li>Add the pages, post or custom links you would like to add</li>
+					<li>Save your menu</li>
+					<li>On the left hand side, choose your menu as the "Primary" and save</li>
+					<li>Fist pump.</li>
+				
+					</ol>
+			
+				<h3>Traditional Navigation</h3>
+				
+				<p class="push">Legend's default navigation is the big dashboard with various access points. If you would prefer a more traditional navigation, just check box..</p>
+				
+				
+				<h3>Dashboard Tabs</h3>
+				
+				<p class="push">Select any page and it will create the tab on the dashboard. The third tab, which is a contact form, is generated when you add your email.</p>
+				
+				<h3>Dashboard Contact Title</h3>
+				
+				<p class="push">Select any page and it will create the tab on the dashboard. The third tab, which is a contact form, is generated when you add your email.</p>
+				
+				<h3>Dashboard Contact Text</h3>
+				
+				<p class="push">Select any page and it will create the tab on the dashboard. The third tab, which is a contact form, is generated when you add your email.</p>	
+				
+				<h3>Tracking Code</h3>
+				
+				<p class="push">Select any page and it will create the tab on the dashboard. The third tab, which is a contact form, is generated when you add your email.</p>
+
+				
+			
+			</div>
+			
+		<h2 id="socials">Socialize</h2>
+		
+			<div class="marginalization">
+			
+				<h3>Your facebook User Name</h3>
+				
+				<p class="push">DO NOT USE HTTP://facebook.COM, JUST THE HANDLE By entering your facebook link, you create the links to all facebook icons or else they will not appeae.</p>
+				
+				
+				<h3>Twitter ID</h3>
+				
+				<p class="push">Just the ID/Handle/At&hellip;whatever you want to call it. By entering your twitter ID you activate the twitter updates various links to twitter.</p>
+				
+				<h3>Twitter Authorization</h3>
+				
+				<p class="push">Twitter's recent API update requires new authentication. Therefore you will need your key, consumer secret, token and user secret to use the twitter feed. Here is a quick step by step.</p>
+				
+				<div class="marginalization">
+					
+					<ol>
+						<li>Go to <a title="https://dev.twitter.com/apps/new" href="https://dev.twitter.com/apps/new">https://dev.twitter.com/apps/new</a> and log in, if necessary <img src="images/twitter_oath.png" /></li>
+						<li>Supply the necessary required fields, accept the TOS, and solve the CAPTCHA.</li>
+						<li>Submit the form by clicking "Create Your Twitter Application</li>
+						<li>Copy the consumer key (API key) and consumer secret and paste them into the appropriate fields in the theme options panel.</li>
+						<li>To get the user token, click on the "Create My Access Token", under "Your access token" feature to automatically negotiate the access token at the permission level you need.</li>
+						<li>If you recieve the green message at the top of the page indicating you have created your token, just refresh the page again.</li>
+						<li>Copy and paste your Access Token and token secrets into the appropriate fields</li>
+					</ol>
+				
+				
+				</div>
+				
+				<h3>Instagram User Name</h3>
+				
+				<p class="push">DO NOT USE HTTP://INSTAGRAM.COM, Create your instagram link with the ID: ex: misfits. </p>
+				
+				<h3>Instagram User ID</h3>
+				
+				<p class="push">EXAMPLE: 5532366. Activate Your Instagram Feed with your ID: and a token (below). Click here to grab your userid and token: <a href="https://instagram.com/oauth/authorize/?client_id=467ede5a6b9b48ae8e03f4e2582aeeb3&redirect_uri=http://instafeedjs.com&response_type=token">Click Here</a></p>
+				
+				<h3>Instagram Access Token</h3>
+				
+				<p class="push">EXAMPLE: 5532366.99be448.fbef473efc0141dd99bdc4428a3a62ad.Activate Your Instagram Feed with your ID: and a token (below). Click here to grab your userid and token: <a href="https://instagram.com/oauth/authorize/?client_id=467ede5a6b9b48ae8e03f4e2582aeeb3&redirect_uri=http://instafeedjs.com&response_type=token">Click Here</a></p>
+				
+				<h3>Dribbble Username</h3>
+				
+				<p class="push">By entering your dribbble you activate the dribbble link and icon, ex: misfit.</p>
+				
+			
+			</div>	
+			
+			
+		<h2 id="homepage">Home Page</h2>
+		
+			<div class="marginalization">
+			
+				
+				<h3>The hardest part about the home page is choosing which of the AWESOME layouts. </h3>
+				
+				<p class="push"><a href="#hpconfig">Click here for more info on Home Page configurations</p>
+
+			</div>
+			
+		
+		<h2 id="aboutus">Footer</h2>
+		
+			<div class="marginalization">
+				
+				<h3>Footer Background Image</h3>
+				
+				<p class="push">This background image will cover the entire area, regardless of size.</p>
+				
+				
+				<h3>Footer Type Style (light or dark)</h3>
+				
+				<p class="push">While the default is type color dark, if you would like your typography to be light (looks better on dark background images), check here</p>
+				
+				
+				<h3>Line One</h3>
+				
+				<p class="push">Enter anything or nothing you would like in the first line</p>
+				
+				
+				<h3>Big Text</h3>
+				
+				<p class="push">Big bold type. Do keep it short.</p>
+				
+				
+				<h3>Info blurp</h3>
+				
+				<p class="push">Add a short bit of text to tell who you are, what you know, or how you plan to change the world</p>
+
+
+				<h3>Contact Button Label</h3>
+				
+				<p class="push">The Default here is Contact Me, but you are welcome to change it.</p>
+				
+				
+				
+				<h3>Footer Contact Button Link</h3>
+				
+				<p class="push">You can paste a link for your contact button. Please be sure to use the HTTP://. If you do not choose one, it will default to open your email</p>
+				
+				<h3>Lower Footer Text</h3>
+				
+			
+			</div>
+			
+		
+		
+			
+		<h2 id="undercon">Under Construction</h2>
+		
+			<div class="marginalization">
+				
+				<h3>You Will Need to Put Dates In The According Fields</h3>
+				
+				<p class="push">Just fill out the fields for the dates that you will be returning, be they minutes or years, put that full time here.</p>
+			
+			</div>
+		
+
+
+			
+		<h2 id="enewsletter">Email Newsletter</h2>
+		
+			<div class="marginalization">
+				
+				<h3>Email Newsletter Option</h3>
+				
+				<p class="push"><a href="#newsletter">See Here</a></p>
+			
+			</div>
+		
+		
+		<p>You're rolling now, man. Hit the save button and Let's get some content up to show off all the cool stuff you've done. </p>
+		
+		
+		
+		<!--++++++++======================   HOME PAGES / POST FEATURES  =========================++++++-->
+		
+		<h1 id="hpconfig">Home Page Configurations</h1>
+		
+		<ul class="subnav">
+			<li><a href="#singlep">Single Image</a></li>
+			<li><a href="#slidep">Image Slider</a></li>
+			<li><a href="#vidp">Video Background</a></li>
+			<li><a href="#pagerp">Single Page</a></li>
+			<li><a href="#introp">Intro Grid (side)</a></li>
+			<li><a href="#intropp">Intro Grid (bottom)</a></li>
+		</ul>
+		
+		<div class="clear"></div>
+		
+		
+			<h3 id="singlep">Single Image</h3>
+
+			<div class="marginalization">
+			
+			<p class="push">Single Image is easy</p>
+			
+				<ol>
+					<li>Upload Your Image</li>
+					<li>Add Your Three Lines of Text</li>
+					<li>If you prefer a logo, upload it instead</li>
+					<li>Save and fist pump.</li>
+				</ol>
+			
+			
+			</div>
+		
+		
+			<h3 id="slidep">Image Slider</h3>
+			
+			
+		
+			<div class="marginalization">
+			
+			<p class="push">We wanted to make the slider function as flexible as possible while at the same time using functionality native to wordpress. Creating your slider is a snap.</p>
+			
+				<ol>
+					<li>Go To Pages > Add New</li>
+					<li>Create a new page and give it a title</li>
+					<li>Use the "Add Media" button to upload images or use images from your media files and click the "Create A Gallery"</li>
+					<li>Check to select images For Your Slider</li>
+					<li>Click "Create New Gallery"</li>
+					<li>You can add a caption to each image to create the big text</li>
+					<li>You can add an additional line of text using the image "description" field to the right</li>
+					<li>Insert your gallery onto the page</li>
+					<li>Publish and Save</li>
+					<li>Now head over to your Legend Options panel</li>
+					<li>Click the slider icon</li>
+					<li>Select your page from the "Page to Create" dropdown</li>
+					<li>You can configure your slider transitions</li>
+					<li>Remove text transitions</li>
+					<li>You can add a image (logo) overlay and remove any text</li>
+					<li>Save and fist pump.</li>
+				</ol>
+			
+			
+			</div>
+			
+			
+			<h3 id="vidp">Video Background</h3>
+			
+			
+		
+			<div class="marginalization">
+			
+			<p class="push">Video is always a little tricky. We tried to make it a bit easier. You need 3 files. An MP4 or Webm file. And OGG/OGV file and a fallback image in case the browser cannot handle video. It is important to keep file sizes small as some servers will not allow an upload more than 8MB. If you need a file convertor/clipper use this site: <a href="http://video.online-convert.com/">Video File Converter</a></p>
+			
+				<ol>
+					<li>Upload Your Video Files</li>
+					<li>You can choose to add audio to your video or else it will remain ambient</li>
+					<li>Upload your fallback image</li>
+					<li>Add Your Three Lines of Text</li>
+					<li>If you prefer a logo, upload it instead</li>
+					<li>Save and dance dance.</li>
+					
+				</ol>
+			
+			
+			</div>
+			
+			
+			<h3 id="pagerp">Any Single Page</h3>
+			
+			
+		
+			<div class="marginalization">
+			
+			<p class="push">You can select any page or the most recent post as your intro and it will default to that page's selected layout, giving you even more flexibility right on the home page. </p>
+			
+				<ol>
+					<li>You can override the default page with your most recent post</li>
+					<li>Or select any of your pages and make it the home showcase</li>
+					<li>Save and fist pump.</li>
+					
+				</ol>
+			
+			
+			</div>
+			
+			
+			
+			<h3 id="introp">Intro Grid (Side)</h3>
+			
+			
+		
+			<div class="marginalization">
+			
+			<p class="push">Each entry point will grab either the banner or the featured image as it's thumbnail</p>
+			
+				<ol>
+					<li>For each entry point, select the page from the dropdown</li>
+					<li>Save and fist pump.</li>
+				</ol>
+			
+			
+			</div>
+			
+			<h3 id="intropp">Intro Grid (Bottom)</h3>
+			
+			
+		
+			<div class="marginalization">
+			
+			
+			<p class="push">Each entry point will grab either the banner or the featured image as it's thumbnail</p>
+			
+				<ol>
+					<li>For each entry point, select the page from the dropdown</li>
+					<li>Save and fist pump.</li>
+				</ol>
+
+			
+			
+			</div>
+			
+
+
+
+
+		
+		<!--++++++++======================   CUSTOM PAGES / POST FEATURES  =========================++++++-->
+		
+		<h1 id="pages">Custom Pages/Post Features</h1>
+		
+		<ul class="subnav">
+			<li><a href="#ppage">Portfolio Template</a></li>
+			<li><a href="#bpage">Blog Template</a></li>
+			<li><a href="#cpage">Contact Template</a></li>
+			<li><a href="#fbpage">Under Construction</a></li>
+			<li><a href="#epage">Newsletter / RSS Templates</a></li>
+			<li><a href="#vids">Post / Page Layouts</a></li>
+		</ul>
+		
+		<div class="clear"></div>
+		
+		
+			<h3 id="ppage">Portfolio Item Page Template</h3>
+
+			<div class="marginalization">
+			
+			<p class="push">The Portfolio Page Template will display all your projects on a single page.</p>
+			
+				<ol>
+					<li>Go To Pages > Add New</li>
+					<li>Create a new page and give it a title</li>
+					<li>Use the subtitle field to give it a nice sentiment</li>
+					<li>On the right hand side, choose "Portfolio"</li>
+					<li>Save and fist pump.</li>
+					<li>To create portfolio projects <a href="#portfolio">See Here</a></li>
+				</ol>
+			
+			
+			</div>
+		
+		
+			<h3 id="bpage">Blog Page Template</h3>
+			
+			
+		
+			<div class="marginalization">
+			
+			<p class="push">The About Us Page Template will display all your team members on a single page.</p>
+			
+				<ol>
+					<li>Go To Pages > Add New</li>
+					<li>Create a new page and give it a title</li>
+					<li>Use the subtitle field to give it a nice sentiment</li>
+					<li>On the right hand side, choose "Blog"</li>
+					<li>Save and fist pump.</li>
+				</ol>
+			
+			
+			</div>	
+			
+			<h3 id="cpage">Contact Us Page Template</h3>
+			
+			
+		
+			<div class="marginalization">
+			
+			<p class="push">The Contact Us Page Template gives you a very customized contact page with a custom google a map to your location as well as a built-in contact form</p>
+			
+				<ol>
+					<li>Be sure to add your email and map coordinates in the options panel under "Personalization" as it populates a map</li>
+					<li>Go To Pages > Add New</li>
+					<li>Create a new page and give it a title</li>
+					<li>On the right hand side, choose "Contact Us Page"</li>
+					<li>Save and fist pump.</li>
+					
+				</ol>
+			
+			
+			</div>
+			
+			
+			
+			<h3 id="fbpage">Under Construction Template</h3>
+			
+			
+		
+			<div class="marginalization">
+			
+			<p class="push">Be sure to first put in your dates for return within the theme's option panel.</p>
+			
+				<ol>
+					<li>Go To Pages > Add New</li>
+					<li>Create a new page and give it a title</li>
+					<li>On the right hand side, choose "Coming Soon"</li>
+					<li>Save and fist pump.</li>
+				</ol>
+			
+			
+			</div>
+					
+		<h3 id="epage">Newsletter Page Templates</h3>
+			
+			
+		
+			<div class="marginalization">
+			
+			<p class="push">The Newsletter Page Template will create a page template displaying your page, your projects (optional) and your posts (optional) and output code you can copy and paste into an email service</p>
+			
+				<ol>
+					<li>Go To Pages > Add New</li>
+					<li>Create a new page and give the page the title you plan to be the feature in your newsletter</li>
+					<li>The featured image will create the large graphic heading and the content will create the content on the page. You can put whatever you like and have the option in the Legend Options panel to display projects and posts below. </li>
+					<li>On the right hand side, choose "Newsletter Page Template"</li>
+					<li>Save and fist pump.</li>
+					<li>To learn more about the Newsletter Template <a href="#newsletter">See Here</a></li>
+				</ol>
+			
+			
+			</div>
+
+		<h3 id="epage">Mailchimp RSS Page Templates</h3>
+			
+			
+		
+			<div class="marginalization">
+			
+			<p class="push">Similar to the Newsletter Page Template, the RSS version will create a page template displaying your page as well as RSS-ready styles that use Mailchimp merge tags to automate your newsletter</p>
+			
+				<ol>
+					<li>Go To Pages > Add New</li>
+					<li>Create a new page and give the page the title you plan to be the feature in your newsletter</li>
+					<li>The featured image will create the large graphic heading and the content will create the content on the page. You can put whatever you like and your posts will display below</li>
+					<li>On the right hand side, choose "Newsletter Page Template"</li>
+					<li>Save and fist pump.</li>
+					<li>To learn more about the RSS Newsletter Template <a href="#newsletter">See Here</a></li>
+				</ol>
+			
+			
+			</div>			
+		
+			
+			
+			<h3 id="vids">Post Video Option</h3>
+			
+			
+		
+			<div class="marginalization">
+			
+			<p class="push">Video can be added at the top of any page. But you must select the default layout option for this to work properly</p>
+			
+			</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			<h3 id="pagelayouts">Custom Page Layout</h3>
+			
+			
+		
+			<div class="marginalization">
+			
+			<p class="push">There are multiple page layout for posts, pages, and portfolio items. There are 7 total. Default. Top Banner. Side Gallery. Intro w/Side Gallery. Intro with Side Banner. Side Banner. Scrolling Gallery. </p>
+			
+			<p class="push">For Banners, use the uploader below the page layout icons</p>
+			
+			<p class="push">**please note, that all thumbnails still use the featured image thumbnails</p>
+			
+			<p class="push">For creating galleries, follow the steps below</p>
+			
+				<ol>
+					<li>Use the "Add Media" button to upload images or use images from your media files and click the "Create A Gallery"</li>
+					<li>Check to select images For Your Slider</li>
+					<li>Click "Create New Gallery"</li>
+					<li>Order you gallery however you like</li>
+					<li>Insert your gallery onto the page</li>
+					<li>Publish and Save</li>
+				</ol>
+
+
+
+			
+			
+			</div>			
+	
+		
+		<!--++++++++======================   PORTFOLIO SETUP  =========================++++++-->
+		
+		<h1 id="portfolio">Portfolio</h1>
+		
+		<div class="marginalization">
+		
+		<p class="push">Creating your project is easy breezy. Just follow the steps below.</p>
+
+				<ol>
+					<li>Be sure to create your <a href="#ppage">Portfolio Template Page</a></li>
+					<li>Click "Portfolio Item"-> add new</li>
+					<li>Title Your Portfolio Item</li>
+					<li>The project type taxonomy allows you to categorize them and it creates the lower affiliation on the individual page under the title</li>
+					<li>You can choose your layout type as a Default. Top Banner. Side Gallery. Intro w/Side Gallery. Intro with Side Banner. Side Banner. Scrolling Gallery.</li>
+					<li>If you have chosen a side banner or a top banner, use the upload field below. **Please note that all thumbnails still use the featured image.</li>
+					<li>If you have chose side gallery, intro w/ side gallery or top gallery. Please follow the instructions below to create your gallery:
+					<ol>
+					<li>Use the "Add Media" button to upload images or use images from your media files and click the "Create A Gallery"</li>
+					<li>Check to select images For Your Slider</li>
+					<li>Click "Create New Gallery"</li>
+					<li>Order you gallery however you like</li>
+					<li>Insert your gallery onto the page</li>
+					</ol>
+					 </li>
+					<li>In the content area, tell us about the project</li>
+					<li>Save and fist pump.</li>
+				</ol>
+		
+		</div>
+		
+		<h2 id="shortcodes">Shortcodes</h2>
+				
+				<ol>
+					<li>Be sure you are in "Visual" mode</li>
+					<li>Click on the green "plus" button in the TinyMCE editor</li>
+					<li>Select from the dropdown your shortcode</li>
+				</ol>
+				
+				<h3>Dropcaps</h3>
+					
+					<ol>
+						<li>Paste in your Dropcap</li>
+						<li>Insert Shortcode</li>
+					</ol>
+				
+				<h3>Blockquotes</h3>
+					
+					
+					<ol>
+						<li>If your blockquote has an author, type it into the first field</li>
+						<li>Type your quote into the text area</li>
+						<li>Insert Shortcode</li>
+					</ol>
+				
+				<h3>Content Tabs</h3>
+				
+					<ol>
+						<li>**Your initial tab creates the frame work for the others.</li>
+						<li>Add your tab title</li>
+						<li>Add your tab content</li>
+						<li>Insert Shortcode</li>
+						<li>You should see your tab title and tab content inside the tab group. Ex: <code>[tabgroup] [tab title="tab title here"]tab content here[/tab] [/tabgroup]</code></li>
+						<li>All other tabs will need to be in the same tab group. I.E: [tabgroup] [tab title="tab title here"]tab content here[/tab][tab title="another tab title here"]tab content here[/tab][tab title="tab title here"]tab content here[/tab][tab title="tab title here"]tab content here[/tab] [/tabgroup]</li>
+						<li>Insert Shortcode</li>
+					</ol>
+				
+				<h3>Columns (up to 4)</h3>
+					<ol>
+						<li>Depending on the number of columns you choose, select. Choose the "last" to close out the column</li>
+						<li>Insert Shortcode</li>
+					</ol>
+				
+				
+				<h3>Accordions</h3>
+					<ol>
+					<li>Add your accordion title</li>
+					<li>Add your accordion content</li>
+					<li>Insert Shortcode</li>
+					</ol>
+				<h3>Buttons</h3>
+					<ol>
+					<li>Select your button text</li>
+					<li>Add your button link</li>
+					<li>Select your button color</li>
+					<li>Insert Shortcode</li>
+					</ol>
+			
+			</div>
+		
+		<div class="clear"></div>
+
+		
+		
+		
+		
+		
+		<!--++++++++======================   NEWSLETTER FEATURE  =========================++++++-->
+		
+		<h1 id="newsletter">Newsletter / RSS Feature</h1>
+		
+		<ul class="subnav">
+			<li><a href="#news">Newsletter</a></li>
+			<li><a href="#rss">Mailchimp RSS</a></li>
+		</ul>
+		
+		<h3>So, What Is It?</h3>
+
+		<div class="marginalized">
+		
+		<p>The newsletter feature allows you to create email newsletters that look and feel like your website. The newsletter give you the option to customize a page in wordpress, add your posts and projects and then outputs a code you can copy and paste right into your email service whether it's Mailchimp, Constant Contact or any other. But, because I am a bit of a Mailchimp fan, the theme also has a Mailchimp RSS feature. The RSS Feature allows you to create a template that automatically pulls your posts based on whatever intervals you set and sends your emails out without a need to do anything on your end but write blog posts. With this template you can chose daily, weekly or monthly emails that check the number of posts that month/week/day and collects them to send out your emails.</p>
+		
+		<h4 id="news">Newsletter</h4>
+		
+		
+		
+		<ol>
+			<li>Login into Wordpress backend.</li>
+			<li>Create Your Page Template By:
+				<ul>
+					<li>Click on Pages -> Add New</li>
+					<li>Create Your Newsletter Heading Title</li>
+					<li>Add any content and imagery in the content area.</li>
+					<li>Set a featured image as your primary photos</li>
+					<li>On the right hand side, choose the page template: "Newsletter Template</li>
+					<li>Publish</li>
+				</ul>
+					
+			</li>
+			<li>On the left, click "Legend Options</li>
+			<li>Click "Email Newsletter Options"</li>
+			<li>Choose your options:
+				<ul>
+					<li>Show Page Template as Heading - <em>You have the option to display the page content from the Template Page or keep it blank</em></li>
+					<li>Show Recent Projects. <em>Will place your most recent 3 projects into the newsletter</em></li>
+					<li>Show Blog Posts. <em>Will add your blog posts to the newsletter</em></li>
+					<li>Number of Blog Posts. <em>Will determine the number of blog posts on the newsletter</em></li>
+				</ul>
+			</li>
+			<li>Save all changes</li>
+			<li>Go back to "Email Newsletter Options"</li>
+			<li>Under Email Newsletter Code, Preview Your Email></li>
+			<li>Go back and copy the block of code under Email Newsletter Code for your newsletter to paste into Mailchimp or any other email service.</li>
+			
+			** if you are using Mailchimp***
+			
+			<li>Go to Mailchimp.com and login to your dashboard.</li>
+			<li>On the left, click "Create Campaign".</li>
+			<li>Choose "Regular Ol' Campaign</li>
+			<li>Choose or create a list that will receive your newsletter and click NEXT</li>
+			<li>Name Your campaign, subject line, reply email and add any additional tracking and social networking options you would like and click NEXT</li>
+			<li>Under Design, choose "Code Your Own"</li>
+			<li>Select all and paste your code into the template builder</li>
+			<li>Save and name your new template</li>
+			<li>Now, under Design, select "My Templates" and choose the template you just created</li>
+			<li>Preview and Test</li>
+			<li>If everything looks good, click NEXT</li>
+			<li>Under Plain Text, click "Copy Text From HTML" and then click next.</li>
+			<li>You can now schedule your email for delivery.</li>
+			<li>Awww yeah!</li>
+		</ol>
+		
+		<h4 id="rss">Mailchimp RSS Feature</h4>
+		
+		<p>Check out the video on the RSS Feature using Mailchimp</p>
+	
+			<ol>
+			<li>Login into Wordpress backend.</li>
+			<li>Create Your Page Template By:
+				<ul>
+					<li>Click on Pages -> Add New</li>
+					<li>Create Your Mailchimp Newsletter Heading Title</li>
+					<li>Add any content and imagery in the content area.</li>
+					<li>On the right hand side, choose the page template: "Mailchimp RSS Template</li>
+					<li>Publish</li>
+				</ul>
+					
+			</li>
+			<li>On the left, click "Legend Options</li>
+			<li>Click "Email Newsletter Options"</li>
+			<li>Under the Mailchimp RSS Email Newsletter Code, Preview Your Email></li>
+			<li>Go back and copy the block of code under Mailchimp RSS Email Newsletter Code for your newsletter to paste into Mailchimp's RSS Service.</li>
+			
+			** if you are using Mailchimp***
+			
+			<li>Go to Mailchimp.com and login to your dashboard.</li>
+			<li>On the left, click "Create Campaign".</li>
+			<li>Choose "RSS Driven' Campaign</li>
+			<li>Add your feed url, which is most likely http://yourdomain.com/feed/ or http://yourdomain.com/?feed=feed (if you have not set a permalink structure)</li>
+			<li>Choose your time intervals for publication and click NEXT</li>
+			<li>Choose or create a list that will receive your newsletter and click NEXT</li>
+			<li>Name Your campaign, subject line, reply email and add any additional tracking and social networking options you would like and click NEXT</li>
+			<li>Under Design, choose "Code Your Own"</li>
+			<li>Select all and paste your code into the template builder</li>
+			<li>Save and name your new template</li>
+			<li>Now, under Design, select "My Templates" and choose the template you just created</li>
+			<li>Preview and Test</li>
+			<li>If everything looks good, click NEXT</li>
+			<li>Under Plain Text, click "Copy Text From HTML" and then click next.</li>
+			<li>You can now schedule your email for delivery.</li>
+			<li>You da man!</li>
+			
+		</ol>
+		</div>
+
+		
+		<div class="clear"></div>
+		
+		
+	
+		
+		<h1 id="images">Images and Galleries</h1>
+		
+		<div class="marginalized">
+		
+			<p>The site thumbnails are generated using wordpress' "Featured Image".  That thumbnail is then resized by CSS. Image galleries are created using wordpress' built-in image gallery creation tool (in your add media popup). Click create a gallery, add and order your images, and Legend will do the rest. Just be sure to insert into the post.</p>
+			
+		
+		
+		<div class="clear"></div>
+		
+		</div>
+		
+		
+		
+		<!--++++++++======================   SOURCES  =========================++++++-->
+		
+		<h1 id="credits">Sources and Credits</h1>
+		
+		<div class="marginalized">
+		
+		<p>The web is filled with amazingly talented people, a few of whose talents were used and appreciated in this them. Want to give them a shout out.</p>
+		
+		<ol>
+			
+			<ul>
+				<li><a href="http://modernizr.com/">modernizr</a> - <em>by Faruk Ates, Paul Irish, Alex Sexton</em></li>
+				<li><a href="http://buildinternet.com/project/supersized/">jQuery Supersized</a> - <em>by Sam Dunn</em></li>
+				<li><a href="http://instafeedjs.com/">Instafeed</a> - <em>by Steven Schobert</em></li>
+				<li><a href="http://www.appelsiini.net/projects/lazyload">Lazy Load</a> - <em>by Mike Tuupola</em></li>
+				<li><a href="http://letteringjs.com/">Lettering JS</a> - <em>by Paravel</em></li>
+				<li><a href="http://tweet.seaofclouds.com/">Tweet Js</a> - <em>by seaofclouds</em></li>
+				
+			</ul>
+
+
+		</div>
+		<hr>	
+		
+		<p>Once again, thank you so much for purchasing this theme. If we can help you in any way or you are having issues, please give us a shout and I will do my best.</p> 
+		
+		<p class="append-bottom alt large"><strong><a href="http://misfit.co/">Misfit Inc</a></strong></p>
+		
+		
+		
+		</div><!-- end content-->
+		
+		<div class="clear"></div>
+
+
+
+	
+</body>
+</html>
