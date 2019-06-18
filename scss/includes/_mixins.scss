@@ -1,0 +1,170 @@
+@import "flexbox";
+
+@mixin transition($args...) {
+	-webkit-transition: $args;
+	-moz-transition: $args;
+	-ms-transition: $args;
+	-o-transition: $args;
+	transition: $args;
+}
+
+@mixin transform($args...) {
+	-webkit-transform: $args;
+	-moz-transform: $args;
+	-ms-transform: $args;
+	-o-transform: $args;
+	transform: $args;
+}
+
+@mixin transform-origin($args...) {
+	-webkit-transform-origin: $args;
+	-moz-transform-origin: $args;
+	-ms-transform-origin: $args;
+	-o-transform-origin: $args;
+	transform-origin: $args;
+}
+
+@mixin transition-property($args...) {
+	-webkit-transition-property: $args;
+	-moz-transition-property: $args;
+	-ms-transition-property: $args;
+	-o-transition-property: $args;
+	transition-property: $args;
+}
+
+@mixin transition-duration() {
+	-webkit-transition-duration: $args;
+	-moz-transition-duration: $args;
+	-ms-transition-duration: $args;
+	-o-transition-duration: $args;
+	transition-duration: $args;
+}
+
+@mixin appearance($args...) {
+	-webkit-appearance: $args;
+	-moz-appearance: $args;
+	-o-appearance: $args;
+	-ms-appearance: $args;
+	appearance: $args;
+}
+
+@mixin box-shadow($args...) {
+	-webkit-box-shadow: $args;
+	-moz-box-shadow: $args;
+	-o-box-shadow: $args;
+	-ms-box-shadow: $args;
+	box-shadow: $args;
+}
+
+@mixin border-radius($args...) {
+	-webkit-border-radius: $args;
+	-moz-border-radius: $args;
+	-o-border-radius: $args;
+	-ms-border-radius: $args;
+	border-radius: $args;
+}
+
+@mixin box-sizing($args...) {
+	-webkit-box-sizing: $args;
+	-moz-box-sizing: $args;
+	-o-box-sizing: $args;
+	-ms-box-sizing: $args;
+	box-sizing: $args;
+}
+
+@mixin writing-mode($args, $ie_args) {
+	-ms-writing-mode: $ie_args;
+	-webkit-writing-mode: $args;
+	-moz-writing-mode: $args;
+	-o-writing-mode: $args;
+	-ms-writing-mode: $args;
+	writing-mode: $args;
+}
+
+@mixin transition-delay($args...) {
+	-webkit-transition-delay: $args;
+	-moz-transition-delay: $args;
+	-o-transition-delay: $args;
+	-ms-transition-delay: $args;
+	transition-delay: $args;
+}
+
+@mixin transition-duration($args...) {
+	-webkit-transition-duration: $args;
+	-moz-transition-duration: $args;
+	-o-transition-duration: $args;
+	-ms-transition-duration: $args;
+	transition-duration: $args;
+}
+
+@mixin animation($args...) {
+	-webkit-animation: $args;
+	-moz-animation: $args;
+	-o-animation: $args;
+	-ms-animation: $args;
+	animation: $args;
+}
+
+@mixin animation-name($args...) {
+	-webkit-animation-name: $args;
+	-moz-animation-name: $args;
+	-o-animation-name: $args;
+	-ms-animation-name: $args;
+	animation-name: $args;
+}
+
+@mixin animation-duration($args...) {
+	-webkit-animation-duration: $args;
+	-moz-animation-duration: $args;
+	-o-animation-duration: $args;
+	-ms-animation-duration: $args;
+	animation-duration: $args;
+}
+
+@mixin animation-delay($args...) {
+	-webkit-animation-delay: $args;
+	-moz-animation-delay: $args;
+	-o-animation-delay: $args;
+	-ms-animation-delay: $args;
+	animation-delay: $args;
+}
+
+@mixin animation-timing-function($args...) {
+	-webkit-animation-timing-function: $args;
+	-moz-animation-timing-function: $args;
+	-o-animation-timing-function: $args;
+	-ms-animation-timing-function: $args;
+	animation-timing-function: $args;
+}
+
+@mixin animation-iteration-count($args...) {
+	-webkit-animation-iteration-count: $args;
+	-moz-animation-iteration-count: $args;
+	-o-animation-iteration-count: $args;
+	-ms-animation-iteration-count: $args;
+	animation-iteration-count: $args;
+}
+
+@mixin animation-play-state($args...) {
+	-webkit-animation-play-state: $args;
+	-moz-animation-play-state: $args;
+	-o-animation-play-state: $args;
+	-ms-animation-play-state: $args;
+	animation-play-state: $args;
+}
+
+@mixin column-count($args...) {
+	-webkit-column-count: $args;
+	-moz-column-count: $args;
+	-o-column-count: $args;
+	-ms-column-count: $args;
+	column-count: $args;
+}
+
+@mixin column-gap($args...) {
+	-webkit-column-gap: $args;
+	-moz-column-gap: $args;
+	-o-column-gap: $args;
+	-ms-column-gap: $args;
+	column-gap: $args;
+}

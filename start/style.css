@@ -1,0 +1,446 @@
+
+/* ---------------------------------------------- CSS RESETS
+-------------------------------------------------------------- */
+
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video, button, textarea, a {
+  	background: transparent;
+	background: none;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	text-decoration: none;
+	font-weight: normal;
+	font-family:"Arial", "Helvetica"
+}                  
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section { 
+    display:block;
+}
+blockquote, q { quotes:none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content:''; content:none; }
+ins { background-color:#ff9; color:#000; text-decoration:none; }
+mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
+del { text-decoration: line-through; }
+abbr[title], dfn[title] { border-bottom:1px dotted; cursor:help; }
+hr { display:block; height:1px; border:0; border-top:1px solid #ccc; padding:0 0 10px 0; }
+input, select { vertical-align:middle; }
+
+/* End of Reset CSS */
+
+
+
+input:invalid, textarea:invalid {
+    -moz-box-shadow: 0px 0px 5px red; 
+ -webkit-box-shadow: 0px 0px 5px red; 
+         box-shadow: 0px 0px 5px red;
+}
+.no-boxshadow input:invalid, 
+.no-boxshadow textarea:invalid {  }
+
+/* By default the selection color is pink */
+::-moz-selection{ background: #468ab1; color:#fff; text-shadow: none; }
+::selection { background:#468ab1; color:#fff; text-shadow: none; }
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+
+
+ul, ol, p {
+	padding: 0 0 1.5em 0;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+p {
+	font-family: Arial;
+	color: #2e2d2d;
+	font-size: 13px;
+	line-height: 22px;	
+}
+
+a {
+	color: #8d3d00;
+}
+
+/* typography.css */
+body {color:#222;background:#fff;font-family:"Lucida Grande","Lucida Sans Unicode","Helvetica Neue", Arial, Helvetica, sans-serif;}
+
+h1, h2, h3, h4, h5, h6 {font-family:"Droid Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;font-weight:normal;color:#111;}
+
+h1 {font-size:2.4em;font-weight:bold;line-height:1;margin-bottom:0.5em;}
+
+h2 {font-size:1.75em;margin-bottom:0.5em;}
+
+h3 {font-size:1.3em;line-height:1;margin-bottom:1em;}
+
+h4 {font-size:1.1em;line-height:1.25;margin-bottom:1.25em;}
+
+h5 {font-size:1em;font-weight:bold;margin-bottom:1.5em;}
+
+h6 {font-size:1em;font-weight:bold;}
+
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {margin:0;}
+
+/* remember to define focus styles! */
+:focus {outline: 0;}
+
+img {border:0;}
+a img {border:0}
+
+/* Float Definitions -----------------------------------------------------------*/
+
+.clear {clear:both;} 
+
+.right {float: right;} 
+
+.left {float: left;}
+
+.alignright {float: right;margin: 0 0 2px 7px;}
+.alignleft {float: left;margin: 0 7px 2px 0;}
+
+img.left, img.alignleft {float: left;margin: 0 15px 7px 0;}
+
+img.right, img.alignright {float: right;margin: 0 0 7px 15px;}
+
+.post img.aligncenter, .attachment img.aligncenter { display:block; margin: 0 auto; text-align: center; }
+
+.nopad {
+	padding: 0px !important;
+}
+.nomargin {
+	margin: 0px !important;
+}
+.noborder {
+	border: none !important;
+}
+
+/*
+    // ========================================== \\
+   ||                                              ||
+   ||               BASE CSS STYLES                  ||
+   ||                                              ||
+    \\ ========================================== //
+*/
+
+body {
+	margin: 0;	
+	position: relative;
+}
+
+#beta {
+	text-align: center;
+	font-style: italic;
+	color: #222;
+}
+
+.button {
+	color: #fff;
+	padding: 10px 30px;
+	font-size: 14px;
+	background: #333;
+}
+.button:hover {
+	background: #555;
+}
+.nav-section {
+	background: #222;
+	width: 255px;
+	height: 100%;
+	position: relative;
+	position: fixed;
+	left: 0;
+	padding: 10px 20px 0 20px;
+	top: 0;
+}
+.nav-section:before {
+	position: absolute;
+	content: '';
+	width: 0; 
+	height: 0; 
+	top: 20px;
+	right: -10px;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-left: 20px solid #222;
+}
+
+.nav-section:after {
+	position: absolute;
+	content: '';
+	width: 243px; 
+	height: 167px; 
+	right: 0;
+	bottom: 0px;
+	background-image: url(images/henry-white.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	z-index: 1;
+	opacity: 0.1;
+}
+.nav-section h3 {
+	background: #555;
+	padding: 10px 15px;
+	color: #eee;
+	font-size: 30px;
+	font-weight: bold;
+	margin: 0;
+}
+.nav-section ol {
+	position: relative;
+	z-index: 9;
+}
+.nav-section li {
+	text-align: center;
+	background: #444;
+	
+	color: #ddd;
+	font-size: 14px;
+	margin: 2px 0;
+}
+.nav-section li:hover {
+	background: #555;
+}
+.nav-section li a {
+	color: #ddd;
+	font-size: 13px;
+	display: block;
+	height: 100%;
+	width: 100%;
+	padding: 12px 0px;
+}
+.nav-section p {
+   color: #999;
+    font-size: 11px;
+    line-height: 18px;
+    margin: -10px 0 0 20px;
+    text-align: center;
+    width: 215px;
+}
+.content {
+	margin-left: 300px;
+	min-height: 1000px;
+	padding: 30px;
+	max-width: 900px;
+}
+.wrap {
+	background: url(images/footer-behind.jpg) center bottom repeat-x;
+	margin: 0;
+}
+
+.welcome {
+	background: #eee;
+	padding: 10px 30px 30px 30px;
+	width: 100%;
+	position: relative;
+	margin: 0 0 40px 0;
+}
+
+.welcome:after {
+	position: absolute;
+	content: '';
+	width: 243px; 
+	height: 167px; 
+	right: 0;
+	bottom: 0px;
+	background-image: url(images/henry-white.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	z-index: 1;
+	opacity: 0.4;
+}
+.welcome h3 {
+	font-size: 18px;
+	font-style: italic;
+	text-align: center;
+	color: #555;
+}
+
+.welcome .left {
+	width: 16%;
+	float: left;
+	border-right: 1px solid #CCCCCC;
+	padding: 15px 0 10px 0;
+}
+.welcome .left img:hover {
+	opacity: 0.8;
+}
+.welcome .right {
+	float: right;
+	width: 80%;
+}
+.welcome .right p {
+	padding: 0;
+	line-height: 22px;
+	color: #555;
+}
+
+
+
+
+
+
+.content h1 {
+	font-size: 28px;
+	color: #444;
+	padding: 5px 0 15px 15px;
+	border-left: 5px solid #444;
+	margin: 10px 0;
+	position: relative;
+}
+.content h1:after {
+	border-bottom: 1px solid #ddd;
+	width: 100%;
+	height: 2px;
+	content: '';
+	bottom: 0;
+	left: -5px;
+	position: absolute;
+}
+.content h2 {
+	font-size: 21px;
+	color: #444;
+	padding: 10px 15px;
+	background: #eee;
+	font-weight: bold;
+    line-height: 1;
+	width: 100%;
+	margin: 0 0 25px 0;
+}
+.content h3 {
+	font-size: 18px;
+	color: #444;
+	padding: 5px 0 15px 15px;
+	border-left: 5px solid #444;
+	margin: 10px 0 10px 30px;
+	position: relative;
+}
+.content h3:after {
+	border-bottom: 1px solid #ddd;
+	width: 100%;
+	height: 2px;
+	content: '';
+	bottom: 0;
+	left: -5px;
+	position: absolute;
+}
+.content h4 {
+	font-size: 16px;
+	color: #444;
+	padding: 10px 15px;
+	background: #eee;
+	font-weight: bold;
+    line-height: 1;
+	width: 100%;
+	margin: 10px 0 15px 0;
+}
+.content .push {
+	margin: 10px 0 10px 50px;
+}
+.content ul.lister {
+	margin: 10px 0 15px 45px;
+}
+.content ul.lister  li {
+	list-style: square;
+	font-size: 13px;
+	padding: 0;
+	line-height: 22px;
+	color: #555;
+	margin: 0 0 0 15px;
+}
+
+.content ol {
+	margin: 10px 0 10px 45px;
+}
+.content ol li {
+	list-style: decimal;
+	font-size: 13px;
+	padding: 0;
+	line-height: 22px;
+	color: #555;
+	margin: 0 0 0 15px;
+}
+
+.marginalized ul li {
+	font-size: 13px;
+	padding: 0;
+	line-height: 22px;
+	color: #555;
+	margin: 0 0 0 15px;
+}
+.content .marginalized {
+	margin: 0 0 0 55px;
+}
+.subnav {
+	margin: 0 0 40px 0;
+}
+
+.marginalized ul li {
+	border: 1px solid #ddd;
+	padding: 5px 15px;
+	margin: 2px 0;
+}
+.subnav li {
+	background: #eee;
+	padding: 10px 20px;
+	margin: 3px;
+	float: left;
+}
+.subnav li:hover {
+	background: #ccc;
+}
+.subnav li a {
+	font-size: 11px;
+	color: #444;
+}
+@media all and (orientation:portrait) { 
+  
+}
+
+@media all and (orientation:landscape) { 
+  
+}
+
+@media screen and (max-device-width: 480px) {
+
+	.feature {
+		height: 300px;
+	}
+  
+}
+
+@media print {
+  * { background: transparent !important; color: #444 !important; text-shadow: none !important; }
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a:after { content: " (" attr(href) ")"; } 
+  abbr:after { content: " (" attr(title) ")"; }
+  .ir a:after { content: ""; }  /* Don't show links for images */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */ 
+  tr, img { page-break-inside: avoid; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+}
+
+
+
+

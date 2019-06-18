@@ -1,0 +1,39 @@
+@font-face {
+	font-family: 'Brandon-Bold';
+	src: url('Brandon-Bold/Brandon-Bold.eot'),  
+		 url('Brandon-Bold/Brandon-Bold.woff') format('woff'), 
+		 url('Brandon-Bold/Brandon-Bold.ttf')  format('truetype'), 
+		 url('Brandon-Bold/Brandon-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Brandon-Regular';
+	src: url('Brandon-Regular/Brandon-Regular.eot'),  
+		 url('Brandon-Regular/Brandon-Regular.woff') format('woff'), 
+		 url('Brandon-Regular/Brandon-Regular.ttf')  format('truetype'), 
+		 url('Brandon-Regular/Brandon-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Brandon-Medium';
+	src: url('Brandon-Medium/Brandon-Medium.eot'),  
+		 url('Brandon-Medium/Brandon-Medium.woff') format('woff'), 
+		 url('Brandon-Medium/Brandon-Medium.ttf')  format('truetype'), 
+		 url('Brandon-Medium/Brandon-Medium.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Avenir-Regular';
+	src: url('Avenir-Regular/Avenir-Regular.eot'),  
+		 url('Avenir-Regular/Avenir-Regular.woff') format('woff'), 
+		 url('Avenir-Regular/Avenir-Regular.ttf')  format('truetype'), 
+		 url('Avenir-Regular/Avenir-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
