@@ -61,4 +61,4 @@
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo ('url'); ?>/misfit-journal/wp-content/themes/misfitjournal/css/media.css">
 	
 	<!-- responsive style -->
-	<script type="text/javascript" src="<?php bloginfo ('template_url'); ?>/js/modernizr.custom.js"></script>
+	<script type="text/javascript" src="<?php bloginfo ('template_url'); ?>/js/modernizr.custom.js"></script>s

@@ -55,8 +55,18 @@ shop/wp-content/debug.log
 shop/local-config.php
 
 # ignore wordpress themes
-shop/wp-content/wp-content/themes/classic/
-shop/wp-content/wp-content/themes/twentyfourteen/
-shop/wp-content/wp-content/themes/twentythirteen/
-shop/wp-content/wp-content/themes/twentytwelve/
+shop/wp-content/themes/classic/
+shop/wp-content/themes/twentyfourteen/
+shop/wp-content/themes/twentythirteen/
+shop/wp-content/themes/twentytwelve/
 shop/wp-content/uploads/sucuri/sucuri-lastlogins.php
+
+danone/
+fsc/
+fsc2/
+greengiants/
+legend/
+millionmiracles/
+slh/
+sotr/
+start/

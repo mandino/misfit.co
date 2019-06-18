@@ -12,7 +12,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( $order ) : ?>
-
+	
+	<script>
+		fbq('track', 'Purchase', {value: '<?php echo $order->get_total(); ?>', currency: 'USD'});
+	</script>
+	
 	<div class="thank_you_header text-center">
 	
 		<?php if ( $order->has_status( 'failed' ) ) : ?>

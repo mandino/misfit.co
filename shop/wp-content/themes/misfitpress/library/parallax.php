@@ -49,13 +49,7 @@ function getLatLonger($addressly){
 							
 							<br />
 									
-							<?php $coordinate = getLatLonger($addressly);
-								$lats = $coordinate['lat'];
-								$longs = $coordinate['long'];
-								
-								$latitudes = str_replace('.', ',', $lats);
-								$longitudes = str_replace('.', ',', $longs);
-							?>
+							
 		
 		
 							<div class="map" data-latitude="<?php echo $latitudes; ?>" data-longtitude="<?php echo $longitudes; ?>"></div>
