@@ -41,7 +41,7 @@
 		left: 50%;
 		font-family: 'Brandon-Bold';
 		font-style: italic;
-		font-size: 24px;
+		font-size: 30px;
 		color: rgba(255,255,255,0.7);
 		cursor: pointer;
 		@include transform(translate(-50%, -50%));
@@ -100,6 +100,11 @@
 			.slide__text {
 				font-size: 20px;
 				line-height: 35px;
+			}
+		}
+		&.custom-content-v3 {
+			.slide__text {
+				font-size: 20px;
 			}
 		}
 		&.short-content {

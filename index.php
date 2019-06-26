@@ -18,7 +18,7 @@ include('header.php');
 			<li class="slide__item slide__item--slide1 slide__item--active">
 				<div class="slide__content content-1 front-content">
 					<h1 class="slide__title slide__title--black">Bleeding to the edges since 2008.</h1>
-					<p class="slide__text slide__text--black">Misfit is an international strategic creative agency, film studio, independent publisher and impact accelerator with a bizarrely eclectic philanthropic arm.</p>
+					<p class="slide__text slide__text--black">Misfit is an international creative agency, film studio, independent publisher and impact accelerator with a bizarrely eclectic philanthropic arm.</p>
 				</div>
 			</li>
 
@@ -44,7 +44,7 @@ include('header.php');
 			</li>
 
 			<li class="slide__item slide__item--slide5">
-				<div class="slide__content content-5">
+				<div class="slide__content content-5 custom-content-v3">
 					<h2 class="slide__title slide__title--white">Changing the world through wildly independent and consistently unrelated acts of generosity.</h2>
 					<p class="slide__text slide__text--white">Misfit has initiated and financed a wide collection of absurdly eclectic philanthropic activities all over the world, wholly subsidised by the profits from our commercial activities. We build windmills, construct schools, fund medical programmes, provide direct aid to families, craft multi-million dollar fundraising appeals for charities, commission artwork, sponsor research programmes and annually underwrite thousands of hours of brand identity, digital, design, video, campaign and strategic consulting work for organisations who are hell-bent on changing the world. Since 2008, we have invested in programmes and organisations across South Sudan, Tanzania, Kenya, Ethiopia, Malawi, Uganda, South Africa, Indonesia, India, Laos, Cuba, the United States, the UK and the Philippines. We even have our very own Writer-in-Residence programme hosted at our eccentric abode personally designed by our founder in Stratford-upon-Avon. <a href="https://www.instagram.com/misfitfoundation/" target="_blank">Follow on Instagram.</a></p>
 				</div>
