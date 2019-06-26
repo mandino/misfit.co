@@ -30,14 +30,14 @@ include('header.php');
 			</li>
 
 			<li class="slide__item slide__item--slide3">
-				<div class="slide__content content-3 short-content">
+				<div class="slide__content content-3 custom-content">
 					<h2 class="slide__title slide__title--white">Curating the world for the flamboyantly independent.</h2>
 					<p class="slide__text slide__text--white">Misfit Press is the finest independent media company in the free world. We produce events, publish original work and handcraft a monthly newsletter covering business, travel, design and culture for troublemakers, rabble rousers and general riff raff around the world. <a href="https://eepurl.us1.list-manage.com/subscribe?u=dab524f4886549dbf587dce02&id=fe7b34881b" target="_blank">Subscribe.</a></p>
 				</div>
 			</li>
 
 			<li class="slide__item slide__item--slide4">
-				<div class="slide__content content-4 short-content">
+				<div class="slide__content content-4 custom-content">
 					<h2 class="slide__title slide__title--white">Handcrafting independent films for weirdos like us.</h2>
 					<p class="slide__text slide__text--white">Misfit Productions is the award-winning film studio behind Confection, New Year and Death is Smoking my Cigars. In addition to handcrafting our very own films and original content, we conceptualise, storyboard, script and illustrate animated and live action films for brands across the globe. <a href="https://vimeo.com/misfitprod" target="_blank">Check out our work.</a></p>
 				</div>
