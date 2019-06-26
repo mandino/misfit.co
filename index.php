@@ -12,7 +12,7 @@ include('header.php');
 	<div class="container__inner">
 		<ul class="slide__container">
 			<div class="logo__container">
-				<span class="logo__text">Misfit</span>
+				<span class="logo__text">misfit</span>
 			</div>
 
 			<li class="slide__item slide__item--slide1 slide__item--active">
@@ -59,8 +59,8 @@ include('header.php');
 
 			<li class="slide__item slide__item--slide7">
 				<div class="slide__content content-7 custom-content-v2">
-					<h2 class="slide__title slide__title--black">The most delightfully incomprehensible investment arm in the history of free market capitalism.</h2>
-					<p class="slide__text slide__title--black">Misfit has seed funded and accelerated a handful of social enterprises across the globe. From sunflower farms in Northern Kenya and disability lifestyle publications in London to co-working spaces in North Dakota and coffee cooperatives in Laos, we have employed our unique agency accelerator approach to help social entrepreneurs transform nascent ideas into sustainable and impactful companies.</p>
+					<h2 class="slide__title slide__title--white">The most delightfully incomprehensible investment arm in the history of free market capitalism.</h2>
+					<p class="slide__text slide__title--white">Misfit has seed funded and accelerated a handful of social enterprises across the globe. From sunflower farms in Northern Kenya and disability lifestyle publications in London to co-working spaces in North Dakota and coffee cooperatives in Laos, we have employed our unique agency accelerator approach to help social entrepreneurs transform nascent ideas into sustainable and impactful companies.</p>
 				</div>
 			</li>
 		</ul>
@@ -94,7 +94,7 @@ include('header.php');
 								<div class="slide__nav-highlight highlight-3"></div>
 								<div class="highlight__stick highlight__stick-3"></div>
 								<h4 class="slide__nav-text slide__nav-text--left">I</h4>
-								<h4 class="slide__nav-text slide__nav-text--right text-3">Publishing</h4>
+								<h4 class="slide__nav-text slide__nav-text--right text-3">Publishing House and Films to Film Studio</h4>
 							</a>
 						</li>
 
