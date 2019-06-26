@@ -132,9 +132,9 @@
 			}
 		}
 		&--white {
-			color: $white;
+			color: $white !important;
 			a {
-				color: $white;
+				color: $white !important;
 			}
 		}
 	}
@@ -284,7 +284,7 @@
 	top: 0;
 	right: 0;
 	height: 100%;
-	width: 320px;
+	width: 380px;
 	overflow: hidden;
 	z-index: 6;
 	@include box-sizing(border-box);
@@ -294,9 +294,9 @@
 .slide__nav-inner {
 	background-color: rgba(0,0,0,0.09);
 	position: absolute;
-	right: -280px;
+	right: -340px;
 	height: 100%;
-	width: 320px;
+	width: 380px;
 	overflow: hidden;
 	@include transition(all 0.5s ease-out);
 	&::before {
@@ -363,7 +363,7 @@
 	float: left;
 	height: 100%;
 	font-family: 'Avenir-Regular';
-	font-size: 14px;
+	font-size: 12px;
 	color: $white;
 	line-height: 42px;	
 	text-transform: uppercase;
