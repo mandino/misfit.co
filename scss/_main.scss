@@ -27,10 +27,10 @@
 /* ========  ELEMENTS  ======== */
 
 .logo__container {
-	background-color: $black;
+	// background-color: $black;
     position: absolute;
     bottom: 0;
-    left: 7%;
+    left: 5%;
     width: 120px;
 	height: 55px;
 	text-align: center;
@@ -38,13 +38,22 @@
 	.logo__text {
 		position: absolute;
 		top: 50%;
-		left: 50%;
+		left: 0;
 		font-family: 'Brandon-Bold';
 		font-style: italic;
 		font-size: 30px;
 		color: rgba(255,255,255,0.7);
 		cursor: pointer;
-		@include transform(translate(-50%, -50%));
+		@include transform(translate(0, -50%));
+		&::before {
+			content: '';
+			background-color: rgba(255,255,255,0.7);
+			position: absolute;
+			bottom: 3px;
+			left: 0;
+			width: 100%;
+			height: 0.1rem;
+		}
 	}
 	.logo__text:hover {
 		color: rgba(255,255,255,1);
@@ -65,7 +74,7 @@
 	.slide__content {
 		position: absolute;
 		top: 10%;
-		left: 7%;
+		left: 5%;
 		width: 40%;
 		@include transition(all 0.8s ease-out);
 		&.front-content {
@@ -103,8 +112,13 @@
 			}
 		}
 		&.custom-content-v3 {
+			.slide__title {
+				padding: 0 10% 0 0;
+			}
 			.slide__text {
 				font-size: 20px;
+				line-height: 27px;
+				padding: 0 11% 0 0;
 			}
 		}
 		&.short-content {
