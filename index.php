@@ -53,12 +53,12 @@ include('header.php');
 			<li class="slide__item slide__item--slide6">
 				<div class="slide__content content-6 custom-content-v2">
 					<h2 class="slide__title slide__title--black">Concocting random stuff that strikes our fancy for no particular or pragmatic reason whatsoever.</h2>
-					<p class="slide__text slide__text--black">Misfit Labs is the independent art + innovation studio of our founder and creative director <a href="http://ajleon.co" target="_blank">AJ Leon</a>. AJ works with a small in-house team supplemented at times with independent collaborators across the globe to develop and pursue a wide array of artistic endeavors including original <a href="https://vimeo.com/298187216" target="_blank">art concepts and installations</a>, copper bookmarks, single slab industrial standing desks, graffiti filing cabinets and pre-batch negroni recipes, among many other peculiar projects.</p>
+					<p class="slide__text slide__text--black">Misfit Labs is the independent art + innovation studio of our founder and creative director <a href="http://ajleon.co" target="_blank">AJ Leon</a>. AJ works with a small in-house team supplemented at times with independent collaborators across the globe to develop and pursue a wide array of artistic endeavors including original art concepts and <a href="https://vimeo.com/298187216" target="_blank">installations</a>, copper bookmarks, single slab industrial standing desks, graffiti filing cabinets and pre-batch negroni recipes, among many other peculiar projects.</p>
 				</div>
 			</li>
 
 			<li class="slide__item slide__item--slide7">
-				<div class="slide__content content-7">
+				<div class="slide__content content-7 custom-content-v2">
 					<h2 class="slide__title slide__title--black">The most delightfully incomprehensible investment arm in the history of free market capitalism.</h2>
 					<p class="slide__text slide__title--black">Misfit has seed funded and accelerated a handful of social enterprises across the globe. From sunflower farms in Northern Kenya and disability lifestyle publications in London to co-working spaces in North Dakota and coffee cooperatives in Laos, we have employed our unique agency accelerator approach to help social entrepreneurs transform nascent ideas into sustainable and impactful companies.</p>
 				</div>
