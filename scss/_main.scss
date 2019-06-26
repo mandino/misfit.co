@@ -118,7 +118,7 @@
 			.slide__text {
 				font-size: 20px;
 				line-height: 27px;
-				padding: 0 11% 0 0;
+				padding: 0 12% 0 0;
 			}
 		}
 		&.short-content {
@@ -212,6 +212,7 @@
 				opacity: 0.6;
 				@include transition(all 0.5s ease-out);
 				&::before {
+					// height: 100%;
 					@include transition(all 0.5s ease-out);
 				}
 			}
@@ -521,7 +522,7 @@
 	&-text {
 		display: block;
 		font-family: 'Brandon-Bold';
-		font-style: italic;
+		// font-style: italic;
 		font-size: 30px;
 		cursor: pointer;
 		@include transition(all 0.5s ease-out);
