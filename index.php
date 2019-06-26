@@ -12,7 +12,7 @@ include('header.php');
 	<div class="container__inner">
 		<ul class="slide__container">
 			<div class="logo__container">
-				<span class="logo__text">misfit</span>
+				<span class="logo__text">misfit.co</span>
 			</div>
 
 			<li class="slide__item slide__item--slide1 slide__item--active">
