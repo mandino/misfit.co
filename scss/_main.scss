@@ -169,9 +169,9 @@
 			color: #000;
 			a {
 				color: #000;
-				&:hover {
-					color: #fff;
-				}
+				// &:hover {
+				// 	color: #fff;
+				// }
 				&::before {
 					background-color: #000;
 				}
@@ -181,9 +181,9 @@
 			color: $white;
 			a {
 				color: $white;
-				&:hover {
-					color: #000;
-				}
+				// &:hover {
+				// 	color: #000;
+				// }
 				&::before {
 					background-color: $white;
 				}
@@ -216,9 +216,10 @@
 				@include transition(all 0.5s ease-out);
 			}
 			&:hover {
+				opacity: 0.6;
 				@include transition(all 0.5s ease-out);
 				&::before {
-					height: 100%;
+					// height: 100%;
 					@include transition(all 0.5s ease-out);
 				}
 			}
@@ -439,7 +440,7 @@
 /* ========  MODIFIER  ======== */
 
 .slide__item--slide1{
-	background: url("../images/gifs/frame-1.gif");
+	background: url("../images/gifs/frame-1-new.gif");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: right;	
@@ -532,21 +533,28 @@
 		font-size: 30px;
 		cursor: pointer;
 		@include transition(all 0.5s ease-out);
-		// &::before {
-		// 	content: '';
-		// 	position: absolute;
-		// 	bottom: 3px;
-		// 	left: 0;
-		// 	width: 100%;
-		// 	height: 0.1rem;
-		// }
-		&:hover {
-			opacity: 0.5;
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: 3px;
+			left: -5%;
+			width: 110%;
+			height: 0;
+			z-index: -1;
 			@include transition(all 0.5s ease-out);
+		}
+		&:hover {
+			&::before {
+				height: 100%;
+				@include transition(all 0.5s ease-out);
+			}
 		}
 
 		&--white {
 			color: #fff;
+			&:hover {
+				color: #000;
+			}
 			&::before {
 				background-color: #fff;
 			}
@@ -554,6 +562,9 @@
 
 		&--black {
 			color: #000;
+			&:hover {
+				color: #fff;
+			}
 			&::before {
 				background-color: #000;
 			}
