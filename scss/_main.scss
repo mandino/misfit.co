@@ -70,6 +70,7 @@
 		@include transition(all 0.8s ease-out);
 		&.front-content {
 			top: 15%;
+			width: 43%;
 			.slide__title {
 				font-size: 55px;
 				line-height: 60px;
