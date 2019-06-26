@@ -79,6 +79,18 @@
 				line-height: 35px;
 			}
 		}
+		&.custom-content {
+			top: 15%;
+			width: 50%;
+			.slide__title {
+				font-size: 55px;
+				line-height: 60px;
+			}
+			.slide__text {
+				font-size: 22px;
+				line-height: 35px;
+			}
+		}
 		&.short-content {
 			top: 15%;
 			width: 45%;
