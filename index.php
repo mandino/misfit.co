@@ -94,7 +94,7 @@ include('header.php');
 								<div class="slide__nav-highlight highlight-3"></div>
 								<div class="highlight__stick highlight__stick-3"></div>
 								<h4 class="slide__nav-text slide__nav-text--left">I</h4>
-								<h4 class="slide__nav-text slide__nav-text--right text-3">Publishing House and Films to Film Studio</h4>
+								<h4 class="slide__nav-text slide__nav-text--right text-3">Publishing House</h4>
 							</a>
 						</li>
 
@@ -103,7 +103,7 @@ include('header.php');
 								<div class="slide__nav-highlight highlight-4"></div>
 								<div class="highlight__stick highlight__stick-4"></div>
 								<h4 class="slide__nav-text slide__nav-text--left">S</h4>
-								<h4 class="slide__nav-text slide__nav-text--right text-4">Films</h4>
+								<h4 class="slide__nav-text slide__nav-text--right text-4">Film Studio</h4>
 							</a>
 						</li>
 

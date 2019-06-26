@@ -284,7 +284,7 @@
 	top: 0;
 	right: 0;
 	height: 100%;
-	width: 380px;
+	width: 320px;
 	overflow: hidden;
 	z-index: 6;
 	@include box-sizing(border-box);
@@ -294,9 +294,9 @@
 .slide__nav-inner {
 	background-color: rgba(0,0,0,0.09);
 	position: absolute;
-	right: -340px;
+	right: -280px;
 	height: 100%;
-	width: 380px;
+	width: 320px;
 	overflow: hidden;
 	@include transition(all 0.5s ease-out);
 	&::before {
@@ -363,7 +363,7 @@
 	float: left;
 	height: 100%;
 	font-family: 'Avenir-Regular';
-	font-size: 12px;
+	font-size: 14px;
 	color: $white;
 	line-height: 42px;	
 	text-transform: uppercase;
