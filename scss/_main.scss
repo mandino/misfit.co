@@ -117,7 +117,7 @@
 	}
 	.slide__text {
 		font-family: 'Brandon-Medium';
-		font-size: 16px;
+		font-size: 18px;
 		color: $black;
 		letter-spacing: 0.05em;
 		line-height: 25px;
@@ -170,7 +170,6 @@
 				opacity: 0.6;
 				@include transition(all 0.5s ease-out);
 				&::before {
-					width: 90%;
 					@include transition(all 0.5s ease-out);
 				}
 			}
