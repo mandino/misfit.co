@@ -23,7 +23,7 @@ include('header.php');
 			</li>
 
 			<li class="slide__item slide__item--slide2">
-				<div class="slide__content content-2 short-content">
+				<div class="slide__content content-2 front-content">
 					<h2 class="slide__title slide__title--black">Empowering the rebellious with obscene creativity.</h2>
 					<p class="slide__text slide__text--black">Studio Misfit is an international design, communication and marketing agency that works exclusively with the rebels, the subversives and the non-conformists. <a href="https://www.studiomisfit.co/" target="_blank">Learn more.</a></p>
 				</div>
