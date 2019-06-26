@@ -51,7 +51,7 @@ include('header.php');
 			</li>
 
 			<li class="slide__item slide__item--slide6">
-				<div class="slide__content content-6">
+				<div class="slide__content content-6 custom-content-v2">
 					<h2 class="slide__title slide__title--black">Concocting random stuff that strikes our fancy for no particular or pragmatic reason whatsoever.</h2>
 					<p class="slide__text slide__text--black">Misfit Labs is the independent art + innovation studio of our founder and creative director <a href="http://ajleon.co" target="_blank">AJ Leon</a>. AJ works with a small in-house team supplemented at times with independent collaborators across the globe to develop and pursue a wide array of artistic endeavors including original <a href="https://vimeo.com/298187216" target="_blank">art concepts and installations</a>, copper bookmarks, single slab industrial standing desks, graffiti filing cabinets and pre-batch negroni recipes, among many other peculiar projects.</p>
 				</div>
