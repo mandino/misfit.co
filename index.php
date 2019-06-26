@@ -18,7 +18,7 @@ include('header.php');
 			<li class="slide__item slide__item--slide1 slide__item--active">
 				<div class="slide__content content-1 front-content">
 					<h1 class="slide__title slide__title--black">Bleeding to the edges since 2008.</h1>
-					<p class="slide__text slide__text--black">Misfit is an international strategic creative agency, film studio, independent publisher and impact accelerator with a bizarrely eclectic philanthropic arm.</p>
+					<p class="slide__text slide__text--black">Misfit is an international creative agency, film studio, independent publisher and impact accelerator with a bizarrely eclectic philanthropic arm.</p>
 				</div>
 			</li>
 
