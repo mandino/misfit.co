@@ -27,7 +27,6 @@
 /* ========  ELEMENTS  ======== */
 
 .logo__container {
-	// background-color: $black;
     position: absolute;
     bottom: 0;
     left: 5%;
@@ -73,76 +72,46 @@
 	@include transition(all 1s ease-in);
 	.slide__content {
 		position: absolute;
-		top: 10%;
+		top: 15%;
 		left: 5%;
-		width: 40%;
+		width: 100%;
 		@include transition(all 0.8s ease-out);
-		&.front-content {
-			top: 15%;
-			width: 43%;
-			.slide__title {
-				font-size: 55px;
-				line-height: 60px;
-			}
-			.slide__text {
-				font-size: 22px;
-				line-height: 35px;
-			}
+		&.content-medium {
+			max-width: 600px;
 		}
-		&.custom-content {
-			top: 15%;
-			width: 50%;
-			.slide__title {
-				font-size: 55px;
-				line-height: 60px;
-			}
-			.slide__text {
-				font-size: 22px;
-				line-height: 35px;
-			}
+		&.content-large {
+			max-width: 700px;
 		}
-		&.custom-content-v2 {
-			top: 15%;
-			width: 45%;
-			.slide__title {
-			}
-			.slide__text {
-				font-size: 20px;
-				line-height: 35px;
-			}
-		}
-		&.custom-content-v3 {
-			.slide__title {
-				padding: 0 10% 0 0;
-			}
-			.slide__text {
-				font-size: 20px;
-				line-height: 27px;
-				padding: 0 12% 0 0;
-			}
-		}
-		&.short-content {
-			top: 15%;
-			width: 45%;
+		&.content-xlarge {
+			top: 10%;
+			max-width: 900px;
 			.slide__title {
 				font-size: 35px;
-				line-height: 40px;
+				line-height: 45px;
 			}
 			.slide__text {
-				font-size: 20px;
+				font-size: 18px;
 				line-height: 30px;
 			}
 		}
-		&.content-5 {
-			width: 60%;
+		&.content-custom {
+			max-width: 600px;
+			.slide__title {
+				font-size: 35px;
+				line-height: 45px;
+			}
+			.slide__text {
+				font-size: 20px;
+				line-height: 35px;
+			}
 		}
 	}
 	.slide__title {
 		font-family: 'Brandon-Medium';
-		font-size: 35px;
+		font-size: 55px;
 		color: $black;
 		letter-spacing: -0.004em;
-		line-height: 40px;
+		line-height: 60px;
 		margin: 0;
 		&--black {
 			color: #000;
@@ -159,10 +128,10 @@
 	}
 	.slide__text {
 		font-family: 'Brandon-Medium';
-		font-size: 18px;
+		font-size: 22px;
 		color: $black;
 		letter-spacing: 0.05em;
-		line-height: 25px;
+		line-height: 35px;
 		padding: 0;
 		margin: 20px 0 0;
 		&--black {
@@ -546,7 +515,6 @@
 	&-text {
 		display: block;
 		font-family: 'Brandon-Bold';
-		// font-style: italic;
 		font-size: 30px;
 		cursor: pointer;
 		@include transition(all 0.5s ease-out);
@@ -566,7 +534,6 @@
 				@include transition(all 0.5s ease-out);
 			}
 		}
-
 		&--white {
 			color: #fff;
 			&:hover {
@@ -576,7 +543,6 @@
 				background-color: #fff;
 			}
 		}
-
 		&--black {
 			color: #000;
 			&:hover {
