@@ -528,26 +528,26 @@
 			z-index: -1;
 			@include transition(all 0.5s ease-out);
 		}
-		&:hover {
-			&::before {
-				width: 110%;
-				@include transition(all 0.5s ease-out);
-			}
-		}
+		// &:hover {
+		// 	&::before {
+		// 		width: 110%;
+		// 		@include transition(all 0.5s ease-out);
+		// 	}
+		// }
 		&--white {
 			color: #fff;
-			&:hover {
-				color: #000;
-			}
+			// &:hover {
+			// 	color: #000;
+			// }
 			&::before {
 				background-color: #fff;
 			}
 		}
 		&--black {
 			color: #000;
-			&:hover {
-				color: #fff;
-			}
+			// &:hover {
+			// 	color: #fff;
+			// }
 			&::before {
 				background-color: #000;
 			}
