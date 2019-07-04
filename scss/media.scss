@@ -1,496 +1,174 @@
-/* ================================================  1500 - 0000  ======================================= */
+@import "includes/mixins";
 
-@media only screen and (max-width: 1500px) {
-
-}
-
-/* ================================================  1440 - 0000  ======================================= */
-
-@media only screen and (max-width: 1440px) {
-
-
-}
-
-/* ================================================  1366 - 0000  ======================================= */
-
-@media only screen and (max-width: 1366px) {
-
-}
-
-/* ================================================  1349 - 0000  ======================================= */
-
-@media only screen and (max-width: 1349px) {
-
-}
-
-/* ================================================  1287 - 0000  ======================================= */
-
-@media only screen and (max-width: 1287px) {
-
-}
-
-
-/* ================================================  1280 - 0000 ======================================= */
-
-@media only screen and (max-width: 1280px) {
-
-
-}
-
-/* ================================================  1279 - 0000 ======================================= */
-
-@media only screen and (max-width: 1279px) {
-
-}
-
-
-
-/* ================================================  1199 - 0000  ======================================= */
-
-@media only screen and (max-width: 1199px) {
-
-
-}	
-
-
-/* ================================================  1060 - 0000  ======================================= */
-
-@media only screen and (max-width: 1060px) {
-
-
-}
-
-
-
-/* ================================================  1024 - 0000  ======================================= */
+/* ====  iPad Large  ==== */
 
 @media only screen and (max-width: 1024px) {
-
-	/* landing page */
-
-	.slide__nav-inner{
-		right: 0;
-		width: 40px;
+	.container {
+		padding: 0;
 	}
 
-	.slide__content{
+	.slide__item::before {
+		content: '';
+		background-color: rgba(255,255,255,0.7);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	.slide__item .slide__content {
 		top: 50%;
-		width: 75% !important;
-		-moz-transform: translateY(-50%);
-		-webkit-transform: translateY(-50%);
-		transform: translateY(-50%);
+		@include transform(translateY(-50%));
 	}
 
-	.slide__item--slide1{
-		background: url("../images/mobile_wrap_1.jpg");
-		background-size: cover;
-		background-repeat: no-repeat;
+	.slide__item .slide__title {
+		font-size: 80px;
+		line-height: 1;
 	}
 
-	.slide__item--slide2{
-		background: url("../images/mobile_wrap_2.jpg");
-		background-size: cover;
-		background-repeat: no-repeat;
+	.slide__item .slide__text {
+		font-size: 25px;
+		line-height: 1.6;
 	}
 
-	.slide__item--slide3{
-		background: url("../images/mobile_wrap_3.jpg");
-		background-size: cover;
-		background-repeat: no-repeat;
+	.slide__item .slide__content.content-medium {
+		max-width: 70%;
 	}
 
-	.slide__item--slide4{
-		background: url("../images/mobile_wrap_4.jpg");
-		background-size: cover;
-		background-repeat: no-repeat;
+	.slide__item .slide__content.content-large {
+		max-width: 70%;
 	}
 
-	.slide__item--slide5{
-		background: url("../images/mobile_wrap_5.jpg");
-		background-size: cover;
-		background-repeat: no-repeat;
+	.slide__item .slide__content.content-xlarge {
+		top: 50%;
+		max-width: 70%;
 	}
 
-	.slide__item--slide6{
-		background: url("../images/mobile_wrap_6.jpg");
-		background-size: cover;
-		background-repeat: no-repeat;
+	.slide__item .slide__content.content-xlarge .slide__title {
+		font-size: 50px;
+		line-height: 1;
 	}
 
-	.slide__item .slide__content{
-		top: 50% !important;
-	    -webkit-transform: translate(0, -50%);
-    	-moz-transform: translate(0, -50%);
-    	transform: translate(0, -50%);
+	.slide__item .slide__content.content-xlarge .slide__text {
+		font-size: 25px;
+		line-height: 1.6;
 	}
 
-	.slide__title{
-		width: 80%;
+	.slide__item .slide__content.content-custom {
+		max-width: 70%;
 	}
 
-	.slide__text{
-		font-size: 20px;
-		line-height: 35px;
+	.slide__item .slide__content.content-custom .slide__title {
+		font-size: 60px;
+		line-height: 1;
 	}
 
-	.slide__item--slide1 .slide__text{
-		font-size: 20px;
-		line-height: 35px;
+	.slide__item .slide__content.content-custom .slide__text {
+		font-size: 25px;
+		line-height: 1.6;
 	}
 
-	.slide__item .slide__list-wrapper .slide__column .slide__column-title{
-		font-size: 15px;
+	.slide__item .slide__title--white {
+		color: #000 !important;
 	}
 
-	.slide__item .slide__list-wrapper .slide__column .slide__column-list .slide__column-item{
-		font-size: 18px;
-		line-height: 35px;
+	.slide__item .slide__text--white {
+		color: #000 !important;
 	}
 
-	.slide__image--7{
-		width: 80%;
+	.slide__item .slide__text--white a {
+		color: #000;
+	}
+
+	.slide__logo-text--white {
+		color: #000;
+	}
+
+	.slide__item .slide__text--white a::before, 
+	.slide__item .slide__text--white a::after {
+		background-color: #000;
 	}
 }
 
-
-/* ================================================  1023 - 0000  ======================================= */
-
-@media only screen and (max-width: 1023px) {
-
-}
-
-
-
-/* ================================================  870 - 000  ======================================= */
-
-@media only screen and (max-width: 870px) {
-
-
-
-}
-
-
-/* ================================================  768 - 000  ======================================= */
+/* ====  iPad Small  ==== */
 
 @media only screen and (max-width: 768px) {
 
-
 }
 
-/* ================================================  736 - 000  ======================================= */
+/* ====  Mobile  ==== */
 
-@media only screen and (max-width: 736px) {
-
-	/* landing page */
-
-	.container__inner{
-		right: 0;
-		left: 0;
+@media only screen and (max-width: 767px) {
+	.slide__nav--active {
+		right: -280px !important;
 	}
 
-	.slide__container{
-		top: 0;
+	.slide__nav-inner {
+		width: 310px;
 	}
 
-	.slide__nav-inner{
-		top: 0;
+	.slide__nav-inner::before {
+		left: 30px;	
 	}
 
-	.slide__nav{
+	.slide__nav {
 		width: 30px;
 	}
 
-	.slide__nav-inner{
-		top: 0;
+	.slide__nav-iconwrap,
+	.slide__nav-text--left {
 		width: 30px;
 	}
 
-	.slide__nav-text--left, .slide__nav-iconwrap{
-		width: 30px;
+	.slide__item .slide__content.content-medium {
+		max-width: 80%;
 	}
 
-	.logo__container{
-	    width: 100px;
-    	height: 30px;
+	.slide__item .slide__content.content-large {
+		max-width: 80%;
 	}
 
-	.logo__container .logo__text{
-		top: 18%;
-		font-size: 15px;
+	.slide__item .slide__content.content-xlarge {
+		max-width: 80%;
 	}
 
-	.slide__item--slide1 .slide__title{
-		font-size: 24px;
+	.slide__item .slide__content.content-custom {
+		max-width: 80%;
 	}
 
-	.slide__item--slide1 .slide__text{
+	.slide__item .slide__title {
+		font-size: 30px;
+		line-height: 1;
+	}
+
+	.slide__item .slide__text {
+		font-size: 16px;
+		line-height: 1.6;
+	}
+
+	.slide__item .slide__content.content-xlarge .slide__title {
+		font-size: 18px;
+		line-height: 1;
+	}
+
+	.slide__item .slide__content.content-xlarge .slide__text {
+		font-size: 11px;
+		line-height: 1.6;
+	}
+
+	.slide__item .slide__content.content-custom .slide__title {
+		font-size: 20px;
+		line-height: 1;
+	}
+
+	.slide__item .slide__content.content-custom .slide__text {
 		font-size: 12px;
-    	line-height: 18px;
+    	line-height: 1.6;
 	}
 
-	.slide__item .slide__title{
-	    font-size: 18px;
-    	line-height: 20px;
-    	margin: 0 0 15px;
-	}
-
-	.slide__item .slide__text{
-		font-size: 9px;
-    	line-height: 15px;
-    	margin: 0;
-    	a{
-    		font-size: 9px;
-	    	line-height: 15px;
-    	}
-	}
-
-	.slide__item .slide__list-wrapper .slide__column .slide__column-list .slide__column-item{
-	    font-size: 9px;
-    	line-height: 15px;
-	}
-
-	.slide__item .slide__list-wrapper .slide__column .slide__column-title{
-		font-size: 7px;
-	}
-
-	.slide__item .slide__list-wrapper .slide__column .slide__column-list .slide__column-item a{
-		font-size: 9px;
-		line-height: 15px;
-	}
-}
-
-
-/* ================================================  599 - 000  ======================================= */
-
-@media only screen and (max-width: 599px) {
-
-
-}
-
-
-/* ================================================  568 - 000  ======================================= */
-
-@media only screen and (max-width: 568px) {
-
-	.slide__item .slide__title{
-	    font-size: 18px;
-    	line-height: 20px;
-    	margin: 0 0 15px;
-	}
-
-	.slide__item .slide__text{
-		font-size: 8px;
-    	line-height: 13px;
-    	margin: 15px 0 0;
-    	a{
-    		font-size: 8px;
-	    	line-height: 13px;
-    	}
-	}
-
-	.slide__item .slide__list-wrapper{
+	.slide__item .slide__text {
 		margin: 15px 0 0;
 	}
-
-	.slide__item .slide__list-wrapper .slide__column .slide__column-title{
-		margin: 0 0 5px;
-	}
-
-	.slide__item .slide__list-wrapper .slide__column .slide__column-list .slide__column-item{
-	    font-size: 8px;
-    	line-height: 15px;
-	}
-
-	.slide__item .slide__list-wrapper .slide__column .slide__column-list .slide__column-item a{
-	    font-size: 8px;
-    	line-height: 15px;
-	}
-
-}	
-
-
-/* ================================================  480 - 000  ======================================= */
-
-@media only screen and (max-width: 480px) {
-
-
 }
-
-
-/* ================================================  479 - 000  ======================================= */
-
-@media only screen and (max-width: 479px) {
-
-
-}
-
-
-/* ================================================  414 - 000  ======================================= */
-
-@media only screen and (max-width: 414px) {
-
-	/* landing page */
-
-	.slide__nav{
-		width: 30px;
-	}
-
-	.slide__nav-inner{
-		top: 0;
-		width: 30px;
-	}
-
-	.slide__nav-text--left, .slide__nav-iconwrap{
-		width: 30px;
-	}
-
-	.container__inner{
-		right: 0;
-		left: 0;
-	}
-
-	.slide__container{
-		top: 0;
-	}
-
-	.logo__container{
-	    width: 120px;
-   	 	height: 45px;
-	}
-
-	.logo__container .logo__text{
-		top: 20%;
-		font-size: 18px;
-	}
-
-	.slide__item--slide1{
-	    background-position: 80% 100%;
-	}
-
-	.slide__item--slide1 .slide__content{
-	    top: 50%;
-	    -moz-transform: translateY(-50%);
-	    -webkit-transform: translateY(-50%);
-	    transform: translateY(-50%);
-	}
-
-	.slide__item--slide1 .slide__title{
-		font-size: 28px;
-    	line-height: 40px;
-    	margin: 0 0 10px;
-	}
-
-	.slide__item--slide1 .slide__text{
-	    width: 90%;
-    	font-size: 14px;
-    	line-height: 22px;	
-	}
-
-	.slide__item .slide__title{
-		width: 90%;
-		font-size: 22px;
-		line-height: 25px;
-		margin: 0 0 20px;
-	}
-
-	.slide__item .slide__text{
-		width: 90%;
-		font-size: 12px;
-		line-height: 20px;
-		a{
-			font-size: 12px;
-		}
-	}
-
-	.slide__item .slide__list-wrapper .slide__column .slide__column-list .slide__column-item{
-		line-height: 22px;
-	}
-
-	.slide__item--slide2, .slide__item--slide3, .slide__item--slide4,
-	.slide__item--slide5, .slide__item--slide6{
-		background-position: 50% 100%;
-	}
-
-	.slide__item .slide__list-wrapper .slide__column .slide__column-title{
-		font-size: 9px;
-	}
-
-	.slide__item .slide__list-wrapper .slide__column .slide__column-list .slide__column-item{
-		width: 80%;
-		font-size: 12px;
-	}
-
-	.slide__item .slide__list-wrapper .slide__column .slide__column-list .slide__column-item a{
-		font-size: 12px;
-		line-height: 22px;
-	}
-
-}
-
-
-/* ================================================  399 - 000  ======================================= */
-
-@media only screen and (max-width: 399px) {
-
-
-}
-
-
-/* ================================================  320 - 000  ======================================= */
-
-@media only screen and (max-width: 320px) {
-
-	/* landing page */
-
-
-	.slide__item--slide1 .slide__title{
-		font-size: 24px;
-	}
-
-	.slide__item--slide1 .slide__text{
-		font-size: 12px;
-    	line-height: 18px;
-	}
-
-	.slide__item .slide__title{
-	    font-size: 22px;
-    	line-height: 25px;
-	}
-
-	.slide__item .slide__text{
-		font-size: 12px;
-    	line-height: 18px;
-    	a{
-    		font-size: 12px;
-    	}
-	}
-
-	.slide__item .slide__list-wrapper .slide__column .slide__column-list .slide__column-item{
-	    font-size: 10px;
-    	line-height: 16px;
-	}
-
-	.slide__item .slide__list-wrapper .slide__column .slide__column-title{
-		font-size: 7px;
-	}
-
-	.slide__item .slide__list-wrapper .slide__column .slide__column-list .slide__column-item a{
-		font-size: 10px;
-		line-height: 18px;
-	}
-
-	.slide__image--7{
-		width: 60%;
-	}
-
-
-}
-
-
-/* ================================================ HEIGHT 900 - 000  ======================================= */
-
-@media only screen and (max-height: 899px) {
-
-}
-
 
