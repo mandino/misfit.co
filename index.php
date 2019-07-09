@@ -26,19 +26,19 @@ include('header.php');
 
 			<li class="slide__item slide__item--slide2">
 				<div class="slide__content content-2 content-large">
-					<h2 class="slide__title slide__title--black">Empowering the rebellious with obscene creativity.</h2>
-					<p class="slide__text slide__text--black">Studio Misfit is an international design, communication and marketing agency that works exclusively with the rebels, the subversives and the non-conformists. <a href="https://www.studiomisfit.co/" target="_blank">Learn more.</a></p>
+					<h2 class="slide__title slide__title--white">Empowering the rebellious with obscene creativity.</h2>
+					<p class="slide__text slide__text--white">Studio Misfit is an international design, communication and marketing agency that works exclusively with the rebels, the subversives and the non-conformists. <a href="https://www.studiomisfit.co/" target="_blank">Learn more.</a></p>
 				</div>
 
 				<div class="slide__logo">
-					<span class="slide__logo-text slide__logo-text--black">misfit.co</span>
+					<span class="slide__logo-text slide__logo-text--white">misfit.co</span>
 				</div>
 			</li>
 
 			<li class="slide__item slide__item--slide3">
 				<div class="slide__content content-3 content-large">
 					<h2 class="slide__title slide__title--white">Curating the world for the flamboyantly independent.</h2>
-					<p class="slide__text slide__text--white">Misfit Press is the finest independent media company in the free world. We produce events, publish original work and handcraft a monthly newsletter covering business, travel, design and culture for troublemakers, rabble rousers and general riff raff around<br>the world. <a href="https://eepurl.us1.list-manage.com/subscribe?u=dab524f4886549dbf587dce02&id=fe7b34881b" target="_blank">Subscribe.</a></p>
+					<p class="slide__text slide__text--white">Misfit Press is the finest independent media company in the free world. We produce events, publish original work and handcraft a monthly newsletter covering business, travel, design and culture for troublemakers, rabble rousers and general riff raff around the world. <a href="https://eepurl.us1.list-manage.com/subscribe?u=dab524f4886549dbf587dce02&id=fe7b34881b" target="_blank">Subscribe.</a></p>
 				</div>
 
 				<div class="slide__logo">
