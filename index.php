@@ -105,7 +105,7 @@ include('header.php');
 									<img class="slide__nav-icon" src="images/studio_misfit_logo.png" alt="studio misfit logo">
 								</div>
 								<div class="slide__nav-iconwrap show-mobile">
-									<img class="slide__nav-icon" src="images/studio_misfit_asterisk.png" alt="studio misfit logo">
+									<img class="slide__nav-icon" src="images/studio_misfit_asterisk-thin.png" alt="studio misfit logo">
 								</div>
 								<h4 class="slide__nav-text slide__nav-text--right text-1">Misfit</h4>
 							</a>
