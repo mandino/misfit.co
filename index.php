@@ -60,7 +60,9 @@ include('header.php');
 			<li class="slide__item slide__item--slide5">
 				<div class="slide__content content-5 content-xlarge">
 					<h2 class="slide__title slide__title--white">Changing the world through wildly independent and consistently unrelated acts of generosity.</h2>
-					<p class="slide__text slide__text--white">Misfit has initiated and financed a wide collection of absurdly eclectic philanthropic activities all over the world, wholly subsidised by the profits from our commercial activities. We build windmills, construct schools, fund medical programmes, provide direct aid to families, craft multi-million dollar fundraising appeals for charities, commission artwork, sponsor research programmes and annually underwrite thousands of hours of brand identity, digital, design, video, campaign and strategic consulting work for organisations who are hell-bent on changing the world. Since 2008, we have invested in programmes and organisations across South Sudan, Tanzania, Kenya, Ethiopia, Malawi, Uganda, South Africa, Indonesia, India, Laos, Cuba, the United States, the UK and the Philippines. We even have our very own Writer-in-Residence programme hosted at our eccentric abode personally designed by our founder in Stratford-upon-Avon. Follow on <a href="https://www.instagram.com/misfitfoundation/" target="_blank">Instagram</a>.</p>
+					<p class="slide__text slide__text--white show-desktop">Misfit has initiated and financed a wide collection of absurdly eclectic philanthropic activities all over the world, wholly subsidised by the profits from our commercial activities. We build windmills, construct schools, fund medical programmes, provide direct aid to families, craft multi-million dollar fundraising appeals for charities, commission artwork, sponsor research programmes and annually underwrite thousands of hours of brand identity, digital, design, video, campaign and strategic consulting work for organisations who are hell-bent on changing the world. Since 2008, we have invested in programmes and organisations across South Sudan, Tanzania, Kenya, Ethiopia, Malawi, Uganda, South Africa, Indonesia, India, Laos, Cuba, the United States, the UK and the Philippines. We even have our very own Writer-in-Residence programme hosted at our eccentric abode personally designed by our founder in Stratford-upon-Avon. Follow on <a href="https://www.instagram.com/misfitfoundation/" target="_blank">Instagram</a>.</p>
+
+					<p class="slide__text slide__text--white show-mobile">Misfit has initiated and financed a wide collection of absurdly eclectic philanthropic activities all over the world, wholly subsidised by the profits from our commercial activities. We build windmills, construct schools, fund medical programmes, provide direct aid to families, craft multi-million dollar fundraising appeals for charities, commission artwork, sponsor research programmes and annually underwrite thousands of hours of brand identity, digital, design, video, campaign and strategic consulting work for organisations who are hell-bent on changing the world. Follow on <a href="https://www.instagram.com/misfitfoundation/" target="_blank">Instagram</a>.</p>
 				</div>
 
 				<div class="slide__logo">
@@ -99,8 +101,11 @@ include('header.php');
 							<a href="#" class="slide__nav-button button-1">
 								<div class="slide__nav-highlight highlight-1"></div>
 								<div class="highlight__stick highlight__stick-1 highlight--active"></div>
-								<div class="slide__nav-iconwrap">
+								<div class="slide__nav-iconwrap show-desktop">
 									<img class="slide__nav-icon" src="images/studio_misfit_logo.png" alt="studio misfit logo">
+								</div>
+								<div class="slide__nav-iconwrap show-mobile">
+									<img class="slide__nav-icon" src="images/studio_misfit_asterisk.png" alt="studio misfit logo">
 								</div>
 								<h4 class="slide__nav-text slide__nav-text--right text-1">Misfit</h4>
 							</a>
