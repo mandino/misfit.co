@@ -7,6 +7,10 @@
 		padding: 0;
 	}
 
+	.slide__item.slide__item--slide3::before {
+		display: none;
+	}
+
 	.slide__item::before {
 		content: '';
 		background-color: rgba(255,255,255,0.2);
@@ -209,13 +213,13 @@
 	}
 
 	.slide__item .slide__content.content-xlarge .slide__title {
-		font-size: 25px;
-		line-height: 1;
+		font-size: 22px;
+		line-height: 1;	
 	}
 
 	.slide__item .slide__content.content-xlarge .slide__text {
-		font-size: 14px;
-		line-height: 1.4;
+		font-size: 12px;
+		line-height: 1.6;
 	}
 
 	.slide__item .slide__content.content-custom .slide__title {
