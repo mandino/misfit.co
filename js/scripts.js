@@ -1,7 +1,7 @@
 	
 $(document).ready(function(){
 
-	let links = [
+	var links = [
 		{name: ".button-1", classHover: ".highlight-1", textHover: ".text-1", slide:".slide__item--slide1", highlightStick: ".highlight__stick-1", content: ".content-1"},
 		{name: ".button-2", classHover: ".highlight-2", textHover: ".text-2", slide:".slide__item--slide2", highlightStick: ".highlight__stick-2", content: ".content-2"},
 		{name: ".button-3", classHover: ".highlight-3", textHover: ".text-3", slide:".slide__item--slide3", highlightStick: ".highlight__stick-3", content: ".content-3"},
