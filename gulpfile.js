@@ -9,7 +9,7 @@ var gulp = require('gulp'),
 
 gulp.task('sass', function () {
 	return gulp.src('./scss/*.scss')
-    .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     // .pipe(sourcemaps.write('./assets/css/maps'))
     .pipe(gulp.dest('./css'));
