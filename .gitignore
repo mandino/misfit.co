@@ -12,6 +12,7 @@ sitemap.xml.gz
 .htaccess
 wp-config.php
 uploads/
+node_modules/
 
 # ignore debug.log
 wp-content/debug.log
