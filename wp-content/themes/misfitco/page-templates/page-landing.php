@@ -21,9 +21,16 @@
 					];
 				
 					$content = get_sub_field('content');
-					$background_image = get_sub_field('background_image');
+					$background_image_desktop = get_sub_field('background_image_desktop');
+					$background_image_mobile = get_sub_field('background_image_mobile');
+
+					if ( !$background_image_mobile ) :
+						$background_image_mobile = $background_image_desktop;
+					endif;
 			?>
-				<li class="slide__item slide__item--slide<?= $counter; ?> slide__item--color-<?= str_replace( '_', '-', $text_color ); ?> <?= ( $counter == 1 ) ? 'slide__item--active' : '' ?> <?= ( $center_content ) ? 'slider__item--center-content' : '' ?>" style="background-image: url(<?= $background_image['url']; ?>);">
+				<li class="slide__item slide__item--slide<?= $counter; ?> slide__item--color-<?= str_replace( '_', '-', $text_color ); ?> <?= ( $counter == 1 ) ? 'slide__item--active' : '' ?> <?= ( $center_content ) ? 'slider__item--center-content' : '' ?>">
+					<div class="slide__item-background show-desktop" style="background-image: url(<?= $background_image_desktop['url']; ?>);"></div>
+					<div class="slide__item-background show-mobile" style="background-image: url(<?= $background_image_mobile['url']; ?>);"></div>
 					<div class="slide__content content-<?= $counter; ?> content-<?= $content_width; ?> <?= ( $counter != 1 ) ? 'slide__content--down' : ''; ?>">
 						<?php if ( $title['text'] ) : ?>
 							<<?= $title['html_tag']; ?> class="slide__title"><?= $title['text']; ?></<?= $title['html_tag']; ?>>
