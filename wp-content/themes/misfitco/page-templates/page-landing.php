@@ -56,7 +56,7 @@
 							<li class="slide__nav-item">
 								<a href="#" class="slide__nav-button button-<?= $counter; ?>">
 									<div class="slide__nav-highlight highlight-<?= $counter; ?>"></div>
-									<div class="highlight__stick highlight__stick-<?= $counter; ?>"></div>
+									<div class="highlight__stick highlight__stick-<?= $counter; ?> <?= ( $counter == 1 ) ? 'highlight--active' : '' ?>" ></div>
 
 									<?php 
 										if ( have_rows('initial_type') ) : while ( have_rows('initial_type') ) : the_row(); 

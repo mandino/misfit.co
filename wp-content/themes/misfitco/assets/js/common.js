@@ -36,15 +36,24 @@
 	$document.ready(function(e) {
 		BodyResizer();
 
-		let links = [
-			{name: ".button-1", classHover: ".highlight-1", textHover: ".text-1", slide:".slide__item--slide1", highlightStick: ".highlight__stick-1", content: ".content-1"},
-			{name: ".button-2", classHover: ".highlight-2", textHover: ".text-2", slide:".slide__item--slide2", highlightStick: ".highlight__stick-2", content: ".content-2"},
-			{name: ".button-3", classHover: ".highlight-3", textHover: ".text-3", slide:".slide__item--slide3", highlightStick: ".highlight__stick-3", content: ".content-3"},
-			{name: ".button-4", classHover: ".highlight-4", textHover: ".text-4", slide:".slide__item--slide4", highlightStick: ".highlight__stick-4", content: ".content-4"},
-			{name: ".button-5", classHover: ".highlight-5", textHover: ".text-5", slide:".slide__item--slide5", highlightStick: ".highlight__stick-5", content: ".content-5"},
-			{name: ".button-6", classHover: ".highlight-6", textHover: ".text-6", slide:".slide__item--slide6", highlightStick: ".highlight__stick-6", content: ".content-6"},
-			{name: ".button-7", classHover: ".highlight-7", textHover: ".text-7", slide:".slide__item--slide7", highlightStick: ".highlight__stick-7", content: ".content-7"}
-		]
+		var links = [];
+
+		function createLinks(index) {
+			index++;
+
+			return {
+				name: '.button-' + index,
+				classHover: '.highlight-' + index,
+				textHover: '.text-' + index,
+				slide: '.slide__item--slide' + index,
+				highlightStick: '.highlight__stick-' + index,
+				content: '.content-' + index
+			};
+		}
+
+		$('.slide__nav-item').each(function(index) {
+			links[index] = createLinks(index);
+		});
 	
 		for (var i = 0 ; i < links.length; i++) {
 			navAnimate(links[i]);
