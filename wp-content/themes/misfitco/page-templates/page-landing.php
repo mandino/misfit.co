@@ -13,6 +13,7 @@
 				if ( have_rows('slider_item') ) : while ( have_rows('slider_item') ) : the_row();
 					$center_content = get_sub_field('center_content');
 					$text_color = get_sub_field('text_color');
+					$content_width = get_sub_field('content_width');
 
 					$title = [
 						'text' => get_sub_field('title'),
@@ -23,7 +24,7 @@
 					$background_image = get_sub_field('background_image');
 			?>
 				<li class="slide__item slide__item--slide<?= $counter; ?> slide__item--color-<?= str_replace( '_', '-', $text_color ); ?> <?= ( $counter == 1 ) ? 'slide__item--active' : '' ?> <?= ( $center_content ) ? 'slider__item--center-content' : '' ?>" style="background-image: url(<?= $background_image['url']; ?>);">
-					<div class="slide__content content-<?= $counter; ?> content-large <?= ( $counter != 1 ) ? 'slide__content--down' : ''; ?>">
+					<div class="slide__content content-<?= $counter; ?> content-<?= $content_width; ?> <?= ( $counter != 1 ) ? 'slide__content--down' : ''; ?>">
 						<?php if ( $title['text'] ) : ?>
 							<<?= $title['html_tag']; ?> class="slide__title"><?= $title['text']; ?></<?= $title['html_tag']; ?>>
 						<?php endif; ?>
@@ -34,7 +35,7 @@
 					</div>
 
 					<div class="slide__logo">
-						<span class="slide__logo-text">studiomisfit.co</span>
+						<span class="slide__logo-text">misfit.co</span>
 					</div>
 				</li>
 			<?php $counter++; endwhile; endif; ?>
@@ -44,88 +45,63 @@
 			<div class="slide__nav-inner">
 				<div class="slide__nav-wrapper">
 					<ul class="slide__nav-list">
-						<li class="slide__nav-item">
-							<a href="#" class="slide__nav-button button-1">
-								<div class="slide__nav-highlight highlight-1"></div>
-								<div class="highlight__stick highlight__stick-1 highlight--active"></div>
-								<div class="slide__nav-iconwrap show-desktop">
-									<img class="slide__nav-icon" src="<?= get_stylesheet_directory_uri(); ?>/assets/images/studio_misfit_logo.png" alt="studio misfit logo">
-								</div>
-								<div class="slide__nav-iconwrap show-mobile">
-									<img class="slide__nav-icon" src="<?= get_stylesheet_directory_uri(); ?>/assets/images/studio_misfit_asterisk-thin.png" alt="studio misfit logo">
-								</div>
-								<h4 class="slide__nav-text slide__nav-text--right text-1">studio misfit</h4>
-							</a>
-						</li>
+						<?php 
+							$counter = 1;
 
-						<li class="slide__nav-item">
-							<a href="#" class="slide__nav-button button-2">
-								<div class="slide__nav-highlight highlight-2"></div>
-								<div class="highlight__stick highlight__stick-2"></div>
-								<h4 class="slide__nav-text slide__nav-text--left">M</h4>
-								<h4 class="slide__nav-text slide__nav-text--right text-2">who we are</h4>
-							</a>
-						</li>
+							if ( have_rows('menu', 'options') ) : while ( have_rows('menu', 'options') ) : the_row(); 
+								$navigation_label = get_sub_field('navigation_label');
 
-						<li class="slide__nav-item">
-							<a href="#" class="slide__nav-button button-3">
-								<div class="slide__nav-highlight highlight-3"></div>
-								<div class="highlight__stick highlight__stick-3"></div>
-								<h4 class="slide__nav-text slide__nav-text--left">I</h4>
-								<h4 class="slide__nav-text slide__nav-text--right text-3">what we do</h4>
-							</a>
-						</li>
+								if ( $navigation_label ) :
+						?>
+							<li class="slide__nav-item">
+								<a href="#" class="slide__nav-button button-<?= $counter; ?>">
+									<div class="slide__nav-highlight highlight-<?= $counter; ?>"></div>
+									<div class="highlight__stick highlight__stick-<?= $counter; ?>"></div>
 
-						<li class="slide__nav-item">
-							<a href="#" class="slide__nav-button button-4">
-								<div class="slide__nav-highlight highlight-4"></div>
-								<div class="highlight__stick highlight__stick-4"></div>
-								<h4 class="slide__nav-text slide__nav-text--left">S</h4>
-								<h4 class="slide__nav-text slide__nav-text--right text-4">who we work with</h4>
-							</a>
-						</li>
+									<?php 
+										if ( have_rows('initial_type') ) : while ( have_rows('initial_type') ) : the_row(); 
+											if ( get_row_layout() == 'letter' ) : 
+												$letter = get_sub_field('letter');
+									?>
+										<h4 class="slide__nav-text slide__nav-text--left"><?= $letter; ?></h4>
+									<?php
+										elseif ( get_row_layout() == 'image' ) : 
+											$image_desktop = acf_get_image( get_sub_field('image_desktop') );
+											$image_mobile = acf_get_image( get_sub_field('image_mobile') );
 
-						<li class="slide__nav-item">
-							<a href="#" class="slide__nav-button button-5">
-								<div class="slide__nav-highlight highlight-5"></div>
-								<div class="highlight__stick highlight__stick-5"></div>
-								<h4 class="slide__nav-text slide__nav-text--left">F</h4>
-								<h4 class="slide__nav-text slide__nav-text--right text-5">work with us</h4>
-							</a>
-						</li>
+											if ( !$image_mobile ) :
+												$image_mobile = $image_desktop;
+											endif;
+									?>
+										<div class="slide__nav-iconwrap show-desktop">
+											<img class="slide__nav-icon" src="<?= $image_desktop['url']; ?>" alt="<?= $image_desktop['alt']; ?>">
+										</div>
 
-						<li class="slide__nav-item">
-							<a href="#" class="slide__nav-button button-6">
-								<div class="slide__nav-highlight highlight-6"></div>
-								<div class="highlight__stick highlight__stick-6"></div>
-								<h4 class="slide__nav-text slide__nav-text--left">I</h4>
-								<h4 class="slide__nav-text slide__nav-text--right text-6">misfit worldwide</h4>
-							</a>
-						</li>
+										<div class="slide__nav-iconwrap show-mobile">
+											<img class="slide__nav-icon" src="<?= $image_mobile['url']; ?>" alt="<?= $image_mobile['alt']; ?>">
+										</div>
+									<?php endif; endwhile; endif; ?>
 
-						<li class="slide__nav-item">
-							<a href="#" class="slide__nav-button button-7">
-								<div class="slide__nav-highlight highlight-7"></div>
-								<div class="highlight__stick highlight__stick-7"></div>
-								<h4 class="slide__nav-text slide__nav-text--left">T</h4>
-								<h4 class="slide__nav-text slide__nav-text--right text-7">surprise</h4>
-							</a>
-						</li>
+									<h4 class="slide__nav-text slide__nav-text--right text-<?= $counter; ?>"><?= $navigation_label; ?></h4>
+								</a>
+							</li>
+						<?php endif; $counter++; endwhile; endif; ?>
 					</ul>
 				</div>
 
-				<div class="slide__nav-social">
-					<div class="slide__nav-social-ico">
-						<a href="https://www.instagram.com/studiomisfit/" target="_blank">
-							<i class="fab fa-instagram"></i>
-						</a>
-					</div>
-					<div class="slide__nav-social-ico">
-						<a href="https://www.linkedin.com/company/misfit-co" target="_blank">
-							<i class="fab fa-linkedin-in"></i>
-						</a>
-					</div>
-				</div>
+				<ul class="slide__nav-social">
+					<?php 
+						if ( have_rows('social', 'options') ) : while ( have_rows('social', 'options') ) : the_row(); 
+							$icon_class = get_sub_field('icon_class');
+							$link = get_sub_field('link');
+					?>
+						<li class="slide__nav-social-ico">
+							<a href="<?= $link; ?>" target="_blank">
+								<i class="<?= $icon_class; ?>"></i>
+							</a>
+						</li>
+					<?php endwhile; endif; ?>
+				</ul>
 			</div>
 		</div>
 

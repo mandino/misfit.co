@@ -75,6 +75,7 @@
 .slide__item {
 	background-size: cover;
     background-repeat: no-repeat;
+	background-position: right;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -147,7 +148,7 @@
 	.slide__title {
 		font-family: $brandon-medium;
 		font-size: 55px;
-		color: $black;
+		color: #000;
 		letter-spacing: -0.004em;
 		line-height: 60px;
 		margin: 0;
@@ -165,6 +166,17 @@
 		.slide__text {
 			* {
 				color: #fff !important;
+			}
+
+			a {
+				&:hover {
+					color: #000;
+				}
+
+				&:before,
+				&:after {
+					background-color: #fff;
+				}
 			}
 		}
 	}
@@ -347,7 +359,7 @@
 						span {
 							font-family: $brandon-regular;
 							font-size: 15px;
-							color: #231f20;
+							color: #000;
 							letter-spacing: 0.05em;
 							line-height: 25px;
 							text-transform: capitalize;
@@ -527,7 +539,8 @@
 		@include transition(0.5s all ease-out);
 	}
 
-	i {
+	i,
+	svg {
 		font-size: 25px;
 		color: #fff;
 	}

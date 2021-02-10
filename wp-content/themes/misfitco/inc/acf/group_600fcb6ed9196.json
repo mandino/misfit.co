@@ -16,8 +16,8 @@
                 "id": ""
             },
             "collapsed": "",
-            "min": 7,
-            "max": 7,
+            "min": 0,
+            "max": 0,
             "layout": "row",
             "button_label": "",
             "sub_fields": [
@@ -57,6 +57,33 @@
                     "ui_off_text": ""
                 },
                 {
+                    "key": "field_6023569407489",
+                    "label": "Content Width",
+                    "name": "content_width",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "medium": "Medium",
+                        "large": "Large",
+                        "xlarge": "xLarge",
+                        "custom": "Custom"
+                    },
+                    "default_value": "large",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
                     "key": "field_600fe11b0b2ce",
                     "label": "Text Color",
                     "name": "text_color",
@@ -72,7 +99,7 @@
                     "choices": {
                         "dark_green": "Dark Green",
                         "white": "White",
-                        "dark_gray": "Dark Gray"
+                        "black": "Black"
                     },
                     "default_value": "dark_green",
                     "allow_null": 0,
@@ -217,5 +244,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1612924899
+    "modified": 1612929799
 }
