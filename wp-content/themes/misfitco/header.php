@@ -15,7 +15,7 @@
 	?>
 
 	<link rel="preload" id="style" href="<?= get_stylesheet_directory_uri(); ?>/assets/css/style.css" as="style" media="screen" crossorigin="anonymous">
-	<link rel="shortcut icon" href="<?= get_stylesheet_directory_uri(); ?>/assets/images/favicon.png">
+	<link rel="shortcut icon" href="<?= get_stylesheet_directory_uri(); ?>/assets/images/favicon_studio-misfit.png">
 
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
