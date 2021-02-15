@@ -11,6 +11,7 @@
 				$counter = 1;
 
 				if ( have_rows('slider_item') ) : while ( have_rows('slider_item') ) : the_row();
+					$add_mobile_content = get_sub_field('add_mobile_content');
 					$center_content = get_sub_field('center_content');
 					$text_color = get_sub_field('text_color');
 					$content_width = get_sub_field('content_width');
@@ -21,6 +22,7 @@
 					];
 				
 					$content = get_sub_field('content');
+					$mobile_content = get_sub_field('mobile_content');
 					$background_image_desktop = get_sub_field('background_image_desktop');
 					$background_image_mobile = get_sub_field('background_image_mobile');
 
@@ -37,7 +39,11 @@
 						<?php endif; ?>
 						
 						<?php if ( $content ) : ?>
-							<div class="slide__text"><?= $content; ?></div>
+							<div class="slide__text <?= ( $add_mobile_content ) ? 'show-desktop' : '' ?>"><?= $content; ?></div>
+						<?php endif; ?>
+
+						<?php if ( $mobile_content && $add_mobile_content ) : ?>
+							<div class="slide__text <?= ( $add_mobile_content ) ? 'show-mobile' : '' ?>"><?= $mobile_content; ?></div>
 						<?php endif; ?>
 					</div>
 
