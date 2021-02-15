@@ -38,6 +38,25 @@
                     "endpoint": 0
                 },
                 {
+                    "key": "field_602a0ea3cccf2",
+                    "label": "Add Mobile Content?",
+                    "name": "add_mobile_content",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
                     "key": "field_6017cd3f6bfa8",
                     "label": "Center Content?",
                     "name": "center_content",
@@ -247,6 +266,33 @@
                     "toolbar": "full",
                     "media_upload": 1,
                     "delay": 0
+                },
+                {
+                    "key": "field_602a0f24cccf6",
+                    "label": "Content - Mobile",
+                    "name": "mobile_content",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_602a0ea3cccf2",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
                 }
             ]
         }
@@ -268,5 +314,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1612938390
+    "modified": 1613369453
 }
