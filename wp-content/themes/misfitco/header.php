@@ -56,4 +56,6 @@
 </head>
 
 <body <?php body_class(); ?>>
+	<?php require get_stylesheet_directory() . '/inc/components/preloader.php'; ?>
+	
 	<main class="wrapper">

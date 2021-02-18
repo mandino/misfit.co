@@ -270,7 +270,8 @@ if(this._resizeData){if(a.x===this._resizeData.windowCoordinates.x&&a.y===this._
 	});
 
 	$window.on('load', function() {
-
+		$('#status').fadeOut();
+		$('#preloader').delay(350).fadeOut('slow');
 	});
 
 	$window.on('scroll', function() {
