@@ -1,0 +1,23 @@
+#preloader {
+	background-color: #fff;
+	position: fixed;
+	z-index: 100;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	top: 0;
+}
+
+#preloader {
+	img {
+		width: 20rem;
+	}
+}
+
+#status {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+
+	@include transform(translate(-50%,-50%));
+}
