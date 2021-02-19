@@ -94,6 +94,7 @@ ehthumbs.db
 *.sql
 *.sqlite
 *.sass-cache
+*.tar
 
 ############
 # Packages #
