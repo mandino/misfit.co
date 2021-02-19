@@ -7,7 +7,7 @@
 <div class="container">
 	<div class="container__inner">
 		<ul class="slide__container">
-			<?php 
+			<?php
 				$counter = 1;
 
 				if ( have_rows('slider_item') ) : while ( have_rows('slider_item') ) : the_row();
@@ -20,7 +20,7 @@
 						'text' => get_sub_field('title'),
 						'html_tag' => acf_html_tag(get_sub_field('title_html_tag'), 'h1')
 					];
-				
+
 					$content = get_sub_field('content');
 					$mobile_content = get_sub_field('mobile_content');
 					$background_image_desktop = get_sub_field('background_image_desktop');
@@ -37,7 +37,7 @@
 						<?php if ( $title['text'] ) : ?>
 							<<?= $title['html_tag']; ?> class="slide__title"><?= $title['text']; ?></<?= $title['html_tag']; ?>>
 						<?php endif; ?>
-						
+
 						<?php if ( $content ) : ?>
 							<div class="slide__text <?= ( $add_mobile_content ) ? 'show-desktop' : '' ?>"><?= $content; ?></div>
 						<?php endif; ?>
@@ -53,15 +53,15 @@
 				</li>
 			<?php $counter++; endwhile; endif; ?>
 		</ul>
-			
+
 		<div class="slide__nav">
 			<div class="slide__nav-inner">
 				<div class="slide__nav-wrapper">
 					<ul class="slide__nav-list">
-						<?php 
+						<?php
 							$counter = 1;
 
-							if ( have_rows('menu', 'options') ) : while ( have_rows('menu', 'options') ) : the_row(); 
+							if ( have_rows('menu', 'options') ) : while ( have_rows('menu', 'options') ) : the_row();
 								$navigation_label = get_sub_field('navigation_label');
 
 								if ( $navigation_label ) :
@@ -71,14 +71,14 @@
 									<div class="slide__nav-highlight highlight-<?= $counter; ?>"></div>
 									<div class="highlight__stick highlight__stick-<?= $counter; ?> <?= ( $counter == 1 ) ? 'highlight--active' : '' ?>" ></div>
 
-									<?php 
-										if ( have_rows('initial_type') ) : while ( have_rows('initial_type') ) : the_row(); 
-											if ( get_row_layout() == 'letter' ) : 
+									<?php
+										if ( have_rows('initial_type') ) : while ( have_rows('initial_type') ) : the_row();
+											if ( get_row_layout() == 'letter' ) :
 												$letter = get_sub_field('letter');
 									?>
 										<h4 class="slide__nav-text slide__nav-text--left"><?= $letter; ?></h4>
 									<?php
-										elseif ( get_row_layout() == 'image' ) : 
+										elseif ( get_row_layout() == 'image' ) :
 											$image_desktop = acf_get_image( get_sub_field('image_desktop') );
 											$image_mobile = acf_get_image( get_sub_field('image_mobile') );
 
@@ -103,8 +103,8 @@
 				</div>
 
 				<ul class="slide__nav-social">
-					<?php 
-						if ( have_rows('social', 'options') ) : while ( have_rows('social', 'options') ) : the_row(); 
+					<?php
+						if ( have_rows('social', 'options') ) : while ( have_rows('social', 'options') ) : the_row();
 							$icon_class = get_sub_field('icon_class');
 							$link = get_sub_field('link');
 					?>
